@@ -6,10 +6,36 @@
   
   html {
   
-    background: #000000;
+    min-height: 100%;
   
     overflow-x: hidden;
   
     scroll-behavior: smooth;
+  
+    background:
+      linear-gradient(
+        to bottom,
+        #0b1220 0%,
+        #101826 35%,
+        #1a1f2b 65%,
+        #25202a 100%
+      );
+  
+  }
+  
+  body {
+  
+    min-height: 100vh;
+  
+    overflow-x: hidden;
+  
+    background:
+      linear-gradient(
+        to bottom,
+        #0b1220 0%,
+        #101826 35%,
+        #1a1f2b 65%,
+        #25202a 100%
+      );
   
   }
