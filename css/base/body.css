@@ -4,13 +4,7 @@ body {
   
     min-height: 100dvh;
   
-    background:
-      linear-gradient(
-        to bottom,
-        #0b1220 0%,
-        #111827 45%,
-        #1f2937 100%
-      );
+    background: transparent;
   
     font-family: 'Inter', sans-serif;
   
