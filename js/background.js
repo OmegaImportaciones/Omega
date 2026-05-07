@@ -2,7 +2,15 @@
 // BACKGROUND BLOBS
 // =========================
 
-const body = document.body;
+// IMPORTANTE:
+// TODO el fondo usa FIXED.
+// NO usamos absolute.
+// NO usamos scrollHeight.
+// NO usamos resize hacks.
+//
+// Safari/iOS rompe el layout
+// cuando el fondo participa
+// del tamaño real del documento.
 
 // =========================
 // CREATE BACKGROUND
@@ -10,51 +18,32 @@ const body = document.body;
 
 const background = document.createElement('div');
 
-// IMPORTANTE PARA iOS / SAFARI
+background.style.position = 'fixed';
 
-background.style.position = 'absolute';
-
-background.style.top = '-20vh';
-
-background.style.left = '0';
+background.style.inset = '0';
 
 background.style.width = '100vw';
 
-background.style.minHeight = '100%';
+background.style.height = '100dvh';
 
 background.style.overflow = 'hidden';
 
 background.style.pointerEvents = 'none';
 
-background.style.zIndex = '0';
-
-background.style.transform = 'translateZ(0)';
+background.style.zIndex = '-1';
 
 background.style.background =
     `
-    linear-gradient(
-        to bottom,
-        #0b1220 0%,
-        #101826 35%,
-        #1a1f2b 65%,
-        #25202a 100%
-    )
-    `;
+linear-gradient(
+    to bottom,
+    #0b1220 0%,
+    #101826 35%,
+    #1a1f2b 65%,
+    #25202a 100%
+)
+`;
 
-body.prepend(background);
-
-// =========================
-// UPDATE BACKGROUND SIZE
-// =========================
-
-function updateBackgroundSize() {
-
-    background.style.height =
-        `${document.documentElement.scrollHeight}px`;
-
-}
-
-updateBackgroundSize();
+document.body.prepend(background);
 
 // =========================
 // TOP LIGHT
@@ -62,7 +51,7 @@ updateBackgroundSize();
 
 const topGlow = document.createElement('div');
 
-topGlow.style.position = 'absolute';
+topGlow.style.position = 'fixed';
 
 topGlow.style.top = '-220px';
 
@@ -77,22 +66,22 @@ topGlow.style.height = '620px';
 
 topGlow.style.background =
     `
-    radial-gradient(
-        circle,
+radial-gradient(
+    circle,
 
-        rgba(120,210,255,0.22) 0%,
+    rgba(120,210,255,0.22) 0%,
 
-        rgba(255,255,255,0.12) 32%,
+    rgba(255,255,255,0.12) 32%,
 
-        transparent 74%
-    )
-    `;
+    transparent 74%
+)
+`;
 
 topGlow.style.filter = 'blur(90px)';
 
 topGlow.style.pointerEvents = 'none';
 
-topGlow.style.zIndex = '0';
+topGlow.style.zIndex = '-1';
 
 background.appendChild(topGlow);
 
@@ -102,7 +91,7 @@ background.appendChild(topGlow);
 
 const bottomGlow = document.createElement('div');
 
-bottomGlow.style.position = 'absolute';
+bottomGlow.style.position = 'fixed';
 
 bottomGlow.style.left = '50%';
 
@@ -117,26 +106,26 @@ bottomGlow.style.height = '900px';
 
 bottomGlow.style.background =
     `
-    radial-gradient(
-        circle,
+radial-gradient(
+    circle,
 
-        rgba(255,255,255,0.20) 0%,
+    rgba(255,255,255,0.20) 0%,
 
-        rgba(120,210,255,0.16) 25%,
+    rgba(120,210,255,0.16) 25%,
 
-        rgba(255,170,90,0.12) 48%,
+    rgba(255,170,90,0.12) 48%,
 
-        rgba(255,255,255,0.05) 62%,
+    rgba(255,255,255,0.05) 62%,
 
-        transparent 78%
-    )
-    `;
+    transparent 78%
+)
+`;
 
 bottomGlow.style.filter = 'blur(100px)';
 
 bottomGlow.style.pointerEvents = 'none';
 
-bottomGlow.style.zIndex = '0';
+bottomGlow.style.zIndex = '-1';
 
 background.appendChild(bottomGlow);
 
@@ -203,7 +192,7 @@ blobsConfig.forEach((config) => {
 
     // STYLE
 
-    blob.style.position = 'absolute';
+    blob.style.position = 'fixed';
 
     blob.style.width =
         `${config.size}px`;
@@ -224,6 +213,8 @@ blobsConfig.forEach((config) => {
     blob.style.pointerEvents = 'none';
 
     blob.style.willChange = 'transform';
+
+    blob.style.zIndex = '-1';
 
     // INITIAL POSITION
 
@@ -312,15 +303,6 @@ function animateBlobs() {
     requestAnimationFrame(animateBlobs);
 
 }
-
-// =========================
-// RESIZE FIX
-// =========================
-
-window.addEventListener(
-    'resize',
-    updateBackgroundSize
-);
 
 // =========================
 // START
