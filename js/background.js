@@ -10,9 +10,17 @@ const body = document.body;
 
 const background = document.createElement('div');
 
-background.style.position = 'fixed';
+// IMPORTANTE PARA iOS SAFARI
 
-background.style.inset = '0';
+background.style.position = 'absolute';
+
+background.style.top = '-20vh';
+
+background.style.left = '0';
+
+background.style.width = '100vw';
+
+background.style.height = '140vh';
 
 background.style.overflow = 'hidden';
 
@@ -20,8 +28,18 @@ background.style.pointerEvents = 'none';
 
 background.style.zIndex = '0';
 
+background.style.transform = 'translateZ(0)';
+
 background.style.background =
-    'linear-gradient(to bottom, #050505 0%, #0a0f18 45%, #111111 100%)';
+    `
+    linear-gradient(
+        to bottom,
+        #0b1220 0%,
+        #101826 35%,
+        #1a1f2b 65%,
+        #25202a 100%
+    )
+    `;
 
 body.prepend(background);
 
@@ -31,30 +49,33 @@ body.prepend(background);
 
 const topGlow = document.createElement('div');
 
-topGlow.style.position = 'fixed';
+topGlow.style.position = 'absolute';
 
-topGlow.style.top = '-180px';
+topGlow.style.top = '-220px';
 
 topGlow.style.left = '50%';
 
 topGlow.style.transform =
     'translateX(-50%)';
 
-topGlow.style.width = '160vw';
+topGlow.style.width = '180vw';
 
-topGlow.style.height = '520px';
+topGlow.style.height = '620px';
 
 topGlow.style.background =
     `
     radial-gradient(
         circle,
-        rgba(120,210,255,0.18) 0%,
-        rgba(255,255,255,0.10) 35%,
-        transparent 72%
+
+        rgba(120,210,255,0.22) 0%,
+
+        rgba(255,255,255,0.12) 32%,
+
+        transparent 74%
     )
     `;
 
-topGlow.style.filter = 'blur(80px)';
+topGlow.style.filter = 'blur(90px)';
 
 topGlow.style.pointerEvents = 'none';
 
@@ -68,31 +89,37 @@ background.appendChild(topGlow);
 
 const bottomGlow = document.createElement('div');
 
-bottomGlow.style.position = 'fixed';
+bottomGlow.style.position = 'absolute';
 
 bottomGlow.style.left = '50%';
 
-bottomGlow.style.bottom = '-80px';
+bottomGlow.style.bottom = '-240px';
 
 bottomGlow.style.transform =
     'translateX(-50%)';
 
-bottomGlow.style.width = '180vw';
+bottomGlow.style.width = '220vw';
 
-bottomGlow.style.height = '700px';
+bottomGlow.style.height = '900px';
 
 bottomGlow.style.background =
     `
     radial-gradient(
         circle,
-        rgba(255,255,255,0.14) 0%,
-        rgba(255,180,90,0.10) 28%,
-        rgba(120,210,255,0.08) 52%,
-        transparent 75%
+
+        rgba(255,255,255,0.20) 0%,
+
+        rgba(120,210,255,0.16) 25%,
+
+        rgba(255,170,90,0.12) 48%,
+
+        rgba(255,255,255,0.05) 62%,
+
+        transparent 78%
     )
     `;
 
-bottomGlow.style.filter = 'blur(70px)';
+bottomGlow.style.filter = 'blur(100px)';
 
 bottomGlow.style.pointerEvents = 'none';
 
@@ -112,7 +139,7 @@ const blobsConfig = [
         size: 520,
 
         color:
-            'rgba(120, 210, 255, 0.26)',
+            'rgba(120, 210, 255, 0.24)',
 
         speedX: 2.3,
 
@@ -125,7 +152,7 @@ const blobsConfig = [
         size: 420,
 
         color:
-            'rgba(255, 255, 255, 0.14)',
+            'rgba(255, 255, 255, 0.12)',
 
         speedX: -1.9,
 
@@ -138,7 +165,7 @@ const blobsConfig = [
         size: 360,
 
         color:
-            'rgba(255, 170, 90, 0.18)',
+            'rgba(255, 170, 90, 0.16)',
 
         speedX: 1.8,
 
@@ -177,7 +204,7 @@ blobsConfig.forEach((config) => {
         config.color;
 
     blob.style.filter =
-        'blur(85px)';
+        'blur(90px)';
 
     blob.style.opacity = '1';
 
@@ -236,10 +263,10 @@ function animateBlobs() {
 
         if (
 
-            blob.x <= -180 ||
+            blob.x <= -220 ||
 
             blob.x >=
-            window.innerWidth - blob.size + 180
+            window.innerWidth - blob.size + 220
 
         ) {
 
@@ -251,10 +278,10 @@ function animateBlobs() {
 
         if (
 
-            blob.y <= -180 ||
+            blob.y <= -220 ||
 
             blob.y >=
-            window.innerHeight - blob.size + 180
+            window.innerHeight - blob.size + 220
 
         ) {
 

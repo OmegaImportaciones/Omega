@@ -1,5 +1,7 @@
 body {
 
+    min-height: 140vh;
+  
     background: transparent;
   
     font-family: 'Inter', sans-serif;
@@ -9,12 +11,14 @@ body {
     padding:
       32px
       24px
-      32px;
+      120px;
   
     overflow-x: hidden;
   
     position: relative;
   
     -webkit-overflow-scrolling: touch;
+  
+    overscroll-behavior-y: none;
   
   }
