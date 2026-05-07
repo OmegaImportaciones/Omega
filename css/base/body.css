@@ -1,16 +1,6 @@
 body {
 
-    background:
-      radial-gradient(
-        circle at top,
-        rgba(255,255,255,0.05),
-        transparent 35%
-      ),
-      linear-gradient(
-        to bottom,
-        var(--bg-primary),
-        var(--bg-secondary)
-      );
+    background: transparent;
   
     font-family: 'Inter', sans-serif;
   

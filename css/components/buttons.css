@@ -1,97 +1,149 @@
+/* =========================
+   BUTTONS CONTAINER
+========================= */
+
 .buttons-container {
 
-    width: 100%;
-  
-    display: flex;
-    flex-direction: column;
-  
-    gap: 16px;
-  
-  }
-  
-  .main-button {
-  
-    width: 100%;
-    min-height: 64px;
-  
-    padding: 18px 22px;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    gap: 12px;
-  
-    background: var(--card-bg);
-  
-    border:
-      1px solid var(--border-color);
-  
-    border-radius: var(--radius-main);
-  
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-  
-    text-decoration: none;
-  
-    color: var(--text-primary);
-  
-    font-size: 1rem;
-    font-weight: 600;
-  
-    letter-spacing: 0.2px;
-  
-    transition: var(--transition-main);
-  
-    box-shadow:
-      var(--shadow-soft);
-  
-    position: relative;
-  
-    overflow: hidden;
-  
-  }
-  
-  .main-button:hover {
-  
-    transform: translateY(-4px);
-  
-    background: var(--button-hover);
-  
-    box-shadow:
-      var(--shadow-soft),
-      var(--shadow-glow);
-  
-  }
-  
-  /* CUSTOM HOVERS */
-  
-  .main-button:nth-child(1):hover {
-  
-    border-color: rgba(37, 211, 102, 0.35);
-  
-    box-shadow:
-      var(--shadow-soft),
-      var(--shadow-green);
-  
-  }
-  
-  .main-button:nth-child(3):hover {
-  
-    border-color: rgba(0, 224, 255, 0.28);
-  
-    box-shadow:
-      var(--shadow-soft),
-      var(--shadow-cyan);
-  
-  }
-  
-  .main-button:nth-child(4):hover {
-  
-    border-color: rgba(24, 119, 242, 0.35);
-  
-    box-shadow:
-      var(--shadow-soft),
-      var(--shadow-blue);
-  
-  }
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+/* =========================
+   MAIN BUTTON
+========================= */
+
+.main-button {
+
+  width: 100%;
+
+  min-height: 64px;
+
+  padding: 18px 22px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+
+  background:
+    rgba(18, 18, 18, 0.58);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  border-radius:
+    var(--radius-main);
+
+  backdrop-filter:
+    blur(18px);
+
+  -webkit-backdrop-filter:
+    blur(18px);
+
+  text-decoration: none;
+
+  color:
+    var(--text-primary);
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.2px;
+
+  transition:
+    var(--transition-main);
+
+  box-shadow:
+    0 4px 18px rgba(0,0,0,0.28);
+
+  position: relative;
+
+  overflow: visible;
+
+  isolation: isolate;
+
+  contain: layout style;
+
+  transform:
+    translateZ(0);
+
+  will-change:
+    transform;
+
+  z-index: 2;
+
+}
+
+/* =========================
+   BUTTON HOVER
+========================= */
+
+.main-button:hover {
+
+  transform:
+    translateY(-4px);
+
+  background:
+    var(--button-hover);
+
+  box-shadow:
+    0 8px 28px rgba(0,0,0,0.32),
+    0 0 18px rgba(255,255,255,0.06);
+
+}
+
+/* =========================
+   WHATSAPP HOVER
+========================= */
+
+.main-button:nth-child(1):hover {
+
+  border-color:
+    rgba(37, 211, 102, 0.35);
+
+  box-shadow:
+    0 8px 28px rgba(0,0,0,0.32),
+    0 0 18px rgba(37,211,102,0.16);
+
+}
+
+/* =========================
+   TIKTOK HOVER
+========================= */
+
+.main-button:nth-child(3):hover {
+
+  border-color:
+    rgba(0, 224, 255, 0.28);
+
+  box-shadow:
+    0 8px 28px rgba(0,0,0,0.32),
+    0 0 18px rgba(0,224,255,0.12);
+
+}
+
+/* =========================
+   FACEBOOK HOVER
+========================= */
+
+.main-button:nth-child(4):hover {
+
+  border-color:
+    rgba(24, 119, 242, 0.35);
+
+  box-shadow:
+    0 8px 28px rgba(0,0,0,0.32),
+    0 0 18px rgba(24,119,242,0.14);
+
+}
