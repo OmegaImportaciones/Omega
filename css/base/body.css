@@ -1,5 +1,17 @@
 body {
 
+    min-height: 100vh;
+  
+    min-height: 100dvh;
+  
+    background:
+      linear-gradient(
+        to bottom,
+        #0b1220 0%,
+        #111827 45%,
+        #1f2937 100%
+      );
+  
     font-family: 'Inter', sans-serif;
   
     color: var(--text-primary);
@@ -7,7 +19,9 @@ body {
     padding:
       32px
       24px
-      32px;
+      48px;
+  
+    overflow-x: hidden;
   
     position: relative;
   
