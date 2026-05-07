@@ -1,16 +1,15 @@
 // =========================
-// BACKGROUND BLOBS
+// OMEGA BACKGROUND
+// LIGERO + ESTABLE
 // =========================
 
 // IMPORTANTE:
-// TODO el fondo usa FIXED.
-// NO usamos absolute.
-// NO usamos scrollHeight.
-// NO usamos resize hacks.
-//
-// Safari/iOS rompe el layout
-// cuando el fondo participa
-// del tamaño real del documento.
+// - Todo usa position: fixed
+// - Sin resize hacks
+// - Sin scrollHeight
+// - Animaciones MUY suaves
+// - Blur reducido
+// - Optimizado para iOS
 
 // =========================
 // CREATE BACKGROUND
@@ -32,14 +31,13 @@ background.style.pointerEvents = 'none';
 
 background.style.zIndex = '-1';
 
-background.style.background =
-    `
+background.style.background = `
 linear-gradient(
     to bottom,
     #0b1220 0%,
-    #101826 35%,
-    #1a1f2b 65%,
-    #25202a 100%
+    #101826 40%,
+    #181d28 70%,
+    #211f27 100%
 )
 `;
 
@@ -53,35 +51,33 @@ const topGlow = document.createElement('div');
 
 topGlow.style.position = 'fixed';
 
-topGlow.style.top = '-220px';
+topGlow.style.top = '-180px';
 
 topGlow.style.left = '50%';
 
 topGlow.style.transform =
     'translateX(-50%)';
 
-topGlow.style.width = '180vw';
+topGlow.style.width = '140vw';
 
-topGlow.style.height = '620px';
+topGlow.style.height = '420px';
 
-topGlow.style.background =
-    `
+topGlow.style.borderRadius = '50%';
+
+topGlow.style.background = `
 radial-gradient(
     circle,
-
-    rgba(120,210,255,0.22) 0%,
-
-    rgba(255,255,255,0.12) 32%,
-
-    transparent 74%
+    rgba(120,210,255,0.14) 0%,
+    rgba(255,255,255,0.06) 35%,
+    transparent 72%
 )
 `;
 
-topGlow.style.filter = 'blur(90px)';
+topGlow.style.filter = 'blur(60px)';
+
+topGlow.style.opacity = '0.9';
 
 topGlow.style.pointerEvents = 'none';
-
-topGlow.style.zIndex = '-1';
 
 background.appendChild(topGlow);
 
@@ -93,104 +89,90 @@ const bottomGlow = document.createElement('div');
 
 bottomGlow.style.position = 'fixed';
 
-bottomGlow.style.left = '50%';
+bottomGlow.style.bottom = '-220px';
 
-bottomGlow.style.bottom = '-240px';
+bottomGlow.style.left = '50%';
 
 bottomGlow.style.transform =
     'translateX(-50%)';
 
-bottomGlow.style.width = '220vw';
+bottomGlow.style.width = '160vw';
 
-bottomGlow.style.height = '900px';
+bottomGlow.style.height = '520px';
 
-bottomGlow.style.background =
-    `
+bottomGlow.style.borderRadius = '50%';
+
+bottomGlow.style.background = `
 radial-gradient(
     circle,
-
-    rgba(255,255,255,0.20) 0%,
-
-    rgba(120,210,255,0.16) 25%,
-
-    rgba(255,170,90,0.12) 48%,
-
-    rgba(255,255,255,0.05) 62%,
-
-    transparent 78%
+    rgba(255,190,120,0.10) 0%,
+    rgba(120,210,255,0.08) 42%,
+    transparent 76%
 )
 `;
 
-bottomGlow.style.filter = 'blur(100px)';
+bottomGlow.style.filter = 'blur(70px)';
+
+bottomGlow.style.opacity = '0.9';
 
 bottomGlow.style.pointerEvents = 'none';
-
-bottomGlow.style.zIndex = '-1';
 
 background.appendChild(bottomGlow);
 
 // =========================
-// CONFIG
+// FLOATING BLOBS
 // =========================
 
 const blobsConfig = [
 
-    // CELESTE
-
     {
-        size: 520,
+        size: 240,
 
         color:
-            'rgba(120, 210, 255, 0.24)',
+            'rgba(120,210,255,0.10)',
 
-        speedX: 2.3,
+        top: '12%',
 
-        speedY: 1.7
+        left: '8%',
+
+        duration: '18s'
     },
 
-    // BLANCO
-
     {
-        size: 420,
+        size: 180,
 
         color:
-            'rgba(255, 255, 255, 0.12)',
+            'rgba(255,255,255,0.06)',
 
-        speedX: -1.9,
+        top: '58%',
 
-        speedY: 1.5
+        left: '72%',
+
+        duration: '22s'
     },
 
-    // NARANJA
-
     {
-        size: 360,
+        size: 200,
 
         color:
-            'rgba(255, 170, 90, 0.16)',
+            'rgba(255,170,90,0.08)',
 
-        speedX: 1.8,
+        top: '72%',
 
-        speedY: -2.1
+        left: '18%',
+
+        duration: '20s'
     }
 
 ];
 
 // =========================
-// BLOBS ARRAY
-// =========================
-
-const blobs = [];
-
-// =========================
 // CREATE BLOBS
 // =========================
 
-blobsConfig.forEach((config) => {
+blobsConfig.forEach((config, index) => {
 
     const blob = document.createElement('div');
-
-    // STYLE
 
     blob.style.position = 'fixed';
 
@@ -200,112 +182,66 @@ blobsConfig.forEach((config) => {
     blob.style.height =
         `${config.size}px`;
 
+    blob.style.top =
+        config.top;
+
+    blob.style.left =
+        config.left;
+
     blob.style.borderRadius = '50%';
 
     blob.style.background =
         config.color;
 
     blob.style.filter =
-        'blur(90px)';
+        'blur(55px)';
 
-    blob.style.opacity = '1';
+    blob.style.opacity = '0.9';
 
     blob.style.pointerEvents = 'none';
 
-    blob.style.willChange = 'transform';
+    blob.style.willChange =
+        'transform';
 
-    blob.style.zIndex = '-1';
-
-    // INITIAL POSITION
-
-    const x =
-        Math.random() *
-        (window.innerWidth - config.size);
-
-    const y =
-        Math.random() *
-        (window.innerHeight - config.size);
-
-    // APPLY INITIAL POSITION
-
-    blob.style.transform =
-        `translate3d(${x}px, ${y}px, 0)`;
+    blob.style.animation =
+        `floatBlob${index} ${config.duration} ease-in-out infinite alternate`;
 
     background.appendChild(blob);
 
-    blobs.push({
+    // =========================
+    // KEYFRAMES
+    // =========================
 
-        element: blob,
+    const style = document.createElement('style');
 
-        x,
-        y,
+    style.textContent = `
+    
+    @keyframes floatBlob${index} {
 
-        speedX: config.speedX,
-        speedY: config.speedY,
+        0% {
 
-        size: config.size
+            transform:
+                translate3d(0px, 0px, 0px)
+                scale(1);
 
-    });
+        }
+
+        100% {
+
+            transform:
+                translate3d(
+                    ${20 + (index * 10)}px,
+                    ${-30 - (index * 8)}px,
+                    0
+                )
+                scale(1.08);
+
+        }
+
+    }
+
+    `;
+
+    document.head.appendChild(style);
 
 });
-
-// =========================
-// ANIMATION
-// =========================
-
-function animateBlobs() {
-
-    blobs.forEach((blob) => {
-
-        // MOVE
-
-        blob.x += blob.speedX;
-
-        blob.y += blob.speedY;
-
-        // HORIZONTAL LIMITS
-
-        if (
-
-            blob.x <= -220 ||
-
-            blob.x >=
-            window.innerWidth - blob.size + 220
-
-        ) {
-
-            blob.speedX *= -1;
-
-        }
-
-        // VERTICAL LIMITS
-
-        if (
-
-            blob.y <= -220 ||
-
-            blob.y >=
-            window.innerHeight - blob.size + 220
-
-        ) {
-
-            blob.speedY *= -1;
-
-        }
-
-        // APPLY MOVEMENT
-
-        blob.element.style.transform =
-            `translate3d(${blob.x}px, ${blob.y}px, 0)`;
-
-    });
-
-    requestAnimationFrame(animateBlobs);
-
-}
-
-// =========================
-// START
-// =========================
-
-animateBlobs();
