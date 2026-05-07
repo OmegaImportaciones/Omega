@@ -8,11 +8,39 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-    <title>OMEGA IMPORTACIONES</title>
+    <title>
+        OMEGA IMPORTACIONES
+    </title>
 
     <meta name="description" content="Tecnología, gadgets y accesorios premium." />
 
     <meta name="theme-color" content="#08101d" />
+
+    <!-- GOOGLE ANALYTICS -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNVK91HBNP"></script>
+
+    <script>
+
+        window.dataLayer =
+            window.dataLayer || [];
+
+        function gtag() {
+
+            dataLayer.push(arguments);
+
+        }
+
+        gtag(
+            'js',
+            new Date()
+        );
+
+        gtag(
+            'config',
+            'G-PNVK91HBNP'
+        );
+
+    </script>
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +66,16 @@
 
             <!-- WHATSAPP -->
             <a href="https://wa.me/59164216262?text=Hola,%20quiero%20información%20sobre%20sus%20productos"
-                target="_blank" rel="noopener noreferrer" class="main-button">
+                target="_blank" rel="noopener noreferrer" class="main-button" onclick="
+                    gtag(
+                        'event',
+                        'click_whatsapp',
+                        {
+                            event_category: 'index',
+                            event_label: 'WhatsApp'
+                        }
+                    );
+                ">
 
                 <img src="./img/w_logo.png" alt="WhatsApp" class="button-icon" draggable="false">
 
@@ -49,7 +86,16 @@
             </a>
 
             <!-- CATALOGO -->
-            <a href="./pages/catalogo.html" class="main-button">
+            <a href="./pages/catalogo.html" class="main-button" onclick="
+                    gtag(
+                        'event',
+                        'click_catalogo',
+                        {
+                            event_category: 'index',
+                            event_label: 'Catalogo'
+                        }
+                    );
+                ">
 
                 <span class="emoji-icon">
                     🛒
@@ -63,7 +109,16 @@
 
             <!-- TIKTOK -->
             <a href="https://www.tiktok.com/@omegaimportaciones" target="_blank" rel="noopener noreferrer"
-                class="main-button">
+                class="main-button" onclick="
+                    gtag(
+                        'event',
+                        'click_tiktok',
+                        {
+                            event_category: 'index',
+                            event_label: 'TikTok'
+                        }
+                    );
+                ">
 
                 <img src="./img/t_logo.png" alt="TikTok" class="button-icon" draggable="false">
 
@@ -75,7 +130,16 @@
 
             <!-- FACEBOOK -->
             <a href="https://www.facebook.com/share/1AATCSwqwf/?mibextid=wwXIfr" target="_blank"
-                rel="noopener noreferrer" class="main-button">
+                rel="noopener noreferrer" class="main-button" onclick="
+                    gtag(
+                        'event',
+                        'click_facebook',
+                        {
+                            event_category: 'index',
+                            event_label: 'Facebook'
+                        }
+                    );
+                ">
 
                 <img src="./img/f_logo.png" alt="Facebook" class="button-icon" draggable="false">
 
@@ -86,7 +150,16 @@
             </a>
 
             <!-- UBICACION -->
-            <a href="./pages/ubicacion.html" class="main-button">
+            <a href="./pages/ubicacion.html" class="main-button" onclick="
+                    gtag(
+                        'event',
+                        'click_ubicacion',
+                        {
+                            event_category: 'index',
+                            event_label: 'Como Llegar'
+                        }
+                    );
+                ">
 
                 <span class="emoji-icon">
                     📍
@@ -102,7 +175,7 @@
 
     </main>
 
-    <!-- BACKGROUND SCRIPT -->
+    <!-- BACKGROUND -->
     <script src="./js/background.js"></script>
 
 </body>
