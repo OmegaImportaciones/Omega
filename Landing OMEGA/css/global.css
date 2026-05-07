@@ -1,0 +1,314 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+
+  /* COLORS */
+  --bg-primary: #000000;
+  --bg-secondary: #050505;
+
+  --card-bg: rgba(18, 18, 18, 0.72);
+
+  --text-primary: #ffffff;
+  --text-secondary: #b5b5b5;
+
+  --border-color: rgba(255, 255, 255, 0.08);
+
+  --button-hover: rgba(255, 255, 255, 0.10);
+
+  /* SHADOWS */
+  --shadow-soft:
+    0 12px 45px rgba(0, 0, 0, 0.60);
+
+  --shadow-glow:
+    0 0 30px rgba(255, 255, 255, 0.08);
+
+  --shadow-green:
+    0 0 22px rgba(37, 211, 102, 0.18);
+
+  --shadow-blue:
+    0 0 22px rgba(24, 119, 242, 0.18);
+
+  --shadow-cyan:
+    0 0 22px rgba(0, 224, 255, 0.14);
+
+  /* RADIUS */
+  --radius-main: 24px;
+
+  /* TRANSITIONS */
+  --transition-main:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    border 0.25s ease;
+
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(255,255,255,0.05),
+      transparent 35%
+    ),
+    linear-gradient(
+      to bottom,
+      var(--bg-primary),
+      var(--bg-secondary)
+    );
+
+  font-family: 'Inter', sans-serif;
+
+  color: var(--text-primary);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 24px;
+
+  overflow: hidden;
+
+  position: relative;
+
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+
+  width: 100%;
+  max-width: 460px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 20px;
+
+  position: relative;
+  z-index: 2;
+
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+
+  width: 520px;
+  max-width: 160%;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 0 26px rgba(255,255,255,0.16)
+    );
+
+  user-select: none;
+
+  margin-bottom: -4px;
+
+}
+
+/* =========================
+   BUTTONS CONTAINER
+========================= */
+
+.buttons-container {
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.main-button {
+
+  width: 100%;
+  min-height: 64px;
+
+  padding: 18px 22px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+
+  background: var(--card-bg);
+
+  border:
+    1px solid var(--border-color);
+
+  border-radius: var(--radius-main);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  text-decoration: none;
+
+  color: var(--text-primary);
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  letter-spacing: 0.2px;
+
+  transition: var(--transition-main);
+
+  box-shadow:
+    var(--shadow-soft);
+
+  position: relative;
+
+  overflow: hidden;
+
+}
+
+/* =========================
+   BUTTON HOVER
+========================= */
+
+.main-button:hover {
+
+  transform: translateY(-4px);
+
+  background: var(--button-hover);
+
+  box-shadow:
+    var(--shadow-soft),
+    var(--shadow-glow);
+
+}
+
+/* =========================
+   CUSTOM HOVERS
+========================= */
+
+.main-button:nth-child(1):hover {
+
+  border-color: rgba(37, 211, 102, 0.35);
+
+  box-shadow:
+    var(--shadow-soft),
+    var(--shadow-green);
+
+}
+
+.main-button:nth-child(3):hover {
+
+  border-color: rgba(0, 224, 255, 0.28);
+
+  box-shadow:
+    var(--shadow-soft),
+    var(--shadow-cyan);
+
+}
+
+.main-button:nth-child(4):hover {
+
+  border-color: rgba(24, 119, 242, 0.35);
+
+  box-shadow:
+    var(--shadow-soft),
+    var(--shadow-blue);
+
+}
+
+/* =========================
+   BUTTON ICONS
+========================= */
+
+.button-icon {
+
+  width: 22px;
+  height: 22px;
+
+  object-fit: contain;
+
+  user-select: none;
+
+}
+
+.emoji-icon {
+
+  font-size: 1.1rem;
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  body {
+    padding: 20px;
+  }
+
+  .container {
+
+    max-width: 100%;
+
+    gap: 18px;
+
+  }
+
+  .logo {
+
+    width: 360px;
+    max-width: 150%;
+
+    margin-bottom: -6px;
+
+  }
+
+  .buttons-container {
+
+    gap: 14px;
+
+  }
+
+  .main-button {
+
+    min-height: 60px;
+
+    font-size: 0.98rem;
+
+    border-radius: 22px;
+
+    padding: 16px 18px;
+
+  }
+
+}
