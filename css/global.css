@@ -9,6 +9,18 @@
 }
 
 /* =========================
+   HTML
+========================= */
+
+html {
+
+  background: #000000;
+
+  overflow-x: hidden;
+
+}
+
+/* =========================
    VARIABLES
 ========================= */
 
@@ -89,6 +101,8 @@ body {
   overflow-y: auto;
 
   position: relative;
+
+  -webkit-overflow-scrolling: touch;
 
 }
 
@@ -274,7 +288,9 @@ body {
 @media (max-width: 480px) {
 
   body {
+
     padding: 20px;
+
   }
 
   .container {
