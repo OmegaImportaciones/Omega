@@ -18,6 +18,8 @@ html {
 
   overflow-x: hidden;
 
+  scroll-behavior: smooth;
+
 }
 
 /* =========================
@@ -73,8 +75,6 @@ html {
 
 body {
 
-  min-height: 100dvh;
-
   background:
     radial-gradient(
       circle at top,
@@ -91,19 +91,12 @@ body {
 
   color: var(--text-primary);
 
-  display: flex;
-  justify-content: center;
-
-  /* IMPORTANTE */
-  align-items: flex-start;
-
   padding:
-    40px
+    32px
     24px
-    120px;
+    32px;
 
   overflow-x: hidden;
-  overflow-y: auto;
 
   position: relative;
 
@@ -120,6 +113,8 @@ body {
   width: 100%;
   max-width: 460px;
 
+  margin: 0 auto;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,9 +123,6 @@ body {
 
   position: relative;
   z-index: 2;
-
-  /* IMPORTANTE */
-  margin: auto 0;
 
 }
 
@@ -151,6 +143,8 @@ body {
     );
 
   user-select: none;
+
+  -webkit-user-drag: none;
 
   margin-bottom: -4px;
 
@@ -281,6 +275,8 @@ body {
 
   user-select: none;
 
+  -webkit-user-drag: none;
+
 }
 
 .emoji-icon {
@@ -298,9 +294,9 @@ body {
   body {
 
     padding:
-      32px
+      24px
       20px
-      100px;
+      24px;
 
   }
 
