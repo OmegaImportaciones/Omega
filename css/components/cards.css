@@ -1,0 +1,38 @@
+.info-card {
+
+    flex-direction: column;
+  
+    align-items: center;
+  
+    justify-content: center;
+  
+    text-align: center;
+  
+  }
+  
+  .info-content {
+  
+    display: flex;
+    flex-direction: column;
+  
+    gap: 6px;
+  
+  }
+  
+  .info-content h3 {
+  
+    font-size: 1rem;
+  
+    font-weight: 600;
+  
+  }
+  
+  .info-content p {
+  
+    color: var(--text-secondary);
+  
+    line-height: 1.6;
+  
+    font-size: 0.95rem;
+  
+  }
