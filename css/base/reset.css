@@ -17,15 +17,10 @@
 
 html,
 body {
-
   width: 100%;
-
   min-height: 100%;
-
-  background: transparent;
-
+  /* Cambia transparent por el color de fondo de tu app */
+  background-color: #08101d; 
   overflow-x: hidden;
-
   scroll-behavior: smooth;
-
 }

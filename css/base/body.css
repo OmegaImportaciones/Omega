@@ -1,24 +1,16 @@
 body {
-
-    min-height: 100vh;
-  
     min-height: 100dvh;
-  
-    background: transparent;
-  
+    background-color: #08101d; /* Esto protege los bordes */
     font-family: 'Inter', sans-serif;
-  
     color: var(--text-primary);
-  
-    padding:
-      32px
-      24px
-      48px;
-  
+    padding: calc(32px + env(safe-area-inset-top)) 24px calc(48px + env(safe-area-inset-bottom));
     overflow-x: hidden;
-  
     position: relative;
-  
-    -webkit-overflow-scrolling: touch;
-  
-  }
+    /* Eliminamos el fondo transparente y dejamos que el JS haga su magia */
+}
+
+/* Aseguramos que el contenido principal flote sobre el fondo */
+.container {
+    position: relative;
+    z-index: 1; 
+}
