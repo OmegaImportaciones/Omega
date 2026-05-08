@@ -1,11 +1,12 @@
+/* =========================
+   ELEMENTS
+========================= */
+
 const searchInput =
     document.getElementById('searchInput');
 
-const productCards =
-    document.querySelectorAll('.product-card');
-
 const promoSection =
-    document.querySelector('.promo-slider');
+    document.getElementById('promoSection');
 
 
 /* =========================
@@ -23,48 +24,67 @@ function normalizeText(text) {
 
 
 /* =========================
-   SEARCH PRODUCTS
+   INITIALIZE SEARCH
 ========================= */
 
-searchInput.addEventListener('input', () => {
+function initializeSearch(products) {
 
-    const search =
-        normalizeText(searchInput.value);
+    searchInput.addEventListener('input', () => {
 
-    let hasSearch =
-        search.length > 0;
-
-
-    productCards.forEach(card => {
-
-        const productName =
+        const search =
             normalizeText(
-                card.dataset.name
+                searchInput.value
             );
 
-        const isVisible =
-            productName.includes(search);
+
+        /* =========================
+           FILTER PRODUCTS
+        ========================= */
+
+        const filteredProducts =
+            products.filter(product => {
+
+                const name =
+                    normalizeText(
+                        product.name
+                    );
+
+                const description =
+                    normalizeText(
+                        product.description
+                    );
+
+                return (
+                    name.includes(search) ||
+                    description.includes(search)
+                );
+
+            });
 
 
-        card.style.display =
-            isVisible
-                ? 'flex'
-                : 'none';
+        /* =========================
+           RE-RENDER PRODUCTS
+        ========================= */
+
+        renderProducts(filteredProducts);
+
+
+        /* =========================
+           SHOW/HIDE PROMOS
+        ========================= */
+
+        if (search.length > 0) {
+
+            promoSection.style.display =
+                'none';
+
+        } else {
+
+            promoSection.style.display =
+                'block';
+
+        }
 
     });
 
-
-    /* =========================
-       HIDE PROMOS ON SEARCH
-    ========================= */
-
-    if (promoSection) {
-
-        promoSection.parentElement.style.display =
-            hasSearch
-                ? 'none'
-                : 'block';
-
-    }
-
-});
+}

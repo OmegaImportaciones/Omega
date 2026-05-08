@@ -4,21 +4,87 @@
 
 .catalog-header {
 
-    position: relative;
+    --compact-progress: 0;
+
+    position: fixed;
+
+    top: calc(
+        22px - (10px * var(--compact-progress))
+    );
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: calc(
+        100% - 32px
+    );
+
+    max-width: 560px;
+
+    z-index: 999;
 
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 
-    gap: 22px;
+    flex-direction: row;
 
-    padding-top: 6px;
-    padding-bottom: 24px;
+    gap: calc(
+        22px - (10px * var(--compact-progress))
+    );
+
+    padding:
+        calc(18px - (8px * var(--compact-progress)))
+        calc(18px - (4px * var(--compact-progress)));
+
+    border-radius: calc(
+        34px - (10px * var(--compact-progress))
+    );
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(
+            10,
+            14,
+            25,
+            calc(0.06 + (0.82 * var(--compact-progress)))
+        ),
+        rgba(
+            10,
+            14,
+            25,
+            calc(0.03 + (0.78 * var(--compact-progress)))
+        )
+    );
+
+        border: 1px solid
+        rgba(
+            255,
+            255,
+            255,
+            calc(0.08 * var(--compact-progress))
+        );
+
+    backdrop-filter:
+        blur(
+            calc(4px + (14px * var(--compact-progress)))
+        );
+
+    box-shadow:
+        0 12px 34px
+        rgba(
+            0,
+            0,
+            0,
+            calc(0.05 + (0.30 * var(--compact-progress)))
+        );
 
     transition:
-        all 0.35s ease;
-
-    z-index: 100;
+        background 0.15s linear,
+        border 0.15s linear,
+        box-shadow 0.15s linear;
 
 }
 
@@ -29,11 +95,9 @@
 
 .catalog-topbar {
 
-    width: 100%;
+    width: auto;
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    flex-shrink: 0;
 
 }
 
@@ -45,11 +109,10 @@
 .catalog-brand {
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
-    transition:
-        all 0.35s ease;
+    flex-shrink: 0;
 
 }
 
@@ -60,10 +123,46 @@
 
 .catalog-logo {
 
-    width: 220px;
+    width: calc(
+        270px - (150px * var(--compact-progress))
+    );
 
     transition:
-        all 0.35s ease;
+        width 0.08s linear;
+
+}
+
+
+/* =========================
+   SEARCH WRAPPER
+========================= */
+
+.catalog-search-wrapper {
+
+    flex: 0.9;
+
+    min-width: 0;
+
+}
+
+
+/* =========================
+   SEARCH BAR
+========================= */
+
+.catalog-search {
+
+    padding:
+        calc(16px - (4px * var(--compact-progress)))
+        calc(18px - (4px * var(--compact-progress)));
+
+    border-radius: calc(
+        24px - (6px * var(--compact-progress))
+    );
+
+    transition:
+        padding 0.08s linear,
+        border-radius 0.08s linear;
 
 }
 
@@ -74,150 +173,28 @@
 
 .compact-back-button {
 
+    padding:
+        calc(14px - (2px * var(--compact-progress)))
+        calc(18px - (4px * var(--compact-progress)));
+
+    border-radius: calc(
+        20px - (4px * var(--compact-progress))
+    );
+
     transition:
-        all 0.3s ease;
+        padding 0.08s linear,
+        border-radius 0.08s linear;
 
 }
 
 
 /* =========================
-   COMPACT MODE
+   BODY OFFSET
 ========================= */
 
-.catalog-header.compact {
+.container {
 
-    position: fixed;
-
-    top: 12px;
-
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    width: calc(100% - 32px);
-
-    max-width: 560px;
-
-    z-index: 999;
-
-    display: flex;
-
-    flex-direction: row;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 12px;
-
-    padding: 10px 14px;
-
-    border-radius: 24px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(10,14,25,0.92),
-            rgba(10,14,25,0.82)
-        );
-
-    border: 1px solid rgba(255,255,255,0.08);
-
-    backdrop-filter: blur(18px);
-
-    box-shadow:
-        0 12px 34px rgba(0,0,0,0.35);
-
-}
-
-
-/* =========================
-   COMPACT TOPBAR
-========================= */
-
-.catalog-header.compact .catalog-topbar {
-
-    width: auto;
-
-    flex-shrink: 0;
-
-}
-
-
-/* =========================
-   COMPACT BRAND
-========================= */
-
-.catalog-header.compact .catalog-brand {
-
-    width: auto;
-
-    flex-shrink: 0;
-
-}
-
-
-/* =========================
-   COMPACT LOGO
-========================= */
-
-.catalog-header.compact .catalog-logo {
-
-    width: 90px;
-
-}
-
-
-/* =========================
-   COMPACT SEARCH
-========================= */
-
-.catalog-header.compact .catalog-search-wrapper {
-
-    flex: 1;
-
-    margin-top: 0;
-
-}
-
-
-/* =========================
-   COMPACT SEARCH BAR
-========================= */
-
-.catalog-header.compact .catalog-search {
-
-    padding: 12px 14px;
-
-    border-radius: 18px;
-
-}
-
-
-/* =========================
-   COMPACT BUTTON
-========================= */
-
-.catalog-header.compact .compact-back-button {
-
-    width: auto;
-
-    min-width: auto;
-
-    padding: 12px 14px;
-
-    border-radius: 18px;
-
-}
-
-
-/* =========================
-   CONTENT OFFSET
-========================= */
-
-.catalog-header.compact + * {
-
-    margin-top: 90px;
+    padding-top: 180px;
 
 }
 
@@ -228,29 +205,29 @@
 
 @media (max-width: 640px) {
 
+    .catalog-header {
+
+        width: calc(100% - 20px);
+
+        gap: calc(
+            18px - (8px * var(--compact-progress))
+        );
+
+    }
+
+    
     .catalog-logo {
 
-        width: 200px;
+        width: calc(
+            230px - (120px * var(--compact-progress))
+        );
 
     }
 
     
-    .catalog-header.compact {
+    .catalog-search-wrapper {
 
-        top: 8px;
-
-        width: calc(100% - 24px);
-
-        padding: 10px 12px;
-
-        border-radius: 22px;
-
-    }
-
-    
-    .catalog-header.compact .catalog-logo {
-
-        width: 76px;
+        flex: 0.85;
 
     }
 
