@@ -6,60 +6,54 @@
 
     --compact-progress: 0;
 
-    position: fixed;
+    position: relative;
 
-    top: calc(
-        22px - (10px * var(--compact-progress))
-    );
-
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    width: calc(
-        100% - 32px
-    );
+    width: 100%;
 
     max-width: 560px;
 
-    z-index: 999;
+    margin: 22px auto 0 auto;
+
+    z-index: 100;
 
     display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-    flex-direction: row;
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
 
     gap: calc(
-        22px - (10px * var(--compact-progress))
+        26px - (18px * var(--compact-progress))
     );
 
     padding:
-        calc(18px - (8px * var(--compact-progress)))
-        calc(18px - (4px * var(--compact-progress)));
+        calc(24px - (16px * var(--compact-progress)))
+        calc(18px - (8px * var(--compact-progress)));
 
     border-radius: calc(
-        34px - (10px * var(--compact-progress))
+        38px - (18px * var(--compact-progress))
     );
 
     background:
-    linear-gradient(
-        145deg,
-        rgba(
-            10,
-            14,
-            25,
-            calc(0.06 + (0.82 * var(--compact-progress)))
-        ),
-        rgba(
-            10,
-            14,
-            25,
-            calc(0.03 + (0.78 * var(--compact-progress)))
-        )
-    );
+        linear-gradient(
+            145deg,
+            rgba(
+                10,
+                14,
+                25,
+                calc(0.02 + (0.80 * var(--compact-progress)))
+            ),
+            rgba(
+                10,
+                14,
+                25,
+                calc(0.01 + (0.76 * var(--compact-progress)))
+            )
+        );
 
-        border: 1px solid
+    border: 1px solid
         rgba(
             255,
             255,
@@ -69,7 +63,7 @@
 
     backdrop-filter:
         blur(
-            calc(4px + (14px * var(--compact-progress)))
+            calc(2px + (16px * var(--compact-progress)))
         );
 
     box-shadow:
@@ -78,13 +72,40 @@
             0,
             0,
             0,
-            calc(0.05 + (0.30 * var(--compact-progress)))
+            calc(0.04 + (0.28 * var(--compact-progress)))
         );
 
     transition:
-        background 0.15s linear,
-        border 0.15s linear,
-        box-shadow 0.15s linear;
+        background 0.12s linear,
+        border 0.12s linear,
+        box-shadow 0.12s linear;
+
+}
+
+
+/* =========================
+   COMPACT MODE
+========================= */
+
+.catalog-header[data-compact="true"] {
+
+    position: fixed;
+
+    top: 10px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: calc(100% - 24px);
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    z-index: 999;
 
 }
 
@@ -109,7 +130,9 @@
 .catalog-brand {
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     flex-shrink: 0;
@@ -124,11 +147,11 @@
 .catalog-logo {
 
     width: calc(
-        270px - (150px * var(--compact-progress))
+        270px - (185px * var(--compact-progress))
     );
 
     transition:
-        width 0.08s linear;
+        width 0.06s linear;
 
 }
 
@@ -139,9 +162,24 @@
 
 .catalog-search-wrapper {
 
-    flex: 0.9;
+    width: 100%;
+
+    max-width: 420px;
 
     min-width: 0;
+
+}
+
+
+/* =========================
+   COMPACT SEARCH
+========================= */
+
+.catalog-header[data-compact="true"] .catalog-search-wrapper {
+
+    flex: 1;
+
+    max-width: none;
 
 }
 
@@ -153,16 +191,16 @@
 .catalog-search {
 
     padding:
-        calc(16px - (4px * var(--compact-progress)))
-        calc(18px - (4px * var(--compact-progress)));
+        calc(16px - (5px * var(--compact-progress)))
+        calc(18px - (5px * var(--compact-progress)));
 
     border-radius: calc(
-        24px - (6px * var(--compact-progress))
+        24px - (8px * var(--compact-progress))
     );
 
     transition:
-        padding 0.08s linear,
-        border-radius 0.08s linear;
+        padding 0.06s linear,
+        border-radius 0.06s linear;
 
 }
 
@@ -174,16 +212,16 @@
 .compact-back-button {
 
     padding:
-        calc(14px - (2px * var(--compact-progress)))
-        calc(18px - (4px * var(--compact-progress)));
+        calc(14px - (3px * var(--compact-progress)))
+        calc(18px - (6px * var(--compact-progress)));
 
     border-radius: calc(
-        20px - (4px * var(--compact-progress))
+        20px - (6px * var(--compact-progress))
     );
 
     transition:
-        padding 0.08s linear,
-        border-radius 0.08s linear;
+        padding 0.06s linear,
+        border-radius 0.06s linear;
 
 }
 
@@ -194,7 +232,18 @@
 
 .container {
 
-    padding-top: 180px;
+    padding-top: 0;
+
+}
+
+
+/* =========================
+   COMPACT SPACING
+========================= */
+
+.catalog-header[data-compact="true"] + * {
+
+    margin-top: 90px;
 
 }
 
@@ -213,21 +262,32 @@
 
         width: calc(100% - 16px);
 
-        top: calc(
-            14px - (6px * var(--compact-progress))
-        );
+        margin-top: 12px;
 
         gap: calc(
-            14px - (8px * var(--compact-progress))
+            20px - (14px * var(--compact-progress))
         );
 
         padding:
-            calc(14px - (6px * var(--compact-progress)))
-            calc(14px - (4px * var(--compact-progress)));
+            calc(18px - (11px * var(--compact-progress)))
+            calc(14px - (6px * var(--compact-progress)));
 
         border-radius: calc(
-            28px - (10px * var(--compact-progress))
+            30px - (16px * var(--compact-progress))
         );
+
+    }
+
+
+    /* =========================
+       COMPACT MODE
+    ========================= */
+
+    .catalog-header[data-compact="true"] {
+
+        top: 8px;
+
+        width: calc(100% - 16px);
 
     }
 
@@ -239,7 +299,7 @@
     .catalog-logo {
 
         width: calc(
-            160px - (85px * var(--compact-progress))
+            190px - (125px * var(--compact-progress))
         );
 
     }
@@ -251,7 +311,9 @@
 
     .catalog-search-wrapper {
 
-        flex: 1;
+        width: 100%;
+
+        max-width: none;
 
         min-width: 0;
 
@@ -259,17 +321,17 @@
 
 
     /* =========================
-       SEARCH
+       SEARCH BAR
     ========================= */
 
     .catalog-search {
 
         padding:
-            calc(13px - (3px * var(--compact-progress)))
-            calc(14px - (3px * var(--compact-progress)));
+            calc(13px - (4px * var(--compact-progress)))
+            calc(14px - (4px * var(--compact-progress)));
 
         border-radius: calc(
-            20px - (5px * var(--compact-progress))
+            20px - (7px * var(--compact-progress))
         );
 
     }
@@ -282,25 +344,14 @@
     .compact-back-button {
 
         padding:
-            calc(12px - (2px * var(--compact-progress)))
-            calc(14px - (3px * var(--compact-progress)));
+            calc(11px - (3px * var(--compact-progress)))
+            calc(13px - (4px * var(--compact-progress)));
 
         font-size: calc(
-            0.92rem - (0.06rem * var(--compact-progress))
+            0.92rem - (0.07rem * var(--compact-progress))
         );
 
         white-space: nowrap;
-
-    }
-
-
-    /* =========================
-       BODY OFFSET
-    ========================= */
-
-    .container {
-
-        padding-top: 140px;
 
     }
 
