@@ -2,20 +2,80 @@ const header =
     document.getElementById('catalogHeader');
 
 
-window.addEventListener('scroll', () => {
+/* =========================
+   LAST SCROLL
+========================= */
 
-    if (window.scrollY > 80) {
+let lastScroll =
+    0;
 
-        header.classList.add(
-            'compact-active'
-        );
 
-    } else {
+/* =========================
+   SCROLL EVENT
+========================= */
 
-        header.classList.remove(
-            'compact-active'
-        );
+window.addEventListener(
+    'scroll',
+    () => {
 
+        const currentScroll =
+            window.scrollY;
+
+
+        /* =========================
+           COMPACT MODE
+        ========================= */
+
+        if (currentScroll > 70) {
+
+            header.classList.add(
+                'compact-active'
+            );
+
+        } else {
+
+            header.classList.remove(
+                'compact-active'
+            );
+
+        }
+
+
+        /* =========================
+           HIDE / SHOW EFFECT
+        ========================= */
+
+        if (
+            currentScroll > lastScroll &&
+            currentScroll > 120
+        ) {
+
+            header.style.transform =
+                'translateX(-50%) translateY(-12px)';
+
+            header.style.opacity =
+                '0.96';
+
+        } else {
+
+            header.style.transform =
+                'translateX(-50%) translateY(0)';
+
+            header.style.opacity =
+                '1';
+
+        }
+
+
+        /* =========================
+           UPDATE SCROLL
+        ========================= */
+
+        lastScroll =
+            currentScroll;
+
+    },
+    {
+        passive: true
     }
-
-});
+);

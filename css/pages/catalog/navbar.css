@@ -4,8 +4,6 @@
 
 .catalog-header {
 
-    --compact-progress: 0;
-
     position: relative;
 
     width: calc(100% - 20px);
@@ -22,6 +20,8 @@
 
     align-items: center;
 
+    justify-content: center;
+
     gap: 22px;
 
     padding: 20px 16px;
@@ -29,7 +29,13 @@
     border-radius: 30px;
 
     transition:
-        all 0.25s ease;
+        transform 0.35s ease,
+        gap 0.35s ease,
+        padding 0.35s ease,
+        border-radius 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease,
+        border 0.35s ease;
 
 }
 
@@ -46,7 +52,9 @@
 
     left: 50%;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%)
+        translateY(0);
 
     width: calc(100% - 16px);
 
@@ -54,13 +62,13 @@
 
     align-items: center;
 
-    justify-content: space-between;
+    justify-content: center;
 
-    gap: 10px;
+    gap: 12px;
 
     padding: 10px 12px;
 
-    border-radius: 20px;
+    border-radius: 22px;
 
     background:
         linear-gradient(
@@ -89,6 +97,13 @@
 
     width: 100%;
 
+    display: flex;
+
+    justify-content: flex-start;
+
+    transition:
+        all 0.35s ease;
+
 }
 
 
@@ -106,15 +121,34 @@
 
 
 /* =========================
+   BRAND
+========================= */
+
+.catalog-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition:
+        all 0.35s ease;
+
+}
+
+
+/* =========================
    LOGO
 ========================= */
 
 .catalog-logo {
 
-    width: 200px;
+    width: 210px;
 
     transition:
-        width 0.25s ease;
+        width 0.35s ease,
+        transform 0.35s ease;
 
 }
 
@@ -125,7 +159,7 @@
 
 .catalog-header.compact-active .catalog-logo {
 
-    width: 72px;
+    width: 78px;
 
 }
 
@@ -138,6 +172,11 @@
 
     width: 100%;
 
+    max-width: 420px;
+
+    transition:
+        all 0.35s ease;
+
 }
 
 
@@ -148,6 +187,8 @@
 .catalog-header.compact-active .catalog-search-wrapper {
 
     flex: 1;
+
+    max-width: none;
 
 }
 
@@ -163,7 +204,7 @@
     border-radius: 22px;
 
     transition:
-        all 0.25s ease;
+        all 0.35s ease;
 
 }
 
@@ -192,7 +233,7 @@
     border-radius: 18px;
 
     transition:
-        all 0.25s ease;
+        all 0.35s ease;
 
 }
 
@@ -218,6 +259,6 @@
 
 .catalog-header.compact-active + * {
 
-    margin-top: 90px;
+    margin-top: 92px;
 
 }
