@@ -1,0 +1,307 @@
+/* =========================
+   HEADER
+========================= */
+
+.catalog-header {
+
+    --compact-progress: 0;
+
+    position: fixed;
+
+    top: calc(
+        22px - (10px * var(--compact-progress))
+    );
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: calc(
+        100% - 32px
+    );
+
+    max-width: 560px;
+
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-direction: row;
+
+    gap: calc(
+        22px - (10px * var(--compact-progress))
+    );
+
+    padding:
+        calc(18px - (8px * var(--compact-progress)))
+        calc(18px - (4px * var(--compact-progress)));
+
+    border-radius: calc(
+        34px - (10px * var(--compact-progress))
+    );
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(
+            10,
+            14,
+            25,
+            calc(0.06 + (0.82 * var(--compact-progress)))
+        ),
+        rgba(
+            10,
+            14,
+            25,
+            calc(0.03 + (0.78 * var(--compact-progress)))
+        )
+    );
+
+        border: 1px solid
+        rgba(
+            255,
+            255,
+            255,
+            calc(0.08 * var(--compact-progress))
+        );
+
+    backdrop-filter:
+        blur(
+            calc(4px + (14px * var(--compact-progress)))
+        );
+
+    box-shadow:
+        0 12px 34px
+        rgba(
+            0,
+            0,
+            0,
+            calc(0.05 + (0.30 * var(--compact-progress)))
+        );
+
+    transition:
+        background 0.15s linear,
+        border 0.15s linear,
+        box-shadow 0.15s linear;
+
+}
+
+
+/* =========================
+   TOPBAR
+========================= */
+
+.catalog-topbar {
+
+    width: auto;
+
+    flex-shrink: 0;
+
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.catalog-brand {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.catalog-logo {
+
+    width: calc(
+        270px - (150px * var(--compact-progress))
+    );
+
+    transition:
+        width 0.08s linear;
+
+}
+
+
+/* =========================
+   SEARCH WRAPPER
+========================= */
+
+.catalog-search-wrapper {
+
+    flex: 0.9;
+
+    min-width: 0;
+
+}
+
+
+/* =========================
+   SEARCH BAR
+========================= */
+
+.catalog-search {
+
+    padding:
+        calc(16px - (4px * var(--compact-progress)))
+        calc(18px - (4px * var(--compact-progress)));
+
+    border-radius: calc(
+        24px - (6px * var(--compact-progress))
+    );
+
+    transition:
+        padding 0.08s linear,
+        border-radius 0.08s linear;
+
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.compact-back-button {
+
+    padding:
+        calc(14px - (2px * var(--compact-progress)))
+        calc(18px - (4px * var(--compact-progress)));
+
+    border-radius: calc(
+        20px - (4px * var(--compact-progress))
+    );
+
+    transition:
+        padding 0.08s linear,
+        border-radius 0.08s linear;
+
+}
+
+
+/* =========================
+   BODY OFFSET
+========================= */
+
+.container {
+
+    padding-top: 180px;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 640px) {
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .catalog-header {
+
+        width: calc(100% - 16px);
+
+        top: calc(
+            14px - (6px * var(--compact-progress))
+        );
+
+        gap: calc(
+            14px - (8px * var(--compact-progress))
+        );
+
+        padding:
+            calc(14px - (6px * var(--compact-progress)))
+            calc(14px - (4px * var(--compact-progress)));
+
+        border-radius: calc(
+            28px - (10px * var(--compact-progress))
+        );
+
+    }
+
+
+    /* =========================
+       LOGO
+    ========================= */
+
+    .catalog-logo {
+
+        width: calc(
+            160px - (85px * var(--compact-progress))
+        );
+
+    }
+
+
+    /* =========================
+       SEARCH WRAPPER
+    ========================= */
+
+    .catalog-search-wrapper {
+
+        flex: 1;
+
+        min-width: 0;
+
+    }
+
+
+    /* =========================
+       SEARCH
+    ========================= */
+
+    .catalog-search {
+
+        padding:
+            calc(13px - (3px * var(--compact-progress)))
+            calc(14px - (3px * var(--compact-progress)));
+
+        border-radius: calc(
+            20px - (5px * var(--compact-progress))
+        );
+
+    }
+
+
+    /* =========================
+       BACK BUTTON
+    ========================= */
+
+    .compact-back-button {
+
+        padding:
+            calc(12px - (2px * var(--compact-progress)))
+            calc(14px - (3px * var(--compact-progress)));
+
+        font-size: calc(
+            0.92rem - (0.06rem * var(--compact-progress))
+        );
+
+        white-space: nowrap;
+
+    }
+
+
+    /* =========================
+       BODY OFFSET
+    ========================= */
+
+    .container {
+
+        padding-top: 140px;
+
+    }
+
+}
