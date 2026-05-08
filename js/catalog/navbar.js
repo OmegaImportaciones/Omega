@@ -3,16 +3,32 @@ const header =
 
 
 /* =========================
-   SCROLL ANIMATION
+   CONFIG
 ========================= */
 
-window.addEventListener('scroll', () => {
+const maxScroll =
+    180;
+
+const compactThreshold =
+    0.90;
+
+
+/* =========================
+   RAF STATE
+========================= */
+
+let ticking =
+    false;
+
+
+/* =========================
+   UPDATE NAVBAR
+========================= */
+
+function updateNavbar() {
 
     const scrollY =
         window.scrollY;
-
-    const maxScroll =
-        180;
 
 
     /* =========================
@@ -40,7 +56,7 @@ window.addEventListener('scroll', () => {
        COMPACT MODE
     ========================= */
 
-    if (progress >= 0.55) {
+    if (progress >= compactThreshold) {
 
         header.setAttribute(
             'data-compact',
@@ -57,10 +73,10 @@ window.addEventListener('scroll', () => {
 
 
     /* =========================
-       OPTIONAL ACTIVE STATE
+       ACTIVE STATE
     ========================= */
 
-    if (scrollY > 10) {
+    if (scrollY > 8) {
 
         header.classList.add(
             'compact-active'
@@ -74,4 +90,45 @@ window.addEventListener('scroll', () => {
 
     }
 
-});
+
+    /* =========================
+       RESET RAF
+    ========================= */
+
+    ticking =
+        false;
+
+}
+
+
+/* =========================
+   SCROLL EVENT
+========================= */
+
+window.addEventListener(
+    'scroll',
+    () => {
+
+        if (!ticking) {
+
+            window.requestAnimationFrame(
+                updateNavbar
+            );
+
+            ticking =
+                true;
+
+        }
+
+    },
+    {
+        passive: true
+    }
+);
+
+
+/* =========================
+   INIT
+========================= */
+
+updateNavbar();
