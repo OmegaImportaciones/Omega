@@ -7,18 +7,7 @@ const header =
 ========================= */
 
 const maxScroll =
-    180;
-
-const compactThreshold =
-    0.90;
-
-
-/* =========================
-   RAF STATE
-========================= */
-
-let ticking =
-    false;
+    160;
 
 
 /* =========================
@@ -56,7 +45,7 @@ function updateNavbar() {
        COMPACT MODE
     ========================= */
 
-    if (progress >= compactThreshold) {
+    if (scrollY >= 140) {
 
         header.setAttribute(
             'data-compact',
@@ -71,33 +60,6 @@ function updateNavbar() {
 
     }
 
-
-    /* =========================
-       ACTIVE STATE
-    ========================= */
-
-    if (scrollY > 8) {
-
-        header.classList.add(
-            'compact-active'
-        );
-
-    } else {
-
-        header.classList.remove(
-            'compact-active'
-        );
-
-    }
-
-
-    /* =========================
-       RESET RAF
-    ========================= */
-
-    ticking =
-        false;
-
 }
 
 
@@ -107,20 +69,7 @@ function updateNavbar() {
 
 window.addEventListener(
     'scroll',
-    () => {
-
-        if (!ticking) {
-
-            window.requestAnimationFrame(
-                updateNavbar
-            );
-
-            ticking =
-                true;
-
-        }
-
-    },
+    updateNavbar,
     {
         passive: true
     }

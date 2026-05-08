@@ -8,11 +8,11 @@
 
     position: relative;
 
-    width: 100%;
+    width: calc(100% - 20px);
 
     max-width: 560px;
 
-    margin: 22px auto 0 auto;
+    margin: 16px auto 0 auto;
 
     z-index: 100;
 
@@ -22,63 +22,21 @@
 
     align-items: center;
 
-    justify-content: center;
+    gap: 20px;
 
-    gap: calc(
-        26px - (12px * var(--compact-progress))
-    );
+    padding: 18px 16px;
 
-    padding:
-        calc(24px - (10px * var(--compact-progress)))
-        calc(18px - (4px * var(--compact-progress)));
-
-    border-radius: calc(
-        38px - (12px * var(--compact-progress))
-    );
+    border-radius: 30px;
 
     background:
         linear-gradient(
             145deg,
-            rgba(
-                10,
-                14,
-                25,
-                calc(0.02 + (0.80 * var(--compact-progress)))
-            ),
-            rgba(
-                10,
-                14,
-                25,
-                calc(0.01 + (0.76 * var(--compact-progress)))
-            )
-        );
-
-    border: 1px solid
-        rgba(
-            255,
-            255,
-            255,
-            calc(0.08 * var(--compact-progress))
-        );
-
-    backdrop-filter:
-        blur(
-            calc(2px + (16px * var(--compact-progress)))
-        );
-
-    box-shadow:
-        0 12px 34px
-        rgba(
-            0,
-            0,
-            0,
-            calc(0.04 + (0.28 * var(--compact-progress)))
+            rgba(10,14,25,0.10),
+            rgba(10,14,25,0.04)
         );
 
     transition:
-        background 0.12s linear,
-        border 0.12s linear,
-        box-shadow 0.12s linear;
+        all 0.22s ease;
 
 }
 
@@ -91,19 +49,39 @@
 
     position: fixed;
 
-    top: 10px;
+    top: 8px;
 
     left: 50%;
 
     transform: translateX(-50%);
 
-    width: calc(100% - 24px);
+    width: calc(100% - 16px);
 
     flex-direction: row;
 
     align-items: center;
 
     justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 10px 12px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(10,14,25,0.92),
+            rgba(10,14,25,0.82)
+        );
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.35);
 
     z-index: 999;
 
@@ -115,8 +93,6 @@
 ========================= */
 
 .catalog-topbar {
-
-    width: auto;
 
     flex-shrink: 0;
 
@@ -135,7 +111,8 @@
 
     justify-content: center;
 
-    flex-shrink: 0;
+    transition:
+        all 0.22s ease;
 
 }
 
@@ -146,12 +123,21 @@
 
 .catalog-logo {
 
-    width: calc(
-        270px - (145px * var(--compact-progress))
-    );
+    width: 210px;
 
     transition:
-        width 0.06s linear;
+        width 0.22s ease;
+
+}
+
+
+/* =========================
+   COMPACT LOGO
+========================= */
+
+.catalog-header[data-compact="true"] .catalog-logo {
+
+    width: 82px;
 
 }
 
@@ -166,7 +152,8 @@
 
     max-width: 420px;
 
-    min-width: 0;
+    transition:
+        all 0.22s ease;
 
 }
 
@@ -190,17 +177,25 @@
 
 .catalog-search {
 
-    padding:
-        calc(16px - (4px * var(--compact-progress)))
-        calc(18px - (4px * var(--compact-progress)));
+    padding: 14px 16px;
 
-    border-radius: calc(
-        24px - (6px * var(--compact-progress))
-    );
+    border-radius: 22px;
 
     transition:
-        padding 0.06s linear,
-        border-radius 0.06s linear;
+        all 0.22s ease;
+
+}
+
+
+/* =========================
+   COMPACT SEARCH BAR
+========================= */
+
+.catalog-header[data-compact="true"] .catalog-search {
+
+    padding: 11px 14px;
+
+    border-radius: 16px;
 
 }
 
@@ -211,39 +206,38 @@
 
 .compact-back-button {
 
-    padding:
-        calc(14px - (2px * var(--compact-progress)))
-        calc(18px - (4px * var(--compact-progress)));
+    padding: 12px 16px;
 
-    border-radius: calc(
-        20px - (4px * var(--compact-progress))
-    );
+    border-radius: 18px;
 
     transition:
-        padding 0.06s linear,
-        border-radius 0.06s linear;
+        all 0.22s ease;
 
 }
 
 
 /* =========================
-   BODY OFFSET
+   COMPACT BACK BUTTON
 ========================= */
 
-.container {
+.catalog-header[data-compact="true"] .compact-back-button {
 
-    padding-top: 0;
+    padding: 10px 13px;
+
+    border-radius: 14px;
+
+    font-size: 0.88rem;
 
 }
 
 
 /* =========================
-   COMPACT SPACING
+   CONTENT OFFSET
 ========================= */
 
 .catalog-header[data-compact="true"] + * {
 
-    margin-top: 110px;
+    margin-top: 90px;
 
 }
 
@@ -252,107 +246,3 @@
    MOBILE
 ========================= */
 
-@media (max-width: 640px) {
-
-    /* =========================
-       HEADER
-    ========================= */
-
-    .catalog-header {
-
-        width: calc(100% - 16px);
-
-        margin-top: 12px;
-
-        gap: calc(
-            20px - (10px * var(--compact-progress))
-        );
-
-        padding:
-            calc(18px - (7px * var(--compact-progress)))
-            calc(14px - (4px * var(--compact-progress)));
-
-        border-radius: calc(
-            30px - (10px * var(--compact-progress))
-        );
-
-    }
-
-
-    /* =========================
-       COMPACT MODE
-    ========================= */
-
-    .catalog-header[data-compact="true"] {
-
-        top: 8px;
-
-        width: calc(100% - 16px);
-
-    }
-
-
-    /* =========================
-       LOGO
-    ========================= */
-
-    .catalog-logo {
-
-        width: calc(
-            190px - (105px * var(--compact-progress))
-        );
-
-    }
-
-
-    /* =========================
-       SEARCH WRAPPER
-    ========================= */
-
-    .catalog-search-wrapper {
-
-        width: 100%;
-
-        max-width: none;
-
-        min-width: 0;
-
-    }
-
-
-    /* =========================
-       SEARCH BAR
-    ========================= */
-
-    .catalog-search {
-
-        padding:
-            calc(13px - (3px * var(--compact-progress)))
-            calc(14px - (3px * var(--compact-progress)));
-
-        border-radius: calc(
-            20px - (5px * var(--compact-progress))
-        );
-
-    }
-
-
-    /* =========================
-       BACK BUTTON
-    ========================= */
-
-    .compact-back-button {
-
-        padding:
-            calc(11px - (2px * var(--compact-progress)))
-            calc(13px - (3px * var(--compact-progress)));
-
-        font-size: calc(
-            0.92rem - (0.05rem * var(--compact-progress))
-        );
-
-        white-space: nowrap;
-
-    }
-
-}
