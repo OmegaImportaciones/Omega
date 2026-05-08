@@ -1,0 +1,182 @@
+/* =========================
+   PROMO SLIDER
+========================= */
+
+.promo-slider {
+
+    display: flex;
+
+    gap: 8px;
+
+    overflow-x: auto;
+
+    scroll-snap-type: x mandatory;
+
+    padding-bottom: 4px;
+
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+
+}
+
+.promo-slider::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+
+/* =========================
+   PROMO CARD
+========================= */
+
+.promo-card {
+
+    flex: 0 0 calc((100% - 16px) / 3);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    padding: 10px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.06),
+            rgba(255,255,255,0.02)
+        );
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 8px 24px rgba(0,0,0,0.28);
+
+    scroll-snap-align: start;
+
+}
+
+
+/* =========================
+   PROMO IMAGE
+========================= */
+
+.promo-image {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 16px;
+
+    background: rgba(255,255,255,0.04);
+
+    display: block;
+
+}
+
+
+/* =========================
+   PROMO INFO
+========================= */
+
+.promo-info {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    min-width: 0;
+
+}
+
+
+/* =========================
+   PROMO TAG
+========================= */
+
+.promo-tag {
+
+    font-size: 0.62rem;
+    font-weight: 600;
+
+    color: #72d6ff;
+
+    line-height: 1;
+
+}
+
+
+/* =========================
+   PROMO TITLE
+========================= */
+
+.promo-info h3 {
+
+    font-size: 0.82rem;
+    font-weight: 700;
+
+    color: #ffffff;
+
+    line-height: 1.15;
+
+    overflow: hidden;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 2;
+
+    -webkit-box-orient: vertical;
+
+}
+
+
+/* =========================
+   PROMO DESCRIPTION
+========================= */
+
+.promo-info p {
+
+    font-size: 0.66rem;
+    font-weight: 500;
+
+    color: rgba(255,255,255,0.68);
+
+    line-height: 1.25;
+
+    overflow: hidden;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 2;
+
+    -webkit-box-orient: vertical;
+
+}
+
+
+/* =========================
+   PROMO CONTACT
+========================= */
+
+.promo-contact {
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    color: #72d6ff;
+
+    margin-top: 2px;
+
+    line-height: 1.2;
+
+}

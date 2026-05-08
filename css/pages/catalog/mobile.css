@@ -1,0 +1,27 @@
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 640px) {
+
+    .promo-card {
+
+        min-width: 30%;
+
+    }
+
+    .product-card {
+
+        align-items: center;
+
+    }
+
+    .product-action {
+
+        padding: 10px 14px;
+
+        font-size: 0.85rem;
+
+    }
+
+}

@@ -1,0 +1,257 @@
+/* =========================
+   HEADER
+========================= */
+
+.catalog-header {
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 22px;
+
+    padding-top: 6px;
+    padding-bottom: 24px;
+
+    transition:
+        all 0.35s ease;
+
+    z-index: 100;
+
+}
+
+
+/* =========================
+   TOPBAR
+========================= */
+
+.catalog-topbar {
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.catalog-brand {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition:
+        all 0.35s ease;
+
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.catalog-logo {
+
+    width: 220px;
+
+    transition:
+        all 0.35s ease;
+
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.compact-back-button {
+
+    transition:
+        all 0.3s ease;
+
+}
+
+
+/* =========================
+   COMPACT MODE
+========================= */
+
+.catalog-header.compact {
+
+    position: fixed;
+
+    top: 12px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: calc(100% - 32px);
+
+    max-width: 560px;
+
+    z-index: 999;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 10px 14px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(10,14,25,0.92),
+            rgba(10,14,25,0.82)
+        );
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 12px 34px rgba(0,0,0,0.35);
+
+}
+
+
+/* =========================
+   COMPACT TOPBAR
+========================= */
+
+.catalog-header.compact .catalog-topbar {
+
+    width: auto;
+
+    flex-shrink: 0;
+
+}
+
+
+/* =========================
+   COMPACT BRAND
+========================= */
+
+.catalog-header.compact .catalog-brand {
+
+    width: auto;
+
+    flex-shrink: 0;
+
+}
+
+
+/* =========================
+   COMPACT LOGO
+========================= */
+
+.catalog-header.compact .catalog-logo {
+
+    width: 90px;
+
+}
+
+
+/* =========================
+   COMPACT SEARCH
+========================= */
+
+.catalog-header.compact .catalog-search-wrapper {
+
+    flex: 1;
+
+    margin-top: 0;
+
+}
+
+
+/* =========================
+   COMPACT SEARCH BAR
+========================= */
+
+.catalog-header.compact .catalog-search {
+
+    padding: 12px 14px;
+
+    border-radius: 18px;
+
+}
+
+
+/* =========================
+   COMPACT BUTTON
+========================= */
+
+.catalog-header.compact .compact-back-button {
+
+    width: auto;
+
+    min-width: auto;
+
+    padding: 12px 14px;
+
+    border-radius: 18px;
+
+}
+
+
+/* =========================
+   CONTENT OFFSET
+========================= */
+
+.catalog-header.compact + * {
+
+    margin-top: 90px;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 640px) {
+
+    .catalog-logo {
+
+        width: 200px;
+
+    }
+
+    
+    .catalog-header.compact {
+
+        top: 8px;
+
+        width: calc(100% - 24px);
+
+        padding: 10px 12px;
+
+        border-radius: 22px;
+
+    }
+
+    
+    .catalog-header.compact .catalog-logo {
+
+        width: 76px;
+
+    }
+
+}

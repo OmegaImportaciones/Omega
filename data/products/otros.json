@@ -1,0 +1,20 @@
+[
+    {
+      "id": "8",
+      "name": "Xiaomi tag",
+      "description": "Localizador · Pequeño",
+      "price": "180",
+      "image": "https://acf.geeknetic.es/imgw/imagenes/auto/2026/2/24/e3i-xiaomi-presentara-el-28-de-febrero-sus-propios-localizadores-los-xiaomi-tag.jpg?f=webp",
+      "whatsapp": "Xiaomi tag",
+      "promoTag": "🔥 Viral"
+    },
+    {
+      "id": "14",
+      "name": "Receptor Wifi Tp Link T3U",
+      "description": "Doble Banda · Mini · 867Mbps",
+      "price": "250",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6VanUZBVwQb2-S_RfeV8fc3KP-zX6EnKsQA&s",
+      "whatsapp": "Receptor Wifi Tp Link T3U",
+      "promoTag": ""
+    }
+  ]

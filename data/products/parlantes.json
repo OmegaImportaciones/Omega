@@ -1,0 +1,58 @@
+[
+    {
+      "id": "1",
+      "name": "Parlante Klip Titan",
+      "description": "17hrs · Resistente al agua",
+      "image": "https://klip-xtreme-frontend.s3.amazonaws.com/media/img/KBS-200BL-Box01.jpg",
+      "whatsapp": "Parlante Klip Titan",
+      "promoTag": "⚡ Oferta"
+    },
+    {
+      "id": "2",
+      "name": "Parlante Klip Titan Pro",
+      "description": "20hrs · Resistente al agua",
+      "image": "https://klip-xtreme-frontend.s3.amazonaws.com/media/img/KBS-300BL-Box01.jpg",
+      "whatsapp": "Parlante Klip Titan Pro",
+      "promoTag": ""
+    },
+    {
+      "id": "3",
+      "name": "HiFuture Mega S",
+      "description": "Bluetooth 5.0 · 10hrs · TWS",
+      "image": "https://hifuturegroup.com/cdn/shop/files/megaS-5.jpg?v=1742190340&width=1080",
+      "whatsapp": "HiFuture Mega S",
+      "promoTag": ""
+    },
+    {
+      "id": "4",
+      "name": "Xiaomi Sound Party 50w",
+      "description": "Afinación Harman · 26hrs · iP67",
+      "image": "https://i02.appmifile.com/560_item_co/21/10/2025/8ea059303944a442782e2b85fad297d5.png?thumb=1&q=85",
+      "whatsapp": "Xiaomi Sound Party 50w",
+      "promoTag": "🔥 Viral"
+    },
+    {
+      "id": "5",
+      "name": "Xiaomi Speaker mini",
+      "description": "Bluetooth 5.0 · TWS",
+      "image": "https://xiaomistore.com.gt/wp-content/uploads/Xiaomi_Bluetooth_Speaker_Mini.webp",
+      "whatsapp": "Xiaomi Speaker mini",
+      "promoTag": ""
+    },
+    {
+      "id": "6",
+      "name": "JBL Flip 7",
+      "description": "Afinación Harman · 35w · iP67",
+      "image": "https://fulltec.com.bo/medios/2025/09/JBL_Flip_7_Blue_Box_Image_1605x1605px.webp",
+      "whatsapp": "JBL Flip 7",
+      "promoTag": "⚡ Oferta"
+    },
+    {
+      "id": "7",
+      "name": "JBL Charge 6",
+      "description": "Afinación Harman · 45w · iP67",
+      "image": "https://www.jbl.es/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwcc289a75/JBL_Charge_6_SKU_Box_Image_Black.png?sw=680&sh=680",
+      "whatsapp": "JBL Charge 6",
+      "promoTag": "⚡ Oferta"
+    }
+  ]

@@ -1,19 +1,11 @@
-.coming-title {
+@import url('./catalog/layout.css');
 
-    font-size: 1.8rem;
-  
-    text-align: center;
-  
-    margin-bottom: 10px;
-  
-  }
-  
-  .coming-text {
-  
-    text-align: center;
-  
-    line-height: 1.7;
-  
-    color: var(--text-secondary);
-  
-  }
+@import url('./catalog/promo.css');
+
+@import url('./catalog/products.css');
+
+@import url('./catalog/mobile.css');
+
+@import url('./catalog/search.css');
+
+@import url('./catalog/navbar.css');

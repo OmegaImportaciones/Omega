@@ -1,0 +1,50 @@
+[
+    {
+      "id": "1",
+      "name": "Mx Box 10",
+      "description": "Android Tv · Red Rj45 · Bluetooth y wifi",
+      "image": "https://m.media-amazon.com/images/I/415XjGdAZmL._AC_UF1000,1000_QL80_.jpg",
+      "whatsapp": "Mx Box",
+      "promoTag": "⚡ Oferta"
+    },
+    {
+      "id": "2",
+      "name": "Mi Box 2da Gen.",
+      "description": "Android Tv · Usb · Dolby Vision/Atmos",
+      "image": "https://fulltec.com.bo/medios/2021/08/MIBOX2GEN.jpg",
+      "whatsapp": "Mi Box 2da Gen.",
+      "promoTag": ""
+    },
+    {
+      "id": "3",
+      "name": "Mi Box 3ra Gen.",
+      "description": "Android Tv · WiFi 6 · Dolby Vision/Atmos",
+      "image": "https://www.tecnogamer.com.bo/wp-content/uploads/2025/12/S1-18.webp",
+      "whatsapp": "Mi Box 3ra Gen.",
+      "promoTag": "🔥 Viral"
+    },
+    {
+      "id": "4",
+      "name": "Watch Onn Tv Stick",
+      "description": "Android Tv · FHD/2k ",
+      "image": "https://sofmat.com.bo/wp-content/uploads/2024/09/Onn-Dispositivo-de-transmision.jpg",
+      "whatsapp": "Watch One Tv Stick",
+      "promoTag": ""
+    },
+    {
+      "id": "5",
+      "name": "Mi Tv Stick",
+      "description": "Android Tv · FHD · BLuetooth y WiFi",
+      "image": "https://fulltec.com.bo/medios/2021/08/MDZ-24-AA.png",
+      "whatsapp": "Mi Tv Stick",
+      "promoTag": ""
+    },
+    {
+      "id": "6",
+      "name": "Watch Onn Tv Box",
+      "description": "Android Tv · Dolby Vision/Atmos · 4K",
+      "image": "https://i0.wp.com/supersmartbolivia.com/wp-content/uploads/2025/01/watchonn.png?fit=495,500&ssl=1",
+      "whatsapp": "Watch One Tv Box",
+      "promoTag": "🔥 Viral"
+    }
+  ]

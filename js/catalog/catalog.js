@@ -1,0 +1,213 @@
+/* =========================
+   CONTAINERS
+========================= */
+
+const promoContainer =
+    document.getElementById('promoContainer');
+
+const productsContainer =
+    document.getElementById('productsContainer');
+
+
+/* =========================
+   PRODUCTS CACHE
+========================= */
+
+let allProducts = [];
+
+
+/* =========================
+   LOAD PRODUCTS
+========================= */
+
+async function loadProducts() {
+
+    try {
+
+        /* =========================
+           LOAD INDEX
+        ========================= */
+
+        const indexResponse =
+            await fetch('../data/products.json');
+
+        const productFiles =
+            await indexResponse.json();
+
+
+        /* =========================
+           LOAD FILES
+        ========================= */
+
+        const responses =
+            await Promise.all(
+
+                productFiles.map(file =>
+
+                    fetch(`../data/products/${file}`)
+                        .then(response => response.json())
+
+                )
+
+            );
+
+
+
+        /* =========================
+           MERGE PRODUCTS
+        ========================= */
+
+        allProducts =
+            responses.flat();
+
+
+
+        /* =========================
+           RENDER
+        ========================= */
+
+        renderPromos(allProducts);
+
+        renderProducts(allProducts);
+
+
+
+        /* =========================
+           INIT SEARCH
+        ========================= */
+
+        if (typeof initializeSearch === 'function') {
+
+            initializeSearch(allProducts);
+
+        }
+
+    } catch (error) {
+
+        console.error(
+            'Error loading products:',
+            error
+        );
+
+    }
+
+}
+
+
+/* =========================
+   RENDER PROMOS
+========================= */
+
+function renderPromos(products) {
+
+    const promos =
+        products.filter(product =>
+            product.promoTag &&
+            product.promoTag.trim() !== ''
+        );
+
+
+    promoContainer.innerHTML =
+        promos.map(product => `
+
+            <article class="promo-card">
+
+                <img src="${product.image}"
+                    alt="${product.name}"
+                    class="promo-image"
+                    loading="lazy">
+
+                <div class="promo-info">
+
+                    <span class="promo-tag">
+
+                        ${product.promoTag}
+
+                    </span>
+
+                    <h3>
+
+                        ${product.name}
+
+                    </h3>
+
+                    <p>
+
+                        ${product.description}
+
+                    </p>
+
+                    <span class="promo-contact">
+
+                        Consultar disponibilidad
+
+                    </span>
+
+                </div>
+
+            </article>
+
+        `).join('');
+
+}
+
+
+/* =========================
+   RENDER PRODUCTS
+========================= */
+
+function renderProducts(products) {
+
+    productsContainer.innerHTML =
+        products.map(product => `
+
+            <article class="main-button product-card"
+                data-name="${product.name}">
+
+                <img src="${product.image}"
+                    alt="${product.name}"
+                    class="product-image"
+                    loading="lazy">
+
+                <div class="product-content">
+
+                    <h3>
+
+                        ${product.name}
+
+                    </h3>
+
+                    <p>
+
+                        ${product.description}
+
+                    </p>
+
+                    <span class="product-contact">
+
+                        Consultar disponibilidad
+
+                    </span>
+
+                </div>
+
+                <a href="https://wa.me/59164216262?text=Hola,%20quiero%20información%20sobre%20${encodeURIComponent(product.whatsapp || product.name)}"
+                    target="_blank"
+                    class="product-action">
+
+                    Consultar
+
+                </a>
+
+            </article>
+
+        `).join('');
+
+}
+
+
+/* =========================
+   INIT
+========================= */
+
+loadProducts();
