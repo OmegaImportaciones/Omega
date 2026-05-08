@@ -3,14 +3,6 @@ const header =
 
 
 /* =========================
-   LAST SCROLL
-========================= */
-
-let lastScroll =
-    0;
-
-
-/* =========================
    SCROLL EVENT
 ========================= */
 
@@ -18,15 +10,15 @@ window.addEventListener(
     'scroll',
     () => {
 
-        const currentScroll =
+        const scrollY =
             window.scrollY;
 
 
         /* =========================
-           COMPACT MODE
+           ACTIVATE
         ========================= */
 
-        if (currentScroll > 70) {
+        if (scrollY > 80) {
 
             header.classList.add(
                 'compact-active'
@@ -39,40 +31,6 @@ window.addEventListener(
             );
 
         }
-
-
-        /* =========================
-           HIDE / SHOW EFFECT
-        ========================= */
-
-        if (
-            currentScroll > lastScroll &&
-            currentScroll > 120
-        ) {
-
-            header.style.transform =
-                'translateX(-50%) translateY(-12px)';
-
-            header.style.opacity =
-                '0.96';
-
-        } else {
-
-            header.style.transform =
-                'translateX(-50%) translateY(0)';
-
-            header.style.opacity =
-                '1';
-
-        }
-
-
-        /* =========================
-           UPDATE SCROLL
-        ========================= */
-
-        lastScroll =
-            currentScroll;
 
     },
     {
