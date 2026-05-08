@@ -37,16 +37,40 @@ window.addEventListener('scroll', () => {
 
 
     /* =========================
-       OPTIONAL SHADOW STATE
+       COMPACT MODE
+    ========================= */
+
+    if (progress >= 0.55) {
+
+        header.setAttribute(
+            'data-compact',
+            'true'
+        );
+
+    } else {
+
+        header.removeAttribute(
+            'data-compact'
+        );
+
+    }
+
+
+    /* =========================
+       OPTIONAL ACTIVE STATE
     ========================= */
 
     if (scrollY > 10) {
 
-        header.classList.add('compact-active');
+        header.classList.add(
+            'compact-active'
+        );
 
     } else {
 
-        header.classList.remove('compact-active');
+        header.classList.remove(
+            'compact-active'
+        );
 
     }
 

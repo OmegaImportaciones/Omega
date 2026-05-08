@@ -25,41 +25,43 @@
     z-index: 999;
 
     display: flex;
-    align-items: center;
-    justify-content: space-between;
 
-    flex-direction: row;
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
 
     gap: calc(
-        22px - (10px * var(--compact-progress))
+        26px - (14px * var(--compact-progress))
     );
 
     padding:
-        calc(18px - (8px * var(--compact-progress)))
+        calc(22px - (10px * var(--compact-progress)))
         calc(18px - (4px * var(--compact-progress)));
 
     border-radius: calc(
-        34px - (10px * var(--compact-progress))
+        38px - (14px * var(--compact-progress))
     );
 
     background:
-    linear-gradient(
-        145deg,
-        rgba(
-            10,
-            14,
-            25,
-            calc(0.06 + (0.82 * var(--compact-progress)))
-        ),
-        rgba(
-            10,
-            14,
-            25,
-            calc(0.03 + (0.78 * var(--compact-progress)))
-        )
-    );
+        linear-gradient(
+            145deg,
+            rgba(
+                10,
+                14,
+                25,
+                calc(0.06 + (0.82 * var(--compact-progress)))
+            ),
+            rgba(
+                10,
+                14,
+                25,
+                calc(0.03 + (0.78 * var(--compact-progress)))
+            )
+        );
 
-        border: 1px solid
+    border: 1px solid
         rgba(
             255,
             255,
@@ -84,7 +86,25 @@
     transition:
         background 0.15s linear,
         border 0.15s linear,
-        box-shadow 0.15s linear;
+        box-shadow 0.15s linear,
+        gap 0.08s linear,
+        padding 0.08s linear,
+        border-radius 0.08s linear;
+
+}
+
+
+/* =========================
+   COMPACT LAYOUT
+========================= */
+
+.catalog-header[data-compact="true"] {
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-between;
 
 }
 
@@ -139,9 +159,24 @@
 
 .catalog-search-wrapper {
 
-    flex: 0.9;
+    width: 100%;
+
+    max-width: 420px;
 
     min-width: 0;
+
+}
+
+
+/* =========================
+   COMPACT SEARCH
+========================= */
+
+.catalog-header[data-compact="true"] .catalog-search-wrapper {
+
+    flex: 1;
+
+    max-width: none;
 
 }
 
@@ -194,7 +229,7 @@
 
 .container {
 
-    padding-top: 180px;
+    padding-top: 240px;
 
 }
 
@@ -205,29 +240,117 @@
 
 @media (max-width: 640px) {
 
+    /* =========================
+       HEADER
+    ========================= */
+
     .catalog-header {
 
-        width: calc(100% - 20px);
+        width: calc(100% - 16px);
+
+        top: calc(
+            14px - (6px * var(--compact-progress))
+        );
 
         gap: calc(
-            18px - (8px * var(--compact-progress))
+            18px - (10px * var(--compact-progress))
+        );
+
+        padding:
+            calc(16px - (7px * var(--compact-progress)))
+            calc(14px - (4px * var(--compact-progress)));
+
+        border-radius: calc(
+            30px - (12px * var(--compact-progress))
         );
 
     }
 
-    
+
+    /* =========================
+       COMPACT MOBILE
+    ========================= */
+
+    .catalog-header[data-compact="true"] {
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+    }
+
+
+    /* =========================
+       LOGO
+    ========================= */
+
     .catalog-logo {
 
         width: calc(
-            230px - (120px * var(--compact-progress))
+            180px - (95px * var(--compact-progress))
         );
 
     }
 
-    
+
+    /* =========================
+       SEARCH WRAPPER
+    ========================= */
+
     .catalog-search-wrapper {
 
-        flex: 0.85;
+        width: 100%;
+
+        max-width: none;
+
+    }
+
+
+    /* =========================
+       SEARCH
+    ========================= */
+
+    .catalog-search {
+
+        padding:
+            calc(13px - (3px * var(--compact-progress)))
+            calc(14px - (3px * var(--compact-progress)));
+
+        border-radius: calc(
+            20px - (5px * var(--compact-progress))
+        );
+
+    }
+
+
+    /* =========================
+       BACK BUTTON
+    ========================= */
+
+    .compact-back-button {
+
+        padding:
+            calc(11px - (2px * var(--compact-progress)))
+            calc(13px - (3px * var(--compact-progress)));
+
+        font-size: calc(
+            0.90rem - (0.05rem * var(--compact-progress))
+        );
+
+        white-space: nowrap;
+
+    }
+
+
+    /* =========================
+       BODY OFFSET
+    ========================= */
+
+    .container {
+
+        padding-top: 210px;
 
     }
 
