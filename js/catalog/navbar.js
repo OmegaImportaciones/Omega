@@ -3,21 +3,16 @@ const header =
 
 
 /* =========================
-   CONFIG
+   SCROLL ANIMATION
 ========================= */
 
-const maxScroll =
-    160;
-
-
-/* =========================
-   UPDATE NAVBAR
-========================= */
-
-function updateNavbar() {
+window.addEventListener('scroll', () => {
 
     const scrollY =
         window.scrollY;
+
+    const maxScroll =
+        180;
 
 
     /* =========================
@@ -42,42 +37,17 @@ function updateNavbar() {
 
 
     /* =========================
-       COMPACT MODE
+       OPTIONAL SHADOW STATE
     ========================= */
 
-    if (scrollY >= 140) {
+    if (scrollY > 10) {
 
-        header.setAttribute(
-            'data-compact',
-            'true'
-        );
+        header.classList.add('compact-active');
 
     } else {
 
-        header.removeAttribute(
-            'data-compact'
-        );
+        header.classList.remove('compact-active');
 
     }
 
-}
-
-
-/* =========================
-   SCROLL EVENT
-========================= */
-
-window.addEventListener(
-    'scroll',
-    updateNavbar,
-    {
-        passive: true
-    }
-);
-
-
-/* =========================
-   INIT
-========================= */
-
-updateNavbar();
+});
