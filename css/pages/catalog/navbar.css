@@ -18,7 +18,7 @@
 
     /* Tamaño responsive:
        94% del ancho o máximo 560px */
-    width: min(94%, 350px);
+    width: min(50%, 350px);
 
     /* Prioridad sobre otros elementos */
     z-index: 999;
