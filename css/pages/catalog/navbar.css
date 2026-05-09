@@ -6,31 +6,31 @@
 
     position: fixed;
 
-    top: 6px;
+    top: 8px;
 
     left: 50%;
 
     transform: translateX(-50%);
 
-    width: calc(100% - 10px);
+    width: calc(100% - 12px);
 
     max-width: 420px;
 
-    height: 42px;
+    height: 52px;
 
     display: flex;
 
     align-items: center;
 
-    gap: 6px;
+    gap: 8px;
 
-    padding: 0 8px;
+    padding: 0 10px;
 
     box-sizing: border-box;
 
     z-index: 999;
 
-    border-radius: 12px;
+    border-radius: 14px;
 
     background:
         rgba(10,14,25,0.92);
@@ -39,10 +39,52 @@
         1px solid rgba(255,255,255,0.04);
 
     backdrop-filter:
-        blur(4px);
+        blur(6px);
 
     box-shadow:
-        0 2px 8px rgba(0,0,0,0.18);
+        0 4px 12px rgba(0,0,0,0.22);
+
+}
+
+
+/* =========================
+   TOPBAR
+========================= */
+
+.catalog-topbar {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-shrink: 0;
+
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.compact-back-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 34px;
+
+    padding: 0 10px !important;
+
+    border-radius: 10px !important;
+
+    font-size: 0.78rem !important;
+
+    white-space: nowrap;
+
+    flex-shrink: 0;
 
 }
 
@@ -70,7 +112,7 @@
 
 .catalog-logo {
 
-    height: 34px;
+    height: 24px;
 
     width: auto;
 
@@ -102,13 +144,13 @@
 
     align-items: center;
 
-    gap: 8px;
+    gap: 6px;
 
-    height: 40px;
+    height: 34px;
 
-    padding: 0 12px;
+    padding: 0 10px;
 
-    border-radius: 14px;
+    border-radius: 10px;
 
     background:
         rgba(255,255,255,0.05);
@@ -125,9 +167,9 @@
 
 .search-icon {
 
-    width: 16px;
+    width: 14px;
 
-    height: 16px;
+    height: 14px;
 
     flex-shrink: 0;
 
@@ -152,7 +194,7 @@
 
     color: #ffffff;
 
-    font-size: 0.92rem;
+    font-size: 0.82rem;
 
     font-weight: 500;
 
@@ -176,43 +218,16 @@
 
 .catalog-header.compact-active {
 
-    top: 6px;
+    top: 0;
 
-    height: 50px;
+    width: 100%;
 
-    border-radius: 14px;
+    max-width: 100%;
+
+    border-radius: 0;
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(8,10,18,0.96),
-            rgba(8,10,18,0.88)
-        );
-
-    box-shadow:
-        0 4px 14px rgba(0,0,0,0.22);
-
-}
-
-
-/* =========================
-   COMPACT LOGO
-========================= */
-
-.catalog-header.compact-active .catalog-logo {
-
-    height: 28px;
-
-}
-
-
-/* =========================
-   COMPACT SEARCH
-========================= */
-
-.catalog-header.compact-active .catalog-search {
-
-    height: 36px;
+        rgba(5,7,12,0.96);
 
 }
 
@@ -223,7 +238,7 @@
 
 .container {
 
-    padding-top: 82px;
+    padding-top: 70px;
 
 }
 
