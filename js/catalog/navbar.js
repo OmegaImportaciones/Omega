@@ -14,6 +14,16 @@ const compactNavbar =
 
 
 /* =========================
+   SEARCH INPUTS
+========================= */
+
+const searchInputs =
+    document.querySelectorAll(
+        '.catalog-hero-search-input, .catalog-compact-search-input'
+    );
+
+
+/* =========================
    CONFIG
 ========================= */
 
@@ -30,10 +40,76 @@ let ticking =
 
 
 /* =========================
+   SEARCH STATE
+========================= */
+
+let isSearching =
+    false;
+
+
+/* =========================
+   SEARCH EVENTS
+========================= */
+
+searchInputs.forEach(input => {
+
+    /* =========================
+       FOCUS
+    ========================= */
+
+    input.addEventListener(
+        'focus',
+        () => {
+
+            isSearching =
+                true;
+
+        }
+    );
+
+
+    /* =========================
+       BLUR
+    ========================= */
+
+    input.addEventListener(
+        'blur',
+        () => {
+
+            setTimeout(() => {
+
+                isSearching =
+                    false;
+
+                updateNavbars();
+
+            }, 120);
+
+        }
+    );
+
+});
+
+
+/* =========================
    UPDATE NAVBARS
 ========================= */
 
 function updateNavbars() {
+
+    /* =========================
+       LOCK DURING SEARCH
+    ========================= */
+
+    if (isSearching) {
+
+        ticking =
+            false;
+
+        return;
+
+    }
+
 
     const scrollY =
         window.scrollY;
