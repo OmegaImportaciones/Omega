@@ -46,25 +46,12 @@
 
 
 /* =========================
-   TOPBAR
-========================= */
-
-.catalog-topbar {
-
-    flex-shrink: 0;
-
-}
-
-
-/* =========================
    BACK BUTTON
 ========================= */
 
 .compact-back-button {
 
-    height: 32px;
-
-    padding: 0 10px !important;
+    flex-shrink: 0;
 
     display: flex;
 
@@ -72,9 +59,25 @@
 
     justify-content: center;
 
-    border-radius: 10px !important;
+    height: 32px;
 
-    font-size: 0.75rem !important;
+    padding: 0 10px;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255,255,255,0.05);
+
+    border:
+        1px solid rgba(255,255,255,0.04);
+
+    color: #ffffff;
+
+    font-size: 0.75rem;
+
+    font-weight: 600;
+
+    text-decoration: none;
 
     white-space: nowrap;
 
@@ -109,6 +112,8 @@
     width: auto;
 
     object-fit: contain;
+
+    display: block;
 
 }
 
@@ -167,6 +172,8 @@
 
     flex-shrink: 0;
 
+    color: #ffffff;
+
 }
 
 
@@ -177,6 +184,8 @@
 .search-input {
 
     width: 100%;
+
+    min-width: 0;
 
     background: transparent;
 
@@ -189,6 +198,8 @@
     font-size: 0.78rem;
 
     font-weight: 500;
+
+    font-family: inherit;
 
 }
 
@@ -212,5 +223,56 @@
 .container {
 
     padding-top: 72px;
+
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 768px) {
+
+    .catalog-header {
+
+        height: 56px;
+
+        padding: 0 12px;
+
+        border-radius: 16px;
+
+    }
+
+
+    .catalog-logo {
+
+        height: 22px;
+
+    }
+
+
+    .compact-back-button {
+
+        height: 34px;
+
+        padding: 0 12px;
+
+        font-size: 0.8rem;
+
+    }
+
+
+    .catalog-search {
+
+        height: 34px;
+
+    }
+
+
+    .search-input {
+
+        font-size: 0.82rem;
+
+    }
 
 }
