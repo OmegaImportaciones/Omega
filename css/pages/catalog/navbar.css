@@ -1,326 +1,105 @@
 /* =========================
-   HEADER
+   HEADER (Estado Inicial)
 ========================= */
-
 .catalog-header {
     position: fixed;
     top: 12px;
     left: 50%;
     transform: translateX(-50%);
     
-    /* SOLUCIÓN AL TAMAÑO: 
-       En móviles pequeños usa el 94%, en pantallas grandes se clava en 550px */
-    width: min(94%, 550px); 
-    
+    /* Responsive: Casi todo el ancho en móvil, contenido en laptop */
+    width: min(92%, 650px); 
+    box-sizing: border-box;
     z-index: 999;
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
     padding: 10px 16px;
     border-radius: 24px;
+    
     background: rgba(10, 14, 25, 0.82);
-    backdrop-filter: blur(10px); /* Agregado para un toque moderno */
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-
 /* =========================
-   TOPBAR
+   LOGO & BRAND
 ========================= */
-
-.catalog-topbar {
-
+.catalog-brand, .catalog-topbar {
     display: flex;
-
     align-items: center;
-
     flex-shrink: 0;
-
 }
-
-
-/* =========================
-   BRAND
-========================= */
-
-.catalog-brand {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    flex-shrink: 0;
-
-}
-
-
-/* =========================
-   LOGO
-========================= */
 
 .catalog-logo {
-    /* Mínimo 60px, ideal 10vw, máximo 90px */
-    width: clamp(60px, 10vw, 90px);
+    width: clamp(60px, 10vw, 85px);
     flex-shrink: 0;
-    transition: width 0.4s ease;
+    transform: translateZ(0);
+    will-change: width;
+    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-
 /* =========================
-   SEARCH WRAPPER
+   SEARCH & BUTTONS
 ========================= */
-
-.catalog-logo {
-
-    width: clamp(58px, 16vw, 82px);
-
-    flex-shrink: 0;
-
-}
-
-
-/* =========================
-   SEARCH BAR
-========================= */
-
-.catalog-search {
-
-    padding: 11px 13px;
-
-    border-radius: 16px;
-
-    transition:
-        all 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-
-}
-
-
-/* =========================
-   BACK BUTTON
-========================= */
-
-.compact-back-button {
-
-    padding: 9px 11px;
-
-    border-radius: 14px;
-
-    font-size: 0.82rem;
-
-    flex-shrink: 0;
-
-    transition:
-        all 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-
-}
-
-
-/* =========================
-   COMPACT MODE
-========================= */
-
-.catalog-header.compact-active {
-    top: 0; /* Pegado arriba en scroll para ganar espacio */
-    width: 100%; /* Ocupa todo el ancho en modo compacto */
-    border-radius: 0; /* Opcional: quitar redondeado al pegar arriba */
-    padding: 8px 15px;
-    background: rgba(10, 14, 25, 0.98);
-}
-
-
-/* =========================
-   COMPACT LOGO
-========================= */
-
-.catalog-header.compact-active .catalog-logo {
-    width: 50px; /* Logo más pequeño al scrollear */
-}
-
-
-/* =========================
-   COMPACT SEARCH
-========================= */
-
-.catalog-header.compact-active .catalog-search {
-
-    padding: 8px 10px;
-
-    border-radius: 14px;
-
-}
-
-
-/* =========================
-   COMPACT BUTTON
-========================= */
-
-.catalog-header.compact-active .compact-back-button {
-
-    padding: 7px 9px;
-
-    border-radius: 12px;
-
-    font-size: 0.76rem;
-
-}
-
-
-/* =========================
-   BODY OFFSET
-========================= */
-
-.container {
-
-    padding-top: 95px;
-
-}
-
-
-/* =========================
-   LOGO
-========================= */
-
-.catalog-logo {
-
-    width: 88px;
-
-    transform:
-        translateZ(0);
-
-    will-change:
-        transform,
-        width;
-
-    transition:
-        all 0.65s cubic-bezier(0.16, 1, 0.3, 1);
-
-}
-
-
-/* =========================
-   SEARCH WRAPPER
-========================= */
-
 .catalog-search-wrapper {
-
     flex: 1;
-
     min-width: 0;
-
     max-width: 420px;
-
 }
-
-
-/* =========================
-   SEARCH BAR
-========================= */
 
 .catalog-search {
-
-    padding: 9px 11px;
-
-    border-radius: 14px;
-
+    width: 100%;
+    padding: 11px 13px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    transition: all 0.6s ease;
 }
-
-
-/* =========================
-   BACK BUTTON
-========================= */
 
 .compact-back-button {
-
-    padding: 8px 10px;
-
-    border-radius: 12px;
-
-    font-size: 0.78rem;
-
+    padding: 9px 11px;
+    border-radius: 14px;
+    font-size: 0.82rem;
     flex-shrink: 0;
-
+    transition: all 0.6s ease;
 }
 
-
 /* =========================
-   COMPACT MODE
+   COMPACT MODE (Activado por JS)
 ========================= */
-
 .catalog-header.compact-active {
-
-    top: 8px;
-
-    width: calc(100% - 12px);
-
-    gap: 8px;
-
-    padding: 7px 9px;
-
-    border-radius: 18px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(10,14,25,0.96),
-            rgba(10,14,25,0.88)
-        );
-
-    box-shadow:
-        0 2px 8px rgba(0,0,0,0.14);
-
+    top: 0; 
+    width: 100%; 
+    max-width: 100%; 
+    border-radius: 0; 
+    padding: 8px 20px;
+    background: rgba(10, 14, 25, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
-
-
-/* =========================
-   COMPACT LOGO
-========================= */
 
 .catalog-header.compact-active .catalog-logo {
-
-    width: 58px;
-
+    width: 50px; /* Reducción de logo en scroll */
 }
-
-
-/* =========================
-   COMPACT SEARCH
-========================= */
 
 .catalog-header.compact-active .catalog-search {
-
     padding: 8px 10px;
-
-    border-radius: 14px;
-
+    border-radius: 12px;
 }
-
-
-/* =========================
-   COMPACT BUTTON
-========================= */
 
 .catalog-header.compact-active .compact-back-button {
-
-    padding: 7px 9px;
-
-    border-radius: 12px;
-
+    padding: 7px 10px;
     font-size: 0.76rem;
-
 }
-
 
 /* =========================
    BODY OFFSET
 ========================= */
-
 .container {
-
     padding-top: 95px;
-
 }
