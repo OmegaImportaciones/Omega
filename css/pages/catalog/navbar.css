@@ -1,5 +1,15 @@
 /* =========================
-   HEADER (Estado Inicial)
+   RESETEO Y VARIABLES
+========================= */
+:root {
+    --nav-bg: rgba(10, 14, 25, 0.85);
+    --nav-bg-compact: rgba(10, 14, 25, 0.98);
+    --border-white: rgba(255, 255, 255, 0.1);
+    --transition-soft: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* =========================
+   HEADER PRINCIPAL (ESTADO INICIAL)
 ========================= */
 .catalog-header {
     position: fixed;
@@ -7,137 +17,155 @@
     left: 50%;
     transform: translateX(-50%);
     
-    /* Responsive: Casi todo el ancho en móvil, contenido en laptop */
-    width: min(92%, 650px); 
-    box-sizing: border-box;
-    z-index: 999;
+    /* Responsive Width */
+    width: 92%;
+    max-width: 650px;
+    height: 60px; /* Altura fija para evitar que se vea gigante */
     
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 8px;
-    padding: 6px 12px;
-    border-radius: 24px;
+    gap: 12px;
+    padding: 0 16px;
     
-    background: rgba(10, 14, 25, 0.82);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    z-index: 999;
+    border-radius: 20px;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: var(--transition-soft);
 }
 
 /* =========================
-   LOGO & BRAND
+   ELEMENTOS INTERNOS
 ========================= */
-.catalog-brand, .catalog-topbar {
+
+/* Contenedores Flex */
+.catalog-brand, 
+.catalog-topbar {
     display: flex;
     align-items: center;
     flex-shrink: 0;
 }
 
+/* LOGO: Tamaño controlado */
 .catalog-logo {
-    /* Bajamos el tamaño: de 60px-90px a 45px-75px */
-    width: clamp(45px, 8vw, 75px); 
-    height: auto;
+    height: 32px; /* Altura fija para no estirar el navbar */
+    width: auto;
     object-fit: contain;
+    transition: var(--transition-soft);
 }
 
-/* =========================
-   SEARCH & BUTTONS
-========================= */
+/* BOTÓN VOLVER: Sobreescritura de estilos globales */
+.compact-back-button {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: white !important;
+    padding: 8px 12px !important;
+    font-size: 13px !important;
+    border-radius: 12px !important;
+    height: auto !important;
+    min-width: auto !important;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: var(--transition-soft);
+}
+
+.compact-back-button:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* BUSCADOR */
 .catalog-search-wrapper {
     flex: 1;
     min-width: 0;
-    max-width: 420px;
+    max-width: 300px; /* Evita que crezca demasiado en laptop */
 }
 
 .catalog-search {
-    width: 100%;
-    padding: 7px 12px; /* Reducido de 11px a 7px */
-    font-size: 0.85rem;
-    border-radius: 12px; /* Un poco menos redondeado para que encaje mejor */
-    box-sizing: border-box;
-    transition: all 0.6s ease;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0 10px;
+    border-radius: 12px;
+    height: 38px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.compact-back-button {
-    padding: 6px 10px; /* Reducido de 7px 12px */
-    font-size: 0.75rem; /* Un poco más pequeña la letra */
-    border-radius: 10px;
-    white-space: nowrap; /* Evita que el texto se rompa en dos líneas */
+.search-icon {
+    opacity: 0.6;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.search-input {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
 }
 
 /* =========================
-   COMPACT MODE (Activado por JS)
+   ESTADO COMPACTO (SCROLL)
 ========================= */
 .catalog-header.compact-active {
-    top: 0; 
-    width: 100%; 
-    max-width: 100%; 
-    border-radius: 0; 
-    padding: 5px 15px; /* Más delgado que el inicial */
-    background: rgba(10, 14, 25, 0.95);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 56px; /* Ligeramente más delgado */
+    border-radius: 0;
+    background: var(--nav-bg-compact);
+    border-bottom: 1px solid var(--border-white);
 }
 
 .catalog-header.compact-active .catalog-logo {
-    width: 50px; /* Reducción de logo en scroll */
-}
-
-.catalog-header.compact-active .catalog-search {
-    padding: 8px 10px;
-    border-radius: 12px;
-}
-
-.catalog-header.compact-active .compact-back-button {
-    padding: 7px 10px;
-    font-size: 0.76rem;
+    height: 28px; /* Logo más discreto */
 }
 
 /* =========================
    BODY OFFSET
 ========================= */
 .container {
-    padding-top: 95px;
+    padding-top: 100px; /* Espacio para que el contenido no quede debajo del header */
 }
 
 /* =========================
-   MOBILE OPTIMIZATION (Media Query)
+   MEDIA QUERIES (AJUSTES FINALES)
 ========================= */
+
+/* Celulares Pequeños */
 @media (max-width: 480px) {
     .catalog-header {
-        top: 8px; /* Más pegado al borde */
-        padding: 4px 10px; /* Reducción agresiva de altura */
-        gap: 6px;
-        border-radius: 16px;
+        padding: 0 12px;
+        gap: 8px;
     }
 
     .catalog-logo {
-        /* Bajamos el logo a un tamaño mucho más razonable para móvil */
-        width: 45px; 
-    }
-
-    .catalog-search {
-        padding: 6px 10px;
-        font-size: 0.8rem;
-        height: 32px; /* Forzamos una altura pequeña para el input */
+        height: 28px;
     }
 
     .compact-back-button {
-        padding: 5px 8px;
-        font-size: 0.7rem;
-        /* Si el botón "Volver" sigue ocupando mucho, 
-           podemos ocultar el texto y dejar solo una flecha si la tienes */
+        padding: 6px 10px !important;
+        font-size: 11px !important;
     }
-
-    /* Ajuste para el estado compacto en móvil */
-    .catalog-header.compact-active {
-        padding: 4px 12px;
+    
+    /* En móvil muy pequeño, acortamos el texto de volver si es necesario */
+    .compact-back-button span {
+        display: none; /* Si tienes el texto en un span, se puede ocultar */
     }
+}
 
-    .catalog-header.compact-active .catalog-logo {
-        width: 35px;
+/* Laptops */
+@media (min-width: 1024px) {
+    .catalog-header {
+        width: 600px; /* Tamaño ideal tipo píldora */
     }
 }
