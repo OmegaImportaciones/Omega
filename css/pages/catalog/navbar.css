@@ -4,52 +4,58 @@
 
 .catalog-header {
 
+    /* Hace que el navbar quede flotando */
     position: fixed;
 
-    top: 14px;
+    /* Distancia desde arriba */
+    top: 12px;
 
+    /* Lo posiciona desde el centro horizontal */
     left: 50%;
 
-    transform:
-        translateX(-50%)
-        translateZ(0);
+    /* Corrige el centrado real */
+    transform: translateX(-50%);
 
-    will-change:
-        transform,
-        opacity;
+    /* Tamaño responsive:
+       94% del ancho o máximo 560px */
+    width: min(94%, 350px);
 
-    width: calc(100% - 16px);
-
-    max-width: 560px;
-
+    /* Prioridad sobre otros elementos */
     z-index: 999;
 
+    /* Activa Flexbox */
     display: flex;
 
-    flex-direction: row;
-
+    /* Alinea verticalmente los hijos */
     align-items: center;
 
+    /* Distribuye los elementos horizontalmente */
     justify-content: space-between;
 
-    gap: 12px;
+    /* Espacio entre hijos */
+    gap: 10px;
 
+    /* Espaciado interno */
     padding: 10px 12px;
 
-    border-radius: 22px;
+    /* Bordes redondeados */
+    border-radius: 20px;
 
+    /* Fondo del navbar */
     background:
-        linear-gradient(
-            145deg,
-            rgba(10,14,25,0.18),
-            rgba(10,14,25,0.10)
-        );
+        rgba(10,14,25,0.82);
 
+    /* Borde sutil */
+    border: 1px solid
+        rgba(255,255,255,0.05);
+
+    /* Sombra */
     box-shadow:
-        0 2px 10px rgba(0,0,0,0.10);
+        0 2px 10px rgba(0,0,0,0.12);
 
+    /* Animaciones suaves */
     transition:
-        all 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+        all 0.5s ease;
 
 }
 
