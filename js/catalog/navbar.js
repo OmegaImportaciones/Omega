@@ -3,37 +3,59 @@ const header =
 
 
 /* =========================
+   CONFIG
+========================= */
+
+const compactOffset =
+    80;
+
+
+/* =========================
+   UPDATE NAVBAR
+========================= */
+
+function updateNavbar() {
+
+    const scrollY =
+        window.scrollY;
+
+
+    /* =========================
+       COMPACT MODE
+    ========================= */
+
+    if (scrollY >= compactOffset) {
+
+        header.classList.add(
+            'compact-active'
+        );
+
+    } else {
+
+        header.classList.remove(
+            'compact-active'
+        );
+
+    }
+
+}
+
+
+/* =========================
    SCROLL EVENT
 ========================= */
 
 window.addEventListener(
     'scroll',
-    () => {
-
-        const scrollY =
-            window.scrollY;
-
-
-        /* =========================
-           ACTIVATE
-        ========================= */
-
-        if (scrollY > 80) {
-
-            header.classList.add(
-                'compact-active'
-            );
-
-        } else {
-
-            header.classList.remove(
-                'compact-active'
-            );
-
-        }
-
-    },
+    updateNavbar,
     {
         passive: true
     }
 );
+
+
+/* =========================
+   INIT
+========================= */
+
+updateNavbar();
