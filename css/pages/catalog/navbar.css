@@ -12,25 +12,23 @@
 
     transform: translateX(-50%);
 
-    width: calc(100% - 12px);
+    width: min(92%, 420px);
 
-    max-width: 420px;
-
-    height: 52px;
+    height: 46px;
 
     display: flex;
 
     align-items: center;
 
-    gap: 8px;
+    gap: 6px;
 
-    padding: 0 10px;
+    padding: 0 8px;
 
     box-sizing: border-box;
 
     z-index: 999;
 
-    border-radius: 14px;
+    border-radius: 12px;
 
     background:
         rgba(10,14,25,0.92);
@@ -42,7 +40,7 @@
         blur(6px);
 
     box-shadow:
-        0 4px 12px rgba(0,0,0,0.22);
+        0 4px 12px rgba(0,0,0,0.18);
 
 }
 
@@ -74,13 +72,13 @@
 
     justify-content: center;
 
-    height: 34px;
+    height: 30px;
 
-    padding: 0 10px !important;
+    padding: 0 9px !important;
 
-    border-radius: 10px !important;
+    border-radius: 8px !important;
 
-    font-size: 0.78rem !important;
+    font-size: 0.72rem !important;
 
     white-space: nowrap;
 
@@ -112,7 +110,7 @@
 
 .catalog-logo {
 
-    height: 24px;
+    height: 20px;
 
     width: auto;
 
@@ -144,13 +142,13 @@
 
     align-items: center;
 
-    gap: 6px;
+    gap: 5px;
 
-    height: 34px;
+    height: 30px;
 
-    padding: 0 10px;
+    padding: 0 8px;
 
-    border-radius: 10px;
+    border-radius: 8px;
 
     background:
         rgba(255,255,255,0.05);
@@ -167,13 +165,13 @@
 
 .search-icon {
 
-    width: 14px;
+    width: 13px;
 
-    height: 14px;
+    height: 13px;
 
     flex-shrink: 0;
 
-    opacity: 0.75;
+    opacity: 0.72;
 
 }
 
@@ -194,7 +192,7 @@
 
     color: #ffffff;
 
-    font-size: 0.82rem;
+    font-size: 0.76rem;
 
     font-weight: 500;
 
@@ -207,27 +205,7 @@
 
 .search-input::placeholder {
 
-    color: rgba(255,255,255,0.45);
-
-}
-
-
-/* =========================
-   COMPACT MODE
-========================= */
-
-.catalog-header.compact-active {
-
-    top: 0;
-
-    width: 100%;
-
-    max-width: 60%;
-
-    border-radius: 0;
-
-    background:
-        rgba(5,7,12,0.96);
+    color: rgba(255,255,255,0.42);
 
 }
 
@@ -238,7 +216,7 @@
 
 .container {
 
-    padding-top: 70px;
+    padding-top: 62px;
 
 }
 
@@ -251,7 +229,43 @@
 
     .catalog-header {
 
-        max-width: 620px;
+        width: min(94%, 620px);
+
+        height: 54px;
+
+        padding: 0 12px;
+
+        border-radius: 14px;
+
+    }
+
+    
+    .catalog-logo {
+
+        height: 24px;
+
+    }
+
+    
+    .catalog-search {
+
+        height: 36px;
+
+    }
+
+    
+    .compact-back-button {
+
+        height: 36px;
+
+        font-size: 0.82rem !important;
+
+    }
+
+    
+    .search-input {
+
+        font-size: 0.86rem;
 
     }
 
