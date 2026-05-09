@@ -1,83 +1,67 @@
 /* =========================
-   HEADER ESTILO ÚNICO
+   HEADER SIMPLIFICADO
 ========================= */
 .catalog-header {
     position: fixed;
     top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 5%;
+    width: 90%;
     
-    /* Ancho y altura fija para consistencia */
-    width: 95%;
-    max-width: 650px;
-    height: 54px; /* Altura delgada */
+    /* Forzamos una altura pequeña y fija */
+    height: 50px; 
     
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 8px; /* Espacio mínimo entre elementos */
+    gap: 8px;
     padding: 0 10px;
-    
     box-sizing: border-box;
     z-index: 999;
-    border-radius: 18px;
-    background: rgba(10, 14, 25, 0.85);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 15px;
+    background: #0a0e19; /* Fondo sólido para evitar fallos visuales */
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    
+    transition: all 0.4s ease;
 }
 
-/* =========================
-   ELEMENTOS (UNA SOLA FILA)
-========================= */
-
-/* 1. BOTÓN VOLVER (Ultra compacto) */
+/* 1. BOTÓN VOLVER (Tamaño mínimo) */
 .compact-back-button {
-    background: rgba(255, 255, 255, 0.06) !important;
-    color: #fff !important;
-    padding: 6px 8px !important; /* Mínimo espacio */
-    font-size: 11px !important; /* Fuente pequeña para que no estorbe */
-    border-radius: 10px !important;
-    text-decoration: none;
-    flex-shrink: 0; /* Que no se encoja */
-    border: 1px solid rgba(255, 255, 255, 0.05) !important;
-    white-space: nowrap;
-}
-
-/* 2. LOGO (Tamaño medio) */
-.catalog-brand {
     flex-shrink: 0;
+    white-space: nowrap;
+    background: #1a1f2b !important;
+    color: #fff !important;
+    padding: 5px 8px !important;
+    font-size: 11px !important;
+    border-radius: 8px !important;
+    text-decoration: none;
 }
 
+/* 2. LOGO (Tamaño fijo pequeño) */
 .catalog-logo {
-    height: 24px; /* Tamaño equilibrado */
+    flex-shrink: 0;
+    height: 20px; /* Tamaño pequeño para que entre todo */
     width: auto;
-    display: block;
 }
 
-/* 3. BUSCADOR (Flexible pero compacto) */
+/* 3. BUSCADOR (El que ocupa el resto) */
 .catalog-search-wrapper {
-    flex: 1; /* Este elemento toma el espacio sobrante */
-    min-width: 0; /* Permite que flex funcione correctamente */
+    flex-grow: 1; /* Esto hace que el buscador rellene el hueco */
+    min-width: 0;
 }
 
 .catalog-search {
     display: flex;
     align-items: center;
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 0 8px;
+    background: #161b26;
+    height: 32px;
     border-radius: 10px;
-    height: 34px; /* Altura menor para el input */
+    padding: 0 8px;
 }
 
 .search-icon {
     width: 14px;
     height: 14px;
-    color: rgba(255, 255, 255, 0.4);
     flex-shrink: 0;
 }
 
@@ -85,65 +69,49 @@
     background: transparent;
     border: none;
     color: white;
-    font-size: 12px; /* Letra pequeña para móvil */
-    padding-left: 6px;
+    font-size: 12px;
     width: 100%;
+    margin-left: 5px;
     outline: none;
 }
 
 /* =========================
-   MODO COMPACTO (SCROLL)
+   ESTADO COMPACTO (SCROLL)
 ========================= */
 .catalog-header.compact-active {
     top: 0;
+    left: 0;
     width: 100%;
-    max-width: 100%;
-    height: 50px;
     border-radius: 0;
-    background: rgba(10, 14, 25, 0.98);
-}
-
-/* Reducimos un poco más en scroll */
-.catalog-header.compact-active .catalog-logo {
-    height: 20px;
-}
-
-.catalog-header.compact-active .catalog-search {
-    height: 30px;
+    height: 45px;
+    background: #000;
 }
 
 /* =========================
-   BODY OFFSET
-========================= */
-.container {
-    padding-top: 80px; 
-}
-
-/* =========================
-   AJUSTE LAPTOP (Más aire)
+   AJUSTE PARA LAPTOP
 ========================= */
 @media (min-width: 768px) {
     .catalog-header {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 600px;
         height: 60px;
-        padding: 0 20px;
-        gap: 20px;
     }
     
     .catalog-logo {
-        height: 30px;
+        height: 28px;
     }
     
     .catalog-search {
         height: 40px;
-        padding: 0 12px;
     }
     
     .search-input {
         font-size: 14px;
     }
-    
-    .compact-back-button {
-        padding: 8px 14px !important;
-        font-size: 13px !important;
-    }
+}
+
+/* Offset del cuerpo */
+.container {
+    padding-top: 80px;
 }
