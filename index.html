@@ -16,8 +16,21 @@
 
     <meta name="theme-color" content="#08101d" />
 
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="OMEGA IMPORTACIONES">
+
+    <meta property="og:description" content="Tecnología, gadgets y accesorios premium.">
+
+    <meta property="og:image" content="https://TU_DOMINIO.com/img/logo.png">
+
+    <meta property="og:type" content="website">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="./img/favicon.png" type="image/png">
+
     <!-- GOOGLE ANALYTICS -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNVK91HBNP"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNVK91HBNP">
+    </script>
 
     <script>
 
@@ -60,6 +73,23 @@
 
         <!-- LOGO -->
         <img src="./img/logo.png" alt="Omega Importaciones" class="logo" draggable="false">
+
+        <!-- OPEN IN BROWSER -->
+        <section id="openBrowserContainer">
+
+            <button id="openBrowserButton" class="main-button">
+
+                <span class="emoji-icon">
+                    🌐
+                </span>
+
+                <span>
+                    Abrir en navegador
+                </span>
+
+            </button>
+
+        </section>
 
         <!-- BUTTONS -->
         <section class="buttons-container">
@@ -175,7 +205,9 @@
 
     </main>
 
-    <!-- BACKGROUND -->
+    <!-- SCRIPTS -->
+    <script src="./js/openBrowser.js"></script>
+
     <script src="./js/background.js"></script>
 
 </body>
