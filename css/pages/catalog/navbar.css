@@ -22,6 +22,8 @@
 
     align-items: center;
 
+    justify-content: flex-start;
+
     gap: 10px;
 
     padding: 0 12px;
@@ -45,66 +47,6 @@
 
     box-shadow:
         0 6px 18px rgba(0,0,0,0.28);
-
-    transition:
-        top 0.35s ease,
-        border-radius 0.35s ease,
-        background 0.35s ease,
-        box-shadow 0.35s ease;
-
-}
-
-
-/* =========================
-   TOPBAR
-========================= */
-
-.catalog-topbar {
-
-    display: flex;
-
-    align-items: center;
-
-    flex-shrink: 0;
-
-}
-
-
-/* =========================
-   BACK BUTTON
-========================= */
-
-.compact-back-button {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    height: 38px;
-
-    padding: 0 14px !important;
-
-    border-radius: 12px !important;
-
-    background:
-        rgba(255,255,255,0.05) !important;
-
-    border:
-        1px solid rgba(255,255,255,0.05);
-
-    color: #fff !important;
-
-    text-decoration: none;
-
-    font-size: 0.9rem !important;
-
-    font-weight: 600;
-
-    white-space: nowrap;
-
-    flex-shrink: 0;
 
 }
 
