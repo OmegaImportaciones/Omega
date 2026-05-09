@@ -1,8 +1,61 @@
 /* =========================
-   NAVBAR
+   NAVBAR HERO
 ========================= */
 
 .catalog-navbar {
+
+    position: relative;
+
+    width: min(94%, 520px);
+
+    margin: 18px auto 0 auto;
+
+    padding: 18px 16px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 18px;
+
+    box-sizing: border-box;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(10,14,25,0.72),
+            rgba(14,18,32,0.62)
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.04);
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.16);
+
+    z-index: 100;
+
+    transition:
+        all 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+
+}
+
+
+/* =========================
+   COMPACT NAVBAR
+========================= */
+
+.catalog-navbar.compact-active {
 
     position: fixed;
 
@@ -17,68 +70,19 @@
 
     width: min(94%, 520px);
 
-    height: 54px;
+    height: 58px;
 
     padding: 0 10px;
 
-    display: flex;
+    flex-direction: row;
 
     align-items: center;
 
+    justify-content: space-between;
+
     gap: 8px;
 
-    box-sizing: border-box;
-
-    z-index: 999;
-
-    border-radius: 16px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(10,14,25,0.82),
-            rgba(14,18,32,0.76)
-        );
-
-    border:
-        1px solid rgba(255,255,255,0.04);
-
-    backdrop-filter:
-        blur(8px);
-
-    -webkit-backdrop-filter:
-        blur(8px);
-
-    box-shadow:
-        0 4px 16px rgba(0,0,0,0.18);
-
-    will-change:
-        transform,
-        opacity,
-        background;
-
-    transition:
-        transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
-        background 0.45s ease,
-        border 0.45s ease,
-        box-shadow 0.45s ease,
-        opacity 0.45s ease;
-
-}
-
-
-/* =========================
-   COMPACT ACTIVE
-========================= */
-
-.catalog-navbar.compact-active {
-
-    top: 8px;
-
-    transform:
-        translateX(-50%)
-        translateY(-2px)
-        translateZ(0);
+    border-radius: 18px;
 
     background:
         linear-gradient(
@@ -99,6 +103,8 @@
     box-shadow:
         0 10px 28px rgba(0,0,0,0.28);
 
+    z-index: 999;
+
 }
 
 
@@ -108,19 +114,17 @@
 
 .catalog-navbar-back {
 
-    height: 34px;
-
-    padding: 0 11px;
-
-    flex-shrink: 0;
-
     display: flex;
 
     align-items: center;
 
     justify-content: center;
 
-    border-radius: 10px;
+    height: 38px;
+
+    padding: 0 14px;
+
+    border-radius: 12px;
 
     background:
         rgba(255,255,255,0.05);
@@ -130,7 +134,7 @@
 
     color: #ffffff;
 
-    font-size: 0.76rem;
+    font-size: 0.82rem;
 
     font-weight: 600;
 
@@ -138,18 +142,27 @@
 
     white-space: nowrap;
 
+    flex-shrink: 0;
+
     transition:
-        background 0.25s ease,
-        border 0.25s ease,
-        transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+        all 0.55s cubic-bezier(0.16, 1, 0.3, 1);
 
 }
 
 
+/* =========================
+   COMPACT BUTTON
+========================= */
+
 .catalog-navbar.compact-active .catalog-navbar-back {
 
-    transform:
-        translateX(-1px);
+    height: 34px;
+
+    padding: 0 11px;
+
+    border-radius: 10px;
+
+    font-size: 0.76rem;
 
 }
 
@@ -166,13 +179,10 @@
 
     justify-content: center;
 
-    flex-shrink: 0;
-
     line-height: 0;
 
     transition:
-        transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
-        opacity 0.45s ease;
+        all 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 
 }
 
@@ -183,25 +193,27 @@
 
 .catalog-navbar-logo {
 
-    height: 22px;
+    height: 48px;
 
     width: auto;
 
-    display: block;
-
     object-fit: contain;
 
+    display: block;
+
     transition:
-        transform 0.55s cubic-bezier(0.16, 1, 0.3, 1),
-        opacity 0.45s ease;
+        all 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 
 }
 
 
+/* =========================
+   COMPACT LOGO
+========================= */
+
 .catalog-navbar.compact-active .catalog-navbar-logo {
 
-    transform:
-        scale(0.92);
+    height: 22px;
 
 }
 
@@ -211,6 +223,20 @@
 ========================= */
 
 .catalog-navbar-search-wrapper {
+
+    width: 100%;
+
+    transition:
+        all 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+
+}
+
+
+/* =========================
+   COMPACT SEARCH WRAPPER
+========================= */
+
+.catalog-navbar.compact-active .catalog-navbar-search-wrapper {
 
     flex: 1;
 
@@ -227,19 +253,19 @@
 
     width: 100%;
 
-    height: 34px;
+    height: 42px;
 
-    padding: 0 10px;
+    padding: 0 14px;
 
     display: flex;
 
     align-items: center;
 
-    gap: 6px;
+    gap: 8px;
 
     box-sizing: border-box;
 
-    border-radius: 10px;
+    border-radius: 14px;
 
     background:
         rgba(255,255,255,0.05);
@@ -248,17 +274,24 @@
         1px solid rgba(255,255,255,0.04);
 
     transition:
-        background 0.25s ease,
-        border 0.25s ease,
-        transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+        all 0.55s cubic-bezier(0.16, 1, 0.3, 1);
 
 }
 
 
+/* =========================
+   COMPACT SEARCH
+========================= */
+
 .catalog-navbar.compact-active .catalog-navbar-search {
 
-    transform:
-        translateX(2px);
+    height: 34px;
+
+    padding: 0 10px;
+
+    gap: 6px;
+
+    border-radius: 10px;
 
 }
 
@@ -284,15 +317,27 @@
 
 .catalog-navbar-search-icon {
 
-    width: 14px;
+    width: 16px;
 
-    height: 14px;
+    height: 16px;
 
     flex-shrink: 0;
 
-    opacity: 0.7;
+    opacity: 0.72;
 
     color: #ffffff;
+
+    transition:
+        all 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+
+}
+
+
+.catalog-navbar.compact-active .catalog-navbar-search-icon {
+
+    width: 14px;
+
+    height: 14px;
 
 }
 
@@ -315,13 +360,23 @@
 
     color: #ffffff;
 
-    font-size: 0.8rem;
+    font-size: 0.92rem;
 
     font-weight: 500;
 
     font-family: inherit;
 
     line-height: 1;
+
+    transition:
+        all 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+
+}
+
+
+.catalog-navbar.compact-active .catalog-navbar-search-input {
+
+    font-size: 0.8rem;
 
 }
 
@@ -340,7 +395,18 @@
 
 .container {
 
-    padding-top: 76px;
+    padding-top: 220px;
+
+}
+
+
+/* =========================
+   COMPACT OFFSET
+========================= */
+
+.catalog-navbar.compact-active + * {
+
+    margin-top: 84px;
 
 }
 
@@ -353,43 +419,21 @@
 
     .catalog-navbar {
 
-        height: 58px;
-
-        padding: 0 12px;
-
-        border-radius: 18px;
+        max-width: 620px;
 
     }
 
 
     .catalog-navbar-logo {
 
+        height: 58px;
+
+    }
+
+
+    .catalog-navbar.compact-active .catalog-navbar-logo {
+
         height: 24px;
-
-    }
-
-
-    .catalog-navbar-back {
-
-        height: 36px;
-
-        padding: 0 13px;
-
-        font-size: 0.82rem;
-
-    }
-
-
-    .catalog-navbar-search {
-
-        height: 36px;
-
-    }
-
-
-    .catalog-navbar-search-input {
-
-        font-size: 0.84rem;
 
     }
 
