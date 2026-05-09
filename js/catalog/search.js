@@ -2,11 +2,15 @@
    ELEMENTS
 ========================= */
 
-const searchInput =
-    document.getElementById('searchInput');
+const searchInputs =
+    document.querySelectorAll(
+        '.catalog-hero-search-input, .catalog-compact-search-input'
+    );
 
 const promoSection =
-    document.getElementById('promoSection');
+    document.getElementById(
+        'promoSection'
+    );
 
 
 /* =========================
@@ -29,61 +33,83 @@ function normalizeText(text) {
 
 function initializeSearch(products) {
 
-    searchInput.addEventListener('input', () => {
+    searchInputs.forEach(input => {
 
-        const search =
-            normalizeText(
-                searchInput.value
-            );
+        input.addEventListener('input', () => {
 
-
-        /* =========================
-           FILTER PRODUCTS
-        ========================= */
-
-        const filteredProducts =
-            products.filter(product => {
-
-                const name =
-                    normalizeText(
-                        product.name
-                    );
-
-                const description =
-                    normalizeText(
-                        product.description
-                    );
-
-                return (
-                    name.includes(search) ||
-                    description.includes(search)
+            const search =
+                normalizeText(
+                    input.value
                 );
+
+
+            /* =========================
+               SYNC INPUTS
+            ========================= */
+
+            searchInputs.forEach(otherInput => {
+
+                if (otherInput !== input) {
+
+                    otherInput.value =
+                        input.value;
+
+                }
 
             });
 
 
-        /* =========================
-           RE-RENDER PRODUCTS
-        ========================= */
+            /* =========================
+               FILTER PRODUCTS
+            ========================= */
 
-        renderProducts(filteredProducts);
+            const filteredProducts =
+                products.filter(product => {
+
+                    const name =
+                        normalizeText(
+                            product.name
+                        );
+
+                    const description =
+                        normalizeText(
+                            product.description
+                        );
+
+                    return (
+                        name.includes(search) ||
+                        description.includes(search)
+                    );
+
+                });
 
 
-        /* =========================
-           SHOW/HIDE PROMOS
-        ========================= */
+            /* =========================
+               RENDER PRODUCTS
+            ========================= */
 
-        if (search.length > 0) {
+            renderProducts(
+                filteredProducts
+            );
 
-            promoSection.style.display =
-                'none';
 
-        } else {
+            /* =========================
+               SHOW / HIDE PROMOS
+            ========================= */
 
-            promoSection.style.display =
-                'block';
+            if (search.length > 0) {
 
-        }
+                promoSection.style.display =
+                    'none';
+
+            } else {
+
+                promoSection.style.display =
+                    'block';
+
+            }
+
+        });
 
     });
 
