@@ -40,7 +40,7 @@
 /* 2. LOGO (Tamaño fijo pequeño) */
 .catalog-logo {
     flex-shrink: 0;
-    height: 20px; /* Tamaño pequeño para que entre todo */
+    height: 60px; /* Tamaño pequeño para que entre todo */
     width: auto;
 }
 
