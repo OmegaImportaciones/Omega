@@ -1,83 +1,67 @@
 /* =========================
-   VARIABLES PREMIUM
-========================= */
-:root {
-    --glass-bg: rgba(13, 17, 28, 0.75);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --accent-color: #007AFF; /* Azul Apple para detalles si gustas */
-    --nav-height-mobile: 110px; /* Más espacio para dos filas */
-    --nav-height-laptop: 64px;
-}
-
-/* =========================
-   HEADER BASE
+   HEADER ESTILO ÚNICO
 ========================= */
 .catalog-header {
     position: fixed;
-    top: 12px;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 92%;
-    max-width: 700px;
     
-    /* Cambiamos a Wrap para que el buscador baje en móviles */
+    /* Ancho y altura fija para consistencia */
+    width: 95%;
+    max-width: 650px;
+    height: 54px; /* Altura delgada */
+    
     display: flex;
-    flex-wrap: wrap; 
     align-items: center;
     justify-content: space-between;
+    gap: 8px; /* Espacio mínimo entre elementos */
+    padding: 0 10px;
     
-    padding: 12px 16px;
     box-sizing: border-box;
     z-index: 999;
-    border-radius: 24px;
-    background: var(--glass-bg);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid var(--glass-border);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    border-radius: 18px;
+    background: rgba(10, 14, 25, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* =========================
-   LOGO Y BOTÓN (PRIMERA FILA)
+   ELEMENTOS (UNA SOLA FILA)
 ========================= */
-.catalog-topbar {
-    order: 1; /* Primero el botón */
+
+/* 1. BOTÓN VOLVER (Ultra compacto) */
+.compact-back-button {
+    background: rgba(255, 255, 255, 0.06) !important;
+    color: #fff !important;
+    padding: 6px 8px !important; /* Mínimo espacio */
+    font-size: 11px !important; /* Fuente pequeña para que no estorbe */
+    border-radius: 10px !important;
+    text-decoration: none;
+    flex-shrink: 0; /* Que no se encoja */
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    white-space: nowrap;
 }
 
+/* 2. LOGO (Tamaño medio) */
 .catalog-brand {
-    order: 2; /* Luego el logo */
+    flex-shrink: 0;
 }
 
 .catalog-logo {
-    height: 28px; /* Tamaño elegante, no gigante */
+    height: 24px; /* Tamaño equilibrado */
     width: auto;
-    filter: drop-shadow(0 0 8px rgba(255,255,255,0.1));
+    display: block;
 }
 
-.compact-back-button {
-    background: rgba(255, 255, 255, 0.06) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    color: #eee !important;
-    padding: 8px 14px !important;
-    font-size: 13px !important;
-    font-weight: 500;
-    border-radius: 14px !important;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-/* =========================
-   BUSCADOR (SEGUNDA FILA EN MÓVIL)
-========================= */
+/* 3. BUSCADOR (Flexible pero compacto) */
 .catalog-search-wrapper {
-    order: 3;
-    width: 100%; /* Ocupa todo el ancho abajo en móvil */
-    margin-top: 12px; /* Separación de la fila de arriba */
-    transition: all 0.4s ease;
+    flex: 1; /* Este elemento toma el espacio sobrante */
+    min-width: 0; /* Permite que flex funcione correctamente */
 }
 
 .catalog-search {
@@ -85,12 +69,14 @@
     align-items: center;
     background: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 0 12px;
-    border-radius: 14px;
-    height: 40px;
+    padding: 0 8px;
+    border-radius: 10px;
+    height: 34px; /* Altura menor para el input */
 }
 
 .search-icon {
+    width: 14px;
+    height: 14px;
     color: rgba(255, 255, 255, 0.4);
     flex-shrink: 0;
 }
@@ -99,62 +85,65 @@
     background: transparent;
     border: none;
     color: white;
-    font-size: 14px;
-    padding-left: 10px;
+    font-size: 12px; /* Letra pequeña para móvil */
+    padding-left: 6px;
     width: 100%;
     outline: none;
 }
 
 /* =========================
-   ESTADO COMPACTO (SCROLL)
+   MODO COMPACTO (SCROLL)
 ========================= */
 .catalog-header.compact-active {
     top: 0;
     width: 100%;
     max-width: 100%;
+    height: 50px;
     border-radius: 0;
-    padding: 8px 16px;
-    background: rgba(10, 14, 25, 0.95);
-    /* En scroll ocultamos el buscador o lo hacemos muy fino para ganar espacio */
+    background: rgba(10, 14, 25, 0.98);
 }
 
-.catalog-header.compact-active .catalog-search-wrapper {
-    margin-top: 8px;
+/* Reducimos un poco más en scroll */
+.catalog-header.compact-active .catalog-logo {
+    height: 20px;
+}
+
+.catalog-header.compact-active .catalog-search {
+    height: 30px;
 }
 
 /* =========================
-   TABLET / LAPTOP (TODO EN UNA FILA)
+   BODY OFFSET
 ========================= */
-@media (min-width: 600px) {
-    .catalog-header {
-        flex-wrap: nowrap; /* Todo en una línea */
-        height: 64px;
-        padding: 0 20px;
-    }
-
-    .catalog-search-wrapper {
-        width: auto;
-        flex: 1;
-        margin-top: 0;
-        margin-left: 20px;
-        max-width: 350px;
-    }
-
-    .catalog-brand {
-        margin-left: 20px;
-        order: 2;
-    }
-    
-    .catalog-topbar {
-        order: 1;
-    }
-    
-    .catalog-search-wrapper {
-        order: 3;
-    }
+.container {
+    padding-top: 80px; 
 }
 
-/* Offset para el contenido */
-.container {
-    padding-top: 140px; /* Ajustado para el nuevo header alto */
+/* =========================
+   AJUSTE LAPTOP (Más aire)
+========================= */
+@media (min-width: 768px) {
+    .catalog-header {
+        height: 60px;
+        padding: 0 20px;
+        gap: 20px;
+    }
+    
+    .catalog-logo {
+        height: 30px;
+    }
+    
+    .catalog-search {
+        height: 40px;
+        padding: 0 12px;
+    }
+    
+    .search-input {
+        font-size: 14px;
+    }
+    
+    .compact-back-button {
+        padding: 8px 14px !important;
+        font-size: 13px !important;
+    }
 }
