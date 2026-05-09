@@ -150,7 +150,10 @@ function renderPromos(products) {
     promoContainer.innerHTML =
         shuffledPromos.map(product => `
 
-            <article class="promo-card">
+            <a href="https://wa.me/59164216262?text=Hola,%20quiero%20información%20sobre%20${encodeURIComponent(product.whatsapp || product.name)}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="promo-card">
 
                 <img src="${product.image}"
                     alt="${product.name}"
@@ -185,7 +188,7 @@ function renderPromos(products) {
 
                 </div>
 
-            </article>
+            </a>
 
         `).join('');
 

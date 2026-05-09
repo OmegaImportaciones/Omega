@@ -64,6 +64,33 @@
 
     scroll-snap-align: start;
 
+    text-decoration: none;
+
+    color: inherit;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+.promo-card:link,
+.promo-card:visited,
+.promo-card:hover,
+.promo-card:active {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+.promo-card:active {
+
+    transform: scale(0.98);
+
 }
 
 
