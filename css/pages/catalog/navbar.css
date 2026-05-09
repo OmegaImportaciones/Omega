@@ -3,60 +3,27 @@
 ========================= */
 
 .catalog-header {
-
-    /* Hace que el navbar quede flotando */
     position: fixed;
-
-    /* Distancia desde arriba */
     top: 12px;
-
-    /* Lo posiciona desde el centro horizontal */
     left: 50%;
-
-    /* Corrige el centrado real */
     transform: translateX(-50%);
-
-    /* Tamaño responsive:
-       94% del ancho o máximo 560px */
-    width: min(50%, 350px);
-
-    /* Prioridad sobre otros elementos */
+    
+    /* SOLUCIÓN AL TAMAÑO: 
+       En móviles pequeños usa el 94%, en pantallas grandes se clava en 550px */
+    width: min(94%, 550px); 
+    
     z-index: 999;
-
-    /* Activa Flexbox */
     display: flex;
-
-    /* Alinea verticalmente los hijos */
     align-items: center;
-
-    /* Distribuye los elementos horizontalmente */
     justify-content: space-between;
-
-    /* Espacio entre hijos */
     gap: 10px;
-
-    /* Espaciado interno */
-    padding: 10px 12px;
-
-    /* Bordes redondeados */
-    border-radius: 20px;
-
-    /* Fondo del navbar */
-    background:
-        rgba(10,14,25,0.82);
-
-    /* Borde sutil */
-    border: 1px solid
-        rgba(255,255,255,0.05);
-
-    /* Sombra */
-    box-shadow:
-        0 2px 10px rgba(0,0,0,0.12);
-
-    /* Animaciones suaves */
-    transition:
-        all 0.5s ease;
-
+    padding: 10px 16px;
+    border-radius: 24px;
+    background: rgba(10, 14, 25, 0.82);
+    backdrop-filter: blur(10px); /* Agregado para un toque moderno */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 
@@ -97,11 +64,10 @@
 ========================= */
 
 .catalog-logo {
-
-    width: clamp(58px, 16vw, 82px);
-
+    /* Mínimo 60px, ideal 10vw, máximo 90px */
+    width: clamp(60px, 10vw, 90px);
     flex-shrink: 0;
-
+    transition: width 0.4s ease;
 }
 
 
@@ -159,27 +125,11 @@
 ========================= */
 
 .catalog-header.compact-active {
-
-    top: 8px;
-
-    width: calc(100% - 12px);
-
-    gap: 8px;
-
-    padding: 7px 9px;
-
-    border-radius: 18px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(10,14,25,0.96),
-            rgba(10,14,25,0.88)
-        );
-
-    box-shadow:
-        0 2px 8px rgba(0,0,0,0.14);
-
+    top: 0; /* Pegado arriba en scroll para ganar espacio */
+    width: 100%; /* Ocupa todo el ancho en modo compacto */
+    border-radius: 0; /* Opcional: quitar redondeado al pegar arriba */
+    padding: 8px 15px;
+    background: rgba(10, 14, 25, 0.98);
 }
 
 
@@ -188,9 +138,7 @@
 ========================= */
 
 .catalog-header.compact-active .catalog-logo {
-
-    width: 58px;
-
+    width: 50px; /* Logo más pequeño al scrollear */
 }
 
 
