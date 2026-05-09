@@ -15,8 +15,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
-    padding: 10px 16px;
+    gap: 8px;
+    padding: 6px 12px;
     border-radius: 24px;
     
     background: rgba(10, 14, 25, 0.82);
@@ -37,11 +37,10 @@
 }
 
 .catalog-logo {
-    width: clamp(60px, 10vw, 85px);
-    flex-shrink: 0;
-    transform: translateZ(0);
-    will-change: width;
-    transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Bajamos el tamaño: de 60px-90px a 45px-75px */
+    width: clamp(45px, 8vw, 75px); 
+    height: auto;
+    object-fit: contain;
 }
 
 /* =========================
@@ -55,18 +54,18 @@
 
 .catalog-search {
     width: 100%;
-    padding: 11px 13px;
-    border-radius: 16px;
+    padding: 7px 12px; /* Reducido de 11px a 7px */
+    font-size: 0.85rem;
+    border-radius: 12px; /* Un poco menos redondeado para que encaje mejor */
     box-sizing: border-box;
     transition: all 0.6s ease;
 }
 
 .compact-back-button {
-    padding: 9px 11px;
-    border-radius: 14px;
-    font-size: 0.82rem;
-    flex-shrink: 0;
-    transition: all 0.6s ease;
+    padding: 6px 10px; /* Reducido de 7px 12px */
+    font-size: 0.75rem; /* Un poco más pequeña la letra */
+    border-radius: 10px;
+    white-space: nowrap; /* Evita que el texto se rompa en dos líneas */
 }
 
 /* =========================
@@ -77,7 +76,7 @@
     width: 100%; 
     max-width: 100%; 
     border-radius: 0; 
-    padding: 8px 20px;
+    padding: 5px 15px; /* Más delgado que el inicial */
     background: rgba(10, 14, 25, 0.95);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
