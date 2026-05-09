@@ -1,5 +1,16 @@
-const header =
-    document.getElementById('catalogHeader');
+/* =========================
+   NAVBARS
+========================= */
+
+const heroNavbar =
+    document.getElementById(
+        'heroNavbar'
+    );
+
+const compactNavbar =
+    document.getElementById(
+        'compactNavbar'
+    );
 
 
 /* =========================
@@ -11,32 +22,63 @@ const compactOffset =
 
 
 /* =========================
-   UPDATE NAVBAR
+   RAF STATE
 ========================= */
 
-function updateNavbar() {
+let ticking =
+    false;
+
+
+/* =========================
+   UPDATE NAVBARS
+========================= */
+
+function updateNavbars() {
 
     const scrollY =
         window.scrollY;
 
 
     /* =========================
-       COMPACT MODE
+       SHOW COMPACT
     ========================= */
 
     if (scrollY >= compactOffset) {
 
-        header.classList.add(
-            'compact-active'
+        heroNavbar.classList.add(
+            'hero-hidden'
         );
 
-    } else {
-
-        header.classList.remove(
-            'compact-active'
+        compactNavbar.classList.add(
+            'compact-visible'
         );
 
     }
+
+
+    /* =========================
+       SHOW HERO
+    ========================= */
+
+    else {
+
+        heroNavbar.classList.remove(
+            'hero-hidden'
+        );
+
+        compactNavbar.classList.remove(
+            'compact-visible'
+        );
+
+    }
+
+
+    /* =========================
+       RESET RAF
+    ========================= */
+
+    ticking =
+        false;
 
 }
 
@@ -47,7 +89,20 @@ function updateNavbar() {
 
 window.addEventListener(
     'scroll',
-    updateNavbar,
+    () => {
+
+        if (!ticking) {
+
+            window.requestAnimationFrame(
+                updateNavbars
+            );
+
+            ticking =
+                true;
+
+        }
+
+    },
     {
         passive: true
     }
@@ -58,4 +113,4 @@ window.addEventListener(
    INIT
 ========================= */
 
-updateNavbar();
+updateNavbars();

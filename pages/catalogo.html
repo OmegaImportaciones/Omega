@@ -3,13 +3,18 @@
 
 <head>
 
-    <!-- META -->
+    <!-- =========================
+         META
+    ========================== -->
+
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
     <title>
+
         Catálogo | OMEGA IMPORTACIONES
+
     </title>
 
     <meta name="description" content="Explora nuestros gadgets y accesorios premium." />
@@ -17,7 +22,10 @@
     <meta name="theme-color" content="#000000" />
 
 
-    <!-- GOOGLE ANALYTICS -->
+    <!-- =========================
+         GOOGLE ANALYTICS
+    ========================== -->
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNVK91HBNP">
     </script>
 
@@ -39,7 +47,10 @@
     </script>
 
 
-    <!-- FONTS -->
+    <!-- =========================
+         FONTS
+    ========================== -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,23 +58,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 
-    <!-- CSS -->
+    <!-- =========================
+         CSS
+    ========================== -->
+
     <link rel="stylesheet" href="../css/global.css" />
 
 </head>
 
 <body>
 
+    <!-- =========================
+         MAIN
+    ========================== -->
+
     <main class="container">
 
+
+
         <!-- =========================
-             NAVBAR
+             HERO NAVBAR
         ========================== -->
 
-        <header class="catalog-navbar" id="catalogHeader">
+        <header class="catalog-hero-navbar" id="heroNavbar">
 
             <!-- BACK -->
-            <a href="../index.html" class="catalog-navbar-back">
+            <a href="../index.html" class="catalog-hero-back">
 
                 ← Volver
 
@@ -71,20 +91,20 @@
 
 
             <!-- LOGO -->
-            <div class="catalog-navbar-brand">
+            <div class="catalog-hero-brand">
 
-                <img src="../img/logo.png" alt="Omega Importaciones" class="catalog-navbar-logo" draggable="false">
+                <img src="../img/logo.png" alt="Omega Importaciones" class="catalog-hero-logo" draggable="false">
 
             </div>
 
 
             <!-- SEARCH -->
-            <div class="catalog-navbar-search-wrapper">
+            <div class="catalog-hero-search-wrapper">
 
-                <div class="catalog-navbar-search">
+                <div class="catalog-hero-search">
 
                     <!-- ICON -->
-                    <svg class="catalog-navbar-search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                    <svg class="catalog-hero-search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
 
@@ -98,8 +118,61 @@
 
 
                     <!-- INPUT -->
-                    <input type="text" id="searchInput" class="catalog-navbar-search-input"
+                    <input type="text" id="searchInput" class="catalog-hero-search-input"
                         placeholder="Buscar productos..." autocomplete="off" spellcheck="false">
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+             COMPACT NAVBAR
+        ========================== -->
+
+        <header class="catalog-compact-navbar" id="compactNavbar">
+
+            <!-- BACK -->
+            <a href="../index.html" class="catalog-compact-back">
+
+                ←
+
+            </a>
+
+
+            <!-- LOGO -->
+            <div class="catalog-compact-brand">
+
+                <img src="../img/logo.png" alt="Omega Importaciones" class="catalog-compact-logo" draggable="false">
+
+            </div>
+
+
+            <!-- SEARCH -->
+            <div class="catalog-compact-search-wrapper">
+
+                <div class="catalog-compact-search">
+
+                    <!-- ICON -->
+                    <svg class="catalog-compact-search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+
+                        <circle cx="11" cy="11" r="8">
+                        </circle>
+
+                        <path d="m21 21-4.3-4.3">
+                        </path>
+
+                    </svg>
+
+
+                    <!-- INPUT -->
+                    <input type="text" class="catalog-compact-search-input" placeholder="Buscar..." autocomplete="off"
+                        spellcheck="false">
 
                 </div>
 
@@ -124,7 +197,6 @@
 
             <!-- PROMO CONTAINER -->
             <div class="promo-slider" id="promoContainer">
-
             </div>
 
         </section>
@@ -136,7 +208,6 @@
         ========================== -->
 
         <section class="buttons-container" id="productsContainer">
-
         </section>
 
 
