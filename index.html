@@ -16,17 +16,40 @@
 
     <meta name="theme-color" content="#08101d" />
 
+    <meta name="robots" content="index, follow" />
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://omegaimportaciones.github.io/Omega/" />
+
     <!-- OPEN GRAPH -->
     <meta property="og:title" content="OMEGA IMPORTACIONES">
 
     <meta property="og:description" content="Tecnología, gadgets y accesorios premium.">
 
-    <meta property="og:image" content="https://TU_DOMINIO.com/img/logo.png">
+    <meta property="og:image" content="https://omegaimportaciones.github.io/Omega/img/logo.png">
+
+    <meta property="og:url" content="https://omegaimportaciones.github.io/Omega/">
+
+    <meta property="og:site_name" content="OMEGA IMPORTACIONES">
 
     <meta property="og:type" content="website">
 
+    <meta property="og:locale" content="es_BO">
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="OMEGA IMPORTACIONES">
+
+    <meta name="twitter:description" content="Tecnología, gadgets y accesorios premium.">
+
+    <meta name="twitter:image" content="https://omegaimportaciones.github.io/Omega/img/logo.png">
+
     <!-- FAVICON -->
     <link rel="icon" href="./img/favicon.png" type="image/png">
+
+    <!-- PRELOAD -->
+    <link rel="preload" as="image" href="./img/logo.png">
 
     <!-- GOOGLE ANALYTICS -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNVK91HBNP">
@@ -50,7 +73,14 @@
 
         gtag(
             'config',
-            'G-PNVK91HBNP'
+            'G-PNVK91HBNP',
+            {
+                page_title:
+                    document.title,
+
+                page_location:
+                    window.location.href
+            }
         );
 
     </script>
