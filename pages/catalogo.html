@@ -21,6 +21,55 @@
 
     <meta name="theme-color" content="#000000" />
 
+    <meta name="robots" content="index, follow" />
+
+    <!-- =========================
+         CANONICAL
+    ========================== -->
+
+    <link rel="canonical" href="https://omegaimportaciones.github.io/Omega/pages/catalogo.html" />
+
+    <!-- =========================
+         OPEN GRAPH
+    ========================== -->
+
+    <meta property="og:title" content="Catálogo | OMEGA IMPORTACIONES">
+
+    <meta property="og:description" content="Explora nuestros gadgets y accesorios premium.">
+
+    <meta property="og:image" content="https://omegaimportaciones.github.io/Omega/img/logo.png">
+
+    <meta property="og:url" content="https://omegaimportaciones.github.io/Omega/pages/catalogo.html">
+
+    <meta property="og:site_name" content="OMEGA IMPORTACIONES">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:locale" content="es_BO">
+
+    <!-- =========================
+         TWITTER
+    ========================== -->
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="Catálogo | OMEGA IMPORTACIONES">
+
+    <meta name="twitter:description" content="Explora nuestros gadgets y accesorios premium.">
+
+    <meta name="twitter:image" content="https://omegaimportaciones.github.io/Omega/img/logo.png">
+
+    <!-- =========================
+         FAVICON
+    ========================== -->
+
+    <link rel="icon" href="../img/favicon.png" type="image/png">
+
+    <!-- =========================
+         PRELOAD
+    ========================== -->
+
+    <link rel="preload" as="image" href="../img/logo.png">
 
     <!-- =========================
          GOOGLE ANALYTICS
@@ -40,12 +89,24 @@
 
         }
 
-        gtag('js', new Date());
+        gtag(
+            'js',
+            new Date()
+        );
 
-        gtag('config', 'G-PNVK91HBNP');
+        gtag(
+            'config',
+            'G-PNVK91HBNP',
+            {
+                page_title:
+                    document.title,
+
+                page_location:
+                    window.location.href
+            }
+        );
 
     </script>
-
 
     <!-- =========================
          FONTS
@@ -56,7 +117,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 
     <!-- =========================
          CSS
@@ -213,11 +273,20 @@
 
 
         <!-- =========================
-             WHATSAPP
+             GENERAL WHATSAPP
         ========================== -->
 
         <a href="https://wa.me/59164216262?text=Hola,%20quiero%20información%20sobre%20sus%20productos" target="_blank"
-            rel="noopener noreferrer" class="main-button">
+            rel="noopener noreferrer" class="main-button" onclick="
+                gtag(
+                    'event',
+                    'click_general_whatsapp',
+                    {
+                        page: 'catalogo',
+                        button: 'general_whatsapp'
+                    }
+                );
+            ">
 
             <img src="../img/w_logo.png" alt="WhatsApp" class="button-icon" draggable="false">
 

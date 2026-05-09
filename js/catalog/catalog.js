@@ -90,8 +90,10 @@ async function loadProducts() {
         ========================= */
 
         if (
+
             typeof initializeSearch ===
             'function'
+
         ) {
 
             initializeSearch(
@@ -153,7 +155,19 @@ function renderPromos(products) {
             <a href="https://wa.me/59164216262?text=Hola,%20quiero%20información%20sobre%20${encodeURIComponent(product.whatsapp || product.name)}"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="promo-card">
+                class="promo-card"
+                onclick="
+                    gtag(
+                        'event',
+                        'click_promo_whatsapp',
+                        {
+                            product_name: '${product.name.replace(/'/g, "\\'")}',
+                            product_description: '${(product.description || '').replace(/'/g, "\\'")}',
+                            promo_tag: '${(product.promoTag || '').replace(/'/g, "\\'")}',
+                            page: 'catalogo'
+                        }
+                    );
+                ">
 
                 <img src="${product.image}"
                     alt="${product.name}"
@@ -236,7 +250,19 @@ function renderProducts(products) {
 
                 <a href="https://wa.me/59164216262?text=Hola,%20quiero%20información%20sobre%20${encodeURIComponent(product.whatsapp || product.name)}"
                     target="_blank"
-                    class="product-action">
+                    rel="noopener noreferrer"
+                    class="product-action"
+                    onclick="
+                        gtag(
+                            'event',
+                            'click_product_whatsapp',
+                            {
+                                product_name: '${product.name.replace(/'/g, "\\'")}',
+                                product_description: '${(product.description || '').replace(/'/g, "\\'")}',
+                                page: 'catalogo'
+                            }
+                        );
+                    ">
 
                     Consultar
 
