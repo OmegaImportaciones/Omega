@@ -107,7 +107,16 @@
         <!-- OPEN IN BROWSER -->
         <section id="openBrowserContainer">
 
-            <button id="openBrowserButton" class="main-button">
+            <button id="openBrowserButton" class="main-button" onclick="
+                    gtag(
+                        'event',
+                        'click_open_browser',
+                        {
+                            page: 'index',
+                            button: 'open_browser'
+                        }
+                    );
+                ">
 
                 <span class="emoji-icon">
                     🌐
@@ -131,8 +140,8 @@
                         'event',
                         'click_whatsapp',
                         {
-                            event_category: 'index',
-                            event_label: 'WhatsApp'
+                            page: 'index',
+                            button: 'whatsapp'
                         }
                     );
                 ">
@@ -151,8 +160,8 @@
                         'event',
                         'click_catalogo',
                         {
-                            event_category: 'index',
-                            event_label: 'Catalogo'
+                            page: 'index',
+                            button: 'catalogo'
                         }
                     );
                 ">
@@ -174,8 +183,8 @@
                         'event',
                         'click_tiktok',
                         {
-                            event_category: 'index',
-                            event_label: 'TikTok'
+                            page: 'index',
+                            button: 'tiktok'
                         }
                     );
                 ">
@@ -195,8 +204,8 @@
                         'event',
                         'click_facebook',
                         {
-                            event_category: 'index',
-                            event_label: 'Facebook'
+                            page: 'index',
+                            button: 'facebook'
                         }
                     );
                 ">
@@ -215,8 +224,8 @@
                         'event',
                         'click_ubicacion',
                         {
-                            event_category: 'index',
-                            event_label: 'Como Llegar'
+                            page: 'index',
+                            button: 'ubicacion'
                         }
                     );
                 ">
