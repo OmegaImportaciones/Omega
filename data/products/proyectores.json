@@ -1,0 +1,66 @@
+[
+    {
+      "id": "1",
+      "name": "Proyector S40 Max",
+      "description": "Juegos · 150” · 2 Controles · Android TV",
+      "image": "https://m.media-amazon.com/images/I/71a3JD7LK9L.jpg",
+      "whatsapp": "Proyector S40 Max",
+      "promoTag": "⚡ Oferta"
+    },
+    {
+      "id": "2",
+      "name": "Proyector Tomate 2043",
+      "description": "120” · Android Tv",
+      "image": "https://apiback.aswin-smart.com/images/productos/69cd8bd5766e2.png",
+      "whatsapp": "Proyector Tomate 2043",
+      "promoTag": ""
+    },
+    {
+      "id": "3",
+      "name": "Proyector Epson PowerLite E20",
+      "description": "3LCD · 300” · 3400lm",
+      "image": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=d8c97d9fbc59cdc2ae12cf560186bfecd66360b1&vid=d8c97d9fbc59cdc2ae12cf560186bfecd66360b1&prid=1200Wx1200H&clid=SAPDAM&prclid=banner&assetDescr=PowerLite_E20_Product_03_Right_Angle_Shadow_690x460",
+      "whatsapp": "Proyector Epson PowerLite E20",
+      "promoTag": "⚡ Oferta"
+    },
+    {
+      "id": "4",
+      "name": "Proyector Epson Flex Portable w01",
+      "description": "3LCD · 300” · 3000lm",
+      "image": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=9339938eadbd2005f9e7367b0c016577322d8ecf&vid=9339938eadbd2005f9e7367b0c016577322d8ecf&prid=1200Wx1200H&clid=SAPDAM&prclid=banner&assetDescr=CO-W01_top-headon_690x460",
+      "whatsapp": "Proyector Epson Flex Portable w01",
+      "promoTag": "⚡ Oferta"
+    },
+    {
+      "id": "5",
+      "name": "Proyector Tomate 2024",
+      "description": "120” · Android Tv",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJYviINk9s5svPvkfx5XugdisX-5MOTqf82g&s",
+      "whatsapp": "Proyector Tomate 2024",
+      "promoTag": "🔥 Viral"
+    },
+    {
+      "id": "6",
+      "name": "Proyector 350 MAX",
+      "description": "Juegos · 150” · 2 Controles · Android TV",
+      "image": "https://m.media-amazon.com/images/I/713VMZBmgVL.jpg",
+      "whatsapp": "Proyector 350 MAX",
+      "promoTag": ""
+    },
+    {
+      "id": "7",
+      "name": "Proyector Epson Fh02",
+      "description": "3LCD · 300” · 3000lm · Android TV",
+      "image": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=47a0cbb4ad2c00933c819afbd840405e07ad2781&vid=47a0cbb4ad2c00933c819afbd840405e07ad2781&prid=515Wx515H&clid=SAPDAM&prclid=productpictures&assetDescr=CO-FH02_SPT_V11HA86020_384x286",
+      "whatsapp": "Proyector Epson Fh02",
+      "promoTag": "⚡ Oferta"
+    },
+    {
+      "id": "8",
+      "name": "Proyector Epson PowerLite W52+",
+      "description": "3LCD · 4000lm",
+      "image": "https://mediaserver.goepson.com/adaptivemedia/rendition?id=3b2cce92b5f5b73980fe44ea7fe4ccd8ce882870&vid=3b2cce92b5f5b73980fe44ea7fe4ccd8ce882870&prid=1200Wx1200H&clid=SAPDAM&prclid=banner&assetDescr=W42_wbw_1",
+      "whatsapp": "Proyector Epson PowerLite W52+",
+      "promoTag": "⚡ Oferta"
+    }
+  ]
