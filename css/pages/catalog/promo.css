@@ -6,11 +6,15 @@
 
     display: flex;
 
-    gap: 8px;
+    gap: 12px;
 
     overflow-x: auto;
 
+    overflow-y: hidden;
+
     scroll-snap-type: x mandatory;
+
+    scroll-behavior: smooth;
 
     padding-bottom: 4px;
 

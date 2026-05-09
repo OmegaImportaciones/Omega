@@ -3,10 +3,14 @@
 ========================= */
 
 const promoContainer =
-    document.getElementById('promoContainer');
+    document.getElementById(
+        'promoContainer'
+    );
 
 const productsContainer =
-    document.getElementById('productsContainer');
+    document.getElementById(
+        'productsContainer'
+    );
 
 
 /* =========================
@@ -29,7 +33,9 @@ async function loadProducts() {
         ========================= */
 
         const indexResponse =
-            await fetch('../data/products.json');
+            await fetch(
+                '../data/products.json'
+            );
 
         const productFiles =
             await indexResponse.json();
@@ -44,13 +50,15 @@ async function loadProducts() {
 
                 productFiles.map(file =>
 
-                    fetch(`../data/products/${file}`)
-                        .then(response => response.json())
+                    fetch(
+                        `../data/products/${file}`
+                    ).then(response =>
+                        response.json()
+                    )
 
                 )
 
             );
-
 
 
         /* =========================
@@ -59,7 +67,6 @@ async function loadProducts() {
 
         allProducts =
             responses.flat();
-
 
 
         /* =========================
@@ -71,14 +78,25 @@ async function loadProducts() {
         renderProducts(allProducts);
 
 
+        /* =========================
+           INIT PROMO SLIDER
+        ========================= */
+
+        initializePromoSlider();
+
 
         /* =========================
            INIT SEARCH
         ========================= */
 
-        if (typeof initializeSearch === 'function') {
+        if (
+            typeof initializeSearch ===
+            'function'
+        ) {
 
-            initializeSearch(allProducts);
+            initializeSearch(
+                allProducts
+            );
 
         }
 
@@ -100,15 +118,37 @@ async function loadProducts() {
 
 function renderPromos(products) {
 
+    /* =========================
+       FILTER PROMOS
+    ========================= */
+
     const promos =
         products.filter(product =>
+
             product.promoTag &&
             product.promoTag.trim() !== ''
+
         );
 
 
+    /* =========================
+       RANDOMIZE
+    ========================= */
+
+    const shuffledPromos =
+        [...promos];
+
+    shuffledPromos.sort(
+        () => Math.random() - 0.5
+    );
+
+
+    /* =========================
+       RENDER
+    ========================= */
+
     promoContainer.innerHTML =
-        promos.map(product => `
+        shuffledPromos.map(product => `
 
             <article class="promo-card">
 
@@ -202,6 +242,76 @@ function renderProducts(products) {
             </article>
 
         `).join('');
+
+}
+
+
+/* =========================
+   AUTO PROMO SLIDER
+========================= */
+
+function initializePromoSlider() {
+
+    if (!promoContainer) return;
+
+
+    /* =========================
+       CONFIG
+    ========================= */
+
+    const scrollAmount =
+        320;
+
+    const intervalTime =
+        10000;
+
+
+    /* =========================
+       AUTO SCROLL
+    ========================= */
+
+    setInterval(() => {
+
+        const maxScroll =
+            promoContainer.scrollWidth -
+            promoContainer.clientWidth;
+
+
+        /* =========================
+           RESTART
+        ========================= */
+
+        if (
+
+            promoContainer.scrollLeft >=
+            maxScroll - 10
+
+        ) {
+
+            promoContainer.scrollTo({
+
+                left: 0,
+                behavior: 'smooth'
+
+            });
+
+            return;
+
+        }
+
+
+        /* =========================
+           NEXT
+        ========================= */
+
+        promoContainer.scrollBy({
+
+            left: scrollAmount,
+            behavior: 'smooth'
+
+        });
+
+    }, intervalTime);
 
 }
 
