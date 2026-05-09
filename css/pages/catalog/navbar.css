@@ -102,3 +102,42 @@
 .container {
     padding-top: 95px;
 }
+
+/* =========================
+   MOBILE OPTIMIZATION (Media Query)
+========================= */
+@media (max-width: 480px) {
+    .catalog-header {
+        top: 8px; /* Más pegado al borde */
+        padding: 4px 10px; /* Reducción agresiva de altura */
+        gap: 6px;
+        border-radius: 16px;
+    }
+
+    .catalog-logo {
+        /* Bajamos el logo a un tamaño mucho más razonable para móvil */
+        width: 45px; 
+    }
+
+    .catalog-search {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+        height: 32px; /* Forzamos una altura pequeña para el input */
+    }
+
+    .compact-back-button {
+        padding: 5px 8px;
+        font-size: 0.7rem;
+        /* Si el botón "Volver" sigue ocupando mucho, 
+           podemos ocultar el texto y dejar solo una flecha si la tienes */
+    }
+
+    /* Ajuste para el estado compacto en móvil */
+    .catalog-header.compact-active {
+        padding: 4px 12px;
+    }
+
+    .catalog-header.compact-active .catalog-logo {
+        width: 35px;
+    }
+}
