@@ -45,13 +45,9 @@
 
 #flashSection {
 
-    width: 100vw;
+    width: calc(100% + 28px);
 
-    position: relative;
-
-    left: 50%;
-
-    transform: translateX(-50%);
+    margin-left: -16px;
 
     display: flex;
 
