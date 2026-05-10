@@ -14,6 +14,17 @@ const flashContainer =
 
 
 /* =========================
+   SLIDER STATE
+========================= */
+
+let flashSliderInterval =
+    null;
+
+let isUserTouching =
+    false;
+
+
+/* =========================
    LOAD FLASH OFFERS
 ========================= */
 
@@ -153,7 +164,7 @@ Vi esta oferta en su página web.`
 
 
         /* =========================
-           INIT AUTO SLIDER
+           INIT SLIDER
         ========================= */
 
         initializeFlashSlider();
@@ -192,14 +203,15 @@ function initializeFlashSlider() {
         );
 
 
+    if (!firstCard) return;
+
+
     /* =========================
        SCROLL AMOUNT
     ========================= */
 
     const scrollAmount =
-        firstCard
-            ? firstCard.offsetWidth + 12
-            : 280;
+        firstCard.offsetWidth + 12;
 
 
     /* =========================
@@ -211,51 +223,108 @@ function initializeFlashSlider() {
 
 
     /* =========================
+       CLEAR OLD INTERVAL
+    ========================= */
+
+    clearInterval(
+        flashSliderInterval
+    );
+
+
+    /* =========================
        AUTO SCROLL
     ========================= */
 
-    setInterval(() => {
+    flashSliderInterval =
+        setInterval(() => {
 
-        const maxScroll =
-            flashContainer.scrollWidth -
-            flashContainer.clientWidth;
+            /* =========================
+               USER TOUCHING
+            ========================= */
+
+            if (isUserTouching) {
+
+                return;
+
+            }
 
 
-        /* =========================
-           RESTART
-        ========================= */
+            const maxScroll =
+                flashContainer.scrollWidth -
+                flashContainer.clientWidth;
 
-        if (
 
-            flashContainer.scrollLeft >=
-            maxScroll - 10
+            /* =========================
+               RESTART
+            ========================= */
 
-        ) {
+            if (
 
-            flashContainer.scrollTo({
+                flashContainer.scrollLeft >=
+                maxScroll - 10
 
-                left: 0,
+            ) {
+
+                flashContainer.scrollTo({
+
+                    left: 0,
+                    behavior: 'smooth'
+
+                });
+
+                return;
+
+            }
+
+
+            /* =========================
+               NEXT
+            ========================= */
+
+            flashContainer.scrollBy({
+
+                left: scrollAmount,
                 behavior: 'smooth'
 
             });
 
-            return;
-
-        }
+        }, intervalTime);
 
 
-        /* =========================
-           NEXT
-        ========================= */
+    /* =========================
+       TOUCH START
+    ========================= */
 
-        flashContainer.scrollBy({
+    flashContainer.addEventListener(
+        'touchstart',
+        () => {
 
-            left: scrollAmount,
-            behavior: 'smooth'
+            isUserTouching =
+                true;
 
-        });
+        },
+        { passive: true }
+    );
 
-    }, intervalTime);
+
+    /* =========================
+       TOUCH END
+    ========================= */
+
+    flashContainer.addEventListener(
+        'touchend',
+        () => {
+
+            setTimeout(() => {
+
+                isUserTouching =
+                    false;
+
+            }, 1500);
+
+        },
+        { passive: true }
+    );
 
 }
 

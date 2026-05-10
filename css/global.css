@@ -57,8 +57,6 @@
 
     width: 100%;
 
-    overflow: hidden;
-
     padding:
         0 14px;
 
@@ -68,37 +66,17 @@
 
 
 /* =========================
-   FLASH SLIDER
+   FLASH CONTAINER
 ========================= */
 
 #flashContainer {
 
-    display: flex;
+    display: grid;
 
-    gap: 12px;
+    grid-template-columns:
+        repeat(3, 1fr);
 
-    overflow-x: auto;
-
-    overflow-y: hidden;
-
-    scroll-snap-type: x mandatory;
-
-    scroll-behavior: smooth;
-
-    padding:
-        0 0 4px;
-
-    -webkit-overflow-scrolling: touch;
-
-    scrollbar-width: none;
-
-    box-sizing: border-box;
-
-}
-
-#flashContainer::-webkit-scrollbar {
-
-    display: none;
+    gap: 8px;
 
 }
 
@@ -109,8 +87,6 @@
 
 .flash-card {
 
-    flex: 0 0 160px;
-
     display: flex;
 
     flex-direction: column;
@@ -119,7 +95,7 @@
 
     padding: 10px;
 
-    border-radius: 22px;
+    border-radius: 20px;
 
     background:
         linear-gradient(
@@ -136,36 +112,11 @@
     box-shadow:
         0 8px 24px rgba(0,0,0,0.28);
 
-    scroll-snap-align: start;
-
     overflow: hidden;
 
     text-decoration: none;
 
     color: inherit;
-
-    cursor: pointer;
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-
-}
-
-.flash-card:link,
-.flash-card:visited,
-.flash-card:hover,
-.flash-card:active {
-
-    text-decoration: none;
-
-    color: inherit;
-
-}
-
-.flash-card:active {
-
-    transform: scale(0.98);
 
 }
 
@@ -182,14 +133,12 @@
 
     object-fit: contain;
 
-    border-radius: 16px;
+    border-radius: 14px;
 
     background:
         rgba(255,255,255,0.04);
 
-    padding: 10px;
-
-    display: block;
+    padding: 8px;
 
 }
 
@@ -208,8 +157,6 @@
 
     min-width: 0;
 
-    color: inherit;
-
 }
 
 
@@ -219,7 +166,7 @@
 
 .flash-info h3 {
 
-    font-size: 0.82rem;
+    font-size: 0.76rem;
 
     font-weight: 700;
 
@@ -244,14 +191,14 @@
 
 .flash-info p {
 
-    font-size: 0.66rem;
+    font-size: 0.62rem;
 
     font-weight: 500;
 
     color:
         rgba(255,255,255,0.68);
 
-    line-height: 1.25;
+    line-height: 1.2;
 
     overflow: hidden;
 
@@ -272,11 +219,9 @@
 
     display: flex;
 
-    align-items: center;
+    flex-direction: column;
 
-    flex-wrap: wrap;
-
-    gap: 8px;
+    gap: 2px;
 
     margin-top: 4px;
 
@@ -289,7 +234,7 @@
 
 .flash-old-price {
 
-    font-size: 0.72rem;
+    font-size: 0.64rem;
 
     font-weight: 600;
 
@@ -307,7 +252,7 @@
 
 .flash-price {
 
-    font-size: 0.92rem;
+    font-size: 0.82rem;
 
     font-weight: 700;
 
@@ -324,7 +269,7 @@
 
     margin-top: 4px;
 
-    font-size: 0.72rem;
+    font-size: 0.66rem;
 
     font-weight: 700;
 
@@ -339,10 +284,6 @@
 
 @media (min-width: 1200px) {
 
-    /* =========================
-       FLASH SECTION
-    ========================= */
-
     #flashSection {
 
         max-width: 1200px;
@@ -354,58 +295,23 @@
     }
 
 
-    /* =========================
-       FLASH WRAPPER
-    ========================= */
-
-    #flashWrapper {
-
-        padding:
-            0 4px;
-
-    }
-
-
-    /* =========================
-       FLASH SLIDER
-    ========================= */
-
     #flashContainer {
 
-        gap: 18px;
-
-        padding:
-            0 0 4px;
+        gap: 16px;
 
     }
 
-
-    /* =========================
-       FLASH CARD
-    ========================= */
 
     .flash-card {
 
-        flex: 0 0 240px;
-
         padding: 16px;
-
-        gap: 12px;
 
     }
 
 
-    /* =========================
-       FLASH IMAGE
-    ========================= */
-
     .flash-image {
 
-        width: 100%;
-
         height: 180px;
-
-        object-fit: contain;
 
         aspect-ratio: unset;
 
@@ -414,54 +320,23 @@
     }
 
 
-    /* =========================
-       FLASH TITLE
-    ========================= */
-
     .flash-info h3 {
 
-        font-size: 0.98rem;
-
-        line-height: 1.2;
+        font-size: 1rem;
 
     }
 
-
-    /* =========================
-       FLASH DESCRIPTION
-    ========================= */
 
     .flash-info p {
 
-        font-size: 0.8rem;
-
-        line-height: 1.35;
-
-        -webkit-line-clamp: 3;
+        font-size: 0.82rem;
 
     }
 
-
-    /* =========================
-       FLASH PRICE
-    ========================= */
 
     .flash-price {
 
         font-size: 1.05rem;
-
-    }
-
-
-    /* =========================
-       FLASH CONTACT
-    ========================= */
-
-    .flash-contact {
-
-        font-size: 0.82rem;
-
-        margin-top: 8px;
 
     }
 

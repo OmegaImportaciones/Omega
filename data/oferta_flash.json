@@ -1,15 +1,5 @@
 [
     {
-      "id": "1",
-      "name": "HiFuture Mega S",
-      "description": "Bluetooth 5.0 · 10hrs · TWS",
-      "image": "https://hifuturegroup.com/cdn/shop/files/megaS-5.jpg?v=1742190340&width=1080",
-      "price": "178 Bs",
-      "oldPrice": "250 Bs",
-      "whatsapp": "HiFuture Mega S",
-      "promoTag": "⚡ Oferta"
-    },
-    {
       "id": "2",
       "name": "Xiaomi Sound Party 50w",
       "description": "Afinación Harman · 26hrs · iP67",
@@ -18,16 +8,6 @@
       "oldPrice": "950 Bs",
       "whatsapp": "Xiaomi Sound Party 50w",
       "promoTag": "🔥 Viral"
-    },
-    {
-      "id": "3",
-      "name": "Xiaomi Speaker mini",
-      "description": "Bluetooth 5.0 · TWS",
-      "image": "https://xiaomistore.com.gt/wp-content/uploads/Xiaomi_Bluetooth_Speaker_Mini.webp",
-      "price": "240 Bs",
-      "oldPrice": "310 Bs",
-      "whatsapp": "Xiaomi Speaker mini",
-      "promoTag": "⚡ Oferta"
     },
     {
       "id": "4",
