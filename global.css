@@ -45,9 +45,13 @@
 
 #flashSection {
 
-    width: 100%;
+    width: 100vw;
 
-    align-self: stretch;
+    position: relative;
+
+    left: 50%;
+
+    transform: translateX(-50%);
 
     display: flex;
 
@@ -69,7 +73,7 @@
     width: 100%;
 
     padding:
-        0 6px;
+        0 14px;
 
     box-sizing: border-box;
 
@@ -119,7 +123,7 @@
 
 .flash-card {
 
-    flex: 0 0 calc((100% - 12px) / 3);
+    flex: 0 0 calc((100% - 12px) / 2.35);
 
     display: flex;
 
@@ -337,7 +341,13 @@
 
     #flashSection {
 
+        width: 100%;
+
         max-width: 1200px;
+
+        left: auto;
+
+        transform: none;
 
         margin-left: auto;
 
