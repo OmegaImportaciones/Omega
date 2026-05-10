@@ -38,7 +38,7 @@
    FLASH SECTION
 ========================= */
 
-.flash-section {
+#flashSection {
 
     display: flex;
 
@@ -50,10 +50,28 @@
 
 
 /* =========================
+   FLASH WRAPPER
+========================= */
+
+#flashWrapper {
+
+    width: 100%;
+
+    overflow: hidden;
+
+    padding:
+        0 14px;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================
    FLASH SLIDER
 ========================= */
 
-.flash-slider {
+#flashContainer {
 
     display: flex;
 
@@ -68,7 +86,7 @@
     scroll-behavior: smooth;
 
     padding:
-        0 14px 4px;
+        0 0 4px;
 
     -webkit-overflow-scrolling: touch;
 
@@ -78,7 +96,7 @@
 
 }
 
-.flash-slider::-webkit-scrollbar {
+#flashContainer::-webkit-scrollbar {
 
     display: none;
 
@@ -337,15 +355,27 @@
 
 
     /* =========================
+       FLASH WRAPPER
+    ========================= */
+
+    #flashWrapper {
+
+        padding:
+            0 4px;
+
+    }
+
+
+    /* =========================
        FLASH SLIDER
     ========================= */
 
-    .flash-slider {
+    #flashContainer {
 
         gap: 18px;
 
         padding:
-            0 4px 4px;
+            0 0 4px;
 
     }
 
