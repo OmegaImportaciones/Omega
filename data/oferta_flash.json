@@ -28,5 +28,37 @@
       "oldPrice": "1390 Bs",
       "whatsapp": "JBL Charge 6",
       "promoTag": "⚡ Oferta"
+    },
+    {
+      "id": "6",
+      "name": "AirPods Pro 2",
+      "description": "Copia · Bluetooth 5.0",
+      "image": "https://www.tiendaamiga.com.bo/media/catalog/product/cache/deb88dadd509903c96aaa309d3e790dc/7/3/732.gif",
+      "whatsapp": "AirPods Pro 2",
+      "promoTag": "⚡ Oferta"
+    },
+    {
+      "id": "7",
+      "name": "Redmi Buds 8 Lite",
+      "description": "ANC 42dB · Eq · 36hrs",
+      "image": "https://xiaomistore.com.gt/wp-content/uploads/buds2081.webp",
+      "whatsapp": "Redmi Buds 8 Lite",
+      "promoTag": "🔥 Viral"
+    },
+    {
+      "id": "8",
+      "name": "Redmi Buds 8 Active",
+      "description": "Semi InEar · Eq · 37hrs",
+      "image": "https://i02.appmifile.com/mi-com-product/fly-birds/redmi-buds-8-active/m/6d6186e7f62ea2770e93660aaa15f22d.jpg",
+      "whatsapp": "Redmi Buds 8 Active",
+      "promoTag": ""
+    },
+    {
+      "id": "9",
+      "name": "Apple EarPods",
+      "description": "Original · Lightning",
+      "image": "https://www.ismartbolivia.com/wp-content/uploads/2014/06/MMTN2.jpg",
+      "whatsapp": "Apple EarPods",
+      "promoTag": ""
     }
   ]
