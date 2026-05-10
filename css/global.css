@@ -45,6 +45,10 @@
 
 #flashSection {
 
+    width: 100%;
+
+    align-self: stretch;
+
     display: flex;
 
     flex-direction: column;
@@ -62,20 +66,22 @@
 
 #flashWrapper {
 
-    width: calc(100% - 48px);
+    width: 100%;
 
-    margin: 0 auto;
+    max-width: 100%;
+
+    padding:
+        0 24px;
+
+    box-sizing: border-box;
 
     overflow: hidden;
 
 }
 
 
-
 /* =========================
-
    FLASH CONTAINER
-
 ========================= */
 
 #flashContainer {
@@ -97,6 +103,8 @@
     scrollbar-width: none;
 
     padding-bottom: 4px;
+
+    box-sizing: border-box;
 
 }
 
@@ -151,6 +159,17 @@
     transition:
         transform 0.25s ease,
         box-shadow 0.25s ease;
+
+}
+
+.flash-card:link,
+.flash-card:visited,
+.flash-card:hover,
+.flash-card:active {
+
+    text-decoration: none;
+
+    color: inherit;
 
 }
 
@@ -325,6 +344,14 @@
         margin-left: auto;
 
         margin-right: auto;
+
+    }
+
+
+    #flashWrapper {
+
+        padding:
+            0 4px;
 
     }
 
