@@ -6,11 +6,13 @@
 @import url('./base/variables.css');
 @import url('./base/body.css');
 
+
 /* =========================
    LAYOUT
 ========================= */
 
 @import url('./layout/container.css');
+
 
 /* =========================
    COMPONENTS
@@ -21,6 +23,7 @@
 @import url('./components/cards.css');
 @import url('./components/icons.css');
 
+
 /* =========================
    PAGES
 ========================= */
@@ -28,11 +31,13 @@
 @import url('./pages/location.css');
 @import url('./pages/catalog.css');
 
+
 /* =========================
    RESPONSIVE
 ========================= */
 
 @import url('./responsive/mobile.css');
+
 
 /* =========================
    FLASH SECTION
@@ -44,7 +49,9 @@
 
     flex-direction: column;
 
-    gap: 14px;
+    gap: 12px;
+
+    overflow: hidden;
 
 }
 
@@ -55,16 +62,14 @@
 
 #flashWrapper {
 
-    width: 100%;
+    width: 90%;
 
-    padding:
-        0 14px;
-
-    box-sizing: border-box;
+    margin: 0 auto;
 
     overflow: hidden;
 
 }
+
 
 
 /* =========================
@@ -75,7 +80,7 @@
 
     display: flex;
 
-    gap: 8px;
+    gap: 12px;
 
     overflow-x: auto;
 
@@ -84,6 +89,8 @@
     scroll-snap-type: x mandatory;
 
     scroll-behavior: smooth;
+
+    padding-bottom: 4px;
 
     -webkit-overflow-scrolling: touch;
 
@@ -104,7 +111,7 @@
 
 .flash-card {
 
-    flex: 0 0 calc((100% - 16px) / 3);
+    flex: 0 0 calc((97% - 12px) / 3);
 
     display: flex;
 
@@ -114,7 +121,7 @@
 
     padding: 10px;
 
-    border-radius: 20px;
+    border-radius: 22px;
 
     background:
         linear-gradient(
@@ -131,13 +138,17 @@
     box-shadow:
         0 8px 24px rgba(0,0,0,0.28);
 
-    overflow: hidden;
+    scroll-snap-align: start;
 
     text-decoration: none;
 
     color: inherit;
 
-    scroll-snap-align: start;
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 
 }
 
@@ -152,14 +163,14 @@
 
     aspect-ratio: 1 / 1;
 
-    object-fit: contain;
+    object-fit: cover;
 
-    border-radius: 14px;
+    border-radius: 16px;
 
     background:
         rgba(255,255,255,0.04);
 
-    padding: 8px;
+    display: block;
 
 }
 
@@ -187,7 +198,7 @@
 
 .flash-info h3 {
 
-    font-size: 0.76rem;
+    font-size: 0.82rem;
 
     font-weight: 700;
 
@@ -212,14 +223,14 @@
 
 .flash-info p {
 
-    font-size: 0.62rem;
+    font-size: 0.66rem;
 
     font-weight: 500;
 
     color:
         rgba(255,255,255,0.68);
 
-    line-height: 1.2;
+    line-height: 1.25;
 
     overflow: hidden;
 
