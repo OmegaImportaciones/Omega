@@ -1,52 +1,52 @@
 [
-    {
-      "id": "2",
-      "name": "Xiaomi Sound Party 50w",
-      "description": "Afinación Harman · 26hrs · iP67",
-      "image": "https://i02.appmifile.com/560_item_co/21/10/2025/8ea059303944a442782e2b85fad297d5.png?thumb=1&q=85",
-      "price": "850 Bs",
-      "oldPrice": "950 Bs",
-      "whatsapp": "Xiaomi Sound Party 50w",
-      "promoTag": "🔥 Viral"
-    },
-    {
-      "id": "4",
-      "name": "JBL Flip 7",
-      "description": "Afinación Harman · 35w · iP67",
-      "image": "https://fulltec.com.bo/medios/2025/09/JBL_Flip_7_Blue_Box_Image_1605x1605px.webp",
-      "price": "920 Bs",
-      "oldPrice": "1100 Bs",
-      "whatsapp": "JBL Flip 7",
-      "promoTag": "⚡ Oferta"
-    },
-    {
-      "id": "5",
-      "name": "JBL Charge 6",
-      "description": "Afinación Harman · 45w · iP67",
-      "image": "https://www.jbl.es/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwcc289a75/JBL_Charge_6_SKU_Box_Image_Black.png?sw=680&sh=680",
-      "price": "1320 Bs",
-      "oldPrice": "1390 Bs",
-      "whatsapp": "JBL Charge 6",
-      "promoTag": "⚡ Oferta"
-    },
-    {
-      "id": "6",
-      "name": "AirPods Pro 2",
-      "description": "Copia · Bluetooth 5.0",
-      "image": "https://www.tiendaamiga.com.bo/media/catalog/product/cache/deb88dadd509903c96aaa309d3e790dc/7/3/732.gif",
-      "price": "95 Bs",
-      "oldPrice": "140 Bs",
-      "whatsapp": "AirPods Pro 2",
-      "promoTag": "⚡ Oferta"
-    },
-    {
-      "id": "7",
-      "name": "Redmi Buds 8 Lite",
-      "description": "ANC 42dB · Eq · 36hrs",
-      "image": "https://xiaomistore.com.gt/wp-content/uploads/buds2081.webp",
-      "price": "220 Bs",
-      "oldPrice": "260 Bs",
-      "whatsapp": "Redmi Buds 8 Lite",
-      "promoTag": "⚡ Oferta"
-    }
-  ]
+  {
+    "id": "2",
+    "name": "Xiaomi Sound Party 50w",
+    "description": "Afinación Harman · 26hrs · iP67",
+    "image": "https://i02.appmifile.com/560_item_co/21/10/2025/8ea059303944a442782e2b85fad297d5.png?thumb=1&q=85",
+    "price": "850 Bs",
+    "oldPrice": "950 Bs",
+    "whatsapp": "Xiaomi Sound Party 50w",
+    "promoTag": "🔥 Viral"
+  },
+  {
+    "id": "4",
+    "name": "Camara Tapo C500",
+    "description": "FHD · Ip65 · 360º",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8Qkz5SZ4uYAs4ZM2-mRTjB5IWDdcNOpvDPg&s",
+    "price": "560 BS",
+    "oldPrice": "500 BS",
+    "whatsapp": "Camara Tapo C500",
+    "promoTag": "⚡ Oferta"
+  },
+  {
+    "id": "5",
+    "name": "JBL Charge 6",
+    "description": "Afinación Harman · 45w · iP67",
+    "image": "https://www.jbl.es/dw/image/v2/BFND_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwcc289a75/JBL_Charge_6_SKU_Box_Image_Black.png?sw=680&sh=680",
+    "price": "1320 Bs",
+    "oldPrice": "1390 Bs",
+    "whatsapp": "JBL Charge 6",
+    "promoTag": "⚡ Oferta"
+  },
+  {
+    "id": "6",
+    "name": "Camara Xiaomi C100",
+    "description": "Fija · 2K · Monitor de bebe",
+    "image": "https://i02.appmifile.com/302_operator_sg/12/05/2025/3061c7ac3444691b00d56c83ee1a6bc9.png",
+    "price": "290 BS",
+    "oldPrice": "245 BS",
+    "whatsapp": "Camara Xiaomi C100",
+    "promoTag": "⚡ Oferta"
+  },
+  {
+    "id": "7",
+    "name": "Mouse Xiaomi Comfort",
+    "description": "Ergonomico · Optico · Inalámbrico",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEcxJVbvRoIme7EsJld48Y_9yE2Qud3YFOjw&s",
+    "price": "200 BS",
+    "oldPrice": "150 BS",
+    "whatsapp": "Mouse Xiaomi Comfort",
+    "promoTag": "⚡ Oferta"
+  }
+]
