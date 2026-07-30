@@ -32,7 +32,8 @@ let currentSearch =
 
 function normalizeText(text) {
 
-    return text
+    return (text || '')
+        .toString()
         .normalize('NFD')
         .replace(/[\u0300-\u036f]/g, '')
         .toLowerCase();
@@ -59,19 +60,19 @@ function applySearch(products) {
     const filteredProducts =
         products.filter(product => {
 
-            const name =
+            const nombre =
                 normalizeText(
-                    product.name
+                    product.producto
                 );
 
-            const description =
+            const codigo =
                 normalizeText(
-                    product.description
+                    product.codigo
                 );
 
             return (
-                name.includes(search) ||
-                description.includes(search)
+                nombre.includes(search) ||
+                codigo.includes(search)
             );
 
         });
@@ -90,17 +91,12 @@ function applySearch(products) {
        SHOW / HIDE PROMOS
     ========================= */
 
-    if (search.length > 0) {
+    if (!promoSection) return;
 
-        promoSection.style.display =
-            'none';
-
-    } else {
-
-        promoSection.style.display =
-            'block';
-
-    }
+    promoSection.style.display =
+        search.length > 0
+            ? 'none'
+            : 'block';
 
 }
 
