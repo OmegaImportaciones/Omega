@@ -918,24 +918,6 @@
         "cantidad_disponible": 0
     },
     {
-        "id": 449,
-        "imagen": "https://apiback.aswin-smart.com/images/productos/666a6f929aa44.png",
-        "imagen2": "https://apiback.aswin-smart.com/images/default.png",
-        "imagen3": "https://apiback.aswin-smart.com/images/default.png",
-        "codigo": "449",
-        "producto": "SERVICIO TECNICO",
-        "minimo": 5,
-        "estado": 1,
-        "precio": "105.00",
-        "precio1": "105.00",
-        "precio2": "52.00",
-        "precio3": "6.00",
-        "precio4": "2.00",
-        "precio5": "2.00",
-        "precio6": "1.00",
-        "cantidad_disponible": 499
-    },
-    {
         "id": 467,
         "imagen": "https://apiback.aswin-smart.com/images/productos/6656a8dcdfc5f.png",
         "imagen2": "https://apiback.aswin-smart.com/images/default.png",
