@@ -1,23 +1,3 @@
-﻿/* =========================================================
-   CATALOG.JS — Catálogo con Virtual Scrolling
-   =========================================================
-   Arquitectura:
-   1. DOM & CONFIG        -> referencias y constantes
-   2. STATE                -> estado central de la virtualización
-   3. DATA LAYER           -> fetch + filtrado de productos
-   4. RENDER LAYER (CARDS) -> construcción de nodos DOM de tarjetas
-   5. VIRTUALIZATION CORE  -> medición de grid, cálculo de rango
-                              visible y RECONCILIACIÓN del DOM
-                              (agrega/quita solo lo necesario, nunca
-                              destruye tarjetas que siguen visibles
-                              -> evita el parpadeo)
-   6. SCROLL / RESIZE      -> listeners y throttling
-   7. PUBLIC API           -> renderProducts(), loadProducts()
-                              (mismas firmas que la versión anterior,
-                              para no romper search.js / analytics)
-   ========================================================= */
-
-
 /* =========================
    1. DOM & CONFIG
 ========================= */
@@ -25,11 +5,10 @@
 const productsContainer =
     document.getElementById('productsContainer');
 
-const VIRTUAL_CONFIG = {
-    BUFFER_ROWS: 3,           // filas extra renderizadas arriba/abajo del viewport
-    DEFAULT_ROW_HEIGHT: 380,  // estimación inicial (px) antes de medir el DOM real
-    DEFAULT_COLUMNS: 1,       // estimación inicial de columnas
-    RESIZE_DEBOUNCE_MS: 150
+const CATALOG_CONFIG = {
+    INITIAL_BATCH_SIZE: 60,   // productos que se pintan al abrir el catálogo
+    LOAD_BATCH_SIZE: 60,      // productos que se agregan en cada carga posterior
+    OBSERVER_ROOT_MARGIN: '600px 0px' // margen de anticipación antes de llegar al final
 };
 
 
@@ -37,19 +16,11 @@ const VIRTUAL_CONFIG = {
    2. STATE
 ========================= */
 
-const virtualState = {
-    dataset: [],          // productos actualmente activos (todos o resultado de búsqueda)
-    columns: VIRTUAL_CONFIG.DEFAULT_COLUMNS,
-    rowHeight: VIRTUAL_CONFIG.DEFAULT_ROW_HEIGHT,
-    totalRows: 0,
-    renderedStart: -1,    // índice inicial actualmente pintado en el DOM
-    renderedEnd: -1,      // índice final actualmente pintado en el DOM
-    nodeMap: new Map(),   // índice del producto -> nodo <article> ya montado en el DOM
-    topSpacer: null,      // referencia persistente al espaciador superior
-    bottomSpacer: null,   // referencia persistente al espaciador inferior
-    ticking: false,       // throttle de scroll vía rAF
-    resizeTimer: null,    // debounce de resize
-    listenersAttached: false
+const catalogState = {
+    dataset: [],        // productos actualmente activos (todos o resultado de búsqueda)
+    renderedCount: 0,    // cuántos productos del dataset ya están pintados en el DOM
+    sentinel: null,      // elemento invisible que dispara la siguiente carga
+    observer: null       // instancia única de IntersectionObserver (se reutiliza)
 };
 
 // Mantenida por compatibilidad: otros módulos (búsqueda, analytics, futuras
@@ -97,7 +68,7 @@ async function loadProducts() {
 
 
 /* =========================
-   4. RENDER LAYER (CARDS)
+   4. CARD BUILDER
 ========================= */
 
 function createWhatsAppLink(product) {
@@ -122,10 +93,9 @@ Vi que en su catálogo web figura con un precio de Bs ${price}.
 
 }
 
-// Crea un nodo <article> REAL (no un string de HTML). Esto es clave:
-// una vez creado, este nodo se reutiliza mientras el producto siga
-// dentro del rango visible, así su <img> nunca se vuelve a decodificar
-// ni a parpadear.
+// Crea un nodo <article> REAL (no un string de HTML). Cada tarjeta se crea
+// una única vez y se añade al DOM; nunca se vuelve a tocar ni a reconstruir,
+// así que su <img> nunca se re-decodifica ni parpadea.
 function createProductCardElement(product) {
 
     const article = document.createElement('article');
@@ -181,284 +151,145 @@ function createProductCardElement(product) {
 
 }
 
-function createSpacerElement(position) {
+// Elemento invisible colocado al final del catálogo. Actúa como disparador
+// para el IntersectionObserver. Se estiliza para no romper ni el grid
+// (desktop) ni el layout en columna (mobile).
+function createSentinelElement() {
 
-    const spacer = document.createElement('div');
-    spacer.className = `virtual-spacer virtual-spacer-${position}`;
-    spacer.setAttribute('aria-hidden', 'true');
+    const sentinel = document.createElement('div');
+    sentinel.className = 'catalog-sentinel';
+    sentinel.setAttribute('aria-hidden', 'true');
 
-    // Inline styles para no depender de cambios en CSS:
-    // - grid-column: 1 / -1 -> funciona si productsContainer es CSS Grid
-    // - flex-basis: 100%    -> funciona si productsContainer es Flexbox wrap
-    spacer.style.width = '100%';
-    spacer.style.gridColumn = '1 / -1';
-    spacer.style.flexBasis = '100%';
-    spacer.style.height = '0px';
+    sentinel.style.width = '100%';
+    sentinel.style.gridColumn = '1 / -1';
+    sentinel.style.flexBasis = '100%';
+    sentinel.style.height = '1px';
 
-    return spacer;
+    return sentinel;
 
 }
 
 
 /* =========================
-   5. VIRTUALIZATION CORE
+   5. RENDERIZADO INCREMENTAL
 ========================= */
 
-function ensureSpacers() {
-
-    if (virtualState.topSpacer && virtualState.bottomSpacer) return;
-
-    productsContainer.innerHTML = '';
-
-    virtualState.topSpacer = createSpacerElement('top');
-    virtualState.bottomSpacer = createSpacerElement('bottom');
-
-    productsContainer.appendChild(virtualState.topSpacer);
-    productsContainer.appendChild(virtualState.bottomSpacer);
-
-}
-
-// Limpia por completo el DOM virtualizado. Se usa SOLO cuando cambia el
-// dataset completo (ej. una nueva búsqueda), porque en ese caso el mismo
-// índice ya no corresponde al mismo producto y no tiene sentido reciclar
-// nodos viejos.
-function resetVirtualDOM() {
+// Limpia el catálogo por completo. Se usa solo cuando cambia el dataset
+// entero (carga inicial o nueva búsqueda), ya que en ese caso no tiene
+// sentido reciclar tarjetas: son productos distintos.
+function resetCatalogDOM() {
 
     if (!productsContainer) return;
 
+    if (catalogState.observer && catalogState.sentinel) {
+        catalogState.observer.unobserve(catalogState.sentinel);
+    }
+
     productsContainer.innerHTML = '';
-    virtualState.nodeMap.clear();
-    virtualState.topSpacer = null;
-    virtualState.bottomSpacer = null;
-    virtualState.renderedStart = -1;
-    virtualState.renderedEnd = -1;
-
-    ensureSpacers();
+    catalogState.sentinel = null;
+    catalogState.renderedCount = 0;
 
 }
 
-function measureGridMetrics() {
-
-    if (!productsContainer) return false;
-
-    // --- columnas ---
-    // getComputedStyle resuelve grid-template-columns a una lista de pistas
-    // en píxeles ya calculadas (aunque se use repeat(auto-fill,...)), por lo
-    // que contar los tokens nos da el número real de columnas actuales.
-    let measuredColumns = virtualState.columns;
-
-    const computedTemplate =
-        getComputedStyle(productsContainer).gridTemplateColumns;
-
-    if (computedTemplate && computedTemplate !== 'none') {
-        const tracks = computedTemplate.trim().split(/\s+/).filter(Boolean);
-        if (tracks.length > 0) measuredColumns = tracks.length;
-    }
-
-    // --- alto de fila ---
-    const firstCard =
-        productsContainer.querySelector('.product-card');
-
-    let measuredRowHeight = virtualState.rowHeight;
-
-    if (firstCard) {
-        const rowGap =
-            parseFloat(getComputedStyle(productsContainer).rowGap) || 0;
-
-        measuredRowHeight =
-            firstCard.getBoundingClientRect().height + rowGap;
-    }
-
-    const changed =
-        measuredColumns !== virtualState.columns ||
-        Math.abs(measuredRowHeight - virtualState.rowHeight) > 1;
-
-    virtualState.columns =
-        Math.max(1, measuredColumns);
-
-    virtualState.rowHeight =
-        measuredRowHeight || VIRTUAL_CONFIG.DEFAULT_ROW_HEIGHT;
-
-    virtualState.totalRows =
-        Math.ceil(virtualState.dataset.length / virtualState.columns);
-
-    return changed;
-
-}
-
-function computeVisibleRange() {
-
-    const { columns, rowHeight, totalRows, dataset } = virtualState;
-
-    if (!productsContainer || dataset.length === 0 || columns < 1) {
-        return { startRow: 0, endRow: -1, startIndex: 0, endIndex: 0 };
-    }
-
-    const containerTop =
-        productsContainer.getBoundingClientRect().top + window.scrollY;
-
-    const scrollWithinContainer =
-        Math.max(0, window.scrollY - containerTop);
-
-    const viewportHeight = window.innerHeight;
-
-    let startRow =
-        Math.floor(scrollWithinContainer / rowHeight) - VIRTUAL_CONFIG.BUFFER_ROWS;
-
-    let endRow =
-        Math.ceil((scrollWithinContainer + viewportHeight) / rowHeight) + VIRTUAL_CONFIG.BUFFER_ROWS;
-
-    startRow = Math.max(0, startRow);
-    endRow = Math.min(totalRows - 1, endRow);
-    if (endRow < startRow) endRow = startRow;
-
-    const startIndex = startRow * columns;
-    const endIndex = Math.min(dataset.length, (endRow + 1) * columns);
-
-    return { startRow, endRow, startIndex, endIndex };
-
-}
-
-// Busca, dentro del rango [fromIndex+1, endIndex), el próximo nodo que ya
-// esté montado en el DOM. Sirve como referencia para insertar un nodo nuevo
-// en la posición correcta con insertBefore, sin tener que reordenar nada.
-function findNextMountedNode(fromIndex, endIndex) {
-
-    for (let index = fromIndex + 1; index < endIndex; index++) {
-        const node = virtualState.nodeMap.get(index);
-        if (node) return node;
-    }
-
-    return null; // no hay nodos después -> insertar justo antes del bottomSpacer
-
-}
-
-// Reconciliación: en lugar de reemplazar innerHTML, solo:
-//   - elimina las tarjetas que quedaron fuera del nuevo rango
-//   - agrega las tarjetas nuevas que entraron al rango
-//   - deja intactas (sin tocar) las que ya estaban y siguen visibles
-// Esto es lo que elimina el parpadeo al hacer scroll.
-function renderVisibleWindow(range) {
+// Agrega el siguiente bloque de productos usando un DocumentFragment
+// (una sola operación de inserción), sin tocar las tarjetas ya
+// renderizadas. Las tarjetas nuevas se insertan SIEMPRE antes del
+// sentinel, por lo que el sentinel queda automáticamente al final.
+function renderNextBatch() {
 
     if (!productsContainer) return;
 
-    const { dataset, rowHeight, totalRows } = virtualState;
+    const { dataset, renderedCount } = catalogState;
 
-    if (dataset.length === 0) {
-        resetVirtualDOM();
-        return;
+    if (renderedCount >= dataset.length) return;
+
+    const batchSize =
+        renderedCount === 0
+            ? CATALOG_CONFIG.INITIAL_BATCH_SIZE
+            : CATALOG_CONFIG.LOAD_BATCH_SIZE;
+
+    const nextCount =
+        Math.min(dataset.length, renderedCount + batchSize);
+
+    const fragment = document.createDocumentFragment();
+
+    for (let index = renderedCount; index < nextCount; index++) {
+        fragment.appendChild(createProductCardElement(dataset[index]));
     }
 
-    ensureSpacers();
+    if (catalogState.sentinel && catalogState.sentinel.parentNode === productsContainer) {
+        productsContainer.insertBefore(fragment, catalogState.sentinel);
+    } else {
+        productsContainer.appendChild(fragment);
+    }
 
-    const { startIndex, endIndex, startRow, endRow } = range;
+    catalogState.renderedCount = nextCount;
 
-    // 1. eliminar tarjetas que quedaron fuera del rango
-    for (const [index, node] of virtualState.nodeMap) {
-        if (index < startIndex || index >= endIndex) {
-            node.remove();
-            virtualState.nodeMap.delete(index);
+}
+
+
+/* =========================
+   6. INTERSECTION OBSERVER
+========================= */
+
+function ensureObserver() {
+
+    if (catalogState.observer) return;
+
+    catalogState.observer = new IntersectionObserver(
+        handleSentinelIntersect,
+        {
+            root: null,
+            rootMargin: CATALOG_CONFIG.OBSERVER_ROOT_MARGIN,
+            threshold: 0
         }
-    }
-
-    // 2. agregar tarjetas nuevas que entraron al rango, en su posición correcta
-    for (let index = startIndex; index < endIndex; index++) {
-
-        if (virtualState.nodeMap.has(index)) continue;
-
-        const product = dataset[index];
-        const node = createProductCardElement(product);
-
-        const referenceNode =
-            findNextMountedNode(index, endIndex) || virtualState.bottomSpacer;
-
-        productsContainer.insertBefore(node, referenceNode);
-        virtualState.nodeMap.set(index, node);
-
-    }
-
-    // 3. actualizar el tamaño de los espaciadores
-    const renderedRows = Math.max(0, endRow - startRow + 1);
-
-    const topHeight = startRow * rowHeight;
-    const bottomHeight =
-        Math.max(0, (totalRows - startRow - renderedRows) * rowHeight);
-
-    virtualState.topSpacer.style.height = `${topHeight}px`;
-    virtualState.bottomSpacer.style.height = `${bottomHeight}px`;
-
-    virtualState.renderedStart = startIndex;
-    virtualState.renderedEnd = endIndex;
+    );
 
 }
 
-function updateVisibleWindow() {
+function handleSentinelIntersect(entries) {
 
-    const range = computeVisibleRange();
+    entries.forEach(entry => {
 
-    const sameRange =
-        range.startIndex === virtualState.renderedStart &&
-        range.endIndex === virtualState.renderedEnd;
+        if (!entry.isIntersecting) return;
 
-    if (sameRange) return; // nada cambió, evitamos trabajo innecesario
+        try {
+            renderNextBatch();
+        } catch (error) {
+            console.error('Error cargando el siguiente bloque de productos:', error);
+        }
 
-    renderVisibleWindow(range);
+        if (catalogState.renderedCount >= catalogState.dataset.length) {
+            catalogState.observer.unobserve(catalogState.sentinel);
+            return;
+        }
 
-}
+        // Forzamos una nueva verificación de intersección: si el sentinel
+        // sigue visible (porque el bloque recién cargado no alcanzó a
+        // empujarlo fuera del viewport), volver a observarlo dispara un
+        // chequeo inmediato y sigue cargando bloques hasta que quede
+        // realmente fuera de pantalla.
+        catalogState.observer.unobserve(catalogState.sentinel);
+        catalogState.observer.observe(catalogState.sentinel);
 
-
-/* =========================
-   6. SCROLL / RESIZE
-========================= */
-
-function handleScroll() {
-
-    if (virtualState.ticking) return;
-
-    virtualState.ticking = true;
-
-    requestAnimationFrame(() => {
-        updateVisibleWindow();
-        virtualState.ticking = false;
     });
 
 }
 
-function handleResize() {
+function attachObserverIfNeeded() {
 
-    clearTimeout(virtualState.resizeTimer);
+    if (catalogState.renderedCount >= catalogState.dataset.length) return;
 
-    virtualState.resizeTimer = setTimeout(() => {
-
-        const changed = measureGridMetrics();
-
-        if (changed) {
-            // Si cambiaron las columnas/alto de fila, los índices por fila
-            // ya no corresponden al layout real: reconstruimos el rango
-            // desde cero (pero seguimos reconciliando nodos, no destruimos
-            // el DOM completo).
-            virtualState.renderedStart = -1;
-            virtualState.renderedEnd = -1;
+    if (!('IntersectionObserver' in window)) {
+        // Fallback sin soporte de IntersectionObserver: cargar todo de una vez.
+        while (catalogState.renderedCount < catalogState.dataset.length) {
+            renderNextBatch();
         }
-
-        updateVisibleWindow();
-
-    }, VIRTUAL_CONFIG.RESIZE_DEBOUNCE_MS);
-
-}
-
-function attachVirtualScrollListeners() {
-
-    if (virtualState.listenersAttached) return;
-    virtualState.listenersAttached = true;
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    window.addEventListener('resize', handleResize);
-
-    if (window.ResizeObserver && productsContainer) {
-        const observer = new ResizeObserver(() => handleResize());
-        observer.observe(productsContainer);
+        return;
     }
+
+    ensureObserver();
+    catalogState.observer.observe(catalogState.sentinel);
 
 }
 
@@ -472,46 +303,35 @@ function attachVirtualScrollListeners() {
 
 function renderProducts(products) {
 
-    virtualState.dataset =
+    if (!productsContainer) return;
+
+    catalogState.dataset =
         Array.isArray(products) ? products : [];
 
-    // Dataset nuevo (carga inicial o nueva búsqueda) -> los índices ya no
-    // representan los mismos productos, así que reciclar nodos no sirve:
-    // arrancamos el DOM virtualizado desde cero.
-    resetVirtualDOM();
+    // Dataset nuevo (carga inicial o nueva búsqueda) -> se reinicia la
+    // paginación desde cero.
+    resetCatalogDOM();
 
-    virtualState.totalRows =
-        Math.ceil(virtualState.dataset.length / virtualState.columns);
+    if (catalogState.dataset.length === 0) return;
 
-    // Render inicial con métricas estimadas/actuales
-    const initialRange = computeVisibleRange();
-    renderVisibleWindow(initialRange);
+    catalogState.sentinel = createSentinelElement();
+    productsContainer.appendChild(catalogState.sentinel);
 
-    // Con tarjetas reales ya en el DOM, medimos el grid de verdad
-    // y corregimos la ventana visible si la estimación estaba mal.
-    // renderVisibleWindow ya reconcilia (no recrea) lo que siga en rango.
-    requestAnimationFrame(() => {
-        const changed = measureGridMetrics();
-        if (changed) {
-            const refinedRange = computeVisibleRange();
-            renderVisibleWindow(refinedRange);
-        }
-    });
+    // Primer bloque: si el dataset (ej. resultado de búsqueda) es más
+    // chico que INITIAL_BATCH_SIZE, esta misma llamada ya lo pinta
+    // completo y attachObserverIfNeeded() no activará el observer.
+    renderNextBatch();
 
-    attachVirtualScrollListeners();
+    attachObserverIfNeeded();
 
 }
 
 // Punto de extensión para futuras features (carrito, filtros avanzados,
-// orden, categorías) sin tocar el motor de virtualización.
-window.CatalogVirtual = {
-    getDataset: () => virtualState.dataset,
-    getMetrics: () => ({
-        columns: virtualState.columns,
-        rowHeight: virtualState.rowHeight,
-        totalRows: virtualState.totalRows
-    }),
-    refresh: () => renderProducts(virtualState.dataset)
+// orden, categorías) sin tocar el motor de paginación.
+window.CatalogPagination = {
+    getDataset: () => catalogState.dataset,
+    getRenderedCount: () => catalogState.renderedCount,
+    refresh: () => renderProducts(catalogState.dataset)
 };
 
 
