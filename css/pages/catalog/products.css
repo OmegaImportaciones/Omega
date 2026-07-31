@@ -1,20 +1,26 @@
 /* =========================
-   PRODUCT CARD
+   PRODUCT CARD (MOBILE FIRST)
+   -> imagen + contenido en la
+      primera fila, botón
+      "Consultar" en su propia
+      fila a ancho completo.
 ========================= */
 
 .product-card {
 
     display: flex;
 
+    flex-wrap: wrap;
+
     align-items: center;
 
-    gap: 12px;
+    gap: 10px 12px;
 
-    padding: 12px 14px;
+    padding: 14px;
 
-    min-height: 170px;
+    min-height: unset;
 
-    max-height: 170px;
+    max-height: unset;
 
     box-sizing: border-box;
 
@@ -29,15 +35,15 @@
 
 .product-image {
 
-    width: 82px;
+    width: 64px;
 
-    height: 82px;
+    height: 64px;
+
+    flex: 0 0 64px;
 
     object-fit: cover;
 
-    border-radius: 18px;
-
-    flex-shrink: 0;
+    border-radius: 16px;
 
     background:
         rgba(255,255,255,0.04);
@@ -47,6 +53,10 @@
 
 /* =========================
    PRODUCT CONTENT
+   -> ocupa todo el ancho
+      restante de la primera
+      fila (ya no compite con
+      el botón)
 ========================= */
 
 .product-content {
@@ -55,11 +65,9 @@
 
     flex-direction: column;
 
-    flex: 1;
+    flex: 1 1 0%;
 
     min-width: 0;
-
-    height: 100%;
 
 }
 
@@ -70,13 +78,13 @@
 
 .product-content h3 {
 
-    font-size: 0.96rem;
+    font-size: 0.98rem;
 
     font-weight: 700;
 
     color: #ffffff;
 
-    line-height: 1.12;
+    line-height: 1.18;
 
     letter-spacing: -0.02em;
 
@@ -99,16 +107,16 @@
 
 .product-content p {
 
-    font-size: 0.76rem;
+    font-size: 0.78rem;
 
     font-weight: 500;
 
     color:
         rgba(255,255,255,0.68);
 
-    line-height: 1.28;
+    line-height: 1.3;
 
-    margin-top: 6px;
+    margin-top: 4px;
 
     overflow: hidden;
 
@@ -122,20 +130,20 @@
 
 
 /* =========================
-   PRODUCT CONTACT
+   PRODUCT CONTACT (precio)
 ========================= */
 
 .product-contact {
 
-    font-size: 0.8rem;
+    font-size: 0.82rem;
 
     font-weight: 700;
 
     color: #72d6ff;
 
-    line-height: 1.15;
+    line-height: 1.2;
 
-    margin-top: 8px;
+    margin-top: 6px;
 
     overflow: hidden;
 
@@ -148,6 +156,8 @@
 
 /* =========================
    PRODUCT BUTTON
+   -> segunda fila, ancho
+      completo de la tarjeta
 ========================= */
 
 .product-action {
@@ -158,9 +168,13 @@
 
     justify-content: center;
 
-    margin-top: auto;
+    flex: 0 0 100%;
 
-    padding: 10px 14px;
+    width: 100%;
+
+    margin-top: 2px;
+
+    padding: 11px 14px;
 
     border-radius: 14px;
 
@@ -176,13 +190,11 @@
 
     color: #ffffff;
 
-    font-size: 0.8rem;
+    font-size: 0.85rem;
 
     font-weight: 600;
 
     text-decoration: none;
-
-    flex-shrink: 0;
 
     transition:
         transform 0.2s ease,
@@ -208,14 +220,6 @@
         );
 
 }
-
-/* =========================
-   DESKTOP PRODUCTS
-========================= */
-
-/* =========================
-   DESKTOP PRODUCTS
-========================= */
 
 /* =========================
    DESKTOP PRODUCTS
@@ -264,6 +268,8 @@
 
         display: flex;
 
+        flex-wrap: nowrap;
+
         flex-direction: column;
 
         align-items: stretch;
@@ -288,6 +294,8 @@
         width: 100%;
 
         height: 220px;
+
+        flex-basis: auto;
 
         object-fit: cover;
 
