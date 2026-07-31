@@ -1,18 +1,25 @@
-/* =========================
-   PRODUCT CARD (MOBILE FIRST)
-   -> imagen + contenido en la
-      primera fila, botón
-      "Consultar" en su propia
-      fila a ancho completo.
-========================= */
+/* =============================================================
+   PRODUCT CARD — MOBILE (BASE / DEFAULT)
+   -----------------------------------------------------------
+   Layout: 2 filas
+     Fila 1 -> imagen + contenido (comparten ancho)
+     Fila 2 -> botón "Consultar" (ancho completo)
+   Este bloque es la base "mobile first" y NO debe asumirse
+   heredado por escritorio: el media query de escritorio
+   redefine cada propiedad relevante desde cero.
+============================================================= */
 
 .product-card {
 
     display: flex;
 
+    flex-direction: row;
+
     flex-wrap: wrap;
 
     align-items: center;
+
+    justify-content: flex-start;
 
     gap: 10px 12px;
 
@@ -30,7 +37,7 @@
 
 
 /* =========================
-   PRODUCT IMAGE
+   IMAGEN (fila 1)
 ========================= */
 
 .product-image {
@@ -52,11 +59,10 @@
 
 
 /* =========================
-   PRODUCT CONTENT
+   CONTENIDO (fila 1)
    -> ocupa todo el ancho
-      restante de la primera
-      fila (ya no compite con
-      el botón)
+      restante, no comparte
+      fila con el botón
 ========================= */
 
 .product-content {
@@ -73,7 +79,7 @@
 
 
 /* =========================
-   PRODUCT TITLE
+   TÍTULO
 ========================= */
 
 .product-content h3 {
@@ -102,7 +108,7 @@
 
 
 /* =========================
-   PRODUCT DESCRIPTION
+   DESCRIPCIÓN
 ========================= */
 
 .product-content p {
@@ -130,7 +136,7 @@
 
 
 /* =========================
-   PRODUCT CONTACT (precio)
+   PRECIO / DISPONIBILIDAD
 ========================= */
 
 .product-contact {
@@ -155,9 +161,7 @@
 
 
 /* =========================
-   PRODUCT BUTTON
-   -> segunda fila, ancho
-      completo de la tarjeta
+   BOTÓN (fila 2, independiente)
 ========================= */
 
 .product-action {
@@ -204,7 +208,7 @@
 
 
 /* =========================
-   BUTTON HOVER
+   BOTÓN HOVER
 ========================= */
 
 .product-action:hover {
@@ -221,14 +225,26 @@
 
 }
 
-/* =========================
-   DESKTOP PRODUCTS
-========================= */
+
+
+/* =============================================================
+   PRODUCT CARD — ESCRITORIO (>= 1200px)
+   -----------------------------------------------------------
+   Este bloque es una RECONSTRUCCIÓN completa del componente,
+   no una adaptación del layout móvil. Cada propiedad que el
+   layout móvil definió (dirección, wrap, tamaño de imagen,
+   comportamiento del botón, gaps, padding) se redefine
+   explícitamente aquí, sin depender de la herencia.
+
+   Estructura vertical:
+     imagen -> nombre -> precio -> disponibilidad
+     -> espacio flexible -> botón (siempre al fondo)
+============================================================= */
 
 @media (min-width: 1200px) {
 
     /* =========================
-       CONTAINER
+       CONTENEDOR
     ========================= */
 
     .container {
@@ -243,7 +259,7 @@
 
 
     /* =========================
-       PRODUCTS GRID
+       GRID DE PRODUCTOS
     ========================= */
 
     #productsContainer {
@@ -261,32 +277,43 @@
 
 
     /* =========================
-       PRODUCT CARD
+       TARJETA
+       -> se redefine dirección,
+          wrap, alineación, gap
+          y padding desde cero
     ========================= */
 
     .product-card {
 
         display: flex;
 
-        flex-wrap: nowrap;
-
         flex-direction: column;
 
+        flex-wrap: nowrap;
+
         align-items: stretch;
+
+        justify-content: flex-start;
+
+        gap: 0;
+
+        padding: 18px;
 
         min-height: 420px;
 
         max-height: 420px;
 
-        padding: 18px;
-
-        gap: 14px;
+        overflow: hidden;
 
     }
 
 
     /* =========================
-       PRODUCT IMAGE
+       IMAGEN
+       -> tamaño y flex-basis
+          propios de escritorio,
+          sin heredar los 64px
+          de mobile
     ========================= */
 
     .product-image {
@@ -295,28 +322,36 @@
 
         height: 220px;
 
-        flex-basis: auto;
+        flex: 0 0 220px;
 
         object-fit: cover;
 
         border-radius: 22px;
 
+        margin-bottom: 14px;
+
     }
 
 
     /* =========================
-       PRODUCT CONTENT
+       CONTENIDO
+       -> crece para empujar el
+          botón hacia el fondo
     ========================= */
 
     .product-content {
 
-        flex: 1;
+        flex: 1 1 auto;
+
+        min-width: 0;
+
+        min-height: 0;
 
     }
 
 
     /* =========================
-       PRODUCT TITLE
+       TÍTULO
     ========================= */
 
     .product-content h3 {
@@ -325,46 +360,60 @@
 
         line-height: 1.2;
 
+        -webkit-line-clamp: 2;
+
     }
 
 
     /* =========================
-       PRODUCT DESCRIPTION
+       DESCRIPCIÓN
+       -> oculta en escritorio:
+          la estructura pedida es
+          imagen / nombre / precio
+          / disponibilidad / botón
     ========================= */
 
     .product-content p {
 
-        font-size: 0.86rem;
-
-        margin-top: 8px;
-
-        -webkit-line-clamp: 3;
+        display: none;
 
     }
 
 
     /* =========================
-       PRODUCT CONTACT
+       PRECIO / DISPONIBILIDAD
     ========================= */
 
     .product-contact {
 
         font-size: 0.86rem;
 
-        margin-top: 12px;
+        margin-top: 10px;
 
+        white-space: normal;
+
+        overflow: visible;
+
+        text-overflow: unset;
     }
 
 
     /* =========================
-       PRODUCT BUTTON
+       BOTÓN
+       -> vuelve a ser un simple
+          bloque al fondo de una
+          columna flex, no una
+          "fila" con flex-basis
+          heredado de mobile
     ========================= */
 
     .product-action {
 
+        flex: 0 0 auto;
+
         width: 100%;
 
-        margin-top: 16px;
+        margin-top: auto;
 
         padding: 14px 18px;
 
