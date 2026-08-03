@@ -789,7 +789,7 @@
         "precio4": "25.00",
         "precio5": "12.00",
         "precio6": null,
-        "cantidad_disponible": 0
+        "cantidad_disponible": 4
     },
     {
         "id": 104,
@@ -3561,7 +3561,7 @@
         "precio4": "35.00",
         "precio5": "23.00",
         "precio6": null,
-        "cantidad_disponible": 3
+        "cantidad_disponible": 2
     },
     {
         "id": 460,
@@ -6351,7 +6351,7 @@
         "precio4": "155.00",
         "precio5": "115.00",
         "precio6": null,
-        "cantidad_disponible": 5
+        "cantidad_disponible": 4
     },
     {
         "id": 889,
@@ -13515,7 +13515,7 @@
         "precio4": "535.00",
         "precio5": "500.00",
         "precio6": null,
-        "cantidad_disponible": 2
+        "cantidad_disponible": 1
     },
     {
         "id": 1451,
@@ -15513,7 +15513,7 @@
         "precio4": "180.00",
         "precio5": "147.00",
         "precio6": null,
-        "cantidad_disponible": 4
+        "cantidad_disponible": 3
     },
     {
         "id": 1575,
@@ -17403,7 +17403,7 @@
         "precio4": "42.00",
         "precio5": "21.00",
         "precio6": null,
-        "cantidad_disponible": 9
+        "cantidad_disponible": 8
     },
     {
         "id": 1682,
@@ -19077,7 +19077,7 @@
         "precio4": "715.00",
         "precio5": "688.00",
         "precio6": null,
-        "cantidad_disponible": 4
+        "cantidad_disponible": 3
     },
     {
         "id": 1776,
@@ -22119,7 +22119,7 @@
         "precio4": "110.00",
         "precio5": "100.00",
         "precio6": null,
-        "cantidad_disponible": 10
+        "cantidad_disponible": 9
     },
     {
         "id": 1947,
@@ -23253,7 +23253,7 @@
         "precio4": "70.00",
         "precio5": "52.00",
         "precio6": null,
-        "cantidad_disponible": 9
+        "cantidad_disponible": 8
     },
     {
         "id": 2011,
@@ -25755,7 +25755,7 @@
         "precio4": "85.00",
         "precio5": "42.00",
         "precio6": null,
-        "cantidad_disponible": 0
+        "cantidad_disponible": 1
     },
     {
         "id": 2150,
@@ -26079,7 +26079,7 @@
         "precio4": "535.00",
         "precio5": "498.00",
         "precio6": null,
-        "cantidad_disponible": 7
+        "cantidad_disponible": 6
     },
     {
         "id": 2169,
