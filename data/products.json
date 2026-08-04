@@ -555,7 +555,7 @@
         "precio4": "55.00",
         "precio5": "35.00",
         "precio6": "34.00",
-        "cantidad_disponible": 22
+        "cantidad_disponible": 21
     },
     {
         "id": 295,
@@ -2899,21 +2899,21 @@
     },
     {
         "id": 1362,
-        "imagen": "https://apiback.aswin-smart.com/images/productos/66516ef47c974.png",
-        "imagen2": "https://apiback.aswin-smart.com/images/default.png",
-        "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen": "https://apiback.aswin-smart.com/images/productos/6a713a25ed70b.png",
+        "imagen2": "https://apiback.aswin-smart.com/images/productos/6a713a264c1d42.png",
+        "imagen3": "https://apiback.aswin-smart.com/images/productos/6a713a266a48f3.png",
         "codigo": "1362",
-        "producto": "CARGADOR CABEZA SAMSUNG TIPO C 65W C/ 2 USB",
+        "producto": "CARGADOR SAMSUNG TIPO C 65W TRIO",
         "minimo": 5,
         "estado": 1,
-        "precio": "90.00",
-        "precio1": "90.00",
-        "precio2": "85.00",
-        "precio3": "80.00",
-        "precio4": "75.00",
-        "precio5": "52.00",
-        "precio6": "48.00",
-        "cantidad_disponible": 0
+        "precio": "100.00",
+        "precio1": "100.00",
+        "precio2": "95.00",
+        "precio3": "90.00",
+        "precio4": "85.00",
+        "precio5": "46.00",
+        "precio6": "44.00",
+        "cantidad_disponible": 10
     },
     {
         "id": 1364,
@@ -5937,7 +5937,7 @@
         "precio4": "155.00",
         "precio5": "115.00",
         "precio6": "110.00",
-        "cantidad_disponible": 4
+        "cantidad_disponible": 1
     },
     {
         "id": 254,
@@ -7521,7 +7521,7 @@
         "precio4": "165.00",
         "precio5": "128.00",
         "precio6": "126.00",
-        "cantidad_disponible": 18
+        "cantidad_disponible": 17
     },
     {
         "id": 426,
@@ -8673,7 +8673,7 @@
         "precio4": "205.00",
         "precio5": "155.00",
         "precio6": "150.00",
-        "cantidad_disponible": 2
+        "cantidad_disponible": 1
     },
     {
         "id": 1620,
@@ -9735,7 +9735,7 @@
         "precio4": "95.00",
         "precio5": "87.00",
         "precio6": "85.00",
-        "cantidad_disponible": 6
+        "cantidad_disponible": 5
     },
     {
         "id": 1678,
@@ -14811,7 +14811,7 @@
         "precio4": "18.00",
         "precio5": "14.00",
         "precio6": "13.00",
-        "cantidad_disponible": 63
+        "cantidad_disponible": 62
     },
     {
         "id": 1909,
@@ -17339,7 +17339,7 @@
         "imagen2": "https://apiback.aswin-smart.com/images/productos/69701ff091c5c2.png",
         "imagen3": "https://apiback.aswin-smart.com/images/productos/69701ff0a1d0d3.png",
         "codigo": "2 PRO 2da GEN",
-        "producto": "AUDIFONO IPHONE APPLE EARPODS 2 PRO 2da GEN",
+        "producto": "AUDIFONO BLUETOOTH IPHONE APPLE EARPODS 2 PRO 2da GEN",
         "minimo": 10,
         "estado": 1,
         "precio": "150.00",
@@ -18699,7 +18699,7 @@
         "precio4": "45.00",
         "precio5": "17.00",
         "precio6": "16.00",
-        "cantidad_disponible": 8
+        "cantidad_disponible": 7
     },
     {
         "id": 2109,
@@ -18735,7 +18735,7 @@
         "precio4": "45.00",
         "precio5": "17.00",
         "precio6": "16.00",
-        "cantidad_disponible": 12
+        "cantidad_disponible": 10
     },
     {
         "id": 2111,
@@ -19023,7 +19023,7 @@
         "precio4": "325.00",
         "precio5": "285.00",
         "precio6": "285.00",
-        "cantidad_disponible": 1
+        "cantidad_disponible": 0
     },
     {
         "id": 1105,
@@ -19671,7 +19671,7 @@
         "precio4": "395.00",
         "precio5": "348.00",
         "precio6": "345.00",
-        "cantidad_disponible": 4
+        "cantidad_disponible": 3
     },
     {
         "id": 2145,
@@ -20467,7 +20467,7 @@
     },
     {
         "id": 2188,
-        "imagen": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen": "https://apiback.aswin-smart.com/images/productos/6a71352e8c8ff.png",
         "imagen2": "https://apiback.aswin-smart.com/images/default.png",
         "imagen3": "https://apiback.aswin-smart.com/images/default.png",
         "codigo": "FIRE H7",
@@ -20485,7 +20485,7 @@
     },
     {
         "id": 2189,
-        "imagen": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen": "https://apiback.aswin-smart.com/images/productos/6a7135202b762.png",
         "imagen2": "https://apiback.aswin-smart.com/images/default.png",
         "imagen3": "https://apiback.aswin-smart.com/images/default.png",
         "codigo": "FIRE H5",
@@ -20535,6 +20535,42 @@
         "precio4": "675.00",
         "precio5": "615.00",
         "precio6": "610.00",
+        "cantidad_disponible": 4
+    },
+    {
+        "id": 2192,
+        "imagen": "https://apiback.aswin-smart.com/images/productos/6a713afbaed04.png",
+        "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+        "codigo": "PSS - HS130 PLUS",
+        "producto": "AUDIFONO CABLE JACK 3.5 PSS-HS130 PLUS",
+        "minimo": 10,
+        "estado": 1,
+        "precio": "60.00",
+        "precio1": "60.00",
+        "precio2": "55.00",
+        "precio3": "50.00",
+        "precio4": "45.00",
+        "precio5": "17.00",
+        "precio6": "15.00",
+        "cantidad_disponible": 20
+    },
+    {
+        "id": 2193,
+        "imagen": "https://apiback.aswin-smart.com/images/productos/6a713bcede35f.png",
+        "imagen2": "https://apiback.aswin-smart.com/images/productos/6a713bcf0eb2e_2.png",
+        "imagen3": "https://apiback.aswin-smart.com/images/productos/6a713bcf27188_3.png",
+        "codigo": "ROKU 2",
+        "producto": "TV BOX ROKU EXPRESS 2 HD ANDORID 16",
+        "minimo": 10,
+        "estado": 1,
+        "precio": "300.00",
+        "precio1": "300.00",
+        "precio2": "295.00",
+        "precio3": "290.00",
+        "precio4": "285.00",
+        "precio5": "235.00",
+        "precio6": "230.00",
         "cantidad_disponible": 4
     }
 ]
