@@ -411,7 +411,7 @@
         "precio4": "455.00",
         "precio5": "425.00",
         "precio6": "420.00",
-        "cantidad_disponible": 1
+        "cantidad_disponible": 0
     },
     {
         "id": 167,
@@ -1957,9 +1957,9 @@
         "precio2": "75.00",
         "precio3": "70.00",
         "precio4": "65.00",
-        "precio5": "50.00",
-        "precio6": "45.00",
-        "cantidad_disponible": 1
+        "precio5": "45.00",
+        "precio6": "43.00",
+        "cantidad_disponible": 12
     },
     {
         "id": 1087,
@@ -2373,7 +2373,7 @@
         "precio4": "340.00",
         "precio5": "305.00",
         "precio6": "300.00",
-        "cantidad_disponible": 3
+        "cantidad_disponible": 2
     },
     {
         "id": 1214,
@@ -6099,7 +6099,7 @@
         "precio4": "40.00",
         "precio5": "26.00",
         "precio6": "25.00",
-        "cantidad_disponible": 0
+        "cantidad_disponible": 10
     },
     {
         "id": 947,
@@ -6207,7 +6207,7 @@
         "precio4": "635.00",
         "precio5": "575.00",
         "precio6": "570.00",
-        "cantidad_disponible": 6
+        "cantidad_disponible": 5
     },
     {
         "id": 1529,
@@ -9555,7 +9555,7 @@
         "precio4": "175.00",
         "precio5": "160.00",
         "precio6": "160.00",
-        "cantidad_disponible": 10
+        "cantidad_disponible": 9
     },
     {
         "id": 1668,
@@ -10463,17 +10463,17 @@
         "imagen2": "https://apiback.aswin-smart.com/images/default.png",
         "imagen3": "https://apiback.aswin-smart.com/images/default.png",
         "codigo": "SC-2050W",
-        "producto": "CAMARA DE SEGURIDAD TOMATE FOCO SC-2050W",
+        "producto": "CAMARA DE SEGURIDAD TOMATE FOCO SC-Y2050W",
         "minimo": 10,
         "estado": 1,
-        "precio": "188.00",
-        "precio1": "188.00",
-        "precio2": "178.00",
-        "precio3": "167.00",
-        "precio4": "157.00",
-        "precio5": "133.00",
-        "precio6": "131.00",
-        "cantidad_disponible": 0
+        "precio": "180.00",
+        "precio1": "180.00",
+        "precio2": "175.00",
+        "precio3": "170.00",
+        "precio4": "165.00",
+        "precio5": "110.00",
+        "precio6": "105.00",
+        "cantidad_disponible": 10
     },
     {
         "id": 1704,
@@ -12662,13 +12662,13 @@
         "producto": "PARLANTE BLUETOOTH JBL CHARGE 6",
         "minimo": 10,
         "estado": 1,
-        "precio": "1540.00",
-        "precio1": "1540.00",
-        "precio2": "1530.00",
-        "precio3": "1520.00",
-        "precio4": "1510.00",
-        "precio5": "1475.00",
-        "precio6": "1470.00",
+        "precio": "1530.00",
+        "precio1": "1530.00",
+        "precio2": "1520.00",
+        "precio3": "1510.00",
+        "precio4": "1500.00",
+        "precio5": "1460.00",
+        "precio6": "1455.00",
         "cantidad_disponible": 29
     },
     {
@@ -16244,13 +16244,13 @@
         "producto": "MONITOR GAMING XIAOMI CURVED G34WQi EU 34 PULGADAS",
         "minimo": 10,
         "estado": 1,
-        "precio": "3910.00",
-        "precio1": "3910.00",
-        "precio2": "3900.00",
-        "precio3": "3890.00",
-        "precio4": "3880.00",
-        "precio5": "3580.00",
-        "precio6": "3570.00",
+        "precio": "3800.00",
+        "precio1": "3800.00",
+        "precio2": "3790.00",
+        "precio3": "3780.00",
+        "precio4": "3770.00",
+        "precio5": "3310.00",
+        "precio6": "3300.00",
         "cantidad_disponible": 1
     },
     {
@@ -17187,7 +17187,7 @@
         "precio4": "260.00",
         "precio5": "230.00",
         "precio6": "225.00",
-        "cantidad_disponible": 14
+        "cantidad_disponible": 8
     },
     {
         "id": 2033,
@@ -17270,13 +17270,13 @@
         "producto": "PARLANTE BLUETOOTH BOSE S1 PRO +",
         "minimo": 10,
         "estado": 1,
-        "precio": "7690.00",
-        "precio1": "7690.00",
-        "precio2": "7680.00",
-        "precio3": "7670.00",
-        "precio4": "7660.00",
-        "precio5": "7630.00",
-        "precio6": "7620.00",
+        "precio": "9270.00",
+        "precio1": "9270.00",
+        "precio2": "9250.00",
+        "precio3": "9230.00",
+        "precio4": "9200.00",
+        "precio5": "8700.00",
+        "precio6": "8690.00",
         "cantidad_disponible": 0
     },
     {
@@ -17324,13 +17324,13 @@
         "producto": "NOTEBOOK DELL 5440 VP6RM 14 Core 7 16GB RAM / 512GB SSD W11PRO BLUE",
         "minimo": 10,
         "estado": 1,
-        "precio": "7890.00",
-        "precio1": "7890.00",
-        "precio2": "7880.00",
-        "precio3": "7870.00",
-        "precio4": "7860.00",
-        "precio5": "7810.00",
-        "precio6": "7800.00",
+        "precio": "7590.00",
+        "precio1": "7590.00",
+        "precio2": "7580.00",
+        "precio3": "7570.00",
+        "precio4": "7560.00",
+        "precio5": "7510.00",
+        "precio6": "7500.00",
         "cantidad_disponible": 3
     },
     {
@@ -17936,14 +17936,14 @@
         "producto": "PAD MOUSE KNUP KP-S013",
         "minimo": 10,
         "estado": 1,
-        "precio": "40.00",
-        "precio1": "40.00",
-        "precio2": "35.00",
-        "precio3": "30.00",
-        "precio4": "30.00",
-        "precio5": "23.00",
-        "precio6": "22.00",
-        "cantidad_disponible": 0
+        "precio": "55.00",
+        "precio1": "55.00",
+        "precio2": "50.00",
+        "precio3": "45.00",
+        "precio4": "40.00",
+        "precio5": "26.00",
+        "precio6": "25.00",
+        "cantidad_disponible": 15
     },
     {
         "id": 2071,
@@ -18062,13 +18062,13 @@
         "producto": "NOTEBOOK HP i7 15-fd0274la 156 SPA I7-1355U 16RAM  512GB W11 GAMEPASS GO TECLADO ESPAÑOL",
         "minimo": 10,
         "estado": 1,
-        "precio": "8684.00",
-        "precio1": "8684.00",
-        "precio2": "8673.00",
-        "precio3": "8663.00",
-        "precio4": "8652.00",
-        "precio5": "8611.00",
-        "precio6": "8600.00",
+        "precio": "8384.00",
+        "precio1": "8384.00",
+        "precio2": "8373.00",
+        "precio3": "8363.00",
+        "precio4": "8352.00",
+        "precio5": "8311.00",
+        "precio6": "8300.00",
         "cantidad_disponible": 0
     },
     {
@@ -18080,13 +18080,13 @@
         "producto": "NOTEBOOK DELL 15255 4W04Y 15.6 RYZEN 5 7520U 16RAM 512GB SSD W11 SILVER TECLADO ESPAÑOL",
         "minimo": 10,
         "estado": 1,
-        "precio": "6790.00",
-        "precio1": "6790.00",
-        "precio2": "6780.00",
-        "precio3": "6770.00",
-        "precio4": "6760.00",
-        "precio5": "6710.00",
-        "precio6": "6700.00",
+        "precio": "6490.00",
+        "precio1": "6490.00",
+        "precio2": "6480.00",
+        "precio3": "6470.00",
+        "precio4": "6460.00",
+        "precio5": "6410.00",
+        "precio6": "6400.00",
         "cantidad_disponible": 2
     },
     {
@@ -18098,13 +18098,13 @@
         "producto": "NOTEBOOK DELL 15255 VYY17 RYZEN 7 7730 15.6 16RAM 1TB SSD W11 SILVER TECLADO ESPAÑOL",
         "minimo": 10,
         "estado": 1,
-        "precio": "8290.00",
-        "precio1": "8290.00",
-        "precio2": "8280.00",
-        "precio3": "8270.00",
-        "precio4": "8260.00",
-        "precio5": "8200.00",
-        "precio6": "8190.00",
+        "precio": "7990.00",
+        "precio1": "7990.00",
+        "precio2": "7980.00",
+        "precio3": "7970.00",
+        "precio4": "7960.00",
+        "precio5": "7900.00",
+        "precio6": "7890.00",
         "cantidad_disponible": 3
     },
     {
@@ -18393,7 +18393,7 @@
         "precio4": "60.00",
         "precio5": "49.00",
         "precio6": "48.00",
-        "cantidad_disponible": 6
+        "cantidad_disponible": 5
     },
     {
         "id": 2092,
@@ -18519,7 +18519,7 @@
         "precio4": "225.00",
         "precio5": "197.00",
         "precio6": "195.00",
-        "cantidad_disponible": 2
+        "cantidad_disponible": 1
     },
     {
         "id": 2099,
@@ -19743,7 +19743,7 @@
         "precio4": "65.00",
         "precio5": "38.00",
         "precio6": "37.00",
-        "cantidad_disponible": 5
+        "cantidad_disponible": 4
     },
     {
         "id": 2149,
@@ -19779,7 +19779,7 @@
         "precio4": "55.00",
         "precio5": "31.00",
         "precio6": "30.00",
-        "cantidad_disponible": 8
+        "cantidad_disponible": 7
     },
     {
         "id": 2152,
@@ -19815,7 +19815,7 @@
         "precio4": "245.00",
         "precio5": "200.00",
         "precio6": "195.00",
-        "cantidad_disponible": 1
+        "cantidad_disponible": 0
     },
     {
         "id": 1102,
@@ -20103,7 +20103,7 @@
         "precio4": "60.00",
         "precio5": "23.00",
         "precio6": "22.00",
-        "cantidad_disponible": 4
+        "cantidad_disponible": 3
     },
     {
         "id": 2168,
@@ -20114,13 +20114,13 @@
         "producto": "PARLANTE BLUETOOTH JBL GO 5",
         "minimo": 10,
         "estado": 1,
-        "precio": "550.00",
-        "precio1": "550.00",
-        "precio2": "545.00",
-        "precio3": "540.00",
-        "precio4": "535.00",
-        "precio5": "498.00",
-        "precio6": "495.00",
+        "precio": "540.00",
+        "precio1": "540.00",
+        "precio2": "535.00",
+        "precio3": "530.00",
+        "precio4": "525.00",
+        "precio5": "485.00",
+        "precio6": "480.00",
         "cantidad_disponible": 30
     },
     {
@@ -20132,13 +20132,13 @@
         "producto": "PARLANTE BLUETOOTH JBL PARTYBOX 520",
         "minimo": 10,
         "estado": 1,
-        "precio": "6550.00",
-        "precio1": "6550.00",
-        "precio2": "6540.00",
-        "precio3": "6530.00",
-        "precio4": "6520.00",
-        "precio5": "6310.00",
-        "precio6": "6300.00",
+        "precio": "6350.00",
+        "precio1": "6350.00",
+        "precio2": "6340.00",
+        "precio3": "6330.00",
+        "precio4": "6320.00",
+        "precio5": "6200.00",
+        "precio6": "6190.00",
         "cantidad_disponible": 1
     },
     {
@@ -20150,13 +20150,13 @@
         "producto": "PARLANTE BLUETOOTH JBL PARTYBOX 720",
         "minimo": 10,
         "estado": 1,
-        "precio": "8370.00",
-        "precio1": "8370.00",
-        "precio2": "8360.00",
-        "precio3": "8350.00",
-        "precio4": "8340.00",
-        "precio5": "8190.00",
-        "precio6": "8180.00",
+        "precio": "8250.00",
+        "precio1": "8250.00",
+        "precio2": "8240.00",
+        "precio3": "8230.00",
+        "precio4": "8220.00",
+        "precio5": "8080.00",
+        "precio6": "8070.00",
         "cantidad_disponible": 1
     },
     {
@@ -20245,8 +20245,8 @@
         "precio2": "105.00",
         "precio3": "100.00",
         "precio4": "95.00",
-        "precio5": "45.00",
-        "precio6": "43.00",
+        "precio5": "48.00",
+        "precio6": "45.00",
         "cantidad_disponible": 8
     },
     {
@@ -20258,13 +20258,13 @@
         "producto": "LECTOR QUEMADOR CD/DVD USB Y TIPO C 3.0 KNUP KP-LE305",
         "minimo": 10,
         "estado": 1,
-        "precio": "160.00",
-        "precio1": "160.00",
-        "precio2": "155.00",
-        "precio3": "150.00",
-        "precio4": "145.00",
-        "precio5": "100.00",
-        "precio6": "98.00",
+        "precio": "155.00",
+        "precio1": "155.00",
+        "precio2": "150.00",
+        "precio3": "145.00",
+        "precio4": "140.00",
+        "precio5": "998.00",
+        "precio6": "95.00",
         "cantidad_disponible": 4
     },
     {
@@ -20391,7 +20391,7 @@
         "precio4": "20.00",
         "precio5": "11.00",
         "precio6": "10.00",
-        "cantidad_disponible": 18
+        "cantidad_disponible": 12
     },
     {
         "id": 2184,
@@ -20572,5 +20572,95 @@
         "precio5": "235.00",
         "precio6": "230.00",
         "cantidad_disponible": 4
+    },
+    {
+        "id": 2194,
+        "imagen": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+        "codigo": "SC-Y3006W",
+        "producto": "CAMARA IP FOCO 3MP TOMATE SC-Y3006W",
+        "minimo": 10,
+        "estado": 1,
+        "precio": "190.00",
+        "precio1": "190.00",
+        "precio2": "185.00",
+        "precio3": "180.00",
+        "precio4": "175.00",
+        "precio5": "120.00",
+        "precio6": "115.00",
+        "cantidad_disponible": 10
+    },
+    {
+        "id": 2195,
+        "imagen": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+        "codigo": "KP-2097",
+        "producto": "TECLADO Y MOUSE COMBO CABLE USB KNUP KP-2097",
+        "minimo": 10,
+        "estado": 1,
+        "precio": "110.00",
+        "precio1": "110.00",
+        "precio2": "105.00",
+        "precio3": "100.00",
+        "precio4": "95.00",
+        "precio5": "60.00",
+        "precio6": "56.00",
+        "cantidad_disponible": 5
+    },
+    {
+        "id": 2196,
+        "imagen": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+        "codigo": "G51",
+        "producto": "MOUSE INALAMBRICO Y BT KNUP G51",
+        "minimo": 10,
+        "estado": 1,
+        "precio": "80.00",
+        "precio1": "80.00",
+        "precio2": "75.00",
+        "precio3": "70.00",
+        "precio4": "65.00",
+        "precio5": "30.00",
+        "precio6": "28.00",
+        "cantidad_disponible": 30
+    },
+    {
+        "id": 2197,
+        "imagen": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+        "codigo": "KP-MU008",
+        "producto": "MOUSE GAMER USB 7 BOTONES KNUP KP-MU008",
+        "minimo": 10,
+        "estado": 1,
+        "precio": "110.00",
+        "precio1": "110.00",
+        "precio2": "105.00",
+        "precio3": "100.00",
+        "precio4": "95.00",
+        "precio5": "48.00",
+        "precio6": "45.00",
+        "cantidad_disponible": 10
+    },
+    {
+        "id": 2198,
+        "imagen": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+        "codigo": "T-TA0011",
+        "producto": "SMARTWATCH A CHIP SUPER AMOLED TOMATE T-TA0011",
+        "minimo": 10,
+        "estado": 1,
+        "precio": "660.00",
+        "precio1": "660.00",
+        "precio2": "655.00",
+        "precio3": "650.00",
+        "precio4": "645.00",
+        "precio5": "600.00",
+        "precio6": "595.00",
+        "cantidad_disponible": 15
     }
 ]
