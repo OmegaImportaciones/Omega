@@ -699,7 +699,7 @@
         "precio4": "27.00",
         "precio5": "18.00",
         "precio6": "17.00",
-        "cantidad_disponible": 4
+        "cantidad_disponible": 3
     },
     {
         "id": 308,
@@ -2373,7 +2373,7 @@
         "precio4": "340.00",
         "precio5": "305.00",
         "precio6": "300.00",
-        "cantidad_disponible": 2
+        "cantidad_disponible": 1
     },
     {
         "id": 1214,
@@ -6441,7 +6441,7 @@
         "precio4": "165.00",
         "precio5": "128.00",
         "precio6": "125.00",
-        "cantidad_disponible": 8
+        "cantidad_disponible": 4
     },
     {
         "id": 1368,
@@ -9980,13 +9980,13 @@
         "producto": "AUDIFONO BLUETOOTH QCY H3 PRO",
         "minimo": 10,
         "estado": 1,
-        "precio": "525.00",
-        "precio1": "525.00",
-        "precio2": "520.00",
-        "precio3": "515.00",
-        "precio4": "510.00",
-        "precio5": "500.00",
-        "precio6": "500.00",
+        "precio": "545.00",
+        "precio1": "545.00",
+        "precio2": "540.00",
+        "precio3": "535.00",
+        "precio4": "530.00",
+        "precio5": "525.00",
+        "precio6": "520.00",
         "cantidad_disponible": 0
     },
     {
@@ -12122,13 +12122,13 @@
         "producto": "XIAOMI MI BOX S 3RA GENERACION",
         "minimo": 10,
         "estado": 1,
-        "precio": "730.00",
-        "precio1": "730.00",
-        "precio2": "725.00",
-        "precio3": "720.00",
-        "precio4": "715.00",
-        "precio5": "688.00",
-        "precio6": "685.00",
+        "precio": "820.00",
+        "precio1": "820.00",
+        "precio2": "815.00",
+        "precio3": "810.00",
+        "precio4": "805.00",
+        "precio5": "790.00",
+        "precio6": "785.00",
         "cantidad_disponible": 6
     },
     {
@@ -12662,13 +12662,13 @@
         "producto": "PARLANTE BLUETOOTH JBL CHARGE 6",
         "minimo": 10,
         "estado": 1,
-        "precio": "1530.00",
-        "precio1": "1530.00",
-        "precio2": "1520.00",
-        "precio3": "1510.00",
-        "precio4": "1500.00",
-        "precio5": "1460.00",
-        "precio6": "1455.00",
+        "precio": "1520.00",
+        "precio1": "1520.00",
+        "precio2": "1510.00",
+        "precio3": "1500.00",
+        "precio4": "1490.00",
+        "precio5": "1435.00",
+        "precio6": "1430.00",
         "cantidad_disponible": 29
     },
     {
@@ -16244,13 +16244,13 @@
         "producto": "MONITOR GAMING XIAOMI CURVED G34WQi EU 34 PULGADAS",
         "minimo": 10,
         "estado": 1,
-        "precio": "3800.00",
-        "precio1": "3800.00",
-        "precio2": "3790.00",
-        "precio3": "3780.00",
-        "precio4": "3770.00",
-        "precio5": "3310.00",
-        "precio6": "3300.00",
+        "precio": "3600.00",
+        "precio1": "3600.00",
+        "precio2": "3590.00",
+        "precio3": "3580.00",
+        "precio4": "3570.00",
+        "precio5": "3300.00",
+        "precio6": "3290.00",
         "cantidad_disponible": 1
     },
     {
@@ -16629,7 +16629,7 @@
         "precio4": "90.00",
         "precio5": "70.00",
         "precio6": "65.00",
-        "cantidad_disponible": 6
+        "cantidad_disponible": 4
     },
     {
         "id": 2002,
@@ -17151,7 +17151,7 @@
         "precio4": "155.00",
         "precio5": "140.00",
         "precio6": "138.00",
-        "cantidad_disponible": 2
+        "cantidad_disponible": 1
     },
     {
         "id": 2031,
@@ -17666,14 +17666,14 @@
         "producto": "PILA RECARGAR AA EWTTO ET-E2009",
         "minimo": 10,
         "estado": 1,
-        "precio": "120.00",
-        "precio1": "120.00",
-        "precio2": "115.00",
-        "precio3": "110.00",
+        "precio": "130.00",
+        "precio1": "130.00",
+        "precio2": "125.00",
+        "precio3": "120.00",
         "precio4": "105.00",
-        "precio5": "70.00",
-        "precio6": "65.00",
-        "cantidad_disponible": 0
+        "precio5": "85.00",
+        "precio6": "82.00",
+        "cantidad_disponible": 13
     },
     {
         "id": 2056,
@@ -17684,14 +17684,14 @@
         "producto": "PILA RECARGAR AAA EWTTO ET-E2010",
         "minimo": 10,
         "estado": 1,
-        "precio": "110.00",
-        "precio1": "110.00",
-        "precio2": "105.00",
-        "precio3": "100.00",
-        "precio4": "95.00",
-        "precio5": "60.00",
-        "precio6": "55.00",
-        "cantidad_disponible": 0
+        "precio": "120.00",
+        "precio1": "120.00",
+        "precio2": "115.00",
+        "precio3": "110.00",
+        "precio4": "105.00",
+        "precio5": "78.00",
+        "precio6": "75.00",
+        "cantidad_disponible": 13
     },
     {
         "id": 2057,
@@ -17792,13 +17792,13 @@
         "producto": "ESTABILIZADOR DE CELULAR DJI OSMO MOBILE 8",
         "minimo": 10,
         "estado": 1,
-        "precio": "2400.00",
-        "precio1": "2400.00",
-        "precio2": "2390.00",
-        "precio3": "2380.00",
-        "precio4": "2370.00",
-        "precio5": "2260.00",
-        "precio6": "2250.00",
+        "precio": "2300.00",
+        "precio1": "2300.00",
+        "precio2": "2290.00",
+        "precio3": "2280.00",
+        "precio4": "2270.00",
+        "precio5": "2160.00",
+        "precio6": "2150.00",
         "cantidad_disponible": 1
     },
     {
@@ -18393,7 +18393,7 @@
         "precio4": "60.00",
         "precio5": "49.00",
         "precio6": "48.00",
-        "cantidad_disponible": 5
+        "cantidad_disponible": 4
     },
     {
         "id": 2092,
@@ -18422,13 +18422,13 @@
         "producto": "DRON DJI MINI 4K FLY MORE COMBO | BUNDLE FLY MORE",
         "minimo": 10,
         "estado": 1,
-        "precio": "5500.00",
-        "precio1": "5500.00",
-        "precio2": "5490.00",
-        "precio3": "5480.00",
-        "precio4": "5470.00",
-        "precio5": "5210.00",
-        "precio6": "5200.00",
+        "precio": "5100.00",
+        "precio1": "5100.00",
+        "precio2": "5090.00",
+        "precio3": "5080.00",
+        "precio4": "5070.00",
+        "precio5": "5010.00",
+        "precio6": "5000.00",
         "cantidad_disponible": 1
     },
     {
@@ -18440,13 +18440,13 @@
         "producto": "DRON DJI NEO 2 FLY MORE COMBO | BUNDLE FLY MORE",
         "minimo": 10,
         "estado": 1,
-        "precio": "5300.00",
-        "precio1": "5300.00",
-        "precio2": "5290.00",
-        "precio3": "5280.00",
-        "precio4": "5270.00",
-        "precio5": "5100.00",
-        "precio6": "5090.00",
+        "precio": "5200.00",
+        "precio1": "5200.00",
+        "precio2": "5190.00",
+        "precio3": "5180.00",
+        "precio4": "5170.00",
+        "precio5": "5060.00",
+        "precio6": "5050.00",
         "cantidad_disponible": 1
     },
     {
@@ -18476,13 +18476,13 @@
         "producto": "DRON DJI AVATA 2 FLY SMART COMBO (THREE BATTERIES)",
         "minimo": 10,
         "estado": 1,
-        "precio": "12800.00",
-        "precio1": "12800.00",
-        "precio2": "12790.00",
-        "precio3": "12780.00",
-        "precio4": "12770.00",
-        "precio5": "12400.00",
-        "precio6": "12390.00",
+        "precio": "12500.00",
+        "precio1": "12500.00",
+        "precio2": "12490.00",
+        "precio3": "12480.00",
+        "precio4": "12470.00",
+        "precio5": "12100.00",
+        "precio6": "12090.00",
         "cantidad_disponible": 1
     },
     {
@@ -19167,7 +19167,7 @@
         "precio4": "465.00",
         "precio5": "405.00",
         "precio6": "400.00",
-        "cantidad_disponible": 1
+        "cantidad_disponible": 0
     },
     {
         "id": 2131,
@@ -19275,7 +19275,7 @@
         "precio4": "175.00",
         "precio5": "139.00",
         "precio6": "137.00",
-        "cantidad_disponible": 6
+        "cantidad_disponible": 3
     },
     {
         "id": 2137,
@@ -19538,13 +19538,13 @@
         "producto": "HUB USB ROWLAND DE 7 PUERTOS 2.0",
         "minimo": 5,
         "estado": 1,
-        "precio": "67.00",
-        "precio1": "67.00",
-        "precio2": "58.00",
-        "precio3": "52.00",
-        "precio4": "0.00",
-        "precio5": "0.00",
-        "precio6": "0.00",
+        "precio": "70.00",
+        "precio1": "70.00",
+        "precio2": "65.00",
+        "precio3": "60.00",
+        "precio4": "55.00",
+        "precio5": "38.00",
+        "precio6": "36.00",
         "cantidad_disponible": 1
     },
     {
@@ -19869,7 +19869,7 @@
         "precio4": "1880.00",
         "precio5": "1820.00",
         "precio6": "1815.00",
-        "cantidad_disponible": 2
+        "cantidad_disponible": 1
     },
     {
         "id": 2156,
@@ -20114,13 +20114,13 @@
         "producto": "PARLANTE BLUETOOTH JBL GO 5",
         "minimo": 10,
         "estado": 1,
-        "precio": "540.00",
-        "precio1": "540.00",
-        "precio2": "535.00",
-        "precio3": "530.00",
-        "precio4": "525.00",
-        "precio5": "485.00",
-        "precio6": "480.00",
+        "precio": "530.00",
+        "precio1": "530.00",
+        "precio2": "525.00",
+        "precio3": "520.00",
+        "precio4": "515.00",
+        "precio5": "475.00",
+        "precio6": "470.00",
         "cantidad_disponible": 30
     },
     {
@@ -20132,13 +20132,13 @@
         "producto": "PARLANTE BLUETOOTH JBL PARTYBOX 520",
         "minimo": 10,
         "estado": 1,
-        "precio": "6350.00",
-        "precio1": "6350.00",
-        "precio2": "6340.00",
-        "precio3": "6330.00",
-        "precio4": "6320.00",
-        "precio5": "6200.00",
-        "precio6": "6190.00",
+        "precio": "6200.00",
+        "precio1": "6200.00",
+        "precio2": "6190.00",
+        "precio3": "6180.00",
+        "precio4": "6170.00",
+        "precio5": "6050.00",
+        "precio6": "6040.00",
         "cantidad_disponible": 1
     },
     {
@@ -20150,13 +20150,13 @@
         "producto": "PARLANTE BLUETOOTH JBL PARTYBOX 720",
         "minimo": 10,
         "estado": 1,
-        "precio": "8250.00",
-        "precio1": "8250.00",
-        "precio2": "8240.00",
-        "precio3": "8230.00",
-        "precio4": "8220.00",
-        "precio5": "8080.00",
-        "precio6": "8070.00",
+        "precio": "8000.00",
+        "precio1": "8000.00",
+        "precio2": "7990.00",
+        "precio3": "7980.00",
+        "precio4": "7970.00",
+        "precio5": "7880.00",
+        "precio6": "7870.00",
         "cantidad_disponible": 1
     },
     {
@@ -20463,7 +20463,7 @@
         "precio4": "420.00",
         "precio5": "368.00",
         "precio6": "365.00",
-        "cantidad_disponible": 3
+        "cantidad_disponible": 2
     },
     {
         "id": 2188,
@@ -20528,13 +20528,13 @@
         "producto": "AUDIFONO BLUETOOTH XIAOMI REDMI BUDS 8 PRO",
         "minimo": 10,
         "estado": 1,
-        "precio": "690.00",
-        "precio1": "690.00",
-        "precio2": "685.00",
-        "precio3": "680.00",
-        "precio4": "675.00",
-        "precio5": "615.00",
-        "precio6": "610.00",
+        "precio": "680.00",
+        "precio1": "680.00",
+        "precio2": "675.00",
+        "precio3": "670.00",
+        "precio4": "665.00",
+        "precio5": "610.00",
+        "precio6": "605.00",
         "cantidad_disponible": 4
     },
     {
