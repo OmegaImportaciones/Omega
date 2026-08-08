@@ -1,6 +1,6 @@
 body {
     min-height: 100dvh;
-    background-color: #000000;
+    background-color: #ffffff;
     font-family: var(--font-body);
     color: var(--text-primary);
     padding: calc(24px + env(safe-area-inset-top)) 16px calc(40px + env(safe-area-inset-bottom));

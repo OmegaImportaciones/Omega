@@ -19,10 +19,10 @@
 
 /* =========================
    MAIN BUTTON
-   Estilo "grouped list row" de iOS:
-   relleno sólido systemGray6, esquinas
-   14pt, sin blur pesado (el blur se
-   reserva para las barras de navegación).
+   Estilo "grouped list row" de iOS en modo claro:
+   relleno systemGray6, esquinas 16pt, sombra
+   casi imperceptible — la profundidad la da el
+   contraste tonal, no el blur pesado.
 ========================= */
 
 .main-button {
@@ -85,12 +85,42 @@
 
   -webkit-tap-highlight-color: transparent;
 
+  animation:
+    button-enter 0.5s var(--ease-out) both;
+
+}
+
+@keyframes button-enter {
+
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+.buttons-container .main-button:nth-child(1) { animation-delay: 0.04s; }
+.buttons-container .main-button:nth-child(2) { animation-delay: 0.09s; }
+.buttons-container .main-button:nth-child(3) { animation-delay: 0.14s; }
+.buttons-container .main-button:nth-child(4) { animation-delay: 0.19s; }
+.buttons-container .main-button:nth-child(5) { animation-delay: 0.24s; }
+.buttons-container .main-button:nth-child(6) { animation-delay: 0.29s; }
+
+@media (prefers-reduced-motion: reduce) {
+
+  .main-button {
+    animation: none;
+  }
+
 }
 
 /* =========================
    PRESS STATE (mobile-first)
-   La retroalimentación táctil real de iOS: la celda se
-   oscurece/aclara levemente y se comprime, sin "levitar".
 ========================= */
 
 .main-button:active {
@@ -125,7 +155,7 @@
 .main-button:nth-child(1):active {
 
   background:
-    rgba(48, 209, 88, 0.12);
+    rgba(52, 199, 89, 0.1);
 
 }
 
@@ -136,7 +166,7 @@
 .main-button:nth-child(3):active {
 
   background:
-    rgba(64, 200, 224, 0.12);
+    rgba(48, 176, 199, 0.1);
 
 }
 
@@ -147,6 +177,6 @@
 .main-button:nth-child(4):active {
 
   background:
-    rgba(10, 132, 255, 0.12);
+    rgba(0, 122, 255, 0.1);
 
 }

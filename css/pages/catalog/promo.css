@@ -51,11 +51,11 @@
     background:
         linear-gradient(
             145deg,
-            rgba(255,255,255,0.06),
-            rgba(255,255,255,0.02)
+            rgba(0,0,0,0.03),
+            rgba(0,0,0,0.01)
         );
 
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid var(--border-hairline);
 
     backdrop-filter: blur(12px);
 
@@ -107,7 +107,7 @@
 
     border-radius: 16px;
 
-    background: rgba(255,255,255,0.04);
+    background: rgba(0,0,0,0.04);
 
     display: block;
 
@@ -155,7 +155,7 @@
     font-size: 0.82rem;
     font-weight: 700;
 
-    color: #ffffff;
+    color: var(--text-primary);
 
     line-height: 1.15;
 
@@ -179,7 +179,7 @@
     font-size: 0.66rem;
     font-weight: 500;
 
-    color: rgba(255,255,255,0.68);
+    color: var(--text-secondary);
 
     line-height: 1.25;
 
@@ -279,7 +279,7 @@
         border-radius: 20px;
 
         background:
-            rgba(255,255,255,0.04);
+            rgba(0,0,0,0.04);
 
         padding: 10px;
 

@@ -1,8 +1,5 @@
 /* =========================
    SECTION TITLES
-   17pt/semibold — iOS "headline" style,
-   como los encabezados de sección en
-   apps nativas (App Store, Música, etc.)
 ========================= */
 
 .section-title {
@@ -13,12 +10,12 @@
 
     font-family: var(--font-display);
 
-    font-size: 1.3125rem; /* 21pt */
+    font-size: 1.3125rem;
     font-weight: 700;
 
     letter-spacing: -0.015em;
 
-    color: #ffffff;
+    color: var(--text-primary);
 
     margin-bottom: 12px;
 

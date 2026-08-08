@@ -1,5 +1,5 @@
 // =========================
-// OMEGA BACKGROUND - OPTIMIZED FOR iOS
+// OMEGA BACKGROUND - LIGHT MODE
 // =========================
 
 // =========================
@@ -19,9 +19,9 @@ background.style.overflow = 'hidden';
 background.style.pointerEvents = 'none';
 background.style.zIndex = '0';
 
-// Negro puro (true black), como el modo oscuro nativo de iOS.
-background.style.backgroundColor = '#000000';
-background.style.background = '#000000';
+// Blanco puro de base — el efecto de vida lo dan los glows pastel de abajo.
+background.style.backgroundColor = '#ffffff';
+background.style.background = '#ffffff';
 
 document.body.prepend(background);
 
@@ -34,12 +34,17 @@ const style = document.createElement('style');
 style.textContent = `
 @keyframes blob1 {
     0% { transform: translate3d(0px, 0px, 0) scale(1); }
-    100% { transform: translate3d(120px, -100px, 0) scale(1.08); }
+    100% { transform: translate3d(90px, -70px, 0) scale(1.1); }
 }
 
 @keyframes blob2 {
     0% { transform: translate3d(0px, 0px, 0) scale(1); }
-    100% { transform: translate3d(-100px, 90px, 0) scale(1.05); }
+    100% { transform: translate3d(-80px, 70px, 0) scale(1.06); }
+}
+
+@keyframes blob3 {
+    0% { transform: translate3d(0px, 0px, 0) scale(1); }
+    100% { transform: translate3d(60px, 60px, 0) scale(1.08); }
 }
 `;
 
@@ -58,7 +63,7 @@ function createBlob({ size, color, top, left, animation }) {
     blob.style.left = left;
     blob.style.borderRadius = '50%';
     blob.style.background = color;
-    blob.style.filter = 'blur(90px)'; // Difuminado amplio para un glow ambiental, no una mancha visible
+    blob.style.filter = 'blur(80px)'; // Difuminado muy amplio: un tinte ambiental, no una mancha
     blob.style.opacity = '1';
     blob.style.pointerEvents = 'none';
     blob.style.willChange = 'transform';
@@ -69,21 +74,30 @@ function createBlob({ size, color, top, left, animation }) {
 
 // =========================
 // BLOBS
-// Solo dos glows muy sutiles y monocromáticos (azul sistema de iOS),
-// muy lentos — nada de mezcla de colores ni movimiento brusco.
+// Tonos pastel muy tenues (azul y violeta de sistema iOS),
+// grandes y lentísimos — dan sensación de vida sin ensuciar
+// el fondo blanco.
 // =========================
 createBlob({
-    size: 380,
-    color: 'rgba(10,132,255,0.10)',
-    top: '2%',
-    left: '10%',
-    animation: 'blob1 16s ease-in-out infinite alternate'
+    size: 340,
+    color: 'rgba(0,122,255,0.10)',
+    top: '4%',
+    left: '8%',
+    animation: 'blob1 15s ease-in-out infinite alternate'
 });
 
 createBlob({
-    size: 320,
-    color: 'rgba(10,132,255,0.06)',
-    top: '60%',
-    left: '55%',
-    animation: 'blob2 18s ease-in-out infinite alternate-reverse'
+    size: 300,
+    color: 'rgba(175,82,222,0.08)',
+    top: '55%',
+    left: '58%',
+    animation: 'blob2 17s ease-in-out infinite alternate-reverse'
+});
+
+createBlob({
+    size: 260,
+    color: 'rgba(52,199,89,0.06)',
+    top: '78%',
+    left: '10%',
+    animation: 'blob3 19s ease-in-out infinite alternate'
 });

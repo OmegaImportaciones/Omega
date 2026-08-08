@@ -111,7 +111,7 @@
 
 .catalog-hero-back:active {
 
-    opacity: 0.5;
+    opacity: 0.4;
 
 }
 
@@ -148,7 +148,7 @@
     object-fit: contain;
 
     filter:
-        drop-shadow(0 6px 18px rgba(0, 0, 0, 0.4));
+        drop-shadow(0 6px 16px rgba(0, 0, 0, 0.08));
 
 }
 
@@ -224,9 +224,9 @@
 
     flex-shrink: 0;
 
-    opacity: 0.55;
+    opacity: 0.5;
 
-    color: #ffffff;
+    color: var(--text-primary);
 
 }
 
@@ -247,7 +247,7 @@
 
     background: transparent;
 
-    color: #ffffff;
+    color: var(--text-primary);
 
     font-size: 1.0625rem;
 
@@ -307,7 +307,7 @@
     border-radius: 16px;
 
     background:
-        rgba(28, 28, 30, 0.78);
+        rgba(255, 255, 255, 0.78);
 
     border:
         0.5px solid var(--border-hairline);
@@ -319,7 +319,7 @@
         blur(20px) saturate(180%);
 
     box-shadow:
-        0 8px 24px rgba(0,0,0,0.35);
+        0 8px 24px rgba(0,0,0,0.08);
 
     opacity: 0;
 
@@ -369,7 +369,7 @@
     border-radius: 9px;
 
     background:
-        rgba(255,255,255,0.06);
+        rgba(0,0,0,0.045);
 
     border: none;
 
@@ -458,7 +458,7 @@
     border-radius: 9px;
 
     background:
-        rgba(255,255,255,0.08);
+        rgba(0,0,0,0.045);
 
     border: none;
 
@@ -477,9 +477,9 @@
 
     flex-shrink: 0;
 
-    opacity: 0.6;
+    opacity: 0.55;
 
-    color: #ffffff;
+    color: var(--text-primary);
 
 }
 
@@ -500,7 +500,7 @@
 
     background: transparent;
 
-    color: #ffffff;
+    color: var(--text-primary);
 
     font-size: 0.85rem;
 
