@@ -52,6 +52,15 @@ function applySearch(products) {
             currentSearch
         );
 
+    // Dividimos la búsqueda en palabras sueltas ("tokens").
+    // Así "camara xiaomi" encuentra "camara ip xiaomi": cada
+    // palabra debe estar presente, pero no importa el orden
+    // ni qué otras palabras haya en medio.
+    const searchTokens =
+        search
+            .split(/\s+/)
+            .filter(token => token.length > 0);
+
 
     /* =========================
        FILTER PRODUCTS
@@ -70,9 +79,14 @@ function applySearch(products) {
                     product.codigo
                 );
 
-            return (
-                nombre.includes(search) ||
-                codigo.includes(search)
+            const haystack =
+                `${nombre} ${codigo}`;
+
+            // Si no hay tokens (búsqueda vacía), todo coincide.
+            if (searchTokens.length === 0) return true;
+
+            return searchTokens.every(token =>
+                haystack.includes(token)
             );
 
         });
