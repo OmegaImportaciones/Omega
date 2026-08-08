@@ -19,17 +19,9 @@ background.style.overflow = 'hidden';
 background.style.pointerEvents = 'none';
 background.style.zIndex = '0';
 
-// Color base sólido + gradiente para evitar transparencia en Safari
-background.style.backgroundColor = '#05070c';
-background.style.background = `
-linear-gradient(
-    to bottom,
-    #05070c 0%,
-    #0a0e18 42%,
-    #121826 74%,
-    #1a1620 100%
-)
-`;
+// Negro puro (true black), como el modo oscuro nativo de iOS.
+background.style.backgroundColor = '#000000';
+background.style.background = '#000000';
 
 document.body.prepend(background);
 
@@ -42,17 +34,12 @@ const style = document.createElement('style');
 style.textContent = `
 @keyframes blob1 {
     0% { transform: translate3d(0px, 0px, 0) scale(1); }
-    100% { transform: translate3d(280px, -220px, 0) scale(1.14); }
+    100% { transform: translate3d(120px, -100px, 0) scale(1.08); }
 }
 
 @keyframes blob2 {
     0% { transform: translate3d(0px, 0px, 0) scale(1); }
-    100% { transform: translate3d(-260px, 220px, 0) scale(1.10); }
-}
-
-@keyframes blob3 {
-    0% { transform: translate3d(0px, 0px, 0) scale(1); }
-    100% { transform: translate3d(220px, 280px, 0) scale(1.18); }
+    100% { transform: translate3d(-100px, 90px, 0) scale(1.05); }
 }
 `;
 
@@ -71,9 +58,8 @@ function createBlob({ size, color, top, left, animation }) {
     blob.style.left = left;
     blob.style.borderRadius = '50%';
     blob.style.background = color;
-    blob.style.filter = 'blur(40px)'; // Un poco más de blur para suavidad
+    blob.style.filter = 'blur(90px)'; // Difuminado amplio para un glow ambiental, no una mancha visible
     blob.style.opacity = '1';
-    blob.style.mixBlendMode = 'screen';
     blob.style.pointerEvents = 'none';
     blob.style.willChange = 'transform';
     blob.style.animation = animation;
@@ -83,27 +69,21 @@ function createBlob({ size, color, top, left, animation }) {
 
 // =========================
 // BLOBS
+// Solo dos glows muy sutiles y monocromáticos (azul sistema de iOS),
+// muy lentos — nada de mezcla de colores ni movimiento brusco.
 // =========================
 createBlob({
-    size: 260,
-    color: 'rgba(227,193,112,0.16)',
-    top: '12%',
-    left: '15%',
-    animation: 'blob1 9s ease-in-out infinite alternate'
+    size: 380,
+    color: 'rgba(10,132,255,0.10)',
+    top: '2%',
+    left: '10%',
+    animation: 'blob1 16s ease-in-out infinite alternate'
 });
 
 createBlob({
-    size: 200,
-    color: 'rgba(200,210,225,0.10)',
-    top: '52%',
-    left: '62%',
-    animation: 'blob2 11s ease-in-out infinite alternate-reverse'
-});
-
-createBlob({
-    size: 230,
-    color: 'rgba(120,150,200,0.14)',
-    top: '68%',
-    left: '18%',
-    animation: 'blob3 10s ease-in-out infinite alternate'
+    size: 320,
+    color: 'rgba(10,132,255,0.06)',
+    top: '60%',
+    left: '55%',
+    animation: 'blob2 18s ease-in-out infinite alternate-reverse'
 });

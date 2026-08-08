@@ -127,27 +127,17 @@
 
     flex-direction: column;
 
-    gap: 8px;
+    gap: 6px;
 
-    padding: 10px;
+    padding: 8px;
 
-    border-radius: 20px;
+    border-radius: 14px;
 
     background:
-        linear-gradient(
-            150deg,
-            rgba(255,255,255,0.055),
-            rgba(255,255,255,0.015)
-        ),
         var(--card-bg);
 
     border:
-        1px solid var(--border-chrome);
-
-    backdrop-filter: blur(12px);
-
-    box-shadow:
-        0 8px 24px rgba(0,0,0,0.32);
+        0.5px solid var(--border-hairline);
 
     scroll-snap-align: start;
 
@@ -158,9 +148,8 @@
     cursor: pointer;
 
     transition:
-        transform 0.25s var(--ease-out),
-        box-shadow 0.25s ease,
-        border 0.25s ease;
+        transform 0.15s var(--ease-out),
+        background 0.15s ease;
 
 }
 
@@ -175,15 +164,12 @@
 
 }
 
-.flash-card:hover {
+.flash-card:active {
 
-    transform: translateY(-3px);
+    transform: scale(0.97);
 
-    border-color: rgba(227, 193, 112, 0.28);
-
-    box-shadow:
-        0 12px 28px rgba(0,0,0,0.36),
-        0 0 16px rgba(227, 193, 112, 0.10);
+    background:
+        var(--card-bg-strong);
 
 }
 
@@ -200,7 +186,7 @@
 
     object-fit: cover;
 
-    border-radius: 14px;
+    border-radius: 10px;
 
     background:
         rgba(255,255,255,0.04);
@@ -223,17 +209,17 @@
 
     font-weight: 700;
 
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
 
     text-transform: uppercase;
 
-    color: #0c0a06;
+    color: #ffffff;
 
-    background: linear-gradient(120deg, var(--accent-soft), var(--accent));
+    background: var(--system-red);
 
-    padding: 3px 8px;
+    padding: 3px 7px;
 
-    border-radius: 999px;
+    border-radius: var(--radius-pill);
 
 }
 
@@ -351,7 +337,7 @@
 
     font-weight: 700;
 
-    color: var(--accent-soft);
+    color: var(--system-green);
 
 }
 

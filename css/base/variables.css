@@ -1,70 +1,69 @@
 :root {
 
   /* =========================
-     SURFACE — graphite / void
+     SURFACE — iOS dark mode
+     (systemBackground / systemGray6)
   ========================= */
-  --bg-void: #05070c;
-  --bg-deep: #0a0e18;
-  --bg-mid: #121826;
-  --bg-warm: #1a1620;
-
   --bg-primary: #000000;
-  --bg-secondary: #050505;
+  --bg-elevated: #1c1c1e;      /* systemGray6 dark — grouped cells */
+  --bg-elevated-2: #2c2c2e;    /* systemGray5 dark — pressed state */
+  --bg-elevated-3: #3a3a3c;    /* systemGray4 dark */
 
-  --card-bg: rgba(18, 20, 26, 0.72);
-  --card-bg-strong: rgba(22, 25, 33, 0.86);
+  --card-bg: rgba(28, 28, 30, 0.94);
+  --card-bg-strong: rgba(44, 44, 46, 0.96);
 
-  --text-primary: #f4f5f7;
-  --text-secondary: #9aa1b0;
+  /* =========================
+     LABELS — iOS text colors
+  ========================= */
+  --text-primary: #ffffff;
+  --text-secondary: rgba(235, 235, 245, 0.6);   /* secondaryLabel dark */
+  --text-tertiary: rgba(235, 235, 245, 0.3);    /* tertiaryLabel dark */
 
+  /* =========================
+     SEPARATORS
+  ========================= */
+  --separator: rgba(84, 84, 88, 0.6);
   --border-color: rgba(255, 255, 255, 0.08);
-  --border-chrome: rgba(214, 222, 235, 0.16);
+  --border-hairline: rgba(255, 255, 255, 0.07);
 
-  --button-hover: rgba(255, 255, 255, 0.08);
-
-  /* =========================
-     METAL — echoes the logo
-  ========================= */
-  --chrome-100: #f4f6f9;
-  --chrome-300: #c7cfdb;
-  --chrome-600: #6a7488;
-  --chrome-sheen: linear-gradient(115deg,
-      rgba(255, 255, 255, 0) 20%,
-      rgba(255, 255, 255, 0.16) 42%,
-      rgba(255, 255, 255, 0.02) 60%);
+  --button-hover: rgba(255, 255, 255, 0.06);
+  --button-pressed: rgba(255, 255, 255, 0.1);
 
   /* =========================
-     ACCENT — brushed gold
+     SYSTEM COLORS (dark palette)
   ========================= */
-  --accent: #e3c170;
-  --accent-soft: #f0d99a;
-  --accent-dim: rgba(227, 193, 112, 0.16);
+  --accent: #0a84ff;        /* systemBlue */
+  --accent-soft: #409cff;
+  --accent-dim: rgba(10, 132, 255, 0.16);
 
-  /* kept for compatibility with earlier price/cyan usage */
+  --system-green: #30d158;
+  --system-red: #ff453a;
+  --system-orange: #ff9f0a;
+  --system-teal: #40c8e0;
+
+  /* kept for compatibility with earlier revisions */
   --accent-cyan: #72d6ff;
 
-  /* SHADOWS */
-  --shadow-soft: 0 14px 40px rgba(0, 0, 0, 0.55);
-  --shadow-lift: 0 18px 46px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.04) inset;
-  --shadow-glow: 0 0 30px rgba(255, 255, 255, 0.07);
-  --shadow-gold: 0 0 24px rgba(227, 193, 112, 0.16);
-  --shadow-green: 0 0 22px rgba(37, 211, 102, 0.18);
-  --shadow-blue: 0 0 22px rgba(24, 119, 242, 0.18);
-  --shadow-cyan: 0 0 22px rgba(0, 224, 255, 0.14);
+  /* SHADOWS — Apple keeps these minimal */
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-lift: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 24px rgba(10, 132, 255, 0.12);
 
-  /* RADIUS */
-  --radius-main: 22px;
-  --radius-soft: 16px;
+  /* RADIUS — iOS corner radii */
+  --radius-main: 14px;
+  --radius-soft: 12px;
+  --radius-pill: 999px;
 
-  /* TYPE */
-  --font-display: 'Sora', 'Inter', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  /* TYPE — native system font stack renders as San Francisco on Apple devices */
+  --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
-  /* TRANSITIONS */
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-main: transform 0.25s var(--ease-out),
-    background 0.25s ease,
-    box-shadow 0.25s ease,
-    border 0.25s ease;
+  /* TRANSITIONS — iOS spring-like easing */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.4, 1);
+  --transition-main: transform 0.18s var(--ease-out),
+    background 0.18s ease,
+    box-shadow 0.18s ease,
+    border 0.18s ease;
 
 }

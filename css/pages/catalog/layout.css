@@ -1,22 +1,25 @@
 /* =========================
    SECTION TITLES
+   17pt/semibold — iOS "headline" style,
+   como los encabezados de sección en
+   apps nativas (App Store, Música, etc.)
 ========================= */
 
 .section-title {
 
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
 
     font-family: var(--font-display);
 
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-size: 1.3125rem; /* 21pt */
+    font-weight: 700;
 
-    letter-spacing: 0.01em;
+    letter-spacing: -0.015em;
 
     color: #ffffff;
 
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 
 }

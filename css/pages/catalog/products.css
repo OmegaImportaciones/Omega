@@ -1,12 +1,8 @@
 /* =============================================================
    PRODUCT CARD — MOBILE (BASE / DEFAULT)
    -----------------------------------------------------------
-   Layout: 2 filas
-     Fila 1 -> imagen + contenido (comparten ancho)
-     Fila 2 -> botón "Consultar" (ancho completo)
-   Este bloque es la base "mobile first" y NO debe asumirse
-   heredado por escritorio: el media query de escritorio
-   redefine cada propiedad relevante desde cero.
+   Fila única, al estilo de una celda de App Store:
+   imagen -> (título + precio + disponibilidad) -> botón píldora
 ============================================================= */
 
 .product-card {
@@ -15,15 +11,15 @@
 
     flex-direction: row;
 
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 
     align-items: center;
 
     justify-content: flex-start;
 
-    gap: 10px 12px;
+    gap: 12px;
 
-    padding: 14px;
+    padding: 10px 12px;
 
     min-height: unset;
 
@@ -38,30 +34,22 @@
 
 }
 
-.product-card:hover {
-
-    transform: translateY(-2px);
-
-    border-color: rgba(227, 193, 112, 0.22);
-
-}
-
 
 /* =========================
-   IMAGEN (fila 1)
+   IMAGEN
 ========================= */
 
 .product-image {
 
-    width: 64px;
+    width: 52px;
 
-    height: 64px;
+    height: 52px;
 
-    flex: 0 0 64px;
+    flex: 0 0 52px;
 
     object-fit: cover;
 
-    border-radius: 16px;
+    border-radius: 12px;
 
     background:
         rgba(255,255,255,0.04);
@@ -70,10 +58,7 @@
 
 
 /* =========================
-   CONTENIDO (fila 1)
-   -> ocupa todo el ancho
-      restante, no comparte
-      fila con el botón
+   CONTENIDO
 ========================= */
 
 .product-content {
@@ -95,15 +80,15 @@
 
 .product-content h3 {
 
-    font-family: var(--font-display);
+    font-family: var(--font-body);
 
-    font-size: 0.98rem;
+    font-size: 0.94rem;
 
-    font-weight: 600;
+    font-weight: 590;
 
     color: #ffffff;
 
-    line-height: 1.18;
+    line-height: 1.2;
 
     letter-spacing: -0.01em;
 
@@ -113,7 +98,7 @@
 
     display: -webkit-box;
 
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
 
     -webkit-box-orient: vertical;
 
@@ -126,16 +111,16 @@
 
 .product-content p {
 
-    font-size: 0.78rem;
+    font-size: 0.84rem;
 
-    font-weight: 500;
+    font-weight: 590;
 
     color:
-        rgba(255,255,255,0.68);
+        var(--accent-soft);
 
     line-height: 1.3;
 
-    margin-top: 4px;
+    margin-top: 2px;
 
     overflow: hidden;
 
@@ -147,20 +132,20 @@
 
 
 /* =========================
-   PRECIO / DISPONIBILIDAD
+   DISPONIBILIDAD
 ========================= */
 
 .product-contact {
 
-    font-size: 0.82rem;
+    font-size: 0.76rem;
 
-    font-weight: 700;
+    font-weight: 400;
 
-    color: var(--accent-soft);
+    color: var(--text-secondary);
 
     line-height: 1.2;
 
-    margin-top: 6px;
+    margin-top: 1px;
 
     overflow: hidden;
 
@@ -172,7 +157,7 @@
 
 
 /* =========================
-   BOTÓN (fila 2, independiente)
+   BOTÓN — píldora estilo "GET" de App Store
 ========================= */
 
 .product-action {
@@ -183,59 +168,62 @@
 
     justify-content: center;
 
-    flex: 0 0 100%;
+    flex: 0 0 auto;
 
-    width: 100%;
+    width: auto;
 
-    margin-top: 2px;
+    margin-top: 0;
 
-    padding: 8px 14px;
+    padding: 8px 16px;
 
-    border-radius: 12px;
+    border-radius: var(--radius-pill);
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(227, 193, 112, 0.14),
-            rgba(227, 193, 112, 0.05)
-        );
+        var(--accent);
 
-    border:
-        1px solid rgba(227, 193, 112, 0.18);
+    border: none;
 
-    color: var(--accent-soft);
+    color: #ffffff;
 
     font-size: 0.82rem;
 
     font-weight: 600;
 
+    letter-spacing: -0.005em;
+
     text-decoration: none;
 
+    white-space: nowrap;
+
     transition:
-        transform 0.2s ease,
-        background 0.2s ease;
+        transform 0.15s var(--ease-out),
+        background 0.15s ease,
+        opacity 0.15s ease;
 
 }
 
 
 /* =========================
-   BOTÓN HOVER
+   BOTÓN — press
 ========================= */
 
-.product-action:hover {
+.product-action:active {
 
     transform:
-        scale(1.02);
+        scale(0.94);
 
-    background:
-        linear-gradient(
-            145deg,
-            rgba(227, 193, 112, 0.22),
-            rgba(227, 193, 112, 0.08)
-        );
+    opacity: 0.85;
 
-    border-color:
-        rgba(227, 193, 112, 0.3);
+}
+
+@media (hover: hover) {
+
+    .product-action:hover {
+
+        background:
+            var(--accent-soft);
+
+    }
 
 }
 
@@ -244,15 +232,8 @@
 /* =============================================================
    PRODUCT CARD — ESCRITORIO (>= 1200px)
    -----------------------------------------------------------
-   Este bloque es una RECONSTRUCCIÓN completa del componente,
-   no una adaptación del layout móvil. Cada propiedad que el
-   layout móvil definió (dirección, wrap, tamaño de imagen,
-   comportamiento del botón, gaps, padding) se redefine
-   explícitamente aquí, sin depender de la herencia.
-
-   Estructura vertical:
-     imagen -> nombre -> precio -> disponibilidad
-     -> espacio flexible -> botón (siempre al fondo)
+   Reconstrucción completa del componente para escritorio,
+   igual que antes: layout de tarjeta vertical en grid.
 ============================================================= */
 
 @media (min-width: 1200px) {
@@ -283,7 +264,7 @@
         grid-template-columns:
             repeat(4, minmax(0, 1fr));
 
-        gap: 22px;
+        gap: 18px;
 
         align-items: stretch;
 
@@ -292,9 +273,6 @@
 
     /* =========================
        TARJETA
-       -> se redefine dirección,
-          wrap, alineación, gap
-          y padding desde cero
     ========================= */
 
     .product-card {
@@ -311,11 +289,11 @@
 
         gap: 0;
 
-        padding: 18px;
+        padding: 16px;
 
-        min-height: 420px;
+        min-height: 400px;
 
-        max-height: 420px;
+        max-height: 400px;
 
         overflow: hidden;
 
@@ -324,23 +302,19 @@
 
     /* =========================
        IMAGEN
-       -> tamaño y flex-basis
-          propios de escritorio,
-          sin heredar los 64px
-          de mobile
     ========================= */
 
     .product-image {
 
         width: 100%;
 
-        height: 220px;
+        height: 210px;
 
-        flex: 0 0 220px;
+        flex: 0 0 210px;
 
         object-fit: cover;
 
-        border-radius: 22px;
+        border-radius: 16px;
 
         margin-bottom: 14px;
 
@@ -349,8 +323,6 @@
 
     /* =========================
        CONTENIDO
-       -> crece para empujar el
-          botón hacia el fondo
     ========================= */
 
     .product-content {
@@ -370,9 +342,9 @@
 
     .product-content h3 {
 
-        font-size: 1.05rem;
+        font-size: 1.02rem;
 
-        line-height: 1.2;
+        line-height: 1.25;
 
         -webkit-line-clamp: 2;
 
@@ -381,15 +353,11 @@
 
     /* =========================
        PRECIO
-       (este es el elemento que
-       en mobile va justo debajo
-       del título — no es una
-       descripción)
     ========================= */
 
     .product-content p {
 
-        font-size: 0.86rem;
+        font-size: 0.88rem;
 
         margin-top: 6px;
 
@@ -405,14 +373,14 @@
 
 
     /* =========================
-       PRECIO / DISPONIBILIDAD
+       DISPONIBILIDAD
     ========================= */
 
     .product-contact {
 
-        font-size: 0.86rem;
+        font-size: 0.84rem;
 
-        margin-top: 10px;
+        margin-top: 8px;
 
         white-space: normal;
 
@@ -424,11 +392,6 @@
 
     /* =========================
        BOTÓN
-       -> vuelve a ser un simple
-          bloque al fondo de una
-          columna flex, no una
-          "fila" con flex-basis
-          heredado de mobile
     ========================= */
 
     .product-action {
@@ -443,7 +406,7 @@
 
         border-radius: 12px;
 
-        font-size: 0.85rem;
+        font-size: 0.88rem;
 
     }
 

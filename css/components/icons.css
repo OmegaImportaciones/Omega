@@ -1,7 +1,7 @@
 .button-icon {
 
-    width: 22px;
-    height: 22px;
+    width: 30px;
+    height: 30px;
 
     object-fit: contain;
 
@@ -11,6 +11,21 @@
 
     flex-shrink: 0;
 
+    border-radius: 8px;
+
+  }
+
+  /* El glifo de TikTok viene sin fondo, así que le damos un
+     chip cuadrado redondeado para que se lea como ícono de app,
+     igual que WhatsApp y Facebook (que ya traen su propio fondo). */
+  img.button-icon[alt="TikTok"] {
+
+    background: #000000;
+
+    padding: 5px;
+
+    box-sizing: border-box;
+
   }
 
   .emoji-icon {
@@ -19,18 +34,16 @@
     align-items: center;
     justify-content: center;
 
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
 
     flex-shrink: 0;
 
-    border-radius: 12px;
+    border-radius: 8px;
 
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(10, 132, 255, 0.16);
 
-    border: 1px solid rgba(255, 255, 255, 0.06);
-
-    font-size: 1.05rem;
+    font-size: 1rem;
 
     line-height: 1;
 

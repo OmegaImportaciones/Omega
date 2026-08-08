@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
 
-  gap: 14px;
+  gap: 10px;
 
   position: relative;
 
@@ -19,41 +19,34 @@
 
 /* =========================
    MAIN BUTTON
+   Estilo "grouped list row" de iOS:
+   relleno sólido systemGray6, esquinas
+   14pt, sin blur pesado (el blur se
+   reserva para las barras de navegación).
 ========================= */
 
 .main-button {
 
   width: 100%;
 
-  min-height: 64px;
+  min-height: 56px;
 
-  padding: 18px 22px;
+  padding: 14px 16px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  gap: 14px;
+  gap: 12px;
 
   background:
-    linear-gradient(
-      150deg,
-      rgba(255, 255, 255, 0.055),
-      rgba(255, 255, 255, 0.015)
-    ),
     var(--card-bg);
 
   border:
-    1px solid var(--border-chrome);
+    0.5px solid var(--border-hairline);
 
   border-radius:
     var(--radius-main);
-
-  backdrop-filter:
-    blur(18px);
-
-  -webkit-backdrop-filter:
-    blur(18px);
 
   text-decoration: none;
 
@@ -62,11 +55,11 @@
 
   font-family: var(--font-body);
 
-  font-size: 1rem;
+  font-size: 1.0625rem; /* 17pt — iOS body/headline size */
 
-  font-weight: 600;
+  font-weight: 590;
 
-  letter-spacing: 0.1px;
+  letter-spacing: -0.01em;
 
   transition:
     var(--transition-main);
@@ -90,115 +83,70 @@
 
   z-index: 2;
 
-}
-
-/* Filo superior tipo "metal cepillado": una línea fina de luz que corre
-   por el borde superior de cada botón, reforzando el vínculo visual con
-   el isotipo cromado de la marca. */
-.main-button::before {
-
-  content: '';
-
-  position: absolute;
-
-  inset: 0;
-
-  border-radius: inherit;
-
-  padding: 1px;
-
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0.32),
-    rgba(255, 255, 255, 0) 30%,
-    rgba(255, 255, 255, 0) 70%,
-    rgba(255, 255, 255, 0.10)
-  );
-
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-
-  -webkit-mask-composite: xor;
-
-  mask-composite: exclude;
-
-  pointer-events: none;
-
-  opacity: 0.7;
+  -webkit-tap-highlight-color: transparent;
 
 }
 
 /* =========================
-   BUTTON HOVER
+   PRESS STATE (mobile-first)
+   La retroalimentación táctil real de iOS: la celda se
+   oscurece/aclara levemente y se comprime, sin "levitar".
 ========================= */
-
-.main-button:hover {
-
-  transform:
-    translateY(-3px);
-
-  background:
-    linear-gradient(
-      150deg,
-      rgba(255, 255, 255, 0.08),
-      rgba(255, 255, 255, 0.02)
-    ),
-    var(--card-bg-strong);
-
-  box-shadow:
-    var(--shadow-lift);
-
-}
 
 .main-button:active {
 
   transform:
-    translateY(-1px) scale(0.99);
+    scale(0.98);
+
+  background:
+    var(--card-bg-strong);
 
 }
 
 /* =========================
-   WHATSAPP HOVER
+   HOVER (solo aporta en desktop/trackpad)
 ========================= */
 
-.main-button:nth-child(1):hover {
+@media (hover: hover) {
 
-  border-color:
-    rgba(37, 211, 102, 0.35);
+  .main-button:hover {
 
-  box-shadow:
-    var(--shadow-lift),
-    0 0 18px rgba(37,211,102,0.16);
+    background:
+      var(--card-bg-strong);
+
+  }
 
 }
 
 /* =========================
-   TIKTOK HOVER
+   WHATSAPP ACCENT
 ========================= */
 
-.main-button:nth-child(3):hover {
+.main-button:nth-child(1):active {
 
-  border-color:
-    rgba(0, 224, 255, 0.28);
-
-  box-shadow:
-    var(--shadow-lift),
-    0 0 18px rgba(0,224,255,0.12);
+  background:
+    rgba(48, 209, 88, 0.12);
 
 }
 
 /* =========================
-   FACEBOOK HOVER
+   TIKTOK ACCENT
 ========================= */
 
-.main-button:nth-child(4):hover {
+.main-button:nth-child(3):active {
 
-  border-color:
-    rgba(24, 119, 242, 0.35);
+  background:
+    rgba(64, 200, 224, 0.12);
 
-  box-shadow:
-    var(--shadow-lift),
-    0 0 18px rgba(24,119,242,0.14);
+}
+
+/* =========================
+   FACEBOOK ACCENT
+========================= */
+
+.main-button:nth-child(4):active {
+
+  background:
+    rgba(10, 132, 255, 0.12);
 
 }

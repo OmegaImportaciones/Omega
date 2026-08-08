@@ -3,9 +3,9 @@
     body {
 
       padding:
-        24px
         20px
-        24px;
+        16px
+        20px;
 
     }
 
@@ -13,16 +13,16 @@
 
       max-width: 100%;
 
-      gap: 18px;
+      gap: 16px;
 
     }
 
     .logo {
 
-      width: 340px;
-      max-width: 148%;
+      width: 300px;
+      max-width: 138%;
 
-      margin-bottom: -6px;
+      margin-bottom: 0;
 
     }
 
@@ -30,7 +30,7 @@
 
       font-size: 0.92rem;
 
-      margin-top: -14px;
+      margin-top: -12px;
 
     }
 
@@ -48,19 +48,19 @@
 
     .buttons-container {
 
-      gap: 13px;
+      gap: 9px;
 
     }
 
     .main-button {
 
-      min-height: 60px;
+      min-height: 54px;
 
-      font-size: 0.98rem;
+      font-size: 1.03125rem;
 
-      border-radius: 20px;
+      border-radius: 14px;
 
-      padding: 16px 18px;
+      padding: 13px 16px;
 
     }
 
