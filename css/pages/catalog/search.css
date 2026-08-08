@@ -106,10 +106,10 @@
 
 .catalog-search:focus-within {
 
-    border-color: rgba(114,214,255,0.35);
+    border-color: rgba(227, 193, 112, 0.32);
 
     box-shadow:
-        0 0 0 1px rgba(114,214,255,0.15),
+        0 0 0 1px rgba(227, 193, 112, 0.14),
         0 12px 34px rgba(0,0,0,0.32);
 
 }

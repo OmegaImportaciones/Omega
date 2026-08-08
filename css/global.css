@@ -131,22 +131,23 @@
 
     padding: 10px;
 
-    border-radius: 22px;
+    border-radius: 20px;
 
     background:
         linear-gradient(
-            145deg,
-            rgba(255,255,255,0.06),
-            rgba(255,255,255,0.02)
-        );
+            150deg,
+            rgba(255,255,255,0.055),
+            rgba(255,255,255,0.015)
+        ),
+        var(--card-bg);
 
     border:
-        1px solid rgba(255,255,255,0.08);
+        1px solid var(--border-chrome);
 
     backdrop-filter: blur(12px);
 
     box-shadow:
-        0 8px 24px rgba(0,0,0,0.28);
+        0 8px 24px rgba(0,0,0,0.32);
 
     scroll-snap-align: start;
 
@@ -157,8 +158,9 @@
     cursor: pointer;
 
     transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+        transform 0.25s var(--ease-out),
+        box-shadow 0.25s ease,
+        border 0.25s ease;
 
 }
 
@@ -170,6 +172,18 @@
     text-decoration: none;
 
     color: inherit;
+
+}
+
+.flash-card:hover {
+
+    transform: translateY(-3px);
+
+    border-color: rgba(227, 193, 112, 0.28);
+
+    box-shadow:
+        0 12px 28px rgba(0,0,0,0.36),
+        0 0 16px rgba(227, 193, 112, 0.10);
 
 }
 
@@ -186,12 +200,40 @@
 
     object-fit: cover;
 
-    border-radius: 16px;
+    border-radius: 14px;
 
     background:
         rgba(255,255,255,0.04);
 
     display: block;
+
+}
+
+
+/* =========================
+   FLASH TAG
+========================= */
+
+.flash-tag {
+
+    display: inline-flex;
+    align-self: flex-start;
+
+    font-size: 0.6rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.03em;
+
+    text-transform: uppercase;
+
+    color: #0c0a06;
+
+    background: linear-gradient(120deg, var(--accent-soft), var(--accent));
+
+    padding: 3px 8px;
+
+    border-radius: 999px;
 
 }
 
@@ -292,7 +334,7 @@
     font-weight: 600;
 
     color:
-        rgba(255,255,255,0.45);
+        rgba(255,255,255,0.4);
 
     text-decoration: line-through;
 
@@ -305,11 +347,11 @@
 
 .flash-price {
 
-    font-size: 0.82rem;
+    font-size: 0.86rem;
 
     font-weight: 700;
 
-    color: #72d6ff;
+    color: var(--accent-soft);
 
 }
 

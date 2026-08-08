@@ -139,7 +139,7 @@
     font-size: 0.62rem;
     font-weight: 600;
 
-    color: #72d6ff;
+    color: var(--accent-soft);
 
     line-height: 1;
 
@@ -203,7 +203,7 @@
     font-size: 0.72rem;
     font-weight: 700;
 
-    color: #72d6ff;
+    color: var(--accent-soft);
 
     margin-top: 2px;
 

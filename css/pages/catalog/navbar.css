@@ -27,12 +27,12 @@
     background:
         linear-gradient(
             145deg,
-            rgba(10,14,25,0.76),
-            rgba(14,18,32,0.64)
+            rgba(10,13,20,0.78),
+            rgba(16,20,30,0.6)
         );
 
     border:
-        1px solid rgba(255,255,255,0.04);
+        1px solid var(--border-chrome);
 
     backdrop-filter:
         blur(10px);
@@ -95,9 +95,11 @@
         rgba(255,255,255,0.05);
 
     border:
-        1px solid rgba(255,255,255,0.04);
+        1px solid var(--border-chrome);
 
     color: #ffffff;
+
+    font-family: var(--font-display);
 
     font-size: 0.95rem;
 
@@ -106,6 +108,20 @@
     text-decoration: none;
 
     white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        border 0.2s ease;
+
+}
+
+.catalog-hero-back:hover {
+
+    background:
+        rgba(227, 193, 112, 0.1);
+
+    border-color:
+        rgba(227, 193, 112, 0.24);
 
 }
 
@@ -181,7 +197,21 @@
         rgba(255,255,255,0.05);
 
     border:
-        1px solid rgba(255,255,255,0.04);
+        1px solid var(--border-chrome);
+
+    transition:
+        border 0.25s ease,
+        box-shadow 0.25s ease;
+
+}
+
+.catalog-hero-search:focus-within {
+
+    border-color:
+        rgba(227, 193, 112, 0.32);
+
+    box-shadow:
+        0 0 0 1px rgba(227, 193, 112, 0.14);
 
 }
 
@@ -279,12 +309,12 @@
     background:
         linear-gradient(
             145deg,
-            rgba(10,14,25,0.96),
-            rgba(14,18,32,0.92)
+            rgba(9,12,19,0.96),
+            rgba(15,19,28,0.92)
         );
 
     border:
-        1px solid rgba(255,255,255,0.06);
+        1px solid var(--border-chrome);
 
     backdrop-filter:
         blur(14px);
@@ -346,7 +376,7 @@
         rgba(255,255,255,0.05);
 
     border:
-        1px solid rgba(255,255,255,0.04);
+        1px solid var(--border-chrome);
 
     color: #ffffff;
 
@@ -436,7 +466,7 @@
         rgba(255,255,255,0.05);
 
     border:
-        1px solid rgba(255,255,255,0.04);
+        1px solid var(--border-chrome);
 
 }
 

@@ -20,7 +20,17 @@ body {
   width: 100%;
   min-height: 100%;
   /* Cambia transparent por el color de fondo de tu app */
-  background-color: #08101d; 
+  background-color: #05070c;
   overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(227, 193, 112, 0.28);
+  color: #ffffff;
+}
+
+:focus-visible {
+  outline: 2px solid rgba(227, 193, 112, 0.65);
+  outline-offset: 2px;
 }

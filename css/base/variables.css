@@ -1,42 +1,70 @@
 :root {
 
-    /* COLORS */
-    --bg-primary: #000000;
-    --bg-secondary: #050505;
-  
-    --card-bg: rgba(18, 18, 18, 0.72);
-  
-    --text-primary: #ffffff;
-    --text-secondary: #b5b5b5;
-  
-    --border-color: rgba(255, 255, 255, 0.08);
-  
-    --button-hover: rgba(255, 255, 255, 0.10);
-  
-    /* SHADOWS */
-    --shadow-soft:
-      0 12px 45px rgba(0, 0, 0, 0.60);
-  
-    --shadow-glow:
-      0 0 30px rgba(255, 255, 255, 0.08);
-  
-    --shadow-green:
-      0 0 22px rgba(37, 211, 102, 0.18);
-  
-    --shadow-blue:
-      0 0 22px rgba(24, 119, 242, 0.18);
-  
-    --shadow-cyan:
-      0 0 22px rgba(0, 224, 255, 0.14);
-  
-    /* RADIUS */
-    --radius-main: 24px;
-  
-    /* TRANSITIONS */
-    --transition-main:
-      transform 0.25s ease,
-      background 0.25s ease,
-      box-shadow 0.25s ease,
-      border 0.25s ease;
-  
-  }
+  /* =========================
+     SURFACE — graphite / void
+  ========================= */
+  --bg-void: #05070c;
+  --bg-deep: #0a0e18;
+  --bg-mid: #121826;
+  --bg-warm: #1a1620;
+
+  --bg-primary: #000000;
+  --bg-secondary: #050505;
+
+  --card-bg: rgba(18, 20, 26, 0.72);
+  --card-bg-strong: rgba(22, 25, 33, 0.86);
+
+  --text-primary: #f4f5f7;
+  --text-secondary: #9aa1b0;
+
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-chrome: rgba(214, 222, 235, 0.16);
+
+  --button-hover: rgba(255, 255, 255, 0.08);
+
+  /* =========================
+     METAL — echoes the logo
+  ========================= */
+  --chrome-100: #f4f6f9;
+  --chrome-300: #c7cfdb;
+  --chrome-600: #6a7488;
+  --chrome-sheen: linear-gradient(115deg,
+      rgba(255, 255, 255, 0) 20%,
+      rgba(255, 255, 255, 0.16) 42%,
+      rgba(255, 255, 255, 0.02) 60%);
+
+  /* =========================
+     ACCENT — brushed gold
+  ========================= */
+  --accent: #e3c170;
+  --accent-soft: #f0d99a;
+  --accent-dim: rgba(227, 193, 112, 0.16);
+
+  /* kept for compatibility with earlier price/cyan usage */
+  --accent-cyan: #72d6ff;
+
+  /* SHADOWS */
+  --shadow-soft: 0 14px 40px rgba(0, 0, 0, 0.55);
+  --shadow-lift: 0 18px 46px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+  --shadow-glow: 0 0 30px rgba(255, 255, 255, 0.07);
+  --shadow-gold: 0 0 24px rgba(227, 193, 112, 0.16);
+  --shadow-green: 0 0 22px rgba(37, 211, 102, 0.18);
+  --shadow-blue: 0 0 22px rgba(24, 119, 242, 0.18);
+  --shadow-cyan: 0 0 22px rgba(0, 224, 255, 0.14);
+
+  /* RADIUS */
+  --radius-main: 22px;
+  --radius-soft: 16px;
+
+  /* TYPE */
+  --font-display: 'Sora', 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* TRANSITIONS */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-main: transform 0.25s var(--ease-out),
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    border 0.25s ease;
+
+}

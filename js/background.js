@@ -20,14 +20,14 @@ background.style.pointerEvents = 'none';
 background.style.zIndex = '0';
 
 // Color base sólido + gradiente para evitar transparencia en Safari
-background.style.backgroundColor = '#08101d';
+background.style.backgroundColor = '#05070c';
 background.style.background = `
 linear-gradient(
     to bottom,
-    #08101d 0%,
-    #0f1a2b 45%,
-    #171f2d 72%,
-    #221f28 100%
+    #05070c 0%,
+    #0a0e18 42%,
+    #121826 74%,
+    #1a1620 100%
 )
 `;
 
@@ -85,25 +85,25 @@ function createBlob({ size, color, top, left, animation }) {
 // BLOBS
 // =========================
 createBlob({
-    size: 240,
-    color: 'rgba(90,180,255,0.24)',
-    top: '15%',
+    size: 260,
+    color: 'rgba(227,193,112,0.16)',
+    top: '12%',
     left: '15%',
-    animation: 'blob1 3.5s linear infinite alternate'
+    animation: 'blob1 9s ease-in-out infinite alternate'
 });
 
 createBlob({
-    size: 190,
-    color: 'rgba(255,255,255,0.12)',
-    top: '50%',
-    left: '60%',
-    animation: 'blob2 4s linear infinite alternate-reverse'
+    size: 200,
+    color: 'rgba(200,210,225,0.10)',
+    top: '52%',
+    left: '62%',
+    animation: 'blob2 11s ease-in-out infinite alternate-reverse'
 });
 
 createBlob({
-    size: 220,
-    color: 'rgba(255,170,90,0.18)',
-    top: '65%',
-    left: '20%',
-    animation: 'blob3 3.2s linear infinite alternate'
+    size: 230,
+    color: 'rgba(120,150,200,0.14)',
+    top: '68%',
+    left: '18%',
+    animation: 'blob3 10s ease-in-out infinite alternate'
 });

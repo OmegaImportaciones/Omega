@@ -2,18 +2,47 @@
 
     width: 520px;
     max-width: 160%;
-  
+
     object-fit: contain;
-  
+
     filter:
       drop-shadow(
-        0 0 26px rgba(255,255,255,0.16)
+        0 0 30px rgba(227, 193, 112, 0.14)
+      )
+      drop-shadow(
+        0 0 60px rgba(255, 255, 255, 0.06)
       );
-  
+
     user-select: none;
-  
+
     -webkit-user-drag: none;
-  
+
     margin-bottom: -4px;
-  
+
+    animation: logo-breathe 6s ease-in-out infinite;
+
+}
+
+@keyframes logo-breathe {
+
+  0%, 100% {
+    filter:
+      drop-shadow(0 0 30px rgba(227, 193, 112, 0.14))
+      drop-shadow(0 0 60px rgba(255, 255, 255, 0.06));
   }
+
+  50% {
+    filter:
+      drop-shadow(0 0 40px rgba(227, 193, 112, 0.22))
+      drop-shadow(0 0 70px rgba(255, 255, 255, 0.09));
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .logo {
+    animation: none;
+  }
+
+}

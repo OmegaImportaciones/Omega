@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
 
-  gap: 16px;
+  gap: 14px;
 
   position: relative;
 
@@ -33,13 +33,18 @@
   justify-content: center;
   align-items: center;
 
-  gap: 12px;
+  gap: 14px;
 
   background:
-    rgba(18, 18, 18, 0.58);
+    linear-gradient(
+      150deg,
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.015)
+    ),
+    var(--card-bg);
 
   border:
-    1px solid rgba(255,255,255,0.08);
+    1px solid var(--border-chrome);
 
   border-radius:
     var(--radius-main);
@@ -55,21 +60,23 @@
   color:
     var(--text-primary);
 
+  font-family: var(--font-body);
+
   font-size: 1rem;
 
   font-weight: 600;
 
-  letter-spacing: 0.2px;
+  letter-spacing: 0.1px;
 
   transition:
     var(--transition-main);
 
   box-shadow:
-    0 4px 18px rgba(0,0,0,0.28);
+    var(--shadow-soft);
 
   position: relative;
 
-  overflow: visible;
+  overflow: hidden;
 
   isolation: isolate;
 
@@ -85,6 +92,43 @@
 
 }
 
+/* Filo superior tipo "metal cepillado": una línea fina de luz que corre
+   por el borde superior de cada botón, reforzando el vínculo visual con
+   el isotipo cromado de la marca. */
+.main-button::before {
+
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  padding: 1px;
+
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.32),
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0) 70%,
+    rgba(255, 255, 255, 0.10)
+  );
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+
+  -webkit-mask-composite: xor;
+
+  mask-composite: exclude;
+
+  pointer-events: none;
+
+  opacity: 0.7;
+
+}
+
 /* =========================
    BUTTON HOVER
 ========================= */
@@ -92,14 +136,25 @@
 .main-button:hover {
 
   transform:
-    translateY(-4px);
+    translateY(-3px);
 
   background:
-    var(--button-hover);
+    linear-gradient(
+      150deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.02)
+    ),
+    var(--card-bg-strong);
 
   box-shadow:
-    0 8px 28px rgba(0,0,0,0.32),
-    0 0 18px rgba(255,255,255,0.06);
+    var(--shadow-lift);
+
+}
+
+.main-button:active {
+
+  transform:
+    translateY(-1px) scale(0.99);
 
 }
 
@@ -113,7 +168,7 @@
     rgba(37, 211, 102, 0.35);
 
   box-shadow:
-    0 8px 28px rgba(0,0,0,0.32),
+    var(--shadow-lift),
     0 0 18px rgba(37,211,102,0.16);
 
 }
@@ -128,7 +183,7 @@
     rgba(0, 224, 255, 0.28);
 
   box-shadow:
-    0 8px 28px rgba(0,0,0,0.32),
+    var(--shadow-lift),
     0 0 18px rgba(0,224,255,0.12);
 
 }
@@ -143,7 +198,7 @@
     rgba(24, 119, 242, 0.35);
 
   box-shadow:
-    0 8px 28px rgba(0,0,0,0.32),
+    var(--shadow-lift),
     0 0 18px rgba(24,119,242,0.14);
 
 }
