@@ -13,9 +13,9 @@
         "precio2": "455.00",
         "precio3": "450.00",
         "precio4": "445.00",
-        "precio5": "420.00",
-        "precio6": "415.00",
-        "cantidad_disponible": 4
+        "precio5": "430.00",
+        "precio6": "427.00",
+        "cantidad_disponible": 3
     },
     {
         "id": 48,
@@ -411,7 +411,7 @@
         "precio4": "455.00",
         "precio5": "425.00",
         "precio6": "420.00",
-        "cantidad_disponible": 0
+        "cantidad_disponible": 3
     },
     {
         "id": 167,
@@ -1437,7 +1437,7 @@
         "precio4": "265.00",
         "precio5": "242.00",
         "precio6": "240.00",
-        "cantidad_disponible": 15
+        "cantidad_disponible": 14
     },
     {
         "id": 880,
@@ -3507,7 +3507,7 @@
         "precio4": "435.00",
         "precio5": "385.00",
         "precio6": "380.00",
-        "cantidad_disponible": 3
+        "cantidad_disponible": 2
     },
     {
         "id": 1449,
@@ -4461,7 +4461,7 @@
         "precio4": "100.00",
         "precio5": "79.00",
         "precio6": "77.00",
-        "cantidad_disponible": 2
+        "cantidad_disponible": 1
     },
     {
         "id": 1483,
@@ -6441,7 +6441,7 @@
         "precio4": "165.00",
         "precio5": "128.00",
         "precio6": "125.00",
-        "cantidad_disponible": 4
+        "cantidad_disponible": 3
     },
     {
         "id": 1368,
@@ -6909,7 +6909,7 @@
         "precio4": "150.00",
         "precio5": "127.00",
         "precio6": "125.00",
-        "cantidad_disponible": 0
+        "cantidad_disponible": 1
     },
     {
         "id": 433,
@@ -7521,7 +7521,7 @@
         "precio4": "165.00",
         "precio5": "128.00",
         "precio6": "126.00",
-        "cantidad_disponible": 17
+        "cantidad_disponible": 16
     },
     {
         "id": 426,
@@ -9890,13 +9890,13 @@
         "producto": "TV BOX MX BOX S CON FLUJOTV",
         "minimo": 10,
         "estado": 1,
-        "precio": "376.00",
-        "precio1": "376.00",
-        "precio2": "366.00",
-        "precio3": "355.00",
-        "precio4": "345.00",
-        "precio5": "330.00",
-        "precio6": "326.00",
+        "precio": "300.00",
+        "precio1": "300.00",
+        "precio2": "295.00",
+        "precio3": "290.00",
+        "precio4": "285.00",
+        "precio5": "230.00",
+        "precio6": "225.00",
         "cantidad_disponible": 1
     },
     {
@@ -12327,7 +12327,7 @@
         "precio4": "90.00",
         "precio5": "78.00",
         "precio6": "75.00",
-        "cantidad_disponible": 9
+        "cantidad_disponible": 6
     },
     {
         "id": 1787,
@@ -15045,7 +15045,7 @@
         "precio4": "115.00",
         "precio5": "110.00",
         "precio6": "108.00",
-        "cantidad_disponible": 3
+        "cantidad_disponible": 2
     },
     {
         "id": 499,
@@ -16791,7 +16791,7 @@
         "precio4": "70.00",
         "precio5": "52.00",
         "precio6": "50.00",
-        "cantidad_disponible": 3
+        "cantidad_disponible": 2
     },
     {
         "id": 2011,
@@ -17943,7 +17943,7 @@
         "precio4": "40.00",
         "precio5": "26.00",
         "precio6": "25.00",
-        "cantidad_disponible": 15
+        "cantidad_disponible": 14
     },
     {
         "id": 2071,
@@ -19725,7 +19725,7 @@
         "precio4": "415.00",
         "precio5": "380.00",
         "precio6": "375.00",
-        "cantidad_disponible": 1
+        "cantidad_disponible": 0
     },
     {
         "id": 2148,
@@ -20103,7 +20103,7 @@
         "precio4": "60.00",
         "precio5": "23.00",
         "precio6": "22.00",
-        "cantidad_disponible": 2
+        "cantidad_disponible": 1
     },
     {
         "id": 2168,
@@ -20337,7 +20337,7 @@
         "precio4": "155.00",
         "precio5": "107.00",
         "precio6": "105.00",
-        "cantidad_disponible": 2
+        "cantidad_disponible": 1
     },
     {
         "id": 2181,
@@ -20427,7 +20427,7 @@
         "precio4": "530.00",
         "precio5": "518.00",
         "precio6": "515.00",
-        "cantidad_disponible": 3
+        "cantidad_disponible": 2
     },
     {
         "id": 2186,
@@ -20438,13 +20438,13 @@
         "producto": "PROYECTOR CON JUEGOS BOSSNEY BS-H9875",
         "minimo": 10,
         "estado": 1,
-        "precio": "550.00",
-        "precio1": "550.00",
-        "precio2": "540.00",
-        "precio3": "530.00",
-        "precio4": "520.00",
-        "precio5": "455.00",
-        "precio6": "450.00",
+        "precio": "610.00",
+        "precio1": "610.00",
+        "precio2": "600.00",
+        "precio3": "590.00",
+        "precio4": "580.00",
+        "precio5": "510.00",
+        "precio6": "500.00",
         "cantidad_disponible": 0
     },
     {
@@ -20467,7 +20467,7 @@
     },
     {
         "id": 2188,
-        "imagen": "https://apiback.aswin-smart.com/images/productos/6a71352e8c8ff.png",
+        "imagen": "https://apiback.aswin-smart.com/images/productos/6a77d54edc229.png",
         "imagen2": "https://apiback.aswin-smart.com/images/default.png",
         "imagen3": "https://apiback.aswin-smart.com/images/default.png",
         "codigo": "FIRE H7",
@@ -20485,7 +20485,7 @@
     },
     {
         "id": 2189,
-        "imagen": "https://apiback.aswin-smart.com/images/productos/6a7135202b762.png",
+        "imagen": "https://apiback.aswin-smart.com/images/productos/6a77d5629248c.png",
         "imagen2": "https://apiback.aswin-smart.com/images/default.png",
         "imagen3": "https://apiback.aswin-smart.com/images/default.png",
         "codigo": "FIRE H5",
@@ -20625,7 +20625,7 @@
         "precio4": "65.00",
         "precio5": "30.00",
         "precio6": "28.00",
-        "cantidad_disponible": 30
+        "cantidad_disponible": 29
     },
     {
         "id": 2197,
@@ -20643,7 +20643,7 @@
         "precio4": "95.00",
         "precio5": "48.00",
         "precio6": "45.00",
-        "cantidad_disponible": 10
+        "cantidad_disponible": 9
     },
     {
         "id": 2198,
