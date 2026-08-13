@@ -1185,7 +1185,7 @@
         "precio4": "230.00",
         "precio5": "205.00",
         "precio6": "200.00",
-        "cantidad_disponible": 3
+        "cantidad_disponible": 4
     },
     {
         "id": 741,
@@ -1437,7 +1437,7 @@
         "precio4": "265.00",
         "precio5": "242.00",
         "precio6": "240.00",
-        "cantidad_disponible": 14
+        "cantidad_disponible": 13
     },
     {
         "id": 880,
@@ -2373,7 +2373,7 @@
         "precio4": "340.00",
         "precio5": "305.00",
         "precio6": "300.00",
-        "cantidad_disponible": 1
+        "cantidad_disponible": 2
     },
     {
         "id": 1214,
@@ -2913,7 +2913,7 @@
         "precio4": "85.00",
         "precio5": "46.00",
         "precio6": "44.00",
-        "cantidad_disponible": 10
+        "cantidad_disponible": 9
     },
     {
         "id": 1364,
@@ -3327,7 +3327,7 @@
         "precio4": "25.00",
         "precio5": "22.00",
         "precio6": "22.00",
-        "cantidad_disponible": 4
+        "cantidad_disponible": 0
     },
     {
         "id": 1420,
@@ -3543,7 +3543,7 @@
         "precio4": "535.00",
         "precio5": "500.00",
         "precio6": "500.00",
-        "cantidad_disponible": 1
+        "cantidad_disponible": 0
     },
     {
         "id": 1451,
@@ -4101,7 +4101,7 @@
         "precio4": "60.00",
         "precio5": "22.00",
         "precio6": "21.00",
-        "cantidad_disponible": 31
+        "cantidad_disponible": 30
     },
     {
         "id": 1333,
@@ -4245,7 +4245,7 @@
         "precio4": "80.00",
         "precio5": "56.00",
         "precio6": "55.00",
-        "cantidad_disponible": 5
+        "cantidad_disponible": 4
     },
     {
         "id": 786,
@@ -4389,7 +4389,7 @@
         "precio4": "40.00",
         "precio5": "27.00",
         "precio6": "25.00",
-        "cantidad_disponible": 36
+        "cantidad_disponible": 34
     },
     {
         "id": 1482,
@@ -5109,7 +5109,7 @@
         "precio4": "89.00",
         "precio5": "71.00",
         "precio6": "68.00",
-        "cantidad_disponible": 2
+        "cantidad_disponible": 1
     },
     {
         "id": 715,
@@ -6981,7 +6981,7 @@
         "precio4": "31.00",
         "precio5": "20.00",
         "precio6": "19.00",
-        "cantidad_disponible": 11
+        "cantidad_disponible": 10
     },
     {
         "id": 386,
@@ -7521,7 +7521,7 @@
         "precio4": "165.00",
         "precio5": "128.00",
         "precio6": "126.00",
-        "cantidad_disponible": 16
+        "cantidad_disponible": 11
     },
     {
         "id": 426,
@@ -8583,7 +8583,7 @@
         "precio4": "360.00",
         "precio5": "340.00",
         "precio6": "335.00",
-        "cantidad_disponible": 1
+        "cantidad_disponible": 0
     },
     {
         "id": 1615,
@@ -8673,7 +8673,7 @@
         "precio4": "205.00",
         "precio5": "155.00",
         "precio6": "150.00",
-        "cantidad_disponible": 1
+        "cantidad_disponible": 0
     },
     {
         "id": 1620,
@@ -10203,7 +10203,7 @@
         "precio4": "165.00",
         "precio5": "165.00",
         "precio6": "160.00",
-        "cantidad_disponible": 2
+        "cantidad_disponible": 0
     },
     {
         "id": 1698,
@@ -11787,7 +11787,7 @@
         "precio4": "155.00",
         "precio5": "150.00",
         "precio6": "147.00",
-        "cantidad_disponible": 5
+        "cantidad_disponible": 4
     },
     {
         "id": 1759,
@@ -12086,11 +12086,11 @@
         "producto": "INFLADOR PORTATIL XIAOMI AIR COMPRESSOR 2 PRO",
         "minimo": 10,
         "estado": 1,
-        "precio": "660.00",
-        "precio1": "660.00",
-        "precio2": "655.00",
-        "precio3": "650.00",
-        "precio4": "645.00",
+        "precio": "640.00",
+        "precio1": "640.00",
+        "precio2": "635.00",
+        "precio3": "630.00",
+        "precio4": "625.00",
         "precio5": "525.00",
         "precio6": "520.00",
         "cantidad_disponible": 1
@@ -12662,13 +12662,13 @@
         "producto": "PARLANTE BLUETOOTH JBL CHARGE 6",
         "minimo": 10,
         "estado": 1,
-        "precio": "1520.00",
-        "precio1": "1520.00",
-        "precio2": "1510.00",
-        "precio3": "1500.00",
-        "precio4": "1490.00",
-        "precio5": "1435.00",
-        "precio6": "1430.00",
+        "precio": "1500.00",
+        "precio1": "1500.00",
+        "precio2": "1490.00",
+        "precio3": "1480.00",
+        "precio4": "1470.00",
+        "precio5": "1430.00",
+        "precio6": "1425.00",
         "cantidad_disponible": 29
     },
     {
@@ -13299,7 +13299,7 @@
         "precio4": "1520.00",
         "precio5": "1420.00",
         "precio6": "1410.00",
-        "cantidad_disponible": 1
+        "cantidad_disponible": 0
     },
     {
         "id": 1838,
@@ -14217,7 +14217,7 @@
         "precio4": "135.00",
         "precio5": "79.00",
         "precio6": "78.00",
-        "cantidad_disponible": 3
+        "cantidad_disponible": 0
     },
     {
         "id": 137,
@@ -14235,7 +14235,7 @@
         "precio4": "560.00",
         "precio5": "525.00",
         "precio6": "520.00",
-        "cantidad_disponible": 2
+        "cantidad_disponible": 3
     },
     {
         "id": 313,
@@ -15333,7 +15333,7 @@
         "precio4": "965.00",
         "precio5": "915.00",
         "precio6": "910.00",
-        "cantidad_disponible": 4
+        "cantidad_disponible": 2
     },
     {
         "id": 1933,
@@ -15441,7 +15441,7 @@
         "precio4": "85.00",
         "precio5": "72.00",
         "precio6": "70.00",
-        "cantidad_disponible": 3
+        "cantidad_disponible": 2
     },
     {
         "id": 1937,
@@ -16244,13 +16244,13 @@
         "producto": "MONITOR GAMING XIAOMI CURVED G34WQi EU 34 PULGADAS",
         "minimo": 10,
         "estado": 1,
-        "precio": "3600.00",
-        "precio1": "3600.00",
-        "precio2": "3590.00",
-        "precio3": "3580.00",
-        "precio4": "3570.00",
-        "precio5": "3300.00",
-        "precio6": "3290.00",
+        "precio": "3500.00",
+        "precio1": "3500.00",
+        "precio2": "3490.00",
+        "precio3": "3480.00",
+        "precio4": "3470.00",
+        "precio5": "3280.00",
+        "precio6": "3270.00",
         "cantidad_disponible": 1
     },
     {
@@ -17187,7 +17187,7 @@
         "precio4": "260.00",
         "precio5": "230.00",
         "precio6": "225.00",
-        "cantidad_disponible": 8
+        "cantidad_disponible": 4
     },
     {
         "id": 2033,
@@ -17324,13 +17324,13 @@
         "producto": "NOTEBOOK DELL 5440 VP6RM 14 Core 7 16GB RAM / 512GB SSD W11PRO BLUE",
         "minimo": 10,
         "estado": 1,
-        "precio": "7590.00",
-        "precio1": "7590.00",
-        "precio2": "7580.00",
-        "precio3": "7570.00",
-        "precio4": "7560.00",
-        "precio5": "7510.00",
-        "precio6": "7500.00",
+        "precio": "7540.00",
+        "precio1": "7540.00",
+        "precio2": "7530.00",
+        "precio3": "7520.00",
+        "precio4": "7510.00",
+        "precio5": "7460.00",
+        "precio6": "7450.00",
         "cantidad_disponible": 3
     },
     {
@@ -17810,13 +17810,13 @@
         "producto": "MICROFONO INALAMBRICO 2TX + 1RX + CHARGING CASE DJI MIC MINI",
         "minimo": 10,
         "estado": 1,
-        "precio": "1400.00",
-        "precio1": "1400.00",
-        "precio2": "1395.00",
-        "precio3": "1390.00",
-        "precio4": "1385.00",
-        "precio5": "1345.00",
-        "precio6": "1340.00",
+        "precio": "1520.00",
+        "precio1": "1520.00",
+        "precio2": "1510.00",
+        "precio3": "1500.00",
+        "precio4": "1490.00",
+        "precio5": "1450.00",
+        "precio6": "1445.00",
         "cantidad_disponible": 0
     },
     {
@@ -18062,13 +18062,13 @@
         "producto": "NOTEBOOK HP i7 15-fd0274la 156 SPA I7-1355U 16RAM  512GB W11 GAMEPASS GO TECLADO ESPAÑOL",
         "minimo": 10,
         "estado": 1,
-        "precio": "8384.00",
-        "precio1": "8384.00",
-        "precio2": "8373.00",
-        "precio3": "8363.00",
-        "precio4": "8352.00",
-        "precio5": "8311.00",
-        "precio6": "8300.00",
+        "precio": "8334.00",
+        "precio1": "8334.00",
+        "precio2": "8323.00",
+        "precio3": "8313.00",
+        "precio4": "8302.00",
+        "precio5": "8261.00",
+        "precio6": "8250.00",
         "cantidad_disponible": 0
     },
     {
@@ -18080,14 +18080,14 @@
         "producto": "NOTEBOOK DELL 15255 4W04Y 15.6 RYZEN 5 7520U 16RAM 512GB SSD W11 SILVER TECLADO ESPAÑOL",
         "minimo": 10,
         "estado": 1,
-        "precio": "6490.00",
-        "precio1": "6490.00",
-        "precio2": "6480.00",
-        "precio3": "6470.00",
-        "precio4": "6460.00",
-        "precio5": "6410.00",
-        "precio6": "6400.00",
-        "cantidad_disponible": 2
+        "precio": "6440.00",
+        "precio1": "6440.00",
+        "precio2": "6430.00",
+        "precio3": "6420.00",
+        "precio4": "6410.00",
+        "precio5": "6360.00",
+        "precio6": "6350.00",
+        "cantidad_disponible": 1
     },
     {
         "id": 2075,
@@ -18098,13 +18098,13 @@
         "producto": "NOTEBOOK DELL 15255 VYY17 RYZEN 7 7730 15.6 16RAM 1TB SSD W11 SILVER TECLADO ESPAÑOL",
         "minimo": 10,
         "estado": 1,
-        "precio": "7990.00",
-        "precio1": "7990.00",
-        "precio2": "7980.00",
-        "precio3": "7970.00",
-        "precio4": "7960.00",
-        "precio5": "7900.00",
-        "precio6": "7890.00",
+        "precio": "7940.00",
+        "precio1": "7940.00",
+        "precio2": "7930.00",
+        "precio3": "7920.00",
+        "precio4": "7910.00",
+        "precio5": "7850.00",
+        "precio6": "7840.00",
         "cantidad_disponible": 3
     },
     {
@@ -18447,7 +18447,7 @@
         "precio4": "5170.00",
         "precio5": "5060.00",
         "precio6": "5050.00",
-        "cantidad_disponible": 1
+        "cantidad_disponible": 0
     },
     {
         "id": 2095,
@@ -18789,7 +18789,7 @@
         "precio4": "105.00",
         "precio5": "65.00",
         "precio6": "63.00",
-        "cantidad_disponible": 2
+        "cantidad_disponible": 1
     },
     {
         "id": 2114,
@@ -18825,7 +18825,7 @@
         "precio4": "195.00",
         "precio5": "165.00",
         "precio6": "160.00",
-        "cantidad_disponible": 2
+        "cantidad_disponible": 0
     },
     {
         "id": 2116,
@@ -18969,7 +18969,7 @@
         "precio4": "63.00",
         "precio5": "37.00",
         "precio6": "35.00",
-        "cantidad_disponible": 5
+        "cantidad_disponible": 2
     },
     {
         "id": 2124,
@@ -19095,7 +19095,7 @@
         "precio4": "145.00",
         "precio5": "120.00",
         "precio6": "115.00",
-        "cantidad_disponible": 0
+        "cantidad_disponible": 2
     },
     {
         "id": 349,
@@ -20103,7 +20103,7 @@
         "precio4": "60.00",
         "precio5": "23.00",
         "precio6": "22.00",
-        "cantidad_disponible": 1
+        "cantidad_disponible": 0
     },
     {
         "id": 2168,
@@ -20114,13 +20114,13 @@
         "producto": "PARLANTE BLUETOOTH JBL GO 5",
         "minimo": 10,
         "estado": 1,
-        "precio": "530.00",
-        "precio1": "530.00",
-        "precio2": "525.00",
-        "precio3": "520.00",
-        "precio4": "515.00",
-        "precio5": "475.00",
-        "precio6": "470.00",
+        "precio": "510.00",
+        "precio1": "510.00",
+        "precio2": "505.00",
+        "precio3": "500.00",
+        "precio4": "495.00",
+        "precio5": "470.00",
+        "precio6": "465.00",
         "cantidad_disponible": 30
     },
     {
@@ -20132,13 +20132,13 @@
         "producto": "PARLANTE BLUETOOTH JBL PARTYBOX 520",
         "minimo": 10,
         "estado": 1,
-        "precio": "6200.00",
-        "precio1": "6200.00",
-        "precio2": "6190.00",
-        "precio3": "6180.00",
-        "precio4": "6170.00",
-        "precio5": "6050.00",
-        "precio6": "6040.00",
+        "precio": "6100.00",
+        "precio1": "6100.00",
+        "precio2": "6090.00",
+        "precio3": "6080.00",
+        "precio4": "6070.00",
+        "precio5": "5990.00",
+        "precio6": "5980.00",
         "cantidad_disponible": 1
     },
     {
@@ -20150,13 +20150,13 @@
         "producto": "PARLANTE BLUETOOTH JBL PARTYBOX 720",
         "minimo": 10,
         "estado": 1,
-        "precio": "8000.00",
-        "precio1": "8000.00",
-        "precio2": "7990.00",
-        "precio3": "7980.00",
-        "precio4": "7970.00",
-        "precio5": "7880.00",
-        "precio6": "7870.00",
+        "precio": "7990.00",
+        "precio1": "7990.00",
+        "precio2": "7980.00",
+        "precio3": "7970.00",
+        "precio4": "7960.00",
+        "precio5": "7860.00",
+        "precio6": "7850.00",
         "cantidad_disponible": 1
     },
     {
@@ -20211,7 +20211,7 @@
         "precio4": "155.00",
         "precio5": "105.00",
         "precio6": "100.00",
-        "cantidad_disponible": 12
+        "cantidad_disponible": 11
     },
     {
         "id": 2174,
@@ -20265,7 +20265,7 @@
         "precio4": "140.00",
         "precio5": "998.00",
         "precio6": "95.00",
-        "cantidad_disponible": 4
+        "cantidad_disponible": 3
     },
     {
         "id": 2177,
@@ -20319,7 +20319,7 @@
         "precio4": "85.00",
         "precio5": "50.00",
         "precio6": "45.00",
-        "cantidad_disponible": 4
+        "cantidad_disponible": 1
     },
     {
         "id": 2180,
@@ -20463,7 +20463,7 @@
         "precio4": "420.00",
         "precio5": "368.00",
         "precio6": "365.00",
-        "cantidad_disponible": 2
+        "cantidad_disponible": 1
     },
     {
         "id": 2188,
@@ -20481,7 +20481,7 @@
         "precio4": "255.00",
         "precio5": "205.00",
         "precio6": "200.00",
-        "cantidad_disponible": 8
+        "cantidad_disponible": 4
     },
     {
         "id": 2189,
@@ -20535,7 +20535,7 @@
         "precio4": "665.00",
         "precio5": "610.00",
         "precio6": "605.00",
-        "cantidad_disponible": 4
+        "cantidad_disponible": 3
     },
     {
         "id": 2192,
@@ -20575,11 +20575,11 @@
     },
     {
         "id": 2194,
-        "imagen": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen": "https://apiback.aswin-smart.com/images/productos/6a7a699c2b19e.png",
         "imagen2": "https://apiback.aswin-smart.com/images/default.png",
         "imagen3": "https://apiback.aswin-smart.com/images/default.png",
         "codigo": "SC-Y3006W",
-        "producto": "CAMARA IP FOCO 3MP TOMATE SC-Y3006W",
+        "producto": "CAMARA IP WIFI FOCO 3MP TOMATE SC-Y3006W",
         "minimo": 10,
         "estado": 1,
         "precio": "190.00",
@@ -20593,7 +20593,7 @@
     },
     {
         "id": 2195,
-        "imagen": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen": "https://apiback.aswin-smart.com/images/productos/6a7a6732a2196.png",
         "imagen2": "https://apiback.aswin-smart.com/images/default.png",
         "imagen3": "https://apiback.aswin-smart.com/images/default.png",
         "codigo": "KP-2097",
@@ -20611,11 +20611,11 @@
     },
     {
         "id": 2196,
-        "imagen": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen": "https://apiback.aswin-smart.com/images/productos/6a7a68a26b22f.png",
         "imagen2": "https://apiback.aswin-smart.com/images/default.png",
         "imagen3": "https://apiback.aswin-smart.com/images/default.png",
         "codigo": "G51",
-        "producto": "MOUSE INALAMBRICO Y BT KNUP G51",
+        "producto": "MOUSE INALAMBRICO Y BT RECARGABLE KNUP G51",
         "minimo": 10,
         "estado": 1,
         "precio": "80.00",
@@ -20625,11 +20625,11 @@
         "precio4": "65.00",
         "precio5": "30.00",
         "precio6": "28.00",
-        "cantidad_disponible": 29
+        "cantidad_disponible": 18
     },
     {
         "id": 2197,
-        "imagen": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen": "https://apiback.aswin-smart.com/images/productos/6a7a66225fac9.png",
         "imagen2": "https://apiback.aswin-smart.com/images/default.png",
         "imagen3": "https://apiback.aswin-smart.com/images/default.png",
         "codigo": "KP-MU008",
@@ -20647,7 +20647,7 @@
     },
     {
         "id": 2198,
-        "imagen": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen": "https://apiback.aswin-smart.com/images/productos/6a7a67ca4e40b.png",
         "imagen2": "https://apiback.aswin-smart.com/images/default.png",
         "imagen3": "https://apiback.aswin-smart.com/images/default.png",
         "codigo": "T-TA0011",
