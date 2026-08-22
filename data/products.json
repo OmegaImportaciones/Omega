@@ -15,7 +15,7 @@
         "precio4": "445.00",
         "precio5": "430.00",
         "precio6": "427.00",
-        "cantidad_disponible": 3
+        "cantidad_disponible": 2
     },
     {
         "id": 48,
@@ -1041,7 +1041,7 @@
         "precio4": "245.00",
         "precio5": "210.00",
         "precio6": "205.00",
-        "cantidad_disponible": 1
+        "cantidad_disponible": 0
     },
     {
         "id": 534,
@@ -1214,14 +1214,14 @@
         "producto": "FLASH HP OTG TIPO C 64GB USB 3.1",
         "minimo": 5,
         "estado": 1,
-        "precio": "170.00",
-        "precio1": "170.00",
-        "precio2": "165.00",
-        "precio3": "160.00",
-        "precio4": "155.00",
-        "precio5": "121.00",
-        "precio6": "118.00",
-        "cantidad_disponible": 0
+        "precio": "265.00",
+        "precio1": "265.00",
+        "precio2": "260.00",
+        "precio3": "255.00",
+        "precio4": "250.00",
+        "precio5": "225.00",
+        "precio6": "220.00",
+        "cantidad_disponible": 5
     },
     {
         "id": 762,
@@ -1959,7 +1959,7 @@
         "precio4": "65.00",
         "precio5": "45.00",
         "precio6": "43.00",
-        "cantidad_disponible": 11
+        "cantidad_disponible": 10
     },
     {
         "id": 1087,
@@ -4220,14 +4220,14 @@
         "producto": "FLASH HP 8GB USB 2.0 CP",
         "minimo": 5,
         "estado": 1,
-        "precio": "70.00",
-        "precio1": "70.00",
-        "precio2": "65.00",
-        "precio3": "60.00",
-        "precio4": "60.00",
-        "precio5": "42.00",
-        "precio6": "41.00",
-        "cantidad_disponible": 6
+        "precio": "75.00",
+        "precio1": "75.00",
+        "precio2": "70.00",
+        "precio3": "68.00",
+        "precio4": "65.00",
+        "precio5": "45.00",
+        "precio6": "44.00",
+        "cantidad_disponible": 2
     },
     {
         "id": 41,
@@ -4245,7 +4245,7 @@
         "precio4": "80.00",
         "precio5": "56.00",
         "precio6": "55.00",
-        "cantidad_disponible": 1
+        "cantidad_disponible": 7
     },
     {
         "id": 786,
@@ -5325,7 +5325,7 @@
         "precio4": "35.00",
         "precio5": "23.00",
         "precio6": "20.00",
-        "cantidad_disponible": 10
+        "cantidad_disponible": 7
     },
     {
         "id": 1507,
@@ -5840,14 +5840,14 @@
         "producto": "FLASH HP 64GB USB 2.0",
         "minimo": 5,
         "estado": 1,
-        "precio": "140.00",
-        "precio1": "140.00",
-        "precio2": "135.00",
-        "precio3": "130.00",
-        "precio4": "125.00",
-        "precio5": "89.00",
-        "precio6": "87.00",
-        "cantidad_disponible": 0
+        "precio": "160.00",
+        "precio1": "160.00",
+        "precio2": "155.00",
+        "precio3": "150.00",
+        "precio4": "145.00",
+        "precio5": "115.00",
+        "precio6": "113.00",
+        "cantidad_disponible": 5
     },
     {
         "id": 533,
@@ -6164,14 +6164,14 @@
         "producto": "MSD SAMSUNG EVO PLUS 256 GB",
         "minimo": 5,
         "estado": 1,
-        "precio": "650.00",
-        "precio1": "650.00",
-        "precio2": "645.00",
-        "precio3": "640.00",
-        "precio4": "640.00",
-        "precio5": "605.00",
-        "precio6": "600.00",
-        "cantidad_disponible": 0
+        "precio": "790.00",
+        "precio1": "790.00",
+        "precio2": "780.00",
+        "precio3": "770.00",
+        "precio4": "765.00",
+        "precio5": "740.00",
+        "precio6": "735.00",
+        "cantidad_disponible": 1
     },
     {
         "id": 114,
@@ -7305,7 +7305,7 @@
         "precio4": "185.00",
         "precio5": "120.00",
         "precio6": "115.00",
-        "cantidad_disponible": 10
+        "cantidad_disponible": 5
     },
     {
         "id": 1069,
@@ -7457,7 +7457,7 @@
         "imagen2": "https://apiback.aswin-smart.com/images/default.png",
         "imagen3": "https://apiback.aswin-smart.com/images/default.png",
         "codigo": "44",
-        "producto": "MSD SAMSUNG EVO PLUS 32GB",
+        "producto": "MSD SAMSUNG EVO PLUS 32GB CO",
         "minimo": 5,
         "estado": 1,
         "precio": "110.00",
@@ -9735,7 +9735,7 @@
         "precio4": "95.00",
         "precio5": "87.00",
         "precio6": "85.00",
-        "cantidad_disponible": 4
+        "cantidad_disponible": 3
     },
     {
         "id": 1678,
@@ -11193,7 +11193,7 @@
         "precio4": "30.00",
         "precio5": "17.00",
         "precio6": "15.00",
-        "cantidad_disponible": 8
+        "cantidad_disponible": 7
     },
     {
         "id": 1740,
@@ -12219,7 +12219,7 @@
         "precio4": "115.00",
         "precio5": "90.00",
         "precio6": "88.00",
-        "cantidad_disponible": 5
+        "cantidad_disponible": 4
     },
     {
         "id": 1781,
@@ -13857,7 +13857,7 @@
         "precio4": "135.00",
         "precio5": "115.00",
         "precio6": "110.00",
-        "cantidad_disponible": 0
+        "cantidad_disponible": 1
     },
     {
         "id": 1869,
@@ -14235,7 +14235,7 @@
         "precio4": "560.00",
         "precio5": "525.00",
         "precio6": "520.00",
-        "cantidad_disponible": 3
+        "cantidad_disponible": 2
     },
     {
         "id": 313,
@@ -17187,7 +17187,7 @@
         "precio4": "260.00",
         "precio5": "230.00",
         "precio6": "225.00",
-        "cantidad_disponible": 2
+        "cantidad_disponible": 1
     },
     {
         "id": 2033,
@@ -17295,7 +17295,7 @@
         "precio4": "40.00",
         "precio5": "24.00",
         "precio6": "23.00",
-        "cantidad_disponible": 2
+        "cantidad_disponible": 1
     },
     {
         "id": 2039,
@@ -17331,7 +17331,7 @@
         "precio4": "7410.00",
         "precio5": "7300.00",
         "precio6": "7290.00",
-        "cantidad_disponible": 3
+        "cantidad_disponible": 1
     },
     {
         "id": 2041,
@@ -18429,7 +18429,7 @@
         "precio4": "5020.00",
         "precio5": "5000.00",
         "precio6": "4990.00",
-        "cantidad_disponible": 1
+        "cantidad_disponible": 0
     },
     {
         "id": 2094,
@@ -20535,7 +20535,7 @@
         "precio4": "665.00",
         "precio5": "610.00",
         "precio6": "605.00",
-        "cantidad_disponible": 3
+        "cantidad_disponible": 2
     },
     {
         "id": 2192,
@@ -20669,7 +20669,7 @@
         "imagen2": "https://apiback.aswin-smart.com/images/default.png",
         "imagen3": "https://apiback.aswin-smart.com/images/default.png",
         "codigo": "MSD 16GB",
-        "producto": "MSD SAMSUNG EVO PLUS 16GB",
+        "producto": "MSD SAMSUNG EVO PLUS 16GB CO",
         "minimo": 10,
         "estado": 1,
         "precio": "75.00",
@@ -20680,5 +20680,41 @@
         "precio5": "55.00",
         "precio6": "53.00",
         "cantidad_disponible": 3
+    },
+    {
+        "id": 2201,
+        "imagen": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+        "codigo": "SONY 32GB 3.2",
+        "producto": "FLASH SONY USB 3.2 32GB CO",
+        "minimo": 10,
+        "estado": 1,
+        "precio": "125.00",
+        "precio1": "125.00",
+        "precio2": "120.00",
+        "precio3": "115.00",
+        "precio4": "110.00",
+        "precio5": "77.00",
+        "precio6": "75.00",
+        "cantidad_disponible": 10
+    },
+    {
+        "id": 20,
+        "imagen": "https://apiback.aswin-smart.com/images/productos/665aba288470d.png",
+        "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+        "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+        "codigo": "20",
+        "producto": "FLASH SAMSUNG 64GB USB 3.1",
+        "minimo": 5,
+        "estado": 1,
+        "precio": "180.00",
+        "precio1": "180.00",
+        "precio2": "175.00",
+        "precio3": "170.00",
+        "precio4": "165.00",
+        "precio5": "120.00",
+        "precio6": "118.00",
+        "cantidad_disponible": 5
     }
 ]
