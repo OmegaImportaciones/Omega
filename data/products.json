@@ -321,7 +321,7 @@
     "precio6": "63.00",
     "precio": "110.00",
     "precio1": "110.00",
-    "cantidad_disponible": 10
+    "cantidad_disponible": 8
   },
   {
     "id": 45,
@@ -2967,7 +2967,7 @@
     "precio6": "40.00",
     "precio": "75.00",
     "precio1": "75.00",
-    "cantidad_disponible": 2
+    "cantidad_disponible": 1
   },
   {
     "id": 341,
@@ -5127,7 +5127,7 @@
     "precio6": "200.00",
     "precio": "240.00",
     "precio1": "240.00",
-    "cantidad_disponible": 13
+    "cantidad_disponible": 11
   },
   {
     "id": 718,
@@ -5703,7 +5703,7 @@
     "precio6": "25.00",
     "precio": "55.00",
     "precio1": "55.00",
-    "cantidad_disponible": 67
+    "cantidad_disponible": 66
   },
   {
     "id": 786,
@@ -6783,7 +6783,7 @@
     "precio6": "240.00",
     "precio": "280.00",
     "precio1": "280.00",
-    "cantidad_disponible": 39
+    "cantidad_disponible": 38
   },
   {
     "id": 878,
@@ -11769,7 +11769,7 @@
     "precio6": "34.00",
     "precio": "70.00",
     "precio1": "70.00",
-    "cantidad_disponible": 42
+    "cantidad_disponible": 40
   },
   {
     "id": 1263,
@@ -13227,7 +13227,7 @@
     "precio6": "44.00",
     "precio": "100.00",
     "precio1": "100.00",
-    "cantidad_disponible": 22
+    "cantidad_disponible": 20
   },
   {
     "id": 1364,
@@ -16719,7 +16719,7 @@
     "precio6": "126.00",
     "precio": "180.00",
     "precio1": "180.00",
-    "cantidad_disponible": 12
+    "cantidad_disponible": 11
   },
   {
     "id": 1575,
@@ -17223,7 +17223,7 @@
     "precio6": "330.00",
     "precio": "390.00",
     "precio1": "390.00",
-    "cantidad_disponible": 35
+    "cantidad_disponible": 33
   },
   {
     "id": 1605,
@@ -18303,7 +18303,7 @@
     "precio6": "127.00",
     "precio": "167.00",
     "precio1": "167.00",
-    "cantidad_disponible": 17
+    "cantidad_disponible": 16
   },
   {
     "id": 1665,
@@ -19563,7 +19563,7 @@
     "precio6": "25.00",
     "precio": "70.00",
     "precio1": "70.00",
-    "cantidad_disponible": 21
+    "cantidad_disponible": 20
   },
   {
     "id": 1735,
@@ -20283,7 +20283,7 @@
     "precio6": "785.00",
     "precio": "820.00",
     "precio1": "820.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 2
   },
   {
     "id": 1776,
@@ -20791,11 +20791,11 @@
   },
   {
     "id": 1804,
-    "imagen": "https://apiback.aswin-smart.com/images/productos/6855fd2061ebf.png",
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6a8e3ef41101f.png",
     "imagen2": "https://apiback.aswin-smart.com/images/default.png",
     "imagen3": "https://apiback.aswin-smart.com/images/default.png",
     "codigo": "LE-902",
-    "producto": "CABLE DE IMPRESORA LELONG LE-902 DE 2M",
+    "producto": "CABLE DE IMPRESORA 2 METROS LELONG LE-902-2M",
     "minimo": 10,
     "estado": 1,
     "precio2": "35.00",
@@ -20823,7 +20823,7 @@
     "precio6": "1405.00",
     "precio": "1480.00",
     "precio1": "1480.00",
-    "cantidad_disponible": 43
+    "cantidad_disponible": 42
   },
   {
     "id": 1806,
@@ -20877,7 +20877,7 @@
     "precio6": "29.00",
     "precio": "70.00",
     "precio1": "70.00",
-    "cantidad_disponible": 19
+    "cantidad_disponible": 18
   },
   {
     "id": 1809,
@@ -21111,7 +21111,7 @@
     "precio6": "17.00",
     "precio": "60.00",
     "precio1": "60.00",
-    "cantidad_disponible": 13
+    "cantidad_disponible": 10
   },
   {
     "id": 1822,
@@ -21399,7 +21399,7 @@
     "precio6": "1410.00",
     "precio": "1550.00",
     "precio1": "1550.00",
-    "cantidad_disponible": 0
+    "cantidad_disponible": 1
   },
   {
     "id": 1838,
@@ -22281,7 +22281,7 @@
     "precio6": "78.00",
     "precio": "150.00",
     "precio1": "150.00",
-    "cantidad_disponible": 14
+    "cantidad_disponible": 32
   },
   {
     "id": 1888,
@@ -22796,13 +22796,13 @@
     "producto": "SWITCH POE GIGABIT DE 16 PUERTOS KNUP PW003",
     "minimo": 10,
     "estado": 1,
-    "precio2": "545.00",
-    "precio3": "540.00",
-    "precio4": "535.00",
-    "precio5": "417.00",
+    "precio2": "470.00",
+    "precio3": "465.00",
+    "precio4": "460.00",
+    "precio5": "420.00",
     "precio6": "415.00",
-    "precio": "450.00",
-    "precio1": "450.00",
+    "precio": "480.00",
+    "precio1": "480.00",
     "cantidad_disponible": 10
   },
   {
@@ -23073,7 +23073,7 @@
     "precio6": "910.00",
     "precio": "980.00",
     "precio1": "980.00",
-    "cantidad_disponible": 4
+    "cantidad_disponible": 3
   },
   {
     "id": 1933,
@@ -24855,7 +24855,7 @@
     "precio6": "225.00",
     "precio": "275.00",
     "precio1": "275.00",
-    "cantidad_disponible": 8
+    "cantidad_disponible": 7
   },
   {
     "id": 2033,
@@ -25197,7 +25197,7 @@
     "precio6": "120.00",
     "precio": "170.00",
     "precio1": "170.00",
-    "cantidad_disponible": 4
+    "cantidad_disponible": 3
   },
   {
     "id": 2052,
@@ -25521,7 +25521,7 @@
     "precio6": "365.00",
     "precio": "450.00",
     "precio1": "450.00",
-    "cantidad_disponible": 6
+    "cantidad_disponible": 5
   },
   {
     "id": 2070,
@@ -26637,7 +26637,7 @@
     "precio6": "105.00",
     "precio": "160.00",
     "precio1": "160.00",
-    "cantidad_disponible": 15
+    "cantidad_disponible": 14
   },
   {
     "id": 2132,
@@ -26817,7 +26817,7 @@
     "precio6": "95.00",
     "precio": "140.00",
     "precio1": "140.00",
-    "cantidad_disponible": 12
+    "cantidad_disponible": 11
   },
   {
     "id": 2142,
@@ -27051,7 +27051,7 @@
     "precio6": "1815.00",
     "precio": "1900.00",
     "precio1": "1900.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 1
   },
   {
     "id": 2156,
@@ -27699,7 +27699,7 @@
     "precio6": "605.00",
     "precio": "680.00",
     "precio1": "680.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 1
   },
   {
     "id": 2192,
@@ -27847,7 +27847,7 @@
   },
   {
     "id": 2201,
-    "imagen": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6a8e34083f3e7.png",
     "imagen2": "https://apiback.aswin-smart.com/images/default.png",
     "imagen3": "https://apiback.aswin-smart.com/images/default.png",
     "codigo": "SONY 32GB 3.2",
@@ -27862,5 +27862,203 @@
     "precio": "125.00",
     "precio1": "125.00",
     "cantidad_disponible": 20
+  },
+  {
+    "id": 2202,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6a8e3e162c308.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "codigo": "T-2480BT",
+    "producto": "AUDIFONO BLUETOOTH TOMATE T-2480BT",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "0.00",
+    "precio3": "0.00",
+    "precio4": "0.00",
+    "precio5": "0.00",
+    "precio6": "0.00",
+    "precio": "0.00",
+    "precio1": "0.00",
+    "cantidad_disponible": 0
+  },
+  {
+    "id": 2203,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6a8e3fd3de192.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "codigo": "TC-001DV",
+    "producto": "CAMARA DEPORTIVA PORTATIL TOMATE TC-001DV",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "0.00",
+    "precio3": "0.00",
+    "precio4": "0.00",
+    "precio5": "0.00",
+    "precio6": "0.00",
+    "precio": "0.00",
+    "precio1": "0.00",
+    "cantidad_disponible": 0
+  },
+  {
+    "id": 2204,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6a8e4095b8b98.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "codigo": "K2034TMN",
+    "producto": "CONTROL CON AIR MOUSE VOZ TECLADO RGB 2.4GHZ/BT TOMATE K2034TMN",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "0.00",
+    "precio3": "0.00",
+    "precio4": "0.00",
+    "precio5": "0.00",
+    "precio6": "0.00",
+    "precio": "0.00",
+    "precio1": "0.00",
+    "cantidad_disponible": 0
+  },
+  {
+    "id": 2205,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6a8e416c8d02f.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "codigo": "KP-HB524",
+    "producto": "HUB TIPO C Y USB 8 EN 1 KNUP KP-HB524",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "0.00",
+    "precio3": "0.00",
+    "precio4": "0.00",
+    "precio5": "0.00",
+    "precio6": "0.00",
+    "precio": "0.00",
+    "precio1": "0.00",
+    "cantidad_disponible": 0
+  },
+  {
+    "id": 2206,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6a8e422a2536a.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "codigo": "KP-HB521/1.2M",
+    "producto": "HUB USB 3.0 DE 4 PUERTOS KNUP KP-HB521/1.2M",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "0.00",
+    "precio3": "0.00",
+    "precio4": "0.00",
+    "precio5": "0.00",
+    "precio6": "0.00",
+    "precio": "0.00",
+    "precio1": "0.00",
+    "cantidad_disponible": 0
+  },
+  {
+    "id": 2207,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6a8e42ba6c3a5.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "codigo": "KP-HB522/1.2M",
+    "producto": "HUB USB 3.0 DE 7 PUERTOS KNUP KP-HB522/1.2M",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "0.00",
+    "precio3": "0.00",
+    "precio4": "0.00",
+    "precio5": "0.00",
+    "precio6": "0.00",
+    "precio": "0.00",
+    "precio1": "0.00",
+    "cantidad_disponible": 0
+  },
+  {
+    "id": 2208,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6a8e43099c86c.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "codigo": "MIC845",
+    "producto": "MICROFONO INALAMBRICO LAVALIER TOMATE MIC845",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "0.00",
+    "precio3": "0.00",
+    "precio4": "0.00",
+    "precio5": "0.00",
+    "precio6": "0.00",
+    "precio": "0.00",
+    "precio1": "0.00",
+    "cantidad_disponible": 0
+  },
+  {
+    "id": 2209,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6a8e433f5e145.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "codigo": "KNUP G54",
+    "producto": "MOUSE GAMER DUAL 2.4GHZ/BT RECARGABLE KNUP G54",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "0.00",
+    "precio3": "0.00",
+    "precio4": "0.00",
+    "precio5": "0.00",
+    "precio6": "0.00",
+    "precio": "0.00",
+    "precio1": "0.00",
+    "cantidad_disponible": 0
+  },
+  {
+    "id": 2210,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6a8e437d0f2f0.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "codigo": "KP-852BT",
+    "producto": "PARLANTE BLUETOOTH AUTO KNUP KP-852BT",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "0.00",
+    "precio3": "0.00",
+    "precio4": "0.00",
+    "precio5": "0.00",
+    "precio6": "0.00",
+    "precio": "0.00",
+    "precio1": "0.00",
+    "cantidad_disponible": 0
+  },
+  {
+    "id": 2211,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6a8e4397342b5.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "codigo": "K2207MN",
+    "producto": "PRESENTADOR DE DIAPOSTIVAS TOMATE K2207MN",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "0.00",
+    "precio3": "0.00",
+    "precio4": "0.00",
+    "precio5": "0.00",
+    "precio6": "0.00",
+    "precio": "0.00",
+    "precio1": "0.00",
+    "cantidad_disponible": 0
+  },
+  {
+    "id": 2212,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6a8e43ad4bd33.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "codigo": "KP-3013",
+    "producto": "RECEPTOR DE WIFI USB 4 ANTENAS KNUP KP-3013",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "0.00",
+    "precio3": "0.00",
+    "precio4": "0.00",
+    "precio5": "0.00",
+    "precio6": "0.00",
+    "precio": "0.00",
+    "precio1": "0.00",
+    "cantidad_disponible": 0
   }
 ]
