@@ -20823,7 +20823,7 @@
     "precio6": "1405.00",
     "precio": "1480.00",
     "precio1": "1480.00",
-    "cantidad_disponible": 42
+    "cantidad_disponible": 0
   },
   {
     "id": 1806,
@@ -27303,7 +27303,7 @@
     "precio6": "5980.00",
     "precio": "6050.00",
     "precio1": "6050.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 0
   },
   {
     "id": 2170,
@@ -27321,7 +27321,7 @@
     "precio6": "7820.00",
     "precio": "7930.00",
     "precio1": "7930.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 0
   },
   {
     "id": 2171,
