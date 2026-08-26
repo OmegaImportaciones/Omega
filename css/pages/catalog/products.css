@@ -328,9 +328,11 @@
 
         padding: 16px;
 
-        min-height: 400px;
+        /* 400px + ~30px para el badge "NUEVO STOCK" (línea + padding +
+           margen), así el título ya no se corta al mostrar la etiqueta. */
+        min-height: 430px;
 
-        max-height: 400px;
+        max-height: 430px;
 
         overflow: hidden;
 
