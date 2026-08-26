@@ -32,18 +32,113 @@ let allProducts = [];
    3. DATA LAYER
 ========================= */
 
-async function fetchAvailableProducts() {
+// Carga un JSON cualquiera. Lanza error si la respuesta no es OK,
+// para que el llamador decida cómo manejarlo (ver fetchOldStockMap).
+async function fetchJSON(path) {
 
     const response =
-        await fetch('../data/products.json');
+        await fetch(path);
 
-    const products =
-        await response.json();
+    if (!response.ok) {
+        throw new Error(`No se pudo cargar ${path}: ${response.status}`);
+    }
 
-    return products.filter(product =>
-        product.estado === 1 &&
-        product.cantidad_disponible > 0
-    );
+    return response.json();
+
+}
+
+// Carga old.json (inventario anterior) y arma un Map id -> cantidad_disponible
+// para poder compararlo contra products.json en O(1) por producto.
+//
+// Si old.json no existe o falla la carga (por ejemplo, primer despliegue
+// de esta feature antes de subir el archivo), se devuelve null. Esto
+// desactiva la detección de "NUEVO STOCK" para esa carga en lugar de
+// romper el catálogo o marcar todo como nuevo por error.
+async function fetchOldStockMap() {
+
+    try {
+
+        const oldProducts =
+            await fetchJSON('../data/old.json');
+
+        const oldStockMap = new Map();
+
+        oldProducts.forEach(product => {
+            oldStockMap.set(
+                product.id,
+                Number(product.cantidad_disponible) || 0
+            );
+        });
+
+        return oldStockMap;
+
+    } catch (error) {
+
+        console.warn(
+            'No se pudo cargar old.json; se omite la detección de NUEVO STOCK:',
+            error
+        );
+
+        return null;
+
+    }
+
+}
+
+// Marca cada producto con "_isNewStock" según las reglas del sistema
+// de priorización:
+//   - id no existe en old.json y tiene stock  -> NUEVO STOCK
+//   - id existe en old.json con stock <= 0 y ahora tiene stock -> NUEVO STOCK
+//   - cualquier otro caso -> sin etiqueta
+function markNewStock(products, oldStockMap) {
+
+    if (!oldStockMap) {
+        return products.map(product => ({ ...product, _isNewStock: false }));
+    }
+
+    return products.map(product => {
+
+        const isNewStock =
+            !oldStockMap.has(product.id) ||
+            oldStockMap.get(product.id) <= 0;
+
+        return { ...product, _isNewStock: isNewStock };
+
+    });
+
+}
+
+// Coloca los productos "_isNewStock" al principio, conservando el orden
+// relativo dentro de cada grupo (sort es estable en JS moderno).
+function sortNewStockFirst(products) {
+
+    return [...products].sort((a, b) => {
+
+        if (a._isNewStock === b._isNewStock) return 0;
+
+        return a._isNewStock ? -1 : 1;
+
+    });
+
+}
+
+async function fetchAvailableProducts() {
+
+    const [products, oldStockMap] = await Promise.all([
+        fetchJSON('../data/products.json'),
+        fetchOldStockMap()
+    ]);
+
+    const availableProducts =
+        products.filter(product =>
+            product.estado === 1 &&
+            product.cantidad_disponible > 0
+        );
+
+    const withNewStockFlag =
+        markNewStock(availableProducts, oldStockMap);
+
+    return sortNewStockFirst(withNewStockFlag);
 
 }
 
@@ -102,6 +197,11 @@ function createProductCardElement(product) {
     article.className = 'main-button product-card';
     article.dataset.name = product.producto;
 
+    const newStockBadge =
+        product._isNewStock
+            ? `<span class="product-badge-new-stock">NUEVO STOCK</span>`
+            : '';
+
     article.innerHTML = `
         <img
             src="${product.imagen}"
@@ -110,6 +210,8 @@ function createProductCardElement(product) {
             loading="lazy">
 
         <div class="product-content">
+
+            ${newStockBadge}
 
             <h3>
                 ${product.producto}
