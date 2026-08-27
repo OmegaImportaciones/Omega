@@ -15,7 +15,7 @@
     "precio6": "427.00",
     "precio": "460.00",
     "precio1": "460.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 2
   },
   {
     "id": 6,
@@ -213,7 +213,7 @@
     "precio6": "77.00",
     "precio": "115.00",
     "precio1": "115.00",
-    "cantidad_disponible": 9
+    "cantidad_disponible": 5
   },
   {
     "id": 32,
@@ -231,7 +231,7 @@
     "precio6": "44.00",
     "precio": "75.00",
     "precio1": "75.00",
-    "cantidad_disponible": 7
+    "cantidad_disponible": 5
   },
   {
     "id": 38,
@@ -249,7 +249,7 @@
     "precio6": "113.00",
     "precio": "160.00",
     "precio1": "160.00",
-    "cantidad_disponible": 19
+    "cantidad_disponible": 15
   },
   {
     "id": 41,
@@ -267,7 +267,7 @@
     "precio6": "55.00",
     "precio": "85.00",
     "precio1": "85.00",
-    "cantidad_disponible": 22
+    "cantidad_disponible": 16
   },
   {
     "id": 42,
@@ -339,7 +339,7 @@
     "precio6": "98.00",
     "precio": "150.00",
     "precio1": "150.00",
-    "cantidad_disponible": 9
+    "cantidad_disponible": 8
   },
   {
     "id": 48,
@@ -635,7 +635,7 @@
     "imagen2": "https://apiback.aswin-smart.com/images/default.png",
     "imagen3": "https://apiback.aswin-smart.com/images/default.png",
     "codigo": "96",
-    "producto": "CABLE HDMI LELONG DE 10 METROS",
+    "producto": "CABLE HDMI 1.4V LELONG LE-4027-10M - 10 METROS",
     "minimo": 5,
     "estado": 1,
     "precio2": "95.00",
@@ -681,7 +681,7 @@
     "precio6": "18.00",
     "precio": "41.00",
     "precio1": "41.00",
-    "cantidad_disponible": 15
+    "cantidad_disponible": 14
   },
   {
     "id": 99,
@@ -735,7 +735,7 @@
     "precio6": "21.00",
     "precio": "70.00",
     "precio1": "70.00",
-    "cantidad_disponible": 61
+    "cantidad_disponible": 54
   },
   {
     "id": 102,
@@ -833,17 +833,35 @@
     "imagen2": "https://apiback.aswin-smart.com/images/default.png",
     "imagen3": "https://apiback.aswin-smart.com/images/default.png",
     "codigo": "108",
-    "producto": "CABLE HDMI LELONG 5 METROS",
+    "producto": "CABLE HDMI 1.4V LELONG LE-6613-5M - 5 METROS",
     "minimo": 5,
     "estado": 1,
     "precio2": "70.00",
     "precio3": "65.00",
     "precio4": "60.00",
-    "precio5": "32.00",
-    "precio6": "30.00",
+    "precio5": "34.00",
+    "precio6": "32.00",
     "precio": "75.00",
     "precio1": "75.00",
-    "cantidad_disponible": 0
+    "cantidad_disponible": 15
+  },
+  {
+    "id": 109,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6656afce6261c.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "codigo": "109",
+    "producto": "CABLE UTP PATCH CORD CAT 5E LELONG LE-305-2M - 2 METROS",
+    "minimo": 5,
+    "estado": 1,
+    "precio2": "18.00",
+    "precio3": "15.00",
+    "precio4": "15.00",
+    "precio5": "9.00",
+    "precio6": "8.00",
+    "precio": "20.00",
+    "precio1": "20.00",
+    "cantidad_disponible": 15
   },
   {
     "id": 110,
@@ -869,17 +887,17 @@
     "imagen2": "https://apiback.aswin-smart.com/images/default.png",
     "imagen3": "https://apiback.aswin-smart.com/images/default.png",
     "codigo": "111",
-    "producto": "CABLE UTP PATCH CORD CAT 5E 10 METROS",
+    "producto": "CABLE UTP PATCH CORD CAT 5E LELONG LE-305-10M - 10 METROS",
     "minimo": 5,
     "estado": 1,
-    "precio2": "48.00",
-    "precio3": "42.00",
+    "precio2": "50.00",
+    "precio3": "45.00",
     "precio4": "40.00",
-    "precio5": "22.00",
-    "precio6": "21.00",
-    "precio": "52.00",
-    "precio1": "52.00",
-    "cantidad_disponible": 0
+    "precio5": "20.00",
+    "precio6": "18.00",
+    "precio": "55.00",
+    "precio1": "55.00",
+    "cantidad_disponible": 20
   },
   {
     "id": 112,
@@ -1167,7 +1185,7 @@
     "precio6": "520.00",
     "precio": "575.00",
     "precio1": "575.00",
-    "cantidad_disponible": 4
+    "cantidad_disponible": 2
   },
   {
     "id": 139,
@@ -1455,7 +1473,7 @@
     "precio6": "420.00",
     "precio": "470.00",
     "precio1": "470.00",
-    "cantidad_disponible": 6
+    "cantidad_disponible": 5
   },
   {
     "id": 166,
@@ -2139,7 +2157,7 @@
     "precio6": "34.00",
     "precio": "70.00",
     "precio1": "70.00",
-    "cantidad_disponible": 37
+    "cantidad_disponible": 34
   },
   {
     "id": 251,
@@ -3479,17 +3497,17 @@
     "imagen2": "https://apiback.aswin-smart.com/images/productos/69c6e709e1b732.png",
     "imagen3": "https://apiback.aswin-smart.com/images/default.png",
     "codigo": "409",
-    "producto": "CABLE HDMI LELONG 3M",
+    "producto": "CABLE HDMI 1.4V LELONG LE-6613-3M - 3 METROS",
     "minimo": 5,
     "estado": 1,
     "precio2": "55.00",
     "precio3": "50.00",
     "precio4": "45.00",
-    "precio5": "24.00",
-    "precio6": "23.00",
+    "precio5": "27.00",
+    "precio6": "25.00",
     "precio": "60.00",
     "precio1": "60.00",
-    "cantidad_disponible": 0
+    "cantidad_disponible": 7
   },
   {
     "id": 411,
@@ -5807,11 +5825,11 @@
     "precio2": "22.00",
     "precio3": "20.00",
     "precio4": "18.00",
-    "precio5": "17.00",
-    "precio6": "10.00",
+    "precio5": "13.00",
+    "precio6": "12.00",
     "precio": "25.00",
     "precio1": "25.00",
-    "cantidad_disponible": 18
+    "cantidad_disponible": 23
   },
   {
     "id": 796,
@@ -6783,7 +6801,7 @@
     "precio6": "240.00",
     "precio": "280.00",
     "precio1": "280.00",
-    "cantidad_disponible": 38
+    "cantidad_disponible": 36
   },
   {
     "id": 878,
@@ -9512,14 +9530,14 @@
     "producto": "CARGADOR UNIVERSAL DE LAPTOP CON CIGARRERA KNUP KP-505A",
     "minimo": 5,
     "estado": 1,
-    "precio2": "140.00",
-    "precio3": "134.00",
-    "precio4": "125.00",
-    "precio5": "100.00",
-    "precio6": "93.00",
-    "precio": "147.00",
-    "precio1": "147.00",
-    "cantidad_disponible": 0
+    "precio2": "150.00",
+    "precio3": "145.00",
+    "precio4": "140.00",
+    "precio5": "112.00",
+    "precio6": "110.00",
+    "precio": "155.00",
+    "precio1": "155.00",
+    "cantidad_disponible": 12
   },
   {
     "id": 1079,
@@ -9897,7 +9915,7 @@
     "precio6": "30.00",
     "precio": "55.00",
     "precio1": "55.00",
-    "cantidad_disponible": 34
+    "cantidad_disponible": 28
   },
   {
     "id": 1107,
@@ -13227,7 +13245,7 @@
     "precio6": "44.00",
     "precio": "100.00",
     "precio1": "100.00",
-    "cantidad_disponible": 20
+    "cantidad_disponible": 19
   },
   {
     "id": 1364,
@@ -14037,7 +14055,7 @@
     "precio6": "115.00",
     "precio": "200.00",
     "precio1": "200.00",
-    "cantidad_disponible": 12
+    "cantidad_disponible": 9
   },
   {
     "id": 1413,
@@ -14613,7 +14631,7 @@
     "precio6": "380.00",
     "precio": "450.00",
     "precio1": "450.00",
-    "cantidad_disponible": 8
+    "cantidad_disponible": 7
   },
   {
     "id": 1449,
@@ -16719,7 +16737,7 @@
     "precio6": "126.00",
     "precio": "180.00",
     "precio1": "180.00",
-    "cantidad_disponible": 11
+    "cantidad_disponible": 7
   },
   {
     "id": 1575,
@@ -17601,7 +17619,7 @@
     "precio6": "330.00",
     "precio": "410.00",
     "precio1": "410.00",
-    "cantidad_disponible": 1
+    "cantidad_disponible": 0
   },
   {
     "id": 1626,
@@ -18653,17 +18671,17 @@
     "imagen2": "https://apiback.aswin-smart.com/images/default.png",
     "imagen3": "https://apiback.aswin-smart.com/images/default.png",
     "codigo": "MX BOX",
-    "producto": "TV BOX MX BOX S CON FLUJOTV",
+    "producto": "TV BOX CON FLUJOTV MX BOX S X10",
     "minimo": 10,
     "estado": 1,
-    "precio2": "295.00",
-    "precio3": "290.00",
-    "precio4": "285.00",
+    "precio2": "285.00",
+    "precio3": "280.00",
+    "precio4": "275.00",
     "precio5": "230.00",
     "precio6": "225.00",
-    "precio": "300.00",
-    "precio1": "300.00",
-    "cantidad_disponible": 4
+    "precio": "290.00",
+    "precio1": "290.00",
+    "cantidad_disponible": 21
   },
   {
     "id": 1685,
@@ -18807,7 +18825,7 @@
     "precio6": "30.00",
     "precio": "55.00",
     "precio1": "55.00",
-    "cantidad_disponible": 44
+    "cantidad_disponible": 43
   },
   {
     "id": 1693,
@@ -19538,14 +19556,14 @@
     "producto": "INVERSOR DE CORRIENTE 300W KNUP KP-TC13 220V",
     "minimo": 10,
     "estado": 1,
-    "precio2": "175.00",
-    "precio3": "170.00",
-    "precio4": "165.00",
-    "precio5": "150.00",
-    "precio6": "148.00",
-    "precio": "180.00",
-    "precio1": "180.00",
-    "cantidad_disponible": 0
+    "precio2": "215.00",
+    "precio3": "210.00",
+    "precio4": "205.00",
+    "precio5": "172.00",
+    "precio6": "170.00",
+    "precio": "220.00",
+    "precio1": "220.00",
+    "cantidad_disponible": 9
   },
   {
     "id": 1734,
@@ -20157,7 +20175,7 @@
     "precio6": "59.00",
     "precio": "80.00",
     "precio1": "80.00",
-    "cantidad_disponible": 17
+    "cantidad_disponible": 16
   },
   {
     "id": 1769,
@@ -20276,14 +20294,14 @@
     "producto": "XIAOMI MI BOX S 3RA GENERACION",
     "minimo": 10,
     "estado": 1,
-    "precio2": "815.00",
-    "precio3": "810.00",
-    "precio4": "805.00",
-    "precio5": "790.00",
-    "precio6": "785.00",
-    "precio": "820.00",
-    "precio1": "820.00",
-    "cantidad_disponible": 2
+    "precio2": "825.00",
+    "precio3": "820.00",
+    "precio4": "815.00",
+    "precio5": "810.00",
+    "precio6": "805.00",
+    "precio": "830.00",
+    "precio1": "830.00",
+    "cantidad_disponible": 33
   },
   {
     "id": 1776,
@@ -20805,7 +20823,7 @@
     "precio6": "16.00",
     "precio": "40.00",
     "precio1": "40.00",
-    "cantidad_disponible": 0
+    "cantidad_disponible": 16
   },
   {
     "id": 1805,
@@ -20819,11 +20837,11 @@
     "precio2": "1470.00",
     "precio3": "1460.00",
     "precio4": "1450.00",
-    "precio5": "1410.00",
-    "precio6": "1405.00",
+    "precio5": "1430.00",
+    "precio6": "1425.00",
     "precio": "1480.00",
     "precio1": "1480.00",
-    "cantidad_disponible": 42
+    "cantidad_disponible": 41
   },
   {
     "id": 1806,
@@ -20834,13 +20852,13 @@
     "producto": "PARLANTE BLUETOOTH JBL FLIP 7",
     "minimo": 10,
     "estado": 1,
-    "precio2": "950.00",
-    "precio3": "940.00",
-    "precio4": "930.00",
-    "precio5": "910.00",
-    "precio6": "905.00",
-    "precio": "960.00",
-    "precio1": "960.00",
+    "precio2": "1095.00",
+    "precio3": "1090.00",
+    "precio4": "1085.00",
+    "precio5": "1070.00",
+    "precio6": "1065.00",
+    "precio": "1100.00",
+    "precio1": "1100.00",
     "cantidad_disponible": 0
   },
   {
@@ -22382,14 +22400,14 @@
     "producto": "MICROFONO JBL PARTYBOX WIRELESS MIC",
     "minimo": 10,
     "estado": 1,
-    "precio2": "1160.00",
-    "precio3": "1150.00",
-    "precio4": "1140.00",
-    "precio5": "1095.00",
-    "precio6": "1090.00",
-    "precio": "1170.00",
-    "precio1": "1170.00",
-    "cantidad_disponible": 0
+    "precio2": "1305.00",
+    "precio3": "1300.00",
+    "precio4": "1295.00",
+    "precio5": "1250.00",
+    "precio6": "1245.00",
+    "precio": "1310.00",
+    "precio1": "1310.00",
+    "cantidad_disponible": 2
   },
   {
     "id": 1895,
@@ -22479,7 +22497,7 @@
     "precio6": "21.00",
     "precio": "73.00",
     "precio1": "73.00",
-    "cantidad_disponible": 18
+    "cantidad_disponible": 16
   },
   {
     "id": 1900,
@@ -22695,7 +22713,7 @@
     "precio6": "20.00",
     "precio": "45.00",
     "precio1": "45.00",
-    "cantidad_disponible": 141
+    "cantidad_disponible": 139
   },
   {
     "id": 1912,
@@ -23073,7 +23091,7 @@
     "precio6": "910.00",
     "precio": "980.00",
     "precio1": "980.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 2
   },
   {
     "id": 1933,
@@ -24351,7 +24369,7 @@
     "precio6": "107.00",
     "precio": "145.00",
     "precio1": "145.00",
-    "cantidad_disponible": 10
+    "cantidad_disponible": 9
   },
   {
     "id": 2005,
@@ -24992,13 +25010,13 @@
     "producto": "NOTEBOOK DELL 5440 VP6RM 14 Core 7 16GB RAM / 512GB SSD W11PRO BLUE",
     "minimo": 10,
     "estado": 1,
-    "precio2": "7430.00",
-    "precio3": "7420.00",
-    "precio4": "7410.00",
-    "precio5": "7300.00",
-    "precio6": "7290.00",
-    "precio": "7440.00",
-    "precio1": "7440.00",
+    "precio2": "7653.00",
+    "precio3": "7643.00",
+    "precio4": "7632.00",
+    "precio5": "7519.00",
+    "precio6": "7509.00",
+    "precio": "7663.00",
+    "precio1": "7663.00",
     "cantidad_disponible": 4
   },
   {
@@ -25071,7 +25089,7 @@
     "precio6": "140.00",
     "precio": "190.00",
     "precio1": "190.00",
-    "cantidad_disponible": 26
+    "cantidad_disponible": 25
   },
   {
     "id": 2045,
@@ -25287,7 +25305,7 @@
     "precio6": "75.00",
     "precio": "120.00",
     "precio1": "120.00",
-    "cantidad_disponible": 45
+    "cantidad_disponible": 42
   },
   {
     "id": 2057,
@@ -25539,7 +25557,7 @@
     "precio6": "25.00",
     "precio": "55.00",
     "precio1": "55.00",
-    "cantidad_disponible": 64
+    "cantidad_disponible": 59
   },
   {
     "id": 2071,
@@ -25586,13 +25604,13 @@
     "producto": "NOTEBOOK HP i7 15-fd0274la 156 SPA I7-1355U 16RAM  512GB W11 GAMEPASS GO TECLADO ESPAÑOL",
     "minimo": 10,
     "estado": 1,
-    "precio2": "8120.00",
-    "precio3": "8110.00",
-    "precio4": "8100.00",
-    "precio5": "8000.00",
-    "precio6": "7990.00",
-    "precio": "8130.00",
-    "precio1": "8130.00",
+    "precio2": "8364.00",
+    "precio3": "8353.00",
+    "precio4": "8343.00",
+    "precio5": "8240.00",
+    "precio6": "8230.00",
+    "precio": "8374.00",
+    "precio1": "8374.00",
     "cantidad_disponible": 0
   },
   {
@@ -25604,14 +25622,14 @@
     "producto": "NOTEBOOK DELL 15255 4W04Y 15.6 RYZEN 5 7520U 16RAM 512GB SSD W11 SILVER TECLADO ESPAÑOL",
     "minimo": 10,
     "estado": 1,
-    "precio2": "6230.00",
-    "precio3": "6220.00",
-    "precio4": "6210.00",
-    "precio5": "6160.00",
-    "precio6": "6150.00",
-    "precio": "6240.00",
-    "precio1": "6240.00",
-    "cantidad_disponible": 4
+    "precio2": "6417.00",
+    "precio3": "6407.00",
+    "precio4": "6396.00",
+    "precio5": "6345.00",
+    "precio6": "6335.00",
+    "precio": "6427.00",
+    "precio1": "6427.00",
+    "cantidad_disponible": 1
   },
   {
     "id": 2075,
@@ -25622,13 +25640,13 @@
     "producto": "NOTEBOOK DELL 15255 VYY17 RYZEN 7 7730 15.6 16RAM 1TB SSD W11 SILVER TECLADO ESPAÑOL",
     "minimo": 10,
     "estado": 1,
-    "precio2": "7730.00",
-    "precio3": "7720.00",
-    "precio4": "7710.00",
-    "precio5": "7650.00",
-    "precio6": "7640.00",
-    "precio": "7740.00",
-    "precio1": "7740.00",
+    "precio2": "7962.00",
+    "precio3": "7952.00",
+    "precio4": "7941.00",
+    "precio5": "7880.00",
+    "precio6": "7869.00",
+    "precio": "7972.00",
+    "precio1": "7972.00",
     "cantidad_disponible": 9
   },
   {
@@ -25673,7 +25691,7 @@
     "imagen2": "https://apiback.aswin-smart.com/images/productos/69c6e6ae0700d2.png",
     "imagen3": "https://apiback.aswin-smart.com/images/default.png",
     "codigo": "LE-6613",
-    "producto": "CABLE HDMI LELONG LE-6613 DE 1.8M",
+    "producto": "CABLE HDMI 1.4V LELONG LE-6613-1.8M - 1.8 METROS",
     "minimo": 10,
     "estado": 1,
     "precio2": "35.00",
@@ -25745,17 +25763,17 @@
     "imagen2": "https://apiback.aswin-smart.com/images/productos/69c6d9ddecfd62.png",
     "imagen3": "https://apiback.aswin-smart.com/images/default.png",
     "codigo": "LE-305 - 15 METROS",
-    "producto": "CABLE UTP PATCH CORD CAT 5E LELONG LE-305 - 15 METROS",
+    "producto": "CABLE UTP PATCH CORD CAT 5E LELONG LE-305-15M - 15 METROS",
     "minimo": 10,
     "estado": 1,
-    "precio2": "45.00",
-    "precio3": "40.00",
-    "precio4": "40.00",
-    "precio5": "22.00",
-    "precio6": "21.00",
-    "precio": "50.00",
-    "precio1": "50.00",
-    "cantidad_disponible": 0
+    "precio2": "65.00",
+    "precio3": "60.00",
+    "precio4": "58.00",
+    "precio5": "27.00",
+    "precio6": "26.00",
+    "precio": "70.00",
+    "precio1": "70.00",
+    "cantidad_disponible": 15
   },
   {
     "id": 2083,
@@ -25763,16 +25781,16 @@
     "imagen2": "https://apiback.aswin-smart.com/images/productos/69c6c711af7792.png",
     "imagen3": "https://apiback.aswin-smart.com/images/default.png",
     "codigo": "LE-305 - 20 METROS",
-    "producto": "CABLE UTP PATCH CORD CAT 5E LELONG LE-305 - 20 METROS",
+    "producto": "CABLE UTP PATCH CORD CAT 5E LELONG LE-305-20M - 20 METROS",
     "minimo": 10,
     "estado": 1,
-    "precio2": "65.00",
-    "precio3": "60.00",
-    "precio4": "55.00",
-    "precio5": "27.00",
-    "precio6": "26.00",
-    "precio": "70.00",
-    "precio1": "70.00",
+    "precio2": "80.00",
+    "precio3": "75.00",
+    "precio4": "75.00",
+    "precio5": "35.00",
+    "precio6": "33.00",
+    "precio": "85.00",
+    "precio1": "85.00",
     "cantidad_disponible": 0
   },
   {
@@ -26241,7 +26259,7 @@
     "precio6": "39.00",
     "precio": "80.00",
     "precio1": "80.00",
-    "cantidad_disponible": 24
+    "cantidad_disponible": 22
   },
   {
     "id": 2110,
@@ -26529,7 +26547,7 @@
     "precio6": "123.00",
     "precio": "165.00",
     "precio1": "165.00",
-    "cantidad_disponible": 5
+    "cantidad_disponible": 3
   },
   {
     "id": 2126,
@@ -26565,7 +26583,7 @@
     "precio6": "131.00",
     "precio": "170.00",
     "precio1": "170.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 2
   },
   {
     "id": 2128,
@@ -26781,7 +26799,7 @@
     "precio6": "125.00",
     "precio": "180.00",
     "precio1": "180.00",
-    "cantidad_disponible": 10
+    "cantidad_disponible": 9
   },
   {
     "id": 2140,
@@ -26979,7 +26997,7 @@
     "precio6": "30.00",
     "precio": "70.00",
     "precio1": "70.00",
-    "cantidad_disponible": 26
+    "cantidad_disponible": 25
   },
   {
     "id": 2152,
@@ -27167,17 +27185,17 @@
     "imagen2": "https://apiback.aswin-smart.com/images/default.png",
     "imagen3": "https://apiback.aswin-smart.com/images/default.png",
     "codigo": "HDMI 20",
-    "producto": "CABLE HDMI LELONG EN BOLSA 20M",
+    "producto": "CABLE HDMI 1.4V LELONG LE-4048-20M - 20 METROS",
     "minimo": 10,
     "estado": 1,
-    "precio2": "145.00",
-    "precio3": "140.00",
-    "precio4": "135.00",
-    "precio5": "95.00",
-    "precio6": "90.00",
-    "precio": "150.00",
-    "precio1": "150.00",
-    "cantidad_disponible": 7
+    "precio2": "135.00",
+    "precio3": "130.00",
+    "precio4": "125.00",
+    "precio5": "90.00",
+    "precio6": "85.00",
+    "precio": "140.00",
+    "precio1": "140.00",
+    "cantidad_disponible": 11
   },
   {
     "id": 2163,
@@ -27185,17 +27203,17 @@
     "imagen2": "https://apiback.aswin-smart.com/images/default.png",
     "imagen3": "https://apiback.aswin-smart.com/images/default.png",
     "codigo": "HDMI 15M",
-    "producto": "CABLE HDMI LELONG EN BOLSA 15M",
+    "producto": "CABLE HDMI 1.4V LELONG LE-4027-15M - 15 METROS",
     "minimo": 10,
     "estado": 1,
     "precio2": "125.00",
     "precio3": "120.00",
     "precio4": "115.00",
-    "precio5": "75.00",
-    "precio6": "70.00",
+    "precio5": "70.00",
+    "precio6": "65.00",
     "precio": "130.00",
     "precio1": "130.00",
-    "cantidad_disponible": 5
+    "cantidad_disponible": 16
   },
   {
     "id": 2164,
@@ -27278,14 +27296,14 @@
     "producto": "PARLANTE BLUETOOTH JBL GO 5",
     "minimo": 10,
     "estado": 1,
-    "precio2": "490.00",
-    "precio3": "480.00",
-    "precio4": "475.00",
-    "precio5": "460.00",
-    "precio6": "455.00",
-    "precio": "500.00",
-    "precio1": "500.00",
-    "cantidad_disponible": 65
+    "precio2": "505.00",
+    "precio3": "500.00",
+    "precio4": "495.00",
+    "precio5": "480.00",
+    "precio6": "475.00",
+    "precio": "510.00",
+    "precio1": "510.00",
+    "cantidad_disponible": 64
   },
   {
     "id": 2169,
@@ -27296,13 +27314,13 @@
     "producto": "PARLANTE BLUETOOTH JBL PARTYBOX 520",
     "minimo": 10,
     "estado": 1,
-    "precio2": "6040.00",
-    "precio3": "6030.00",
-    "precio4": "6020.00",
-    "precio5": "5990.00",
-    "precio6": "5980.00",
-    "precio": "6050.00",
-    "precio1": "6050.00",
+    "precio2": "6230.00",
+    "precio3": "6220.00",
+    "precio4": "6215.00",
+    "precio5": "6180.00",
+    "precio6": "6170.00",
+    "precio": "6240.00",
+    "precio1": "6240.00",
     "cantidad_disponible": 3
   },
   {
@@ -27314,13 +27332,13 @@
     "producto": "PARLANTE BLUETOOTH JBL PARTYBOX 720",
     "minimo": 10,
     "estado": 1,
-    "precio2": "7920.00",
-    "precio3": "7910.00",
-    "precio4": "7900.00",
-    "precio5": "7830.00",
-    "precio6": "7820.00",
-    "precio": "7930.00",
-    "precio1": "7930.00",
+    "precio2": "7990.00",
+    "precio3": "7980.00",
+    "precio4": "7970.00",
+    "precio5": "7890.00",
+    "precio6": "7880.00",
+    "precio": "8000.00",
+    "precio1": "8000.00",
     "cantidad_disponible": 3
   },
   {
@@ -27555,7 +27573,7 @@
     "precio6": "10.00",
     "precio": "25.00",
     "precio1": "25.00",
-    "cantidad_disponible": 48
+    "cantidad_disponible": 45
   },
   {
     "id": 2184,
@@ -27861,7 +27879,7 @@
     "precio6": "75.00",
     "precio": "125.00",
     "precio1": "125.00",
-    "cantidad_disponible": 20
+    "cantidad_disponible": 17
   },
   {
     "id": 2202,
@@ -27879,7 +27897,7 @@
     "precio6": "77.00",
     "precio": "135.00",
     "precio1": "135.00",
-    "cantidad_disponible": 45
+    "cantidad_disponible": 44
   },
   {
     "id": 2203,
@@ -27897,7 +27915,7 @@
     "precio6": "295.00",
     "precio": "360.00",
     "precio1": "360.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 4
   },
   {
     "id": 2204,
@@ -27915,7 +27933,7 @@
     "precio6": "63.00",
     "precio": "110.00",
     "precio1": "110.00",
-    "cantidad_disponible": 15
+    "cantidad_disponible": 9
   },
   {
     "id": 2205,
@@ -27933,7 +27951,7 @@
     "precio6": "46.00",
     "precio": "100.00",
     "precio1": "100.00",
-    "cantidad_disponible": 13
+    "cantidad_disponible": 10
   },
   {
     "id": 2206,
@@ -28077,6 +28095,78 @@
     "precio6": "83.00",
     "precio": "140.00",
     "precio1": "140.00",
-    "cantidad_disponible": 20
+    "cantidad_disponible": 19
+  },
+  {
+    "id": 2214,
+    "imagen": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "codigo": "LE-12-1.8M",
+    "producto": "CABLE  VGA DE 1.8 METROS LELONG LE-12-1.8M",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "35.00",
+    "precio3": "30.00",
+    "precio4": "28.00",
+    "precio5": "19.00",
+    "precio6": "17.00",
+    "precio": "40.00",
+    "precio1": "40.00",
+    "cantidad_disponible": 0
+  },
+  {
+    "id": 2215,
+    "imagen": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "codigo": "LE-305-30M",
+    "producto": "CABLE UTP PATCH CORD CAT 5E LELONG LE-305-30M - 30 METROS",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "95.00",
+    "precio3": "90.00",
+    "precio4": "85.00",
+    "precio5": "46.00",
+    "precio6": "45.00",
+    "precio": "100.00",
+    "precio1": "100.00",
+    "cantidad_disponible": 1
+  },
+  {
+    "id": 2216,
+    "imagen": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "codigo": "YS-15-S",
+    "producto": "ALARGADOR DE CORRIENTE YS-15-S - 5 METROS",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "58.00",
+    "precio3": "55.00",
+    "precio4": "55.00",
+    "precio5": "38.00",
+    "precio6": "37.00",
+    "precio": "60.00",
+    "precio1": "60.00",
+    "cantidad_disponible": 5
+  },
+  {
+    "id": 2217,
+    "imagen": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "codigo": "YS-15-S-10M",
+    "producto": "ALARGADOR DE CORRIENTE YS-15-S - 10 METROS",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "85.00",
+    "precio3": "80.00",
+    "precio4": "80.00",
+    "precio5": "55.00",
+    "precio6": "52.00",
+    "precio": "90.00",
+    "precio1": "90.00",
+    "cantidad_disponible": 5
   }
 ]
