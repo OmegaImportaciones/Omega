@@ -199,19 +199,23 @@ function createProductCardElement(product) {
 
     const newStockBadge =
         product._isNewStock
-            ? `<span class="product-badge-new-stock">NUEVO STOCK</span>`
+            ? `<span class="product-badge-new-stock">Nuevo</span>`
             : '';
 
     article.innerHTML = `
-        <img
-            src="${product.imagen}"
-            alt="${product.producto}"
-            class="product-image"
-            loading="lazy">
+        <div class="product-media">
 
-        <div class="product-content">
+            <img
+                src="${product.imagen}"
+                alt="${product.producto}"
+                class="product-image"
+                loading="lazy">
 
             ${newStockBadge}
+
+        </div>
+
+        <div class="product-content">
 
             <h3>
                 ${product.producto}

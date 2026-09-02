@@ -1,25 +1,46 @@
 /* =============================================================
-   PRODUCT CARD — MOBILE (BASE / DEFAULT)
+   PRODUCTS GRID
    -----------------------------------------------------------
-   Fila única, al estilo de una celda de App Store:
-   imagen -> (título + precio + disponibilidad) -> botón píldora
+   Grilla de 2 columnas en mobile (base), escalando a 3 y 4
+   columnas en pantallas más grandes.
+============================================================= */
+
+#productsContainer {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+
+    align-items: stretch;
+
+    width: 100%;
+
+}
+
+
+/* =============================================================
+   PRODUCT CARD
+   -----------------------------------------------------------
+   Tarjeta vertical: foto arriba (con el badge superpuesto),
+   contenido abajo, botón píldora al final.
 ============================================================= */
 
 .product-card {
 
     display: flex;
 
-    flex-direction: row;
+    flex-direction: column;
 
-    flex-wrap: nowrap;
-
-    align-items: center;
+    align-items: stretch;
 
     justify-content: flex-start;
 
-    gap: 12px;
+    gap: 0;
 
-    padding: 10px 12px;
+    padding: 8px 8px 10px;
 
     min-height: unset;
 
@@ -34,6 +55,37 @@
 
 }
 
+.product-card:active {
+
+    transform:
+        scale(0.98);
+
+}
+
+
+/* =========================
+   MEDIA (imagen + badge)
+========================= */
+
+.product-media {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background:
+        rgba(0,0,0,0.04);
+
+    margin-bottom: 8px;
+
+}
+
 
 /* =========================
    IMAGEN
@@ -41,18 +93,60 @@
 
 .product-image {
 
-    width: 52px;
+    width: 100%;
 
-    height: 52px;
-
-    flex: 0 0 52px;
+    height: 100%;
 
     object-fit: cover;
 
-    border-radius: 12px;
+    display: block;
 
     background:
         rgba(0,0,0,0.04);
+
+}
+
+
+/* =========================
+   ETIQUETA "NUEVO"
+   Superpuesta sobre la esquina de la foto —
+   patrón clásico de catálogo de e-commerce.
+========================= */
+
+.product-badge-new-stock {
+
+    position: absolute;
+
+    top: 6px;
+
+    left: 6px;
+
+    display: inline-block;
+
+    padding: 3px 8px;
+
+    border-radius: var(--radius-pill);
+
+    background: var(--system-green);
+
+    color: #ffffff;
+
+    font-family: var(--font-body);
+
+    font-size: 0.58rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.02em;
+
+    text-transform: uppercase;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 2px 6px rgba(0,0,0,0.18);
 
 }
 
@@ -67,67 +161,33 @@
 
     flex-direction: column;
 
-    flex: 1 1 0%;
+    flex: 1 1 auto;
 
     min-width: 0;
 
-}
-
-
-/* =========================
-   ETIQUETA "NUEVO STOCK"
-========================= */
-
-.product-badge-new-stock {
-
-    display: inline-block;
-
-    align-self: flex-start;
-
-    padding: 2px 8px;
-
-    margin-bottom: 3px;
-
-    border-radius: var(--radius-pill);
-
-    background: var(--system-green);
-
-    color: #ffffff;
-
-    font-family: var(--font-body);
-
-    font-size: 0.6rem;
-
-    font-weight: 700;
-
-    letter-spacing: 0.02em;
-
-    text-transform: uppercase;
-
-    line-height: 1.4;
-
-    white-space: nowrap;
+    padding: 0 2px;
 
 }
 
 
 /* =========================
    TÍTULO
+   2 líneas completas — ya no se corta a media palabra.
 ========================= */
 
 .product-content h3 {
 
     font-family: var(--font-body);
 
-    font-size: 0.94rem;
+    font-size: 0.82rem;
 
     font-weight: 590;
 
     color: var(--text-primary);
 
-    line-height: 1.2;
+    line-height: 1.28;
 
-    letter-spacing: -0.01em;
+    letter-spacing: -0.005em;
 
     margin: 0;
 
@@ -135,9 +195,11 @@
 
     display: -webkit-box;
 
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 2;
 
     -webkit-box-orient: vertical;
+
+    min-height: calc(0.82rem * 1.28 * 2);
 
 }
 
@@ -148,7 +210,7 @@
 
 .product-content p {
 
-    font-size: 0.84rem;
+    font-size: 0.92rem;
 
     font-weight: 700;
 
@@ -157,7 +219,7 @@
 
     line-height: 1.3;
 
-    margin-top: 2px;
+    margin-top: 4px;
 
     overflow: hidden;
 
@@ -174,7 +236,7 @@
 
 .product-contact {
 
-    font-size: 0.76rem;
+    font-size: 0.68rem;
 
     font-weight: 400;
 
@@ -182,7 +244,7 @@
 
     line-height: 1.2;
 
-    margin-top: 1px;
+    margin-top: 2px;
 
     overflow: hidden;
 
@@ -194,7 +256,7 @@
 
 
 /* =========================
-   BOTÓN — píldora estilo "GET" de App Store
+   BOTÓN
 ========================= */
 
 .product-action {
@@ -205,13 +267,11 @@
 
     justify-content: center;
 
-    flex: 0 0 auto;
+    width: 100%;
 
-    width: auto;
+    margin-top: 8px;
 
-    margin-top: 0;
-
-    padding: 8px 16px;
+    padding: 9px 12px;
 
     border-radius: var(--radius-pill);
 
@@ -222,7 +282,7 @@
 
     color: #ffffff;
 
-    font-size: 0.82rem;
+    font-size: 0.8rem;
 
     font-weight: 600;
 
@@ -238,11 +298,6 @@
         opacity 0.15s ease;
 
 }
-
-
-/* =========================
-   BOTÓN — press
-========================= */
 
 .product-action:active {
 
@@ -267,17 +322,41 @@
 
 
 /* =============================================================
-   PRODUCT CARD — ESCRITORIO (>= 1200px)
-   -----------------------------------------------------------
-   Reconstrucción completa del componente para escritorio,
-   igual que antes: layout de tarjeta vertical en grid.
+   TABLET (>= 700px) — 3 columnas
+============================================================= */
+
+@media (min-width: 700px) {
+
+    #productsContainer {
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 14px;
+
+    }
+
+    .product-card {
+
+        padding: 10px 10px 12px;
+
+    }
+
+    .product-content h3 {
+
+        font-size: 0.88rem;
+
+    }
+
+}
+
+
+
+/* =============================================================
+   ESCRITORIO (>= 1200px) — 4 columnas, tarjeta más grande
 ============================================================= */
 
 @media (min-width: 1200px) {
-
-    /* =========================
-       CONTENEDOR
-    ========================= */
 
     .container {
 
@@ -289,113 +368,40 @@
 
     }
 
-
-    /* =========================
-       GRID DE PRODUCTOS
-    ========================= */
-
     #productsContainer {
-
-        display: grid;
 
         grid-template-columns:
             repeat(4, minmax(0, 1fr));
 
         gap: 18px;
 
-        align-items: stretch;
-
     }
-
-
-    /* =========================
-       TARJETA
-    ========================= */
 
     .product-card {
 
-        display: flex;
-
-        flex-direction: column;
-
-        flex-wrap: nowrap;
-
-        align-items: stretch;
-
-        justify-content: flex-start;
-
-        gap: 0;
-
         padding: 16px;
-
-        /* 400px + ~30px para el badge "NUEVO STOCK" (línea + padding +
-           margen), así el título ya no se corta al mostrar la etiqueta. */
-        min-height: 430px;
-
-        max-height: 430px;
-
-        overflow: hidden;
 
     }
 
-
-    /* =========================
-       IMAGEN
-    ========================= */
-
-    .product-image {
-
-        width: 100%;
-
-        height: 210px;
-
-        flex: 0 0 210px;
-
-        object-fit: cover;
-
-        border-radius: 16px;
+    .product-media {
 
         margin-bottom: 14px;
 
-        background:
-            rgba(0,0,0,0.04);
+        border-radius: 16px;
 
     }
-
-
-    /* =========================
-       CONTENIDO
-    ========================= */
-
-    .product-content {
-
-        flex: 1 1 auto;
-
-        min-width: 0;
-
-        min-height: 0;
-
-    }
-
-
-    /* =========================
-       ETIQUETA "NUEVO STOCK"
-    ========================= */
 
     .product-badge-new-stock {
 
+        top: 10px;
+
+        left: 10px;
+
         font-size: 0.68rem;
 
-        padding: 3px 10px;
-
-        margin-bottom: 6px;
+        padding: 4px 10px;
 
     }
-
-
-    /* =========================
-       TÍTULO
-    ========================= */
 
     .product-content h3 {
 
@@ -403,67 +409,32 @@
 
         line-height: 1.25;
 
-        -webkit-line-clamp: 2;
+        min-height: calc(1.02rem * 1.25 * 2);
 
     }
-
-
-    /* =========================
-       PRECIO
-    ========================= */
 
     .product-content p {
 
-        font-size: 0.88rem;
+        font-size: 1rem;
 
         margin-top: 6px;
-
-        -webkit-line-clamp: 1;
-
-        white-space: nowrap;
-
-        overflow: hidden;
-
-        text-overflow: ellipsis;
-
     }
-
-
-    /* =========================
-       DISPONIBILIDAD
-    ========================= */
 
     .product-contact {
 
         font-size: 0.84rem;
 
-        margin-top: 8px;
+        margin-top: 4px;
 
-        white-space: normal;
-
-        overflow: visible;
-
-        text-overflow: unset;
     }
-
-
-    /* =========================
-       BOTÓN
-    ========================= */
 
     .product-action {
 
-        flex: 0 0 auto;
-
-        width: 100%;
-
-        margin-top: auto;
+        margin-top: 12px;
 
         padding: 10px 18px;
 
-        border-radius: 12px;
-
-        font-size: 0.88rem;
+        font-size: 0.9rem;
 
     }
 
