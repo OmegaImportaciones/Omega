@@ -8,13 +8,13 @@
     "producto": "MI TV STICK XIAOMI FHD",
     "minimo": 5,
     "estado": 1,
-    "precio2": "455.00",
-    "precio3": "450.00",
-    "precio4": "445.00",
-    "precio5": "430.00",
-    "precio6": "427.00",
-    "precio": "460.00",
-    "precio1": "460.00",
+    "precio2": "465.00",
+    "precio3": "460.00",
+    "precio4": "460.00",
+    "precio5": "446.00",
+    "precio6": "444.00",
+    "precio": "470.00",
+    "precio1": "470.00",
     "cantidad_disponible": 1
   },
   {
@@ -321,7 +321,7 @@
     "precio6": "63.00",
     "precio": "110.00",
     "precio1": "110.00",
-    "cantidad_disponible": 11
+    "cantidad_disponible": 7
   },
   {
     "id": 45,
@@ -411,7 +411,7 @@
     "precio6": "210.00",
     "precio": "280.00",
     "precio1": "280.00",
-    "cantidad_disponible": 12
+    "cantidad_disponible": 11
   },
   {
     "id": 56,
@@ -3615,7 +3615,7 @@
     "precio6": "260.00",
     "precio": "320.00",
     "precio1": "320.00",
-    "cantidad_disponible": 11
+    "cantidad_disponible": 10
   },
   {
     "id": 426,
@@ -4310,14 +4310,14 @@
     "producto": "POWER BANK XIAOMI 20000MAH 18W CAJA ROJO",
     "minimo": 5,
     "estado": 1,
-    "precio2": "255.00",
-    "precio3": "250.00",
-    "precio4": "245.00",
+    "precio2": "250.00",
+    "precio3": "245.00",
+    "precio4": "240.00",
     "precio5": "205.00",
     "precio6": "200.00",
-    "precio": "260.00",
-    "precio1": "260.00",
-    "cantidad_disponible": 20
+    "precio": "255.00",
+    "precio1": "255.00",
+    "cantidad_disponible": 18
   },
   {
     "id": 526,
@@ -6797,11 +6797,11 @@
     "precio2": "275.00",
     "precio3": "270.00",
     "precio4": "265.00",
-    "precio5": "242.00",
-    "precio6": "240.00",
+    "precio5": "245.00",
+    "precio6": "243.00",
     "precio": "280.00",
     "precio1": "280.00",
-    "cantidad_disponible": 33
+    "cantidad_disponible": 31
   },
   {
     "id": 878,
@@ -7424,13 +7424,13 @@
     "producto": "XIAOMI MESH SYSTEM AX3000 2 PACK",
     "minimo": 5,
     "estado": 1,
-    "precio2": "1090.00",
-    "precio3": "1080.00",
-    "precio4": "1070.00",
-    "precio5": "950.00",
-    "precio6": "945.00",
-    "precio": "1100.00",
-    "precio1": "1100.00",
+    "precio2": "1060.00",
+    "precio3": "1050.00",
+    "precio4": "1040.00",
+    "precio5": "945.00",
+    "precio6": "940.00",
+    "precio": "1070.00",
+    "precio1": "1070.00",
     "cantidad_disponible": 0
   },
   {
@@ -13245,7 +13245,7 @@
     "precio6": "44.00",
     "precio": "100.00",
     "precio1": "100.00",
-    "cantidad_disponible": 29
+    "cantidad_disponible": 25
   },
   {
     "id": 1364,
@@ -14627,11 +14627,11 @@
     "precio2": "445.00",
     "precio3": "440.00",
     "precio4": "435.00",
-    "precio5": "385.00",
-    "precio6": "380.00",
+    "precio5": "390.00",
+    "precio6": "385.00",
     "precio": "450.00",
     "precio1": "450.00",
-    "cantidad_disponible": 7
+    "cantidad_disponible": 6
   },
   {
     "id": 1449,
@@ -15923,8 +15923,8 @@
     "precio2": "645.00",
     "precio3": "640.00",
     "precio4": "635.00",
-    "precio5": "575.00",
-    "precio6": "570.00",
+    "precio5": "580.00",
+    "precio6": "578.00",
     "precio": "650.00",
     "precio1": "650.00",
     "cantidad_disponible": 18
@@ -16118,13 +16118,13 @@
     "producto": "REPETIDOR WIFI XIAOMI N300",
     "minimo": 10,
     "estado": 1,
-    "precio2": "175.00",
-    "precio3": "170.00",
-    "precio4": "165.00",
+    "precio2": "165.00",
+    "precio3": "160.00",
+    "precio4": "160.00",
     "precio5": "128.00",
     "precio6": "125.00",
-    "precio": "180.00",
-    "precio1": "180.00",
+    "precio": "170.00",
+    "precio1": "170.00",
     "cantidad_disponible": 5
   },
   {
@@ -16737,7 +16737,7 @@
     "precio6": "126.00",
     "precio": "180.00",
     "precio1": "180.00",
-    "cantidad_disponible": 4
+    "cantidad_disponible": 2
   },
   {
     "id": 1575,
@@ -17594,13 +17594,13 @@
     "producto": "SMARTWATCH XIAOMI REDMI WATCH 5 LITE",
     "minimo": 10,
     "estado": 1,
-    "precio2": "505.00",
-    "precio3": "500.00",
-    "precio4": "495.00",
+    "precio2": "495.00",
+    "precio3": "490.00",
+    "precio4": "485.00",
     "precio5": "440.00",
     "precio6": "435.00",
-    "precio": "510.00",
-    "precio1": "510.00",
+    "precio": "500.00",
+    "precio1": "500.00",
     "cantidad_disponible": 1
   },
   {
@@ -17612,14 +17612,14 @@
     "producto": "SMARTWATCH XIAOMI REDMI WATCH 5 ACTIVE",
     "minimo": 10,
     "estado": 1,
-    "precio2": "405.00",
-    "precio3": "400.00",
-    "precio4": "395.00",
+    "precio2": "395.00",
+    "precio3": "390.00",
+    "precio4": "355.00",
     "precio5": "335.00",
     "precio6": "330.00",
-    "precio": "410.00",
-    "precio1": "410.00",
-    "cantidad_disponible": 1
+    "precio": "400.00",
+    "precio1": "400.00",
+    "cantidad_disponible": 0
   },
   {
     "id": 1626,
@@ -18177,7 +18177,7 @@
     "precio6": "275.00",
     "precio": "310.00",
     "precio1": "310.00",
-    "cantidad_disponible": 8
+    "cantidad_disponible": 2
   },
   {
     "id": 1657,
@@ -19023,7 +19023,7 @@
     "precio6": "105.00",
     "precio": "180.00",
     "precio1": "180.00",
-    "cantidad_disponible": 58
+    "cantidad_disponible": 57
   },
   {
     "id": 1704,
@@ -20258,13 +20258,13 @@
     "producto": "INFLADOR PORTATIL XIAOMI AIR COMPRESSOR 2 PRO",
     "minimo": 10,
     "estado": 1,
-    "precio2": "635.00",
-    "precio3": "630.00",
-    "precio4": "625.00",
+    "precio2": "605.00",
+    "precio3": "600.00",
+    "precio4": "595.00",
     "precio5": "525.00",
     "precio6": "520.00",
-    "precio": "640.00",
-    "precio1": "640.00",
+    "precio": "610.00",
+    "precio1": "610.00",
     "cantidad_disponible": 3
   },
   {
@@ -20294,13 +20294,13 @@
     "producto": "XIAOMI MI BOX S 3RA GENERACION",
     "minimo": 10,
     "estado": 1,
-    "precio2": "825.00",
-    "precio3": "820.00",
-    "precio4": "815.00",
-    "precio5": "810.00",
-    "precio6": "805.00",
-    "precio": "830.00",
-    "precio1": "830.00",
+    "precio2": "840.00",
+    "precio3": "835.00",
+    "precio4": "830.00",
+    "precio5": "818.00",
+    "precio6": "815.00",
+    "precio": "845.00",
+    "precio1": "845.00",
     "cantidad_disponible": 29
   },
   {
@@ -20805,7 +20805,7 @@
     "precio6": "100.00",
     "precio": "190.00",
     "precio1": "190.00",
-    "cantidad_disponible": 7
+    "cantidad_disponible": 2
   },
   {
     "id": 1804,
@@ -20834,13 +20834,13 @@
     "producto": "PARLANTE BLUETOOTH JBL CHARGE 6",
     "minimo": 10,
     "estado": 1,
-    "precio2": "1470.00",
-    "precio3": "1460.00",
-    "precio4": "1450.00",
-    "precio5": "1430.00",
-    "precio6": "1425.00",
-    "precio": "1480.00",
-    "precio1": "1480.00",
+    "precio2": "1515.00",
+    "precio3": "1510.00",
+    "precio4": "1505.00",
+    "precio5": "1465.00",
+    "precio6": "1460.00",
+    "precio": "152.00",
+    "precio1": "152.00",
     "cantidad_disponible": 36
   },
   {
@@ -21701,8 +21701,8 @@
     "precio2": "665.00",
     "precio3": "660.00",
     "precio4": "655.00",
-    "precio5": "630.00",
-    "precio6": "628.00",
+    "precio5": "635.00",
+    "precio6": "630.00",
     "precio": "670.00",
     "precio1": "670.00",
     "cantidad_disponible": 20
@@ -21716,13 +21716,13 @@
     "producto": "PROYECTOR XIAOMI L1 PRO EU",
     "minimo": 10,
     "estado": 1,
-    "precio2": "3215.00",
-    "precio3": "3210.00",
-    "precio4": "3205.00",
-    "precio5": "3180.00",
-    "precio6": "3170.00",
-    "precio": "3220.00",
-    "precio1": "3220.00",
+    "precio2": "3190.00",
+    "precio3": "3180.00",
+    "precio4": "3170.00",
+    "precio5": "3080.00",
+    "precio6": "3070.00",
+    "precio": "3200.00",
+    "precio1": "3200.00",
     "cantidad_disponible": 3
   },
   {
@@ -21975,7 +21975,7 @@
     "precio6": "110.00",
     "precio": "150.00",
     "precio1": "150.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 2
   },
   {
     "id": 1869,
@@ -22079,8 +22079,8 @@
     "precio2": "475.00",
     "precio3": "470.00",
     "precio4": "465.00",
-    "precio5": "438.00",
-    "precio6": "435.00",
+    "precio5": "430.00",
+    "precio6": "425.00",
     "precio": "480.00",
     "precio1": "480.00",
     "cantidad_disponible": 4
@@ -22112,13 +22112,13 @@
     "producto": "POWER BANK XIAOMI METAL MAGNETIC POWER BANK 5000MAH",
     "minimo": 10,
     "estado": 1,
-    "precio2": "365.00",
-    "precio3": "360.00",
-    "precio4": "355.00",
+    "precio2": "355.00",
+    "precio3": "350.00",
+    "precio4": "345.00",
     "precio5": "305.00",
     "precio6": "300.00",
-    "precio": "370.00",
-    "precio1": "370.00",
+    "precio": "360.00",
+    "precio1": "360.00",
     "cantidad_disponible": 0
   },
   {
@@ -22364,13 +22364,13 @@
     "producto": "PROYECTOR XIAOMI L1 EU",
     "minimo": 10,
     "estado": 1,
-    "precio2": "2300.00",
-    "precio3": "2290.00",
-    "precio4": "2280.00",
-    "precio5": "2240.00",
-    "precio6": "2235.00",
-    "precio": "2310.00",
-    "precio1": "2310.00",
+    "precio2": "2210.00",
+    "precio3": "2200.00",
+    "precio4": "2190.00",
+    "precio5": "2140.00",
+    "precio6": "2130.00",
+    "precio": "2220.00",
+    "precio1": "2220.00",
     "cantidad_disponible": 0
   },
   {
@@ -22389,7 +22389,7 @@
     "precio6": "273.00",
     "precio": "300.00",
     "precio1": "300.00",
-    "cantidad_disponible": 1
+    "cantidad_disponible": 0
   },
   {
     "id": 1894,
@@ -22641,7 +22641,7 @@
     "precio6": "10.00",
     "precio": "40.00",
     "precio1": "40.00",
-    "cantidad_disponible": 337
+    "cantidad_disponible": 336
   },
   {
     "id": 1908,
@@ -23087,11 +23087,11 @@
     "precio2": "975.00",
     "precio3": "970.00",
     "precio4": "965.00",
-    "precio5": "915.00",
-    "precio6": "910.00",
+    "precio5": "930.00",
+    "precio6": "925.00",
     "precio": "980.00",
     "precio1": "980.00",
-    "cantidad_disponible": 1
+    "cantidad_disponible": 0
   },
   {
     "id": 1933,
@@ -23105,11 +23105,11 @@
     "precio2": "325.00",
     "precio3": "320.00",
     "precio4": "315.00",
-    "precio5": "265.00",
-    "precio6": "260.00",
+    "precio5": "270.00",
+    "precio6": "268.00",
     "precio": "330.00",
     "precio1": "330.00",
-    "cantidad_disponible": 16
+    "cantidad_disponible": 15
   },
   {
     "id": 1934,
@@ -23930,13 +23930,13 @@
     "producto": "MONITOR GAMING XIAOMI 34 PULGADAS CURVED EU G34WQi",
     "minimo": 10,
     "estado": 1,
-    "precio2": "3490.00",
-    "precio3": "3480.00",
-    "precio4": "3470.00",
+    "precio2": "3440.00",
+    "precio3": "3430.00",
+    "precio4": "3420.00",
     "precio5": "3280.00",
     "precio6": "3270.00",
-    "precio": "3500.00",
-    "precio1": "3500.00",
+    "precio": "3450.00",
+    "precio1": "3450.00",
     "cantidad_disponible": 2
   },
   {
@@ -23951,11 +23951,11 @@
     "precio2": "1915.00",
     "precio3": "1910.00",
     "precio4": "1905.00",
-    "precio5": "1790.00",
-    "precio6": "1785.00",
+    "precio5": "1815.00",
+    "precio6": "1810.00",
     "precio": "1920.00",
     "precio1": "1920.00",
-    "cantidad_disponible": 4
+    "cantidad_disponible": 3
   },
   {
     "id": 1982,
@@ -24758,13 +24758,13 @@
     "producto": "CAMARA DE SEGURIDAD XIAOMI EXTERIOR CW100 DUAL",
     "minimo": 10,
     "estado": 1,
-    "precio2": "485.00",
-    "precio3": "480.00",
-    "precio4": "475.00",
-    "precio5": "435.00",
-    "precio6": "430.00",
-    "precio": "490.00",
-    "precio1": "490.00",
+    "precio2": "475.00",
+    "precio3": "470.00",
+    "precio4": "465.00",
+    "precio5": "430.00",
+    "precio6": "428.00",
+    "precio": "480.00",
+    "precio1": "480.00",
     "cantidad_disponible": 8
   },
   {
@@ -24873,7 +24873,7 @@
     "precio6": "230.00",
     "precio": "275.00",
     "precio1": "275.00",
-    "cantidad_disponible": 33
+    "cantidad_disponible": 30
   },
   {
     "id": 2033,
@@ -25053,7 +25053,7 @@
     "precio6": "228.00",
     "precio": "260.00",
     "precio1": "260.00",
-    "cantidad_disponible": 17
+    "cantidad_disponible": 14
   },
   {
     "id": 2043,
@@ -25406,13 +25406,13 @@
     "producto": "ESTABILIZADOR DE CELULAR DJI OSMO MOBILE 8",
     "minimo": 10,
     "estado": 1,
-    "precio2": "2090.00",
-    "precio3": "2080.00",
-    "precio4": "2070.00",
-    "precio5": "2000.00",
-    "precio6": "1990.00",
-    "precio": "2100.00",
-    "precio1": "2100.00",
+    "precio2": "2070.00",
+    "precio3": "2060.00",
+    "precio4": "2050.00",
+    "precio5": "1940.00",
+    "precio6": "1935.00",
+    "precio": "2080.00",
+    "precio1": "2080.00",
     "cantidad_disponible": 2
   },
   {
@@ -25935,7 +25935,7 @@
     "precio6": "48.00",
     "precio": "75.00",
     "precio1": "75.00",
-    "cantidad_disponible": 8
+    "cantidad_disponible": 7
   },
   {
     "id": 2092,
@@ -26094,10 +26094,10 @@
     "precio3": "390.00",
     "precio4": "385.00",
     "precio5": "330.00",
-    "precio6": "325.00",
+    "precio6": "328.00",
     "precio": "400.00",
     "precio1": "400.00",
-    "cantidad_disponible": 34
+    "cantidad_disponible": 32
   },
   {
     "id": 2101,
@@ -26223,7 +26223,7 @@
     "precio6": "195.00",
     "precio": "300.00",
     "precio1": "300.00",
-    "cantidad_disponible": 32
+    "cantidad_disponible": 31
   },
   {
     "id": 2108,
@@ -26403,7 +26403,7 @@
     "precio6": "108.00",
     "precio": "150.00",
     "precio1": "150.00",
-    "cantidad_disponible": 5
+    "cantidad_disponible": 3
   },
   {
     "id": 2118,
@@ -26619,7 +26619,7 @@
     "precio6": "1205.00",
     "precio": "1290.00",
     "precio1": "1290.00",
-    "cantidad_disponible": 2
+    "cantidad_disponible": 1
   },
   {
     "id": 2130,
@@ -26673,7 +26673,7 @@
     "precio6": "150.00",
     "precio": "210.00",
     "precio1": "210.00",
-    "cantidad_disponible": 9
+    "cantidad_disponible": 8
   },
   {
     "id": 2133,
@@ -26889,7 +26889,7 @@
     "precio6": "345.00",
     "precio": "410.00",
     "precio1": "410.00",
-    "cantidad_disponible": 16
+    "cantidad_disponible": 15
   },
   {
     "id": 2145,
@@ -27299,8 +27299,8 @@
     "precio2": "505.00",
     "precio3": "500.00",
     "precio4": "495.00",
-    "precio5": "480.00",
-    "precio6": "475.00",
+    "precio5": "465.00",
+    "precio6": "460.00",
     "precio": "510.00",
     "precio1": "510.00",
     "cantidad_disponible": 63
@@ -27314,13 +27314,13 @@
     "producto": "PARLANTE BLUETOOTH JBL PARTYBOX 520",
     "minimo": 10,
     "estado": 1,
-    "precio2": "6230.00",
-    "precio3": "6220.00",
-    "precio4": "6215.00",
-    "precio5": "6180.00",
-    "precio6": "6170.00",
-    "precio": "6240.00",
-    "precio1": "6240.00",
+    "precio2": "6345.00",
+    "precio3": "6340.00",
+    "precio4": "6335.00",
+    "precio5": "6300.00",
+    "precio6": "6295.00",
+    "precio": "6350.00",
+    "precio1": "6350.00",
     "cantidad_disponible": 3
   },
   {
@@ -27332,13 +27332,13 @@
     "producto": "PARLANTE BLUETOOTH JBL PARTYBOX 720",
     "minimo": 10,
     "estado": 1,
-    "precio2": "7990.00",
-    "precio3": "7980.00",
-    "precio4": "7970.00",
-    "precio5": "7890.00",
-    "precio6": "7880.00",
-    "precio": "8000.00",
-    "precio1": "8000.00",
+    "precio2": "7820.00",
+    "precio3": "7810.00",
+    "precio4": "8000.00",
+    "precio5": "7955.00",
+    "precio6": "7950.00",
+    "precio": "8030.00",
+    "precio1": "8030.00",
     "cantidad_disponible": 3
   },
   {
@@ -27602,13 +27602,13 @@
     "producto": "MI TV STICK XIAOMI FHD 2da GENERACION",
     "minimo": 10,
     "estado": 1,
-    "precio2": "545.00",
-    "precio3": "540.00",
-    "precio4": "535.00",
-    "precio5": "518.00",
-    "precio6": "516.00",
-    "precio": "550.00",
-    "precio1": "550.00",
+    "precio2": "555.00",
+    "precio3": "550.00",
+    "precio4": "545.00",
+    "precio5": "522.00",
+    "precio6": "520.00",
+    "precio": "560.00",
+    "precio1": "560.00",
     "cantidad_disponible": 22
   },
   {
@@ -27627,7 +27627,7 @@
     "precio6": "500.00",
     "precio": "610.00",
     "precio1": "610.00",
-    "cantidad_disponible": 2
+    "cantidad_disponible": 1
   },
   {
     "id": 2187,
@@ -27717,7 +27717,7 @@
     "precio6": "605.00",
     "precio": "680.00",
     "precio1": "680.00",
-    "cantidad_disponible": 1
+    "cantidad_disponible": 0
   },
   {
     "id": 2192,
@@ -28059,7 +28059,7 @@
     "precio6": "56.00",
     "precio": "105.00",
     "precio1": "105.00",
-    "cantidad_disponible": 15
+    "cantidad_disponible": 14
   },
   {
     "id": 2212,
@@ -28095,7 +28095,7 @@
     "precio6": "83.00",
     "precio": "140.00",
     "precio1": "140.00",
-    "cantidad_disponible": 15
+    "cantidad_disponible": 14
   },
   {
     "id": 2214,
@@ -28178,13 +28178,13 @@
     "producto": "MONITOR FHD XIAOMI 23.8 PULGADAS A24i 2026",
     "minimo": 10,
     "estado": 1,
-    "precio2": "1285.00",
-    "precio3": "1280.00",
-    "precio4": "1275.00",
-    "precio5": "1190.00",
-    "precio6": "1180.00",
-    "precio": "1290.00",
-    "precio1": "1290.00",
+    "precio2": "1245.00",
+    "precio3": "1240.00",
+    "precio4": "1235.00",
+    "precio5": "1160.00",
+    "precio6": "1150.00",
+    "precio": "1250.00",
+    "precio1": "1250.00",
     "cantidad_disponible": 4
   },
   {
@@ -28196,14 +28196,14 @@
     "producto": "MONITOR FHD XIAOMI 27 PULGADAS A27i 2026",
     "minimo": 10,
     "estado": 1,
-    "precio2": "1540.00",
-    "precio3": "1530.00",
-    "precio4": "1520.00",
-    "precio5": "1450.00",
-    "precio6": "1445.00",
-    "precio": "1550.00",
-    "precio1": "1550.00",
-    "cantidad_disponible": 4
+    "precio2": "1420.00",
+    "precio3": "1410.00",
+    "precio4": "1400.00",
+    "precio5": "1390.00",
+    "precio6": "1385.00",
+    "precio": "1430.00",
+    "precio1": "1430.00",
+    "cantidad_disponible": 3
   },
   {
     "id": 2220,
@@ -28286,14 +28286,14 @@
     "producto": "LICUADORA XIAOMI BLENDER EU",
     "minimo": 10,
     "estado": 1,
-    "precio2": "745.00",
-    "precio3": "740.00",
-    "precio4": "735.00",
-    "precio5": "680.00",
-    "precio6": "675.00",
-    "precio": "750.00",
-    "precio1": "750.00",
-    "cantidad_disponible": 3
+    "precio2": "805.00",
+    "precio3": "800.00",
+    "precio4": "795.00",
+    "precio5": "750.00",
+    "precio6": "745.00",
+    "precio": "810.00",
+    "precio1": "810.00",
+    "cantidad_disponible": 2
   },
   {
     "id": 2225,
@@ -28307,11 +28307,11 @@
     "precio2": "995.00",
     "precio3": "990.00",
     "precio4": "985.00",
-    "precio5": "855.00",
-    "precio6": "850.00",
+    "precio5": "880.00",
+    "precio6": "875.00",
     "precio": "1000.00",
     "precio1": "1000.00",
-    "cantidad_disponible": 2
+    "cantidad_disponible": 1
   },
   {
     "id": 2226,
@@ -28325,8 +28325,8 @@
     "precio2": "365.00",
     "precio3": "360.00",
     "precio4": "355.00",
-    "precio5": "328.00",
-    "precio6": "325.00",
+    "precio5": "325.00",
+    "precio6": "320.00",
     "precio": "370.00",
     "precio1": "370.00",
     "cantidad_disponible": 14
@@ -28358,14 +28358,14 @@
     "producto": "JARRA ELECTRICA XIAOMI SMART KETTLE 2 PRO EU",
     "minimo": 10,
     "estado": 1,
-    "precio2": "545.00",
-    "precio3": "540.00",
-    "precio4": "535.00",
-    "precio5": "485.00",
-    "precio6": "480.00",
-    "precio": "550.00",
-    "precio1": "550.00",
-    "cantidad_disponible": 3
+    "precio2": "560.00",
+    "precio3": "555.00",
+    "precio4": "550.00",
+    "precio5": "515.00",
+    "precio6": "510.00",
+    "precio": "565.00",
+    "precio1": "565.00",
+    "cantidad_disponible": 2
   },
   {
     "id": 2229,
@@ -28412,13 +28412,13 @@
     "producto": "JARRA ELECTRICA XIAOMI DOUBLE WALL ELECTRIC KETTLE S1",
     "minimo": 10,
     "estado": 1,
-    "precio2": "395.00",
-    "precio3": "390.00",
-    "precio4": "385.00",
-    "precio5": "340.00",
-    "precio6": "335.00",
-    "precio": "400.00",
-    "precio1": "400.00",
+    "precio2": "400.00",
+    "precio3": "395.00",
+    "precio4": "390.00",
+    "precio5": "365.00",
+    "precio6": "360.00",
+    "precio": "405.00",
+    "precio1": "405.00",
     "cantidad_disponible": 3
   },
   {
@@ -28541,8 +28541,8 @@
     "precio2": "525.00",
     "precio3": "520.00",
     "precio4": "515.00",
-    "precio5": "470.00",
-    "precio6": "465.00",
+    "precio5": "472.00",
+    "precio6": "470.00",
     "precio": "530.00",
     "precio1": "530.00",
     "cantidad_disponible": 4
@@ -28556,14 +28556,14 @@
     "producto": "SMARTWATCH XIAOMI REDMI WATCH 6 ACTIVE",
     "minimo": 10,
     "estado": 1,
-    "precio2": "475.00",
-    "precio3": "470.00",
-    "precio4": "465.00",
-    "precio5": "425.00",
-    "precio6": "420.00",
-    "precio": "480.00",
-    "precio1": "480.00",
-    "cantidad_disponible": 22
+    "precio2": "485.00",
+    "precio3": "480.00",
+    "precio4": "475.00",
+    "precio5": "438.00",
+    "precio6": "435.00",
+    "precio": "490.00",
+    "precio1": "490.00",
+    "cantidad_disponible": 21
   },
   {
     "id": 2240,
@@ -28577,10 +28577,10 @@
     "precio2": "705.00",
     "precio3": "700.00",
     "precio4": "695.00",
-    "precio5": "638.00",
-    "precio6": "635.00",
+    "precio5": "655.00",
+    "precio6": "650.00",
     "precio": "710.00",
     "precio1": "710.00",
-    "cantidad_disponible": 22
+    "cantidad_disponible": 21
   }
 ]
