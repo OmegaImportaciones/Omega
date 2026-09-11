@@ -249,7 +249,7 @@
     "precio6": "113.00",
     "precio": "160.00",
     "precio1": "160.00",
-    "cantidad_disponible": 12
+    "cantidad_disponible": 11
   },
   {
     "id": 41,
@@ -267,7 +267,7 @@
     "precio6": "55.00",
     "precio": "85.00",
     "precio1": "85.00",
-    "cantidad_disponible": 16
+    "cantidad_disponible": 15
   },
   {
     "id": 42,
@@ -321,7 +321,7 @@
     "precio6": "69.00",
     "precio": "120.00",
     "precio1": "120.00",
-    "cantidad_disponible": 16
+    "cantidad_disponible": 15
   },
   {
     "id": 45,
@@ -411,7 +411,7 @@
     "precio6": "210.00",
     "precio": "280.00",
     "precio1": "280.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 2
   },
   {
     "id": 56,
@@ -1473,7 +1473,7 @@
     "precio6": "420.00",
     "precio": "470.00",
     "precio1": "470.00",
-    "cantidad_disponible": 4
+    "cantidad_disponible": 1
   },
   {
     "id": 166,
@@ -1517,7 +1517,7 @@
     "imagen2": "https://apiback.aswin-smart.com/images/productos/68e2ff0e1b4f22.png",
     "imagen3": "https://apiback.aswin-smart.com/images/productos/68e2ff0e2f2213.png",
     "codigo": "168",
-    "producto": "MODEM ROTER TP-LINK ADSL TD-W8961N",
+    "producto": "MODEM ROUTER TP-LINK ADSL TD-W8961N",
     "minimo": 5,
     "estado": 1,
     "precio2": "230.00",
@@ -2877,7 +2877,7 @@
     "precio6": "51.00",
     "precio": "70.00",
     "precio1": "70.00",
-    "cantidad_disponible": 9
+    "cantidad_disponible": 8
   },
   {
     "id": 325,
@@ -3615,7 +3615,7 @@
     "precio6": "260.00",
     "precio": "320.00",
     "precio1": "320.00",
-    "cantidad_disponible": 5
+    "cantidad_disponible": 1
   },
   {
     "id": 426,
@@ -3687,7 +3687,7 @@
     "precio6": "25.00",
     "precio": "50.00",
     "precio1": "50.00",
-    "cantidad_disponible": 28
+    "cantidad_disponible": 27
   },
   {
     "id": 436,
@@ -11045,11 +11045,11 @@
     "precio2": "350.00",
     "precio3": "345.00",
     "precio4": "340.00",
-    "precio5": "305.00",
-    "precio6": "300.00",
+    "precio5": "315.00",
+    "precio6": "310.00",
     "precio": "355.00",
     "precio1": "355.00",
-    "cantidad_disponible": 0
+    "cantidad_disponible": 28
   },
   {
     "id": 1210,
@@ -12741,7 +12741,7 @@
     "precio6": "90.00",
     "precio": "120.00",
     "precio1": "120.00",
-    "cantidad_disponible": 25
+    "cantidad_disponible": 20
   },
   {
     "id": 1328,
@@ -12759,7 +12759,7 @@
     "precio6": "1090.00",
     "precio": "1170.00",
     "precio1": "1170.00",
-    "cantidad_disponible": 2
+    "cantidad_disponible": 5
   },
   {
     "id": 1330,
@@ -13425,7 +13425,7 @@
     "precio6": "230.00",
     "precio": "280.00",
     "precio1": "280.00",
-    "cantidad_disponible": 2
+    "cantidad_disponible": 1
   },
   {
     "id": 1376,
@@ -14019,7 +14019,7 @@
     "precio6": "49.00",
     "precio": "75.00",
     "precio1": "75.00",
-    "cantidad_disponible": 12
+    "cantidad_disponible": 11
   },
   {
     "id": 1411,
@@ -16359,7 +16359,7 @@
     "precio6": "19.00",
     "precio": "60.00",
     "precio1": "60.00",
-    "cantidad_disponible": 18
+    "cantidad_disponible": 17
   },
   {
     "id": 1553,
@@ -18681,7 +18681,7 @@
     "precio6": "225.00",
     "precio": "280.00",
     "precio1": "280.00",
-    "cantidad_disponible": 16
+    "cantidad_disponible": 15
   },
   {
     "id": 1685,
@@ -18897,7 +18897,7 @@
     "precio6": "85.00",
     "precio": "120.00",
     "precio1": "120.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 2
   },
   {
     "id": 1697,
@@ -19329,7 +19329,7 @@
     "precio6": "594.00",
     "precio": "650.00",
     "precio1": "650.00",
-    "cantidad_disponible": 4
+    "cantidad_disponible": 3
   },
   {
     "id": 1721,
@@ -19581,7 +19581,7 @@
     "precio6": "25.00",
     "precio": "70.00",
     "precio1": "70.00",
-    "cantidad_disponible": 14
+    "cantidad_disponible": 13
   },
   {
     "id": 1735,
@@ -20301,7 +20301,7 @@
     "precio6": "815.00",
     "precio": "845.00",
     "precio1": "845.00",
-    "cantidad_disponible": 22
+    "cantidad_disponible": 21
   },
   {
     "id": 1776,
@@ -20895,7 +20895,7 @@
     "precio6": "29.00",
     "precio": "70.00",
     "precio1": "70.00",
-    "cantidad_disponible": 18
+    "cantidad_disponible": 17
   },
   {
     "id": 1809,
@@ -21219,7 +21219,7 @@
     "precio6": "2.80",
     "precio": "4.00",
     "precio1": "4.00",
-    "cantidad_disponible": 395
+    "cantidad_disponible": 385
   },
   {
     "id": 1827,
@@ -21939,7 +21939,7 @@
     "precio6": "175.00",
     "precio": "200.00",
     "precio1": "200.00",
-    "cantidad_disponible": 12
+    "cantidad_disponible": 11
   },
   {
     "id": 1867,
@@ -23955,7 +23955,7 @@
     "precio6": "1800.00",
     "precio": "1910.00",
     "precio1": "1910.00",
-    "cantidad_disponible": 2
+    "cantidad_disponible": 0
   },
   {
     "id": 1982,
@@ -24488,14 +24488,14 @@
     "producto": "SOPORTE MULTIFUNCION FLEXIBLE UGREEN LP113",
     "minimo": 10,
     "estado": 1,
-    "precio2": "95.00",
-    "precio3": "90.00",
-    "precio4": "85.00",
-    "precio5": "70.00",
-    "precio6": "67.00",
-    "precio": "100.00",
-    "precio1": "100.00",
-    "cantidad_disponible": 1
+    "precio2": "115.00",
+    "precio3": "110.00",
+    "precio4": "105.00",
+    "precio5": "80.00",
+    "precio6": "78.00",
+    "precio": "120.00",
+    "precio1": "120.00",
+    "cantidad_disponible": 10
   },
   {
     "id": 2012,
@@ -24873,7 +24873,7 @@
     "precio6": "230.00",
     "precio": "275.00",
     "precio1": "275.00",
-    "cantidad_disponible": 19
+    "cantidad_disponible": 17
   },
   {
     "id": 2033,
@@ -24909,7 +24909,7 @@
     "precio6": "128.00",
     "precio": "190.00",
     "precio1": "190.00",
-    "cantidad_disponible": 2
+    "cantidad_disponible": 1
   },
   {
     "id": 2035,
@@ -25395,7 +25395,7 @@
     "precio6": "38.00",
     "precio": "90.00",
     "precio1": "90.00",
-    "cantidad_disponible": 1
+    "cantidad_disponible": 0
   },
   {
     "id": 2062,
@@ -26259,7 +26259,7 @@
     "precio6": "39.00",
     "precio": "80.00",
     "precio1": "80.00",
-    "cantidad_disponible": 9
+    "cantidad_disponible": 8
   },
   {
     "id": 2110,
@@ -26317,21 +26317,21 @@
   },
   {
     "id": 2113,
-    "imagen": "https://apiback.aswin-smart.com/images/productos/69e3bebb2c1b6.png",
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6aa3514442024.png",
     "imagen2": "https://apiback.aswin-smart.com/images/productos/69e3bebb4795b_2.png",
     "imagen3": "https://apiback.aswin-smart.com/images/productos/69e3bebb62103_3.png",
     "codigo": "BLUET UGREEN",
-    "producto": "RECEPTOR BLUETOOTH USB 5.3 UGREEN CMS91",
+    "producto": "RECEPTOR BLUETOOTH USB 5.3 UGREEN CM591-35995",
     "minimo": 10,
     "estado": 1,
-    "precio2": "115.00",
-    "precio3": "110.00",
-    "precio4": "105.00",
-    "precio5": "65.00",
-    "precio6": "63.00",
-    "precio": "120.00",
-    "precio1": "120.00",
-    "cantidad_disponible": 0
+    "precio2": "105.00",
+    "precio3": "100.00",
+    "precio4": "95.00",
+    "precio5": "67.00",
+    "precio6": "65.00",
+    "precio": "110.00",
+    "precio1": "110.00",
+    "cantidad_disponible": 50
   },
   {
     "id": 2114,
@@ -26601,7 +26601,7 @@
     "precio6": "500.00",
     "precio": "580.00",
     "precio1": "580.00",
-    "cantidad_disponible": 8
+    "cantidad_disponible": 7
   },
   {
     "id": 2129,
@@ -27357,7 +27357,7 @@
     "precio6": "110.00",
     "precio": "180.00",
     "precio1": "180.00",
-    "cantidad_disponible": 8
+    "cantidad_disponible": 5
   },
   {
     "id": 2172,
@@ -27447,7 +27447,7 @@
     "precio6": "95.00",
     "precio": "155.00",
     "precio1": "155.00",
-    "cantidad_disponible": 19
+    "cantidad_disponible": 16
   },
   {
     "id": 2177,
@@ -27609,7 +27609,7 @@
     "precio6": "520.00",
     "precio": "560.00",
     "precio1": "560.00",
-    "cantidad_disponible": 17
+    "cantidad_disponible": 15
   },
   {
     "id": 2186,
@@ -27847,7 +27847,7 @@
   },
   {
     "id": 2200,
-    "imagen": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6aa351271c9b5.png",
     "imagen2": "https://apiback.aswin-smart.com/images/default.png",
     "imagen3": "https://apiback.aswin-smart.com/images/default.png",
     "codigo": "MSD 16GB",
@@ -27951,7 +27951,7 @@
     "precio6": "46.00",
     "precio": "100.00",
     "precio1": "100.00",
-    "cantidad_disponible": 6
+    "cantidad_disponible": 1
   },
   {
     "id": 2206,
@@ -28023,7 +28023,7 @@
     "precio6": "45.00",
     "precio": "100.00",
     "precio1": "100.00",
-    "cantidad_disponible": 21
+    "cantidad_disponible": 11
   },
   {
     "id": 2210,
@@ -28059,7 +28059,7 @@
     "precio6": "56.00",
     "precio": "105.00",
     "precio1": "105.00",
-    "cantidad_disponible": 11
+    "cantidad_disponible": 9
   },
   {
     "id": 2212,
@@ -28095,7 +28095,7 @@
     "precio6": "83.00",
     "precio": "140.00",
     "precio1": "140.00",
-    "cantidad_disponible": 16
+    "cantidad_disponible": 15
   },
   {
     "id": 2214,
@@ -28185,7 +28185,7 @@
     "precio6": "1140.00",
     "precio": "1240.00",
     "precio1": "1240.00",
-    "cantidad_disponible": 1
+    "cantidad_disponible": 4
   },
   {
     "id": 2219,
@@ -28221,7 +28221,7 @@
     "precio6": "5240.00",
     "precio": "5350.00",
     "precio1": "5350.00",
-    "cantidad_disponible": 1
+    "cantidad_disponible": 0
   },
   {
     "id": 2221,
@@ -28585,9 +28585,9 @@
   },
   {
     "id": 2241,
-    "imagen": "https://apiback.aswin-smart.com/images/default.png",
-    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
-    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6aa350f38ca8d.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/productos/6aa350f4082412.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/productos/6aa350f42b2af3.png",
     "codigo": "CUDY M1500",
     "producto": "MESH CUDY M1500 2 PACK WIFI 6 DUAL BAND MIMO",
     "minimo": 10,
@@ -28603,9 +28603,9 @@
   },
   {
     "id": 2242,
-    "imagen": "https://apiback.aswin-smart.com/images/default.png",
-    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
-    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6aa35081a75a5.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/productos/6aa35082653142.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/productos/6aa3508291f333.png",
     "codigo": "CUDY M1500 3 PACK",
     "producto": "MESH CUDY M1500 3 PACK WIFI 6 DUAL BAND MIMO",
     "minimo": 10,
@@ -28621,9 +28621,9 @@
   },
   {
     "id": 2243,
-    "imagen": "https://apiback.aswin-smart.com/images/default.png",
-    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
-    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6aa34fcae3899.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/productos/6aa34fcb4b1a52.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/productos/6aa34fcb6747f3.png",
     "codigo": "AX300 USB NANO",
     "producto": "RECEPTOR DE WIFI USB NANO CUDY WIFI 6 AX300",
     "minimo": 10,
@@ -28639,9 +28639,9 @@
   },
   {
     "id": 2244,
-    "imagen": "https://apiback.aswin-smart.com/images/default.png",
-    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
-    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6aa34f2c4c049.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/productos/6aa34f2c954342.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/productos/6aa34f2ca77063.png",
     "codigo": "ROBOT 30W",
     "producto": "POWER BANK UGREEN ROBOT 30W 10000MAH",
     "minimo": 10,
@@ -28657,9 +28657,9 @@
   },
   {
     "id": 2245,
-    "imagen": "https://apiback.aswin-smart.com/images/default.png",
-    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
-    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6aa34dd87d117.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/productos/6aa34dd8d23d72.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/productos/6aa34dd8e7c063.png",
     "codigo": "UGREEN 65W",
     "producto": "CARGADOR UGREEN MULTIPUERTOS DE 65W",
     "minimo": 10,
@@ -28672,5 +28672,23 @@
     "precio": "400.00",
     "precio1": "400.00",
     "cantidad_disponible": 10
+  },
+  {
+    "id": 2246,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6aa3527a97172.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/productos/6aa3527aae272_2.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/productos/6aa3527ac460f_3.png",
+    "codigo": "FINDER SLIM PRO",
+    "producto": "LOCALIZADOR RASTREADOR UGREEN FINDER SLIM PRO",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "265.00",
+    "precio3": "260.00",
+    "precio4": "255.00",
+    "precio5": "222.00",
+    "precio6": "220.00",
+    "precio": "270.00",
+    "precio1": "270.00",
+    "cantidad_disponible": 9
   }
 ]
