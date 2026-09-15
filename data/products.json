@@ -321,7 +321,7 @@
     "precio6": "69.00",
     "precio": "120.00",
     "precio1": "120.00",
-    "cantidad_disponible": 15
+    "cantidad_disponible": 1
   },
   {
     "id": 45,
@@ -339,7 +339,7 @@
     "precio6": "103.00",
     "precio": "160.00",
     "precio1": "160.00",
-    "cantidad_disponible": 7
+    "cantidad_disponible": 5
   },
   {
     "id": 48,
@@ -411,7 +411,7 @@
     "precio6": "210.00",
     "precio": "280.00",
     "precio1": "280.00",
-    "cantidad_disponible": 2
+    "cantidad_disponible": 0
   },
   {
     "id": 56,
@@ -519,7 +519,7 @@
     "precio6": "25.00",
     "precio": "55.00",
     "precio1": "55.00",
-    "cantidad_disponible": 24
+    "cantidad_disponible": 23
   },
   {
     "id": 80,
@@ -681,7 +681,7 @@
     "precio6": "18.00",
     "precio": "41.00",
     "precio1": "41.00",
-    "cantidad_disponible": 13
+    "cantidad_disponible": 10
   },
   {
     "id": 99,
@@ -771,7 +771,7 @@
     "precio6": "11.00",
     "precio": "35.00",
     "precio1": "35.00",
-    "cantidad_disponible": 7
+    "cantidad_disponible": 2
   },
   {
     "id": 104,
@@ -879,7 +879,7 @@
     "precio6": "15.00",
     "precio": "30.00",
     "precio1": "30.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 4
   },
   {
     "id": 111,
@@ -1077,7 +1077,7 @@
     "precio6": "104.00",
     "precio": "130.00",
     "precio1": "130.00",
-    "cantidad_disponible": 34
+    "cantidad_disponible": 21
   },
   {
     "id": 130,
@@ -1185,7 +1185,7 @@
     "precio6": "520.00",
     "precio": "575.00",
     "precio1": "575.00",
-    "cantidad_disponible": 1
+    "cantidad_disponible": 0
   },
   {
     "id": 139,
@@ -3075,7 +3075,7 @@
     "precio6": "175.00",
     "precio": "220.00",
     "precio1": "220.00",
-    "cantidad_disponible": 23
+    "cantidad_disponible": 22
   },
   {
     "id": 347,
@@ -3219,7 +3219,7 @@
     "precio6": "13.00",
     "precio": "31.00",
     "precio1": "31.00",
-    "cantidad_disponible": 20
+    "cantidad_disponible": 19
   },
   {
     "id": 377,
@@ -3608,14 +3608,14 @@
     "producto": "ROUTER XIAOMI 4A AC1200 DUAL BAND",
     "minimo": 5,
     "estado": 1,
-    "precio2": "315.00",
-    "precio3": "310.00",
-    "precio4": "305.00",
+    "precio2": "310.00",
+    "precio3": "305.00",
+    "precio4": "300.00",
     "precio5": "265.00",
     "precio6": "260.00",
-    "precio": "320.00",
-    "precio1": "320.00",
-    "cantidad_disponible": 1
+    "precio": "315.00",
+    "precio1": "315.00",
+    "cantidad_disponible": 5
   },
   {
     "id": 426,
@@ -3687,7 +3687,7 @@
     "precio6": "25.00",
     "precio": "50.00",
     "precio1": "50.00",
-    "cantidad_disponible": 27
+    "cantidad_disponible": 26
   },
   {
     "id": 436,
@@ -3813,7 +3813,7 @@
     "precio6": "1.00",
     "precio": "105.00",
     "precio1": "105.00",
-    "cantidad_disponible": 649
+    "cantidad_disponible": 648
   },
   {
     "id": 452,
@@ -4317,7 +4317,7 @@
     "precio6": "200.00",
     "precio": "255.00",
     "precio1": "255.00",
-    "cantidad_disponible": 9
+    "cantidad_disponible": 7
   },
   {
     "id": 526,
@@ -4785,7 +4785,7 @@
     "precio6": "38.00",
     "precio": "70.00",
     "precio1": "70.00",
-    "cantidad_disponible": 1
+    "cantidad_disponible": 0
   },
   {
     "id": 651,
@@ -5145,7 +5145,7 @@
     "precio6": "200.00",
     "precio": "240.00",
     "precio1": "240.00",
-    "cantidad_disponible": 8
+    "cantidad_disponible": 4
   },
   {
     "id": 718,
@@ -5361,7 +5361,7 @@
     "precio6": "9.00",
     "precio": "27.00",
     "precio1": "27.00",
-    "cantidad_disponible": 51
+    "cantidad_disponible": 48
   },
   {
     "id": 745,
@@ -5721,7 +5721,7 @@
     "precio6": "25.00",
     "precio": "55.00",
     "precio1": "55.00",
-    "cantidad_disponible": 26
+    "cantidad_disponible": 18
   },
   {
     "id": 786,
@@ -5829,7 +5829,7 @@
     "precio6": "12.00",
     "precio": "25.00",
     "precio1": "25.00",
-    "cantidad_disponible": 22
+    "cantidad_disponible": 21
   },
   {
     "id": 796,
@@ -5847,7 +5847,7 @@
     "precio6": "17.00",
     "precio": "40.00",
     "precio1": "40.00",
-    "cantidad_disponible": 70
+    "cantidad_disponible": 69
   },
   {
     "id": 797,
@@ -6459,7 +6459,7 @@
     "precio6": "155.00",
     "precio": "195.00",
     "precio1": "195.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 2
   },
   {
     "id": 852,
@@ -6801,7 +6801,7 @@
     "precio6": "245.00",
     "precio": "285.00",
     "precio1": "285.00",
-    "cantidad_disponible": 28
+    "cantidad_disponible": 20
   },
   {
     "id": 878,
@@ -6837,7 +6837,7 @@
     "precio6": "1.00",
     "precio": "3.00",
     "precio1": "3.00",
-    "cantidad_disponible": 839
+    "cantidad_disponible": 827
   },
   {
     "id": 880,
@@ -7557,7 +7557,7 @@
     "precio6": "32.00",
     "precio": "60.00",
     "precio1": "60.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 2
   },
   {
     "id": 946,
@@ -9537,7 +9537,7 @@
     "precio6": "110.00",
     "precio": "155.00",
     "precio1": "155.00",
-    "cantidad_disponible": 12
+    "cantidad_disponible": 11
   },
   {
     "id": 1079,
@@ -9555,7 +9555,7 @@
     "precio6": "43.00",
     "precio": "80.00",
     "precio1": "80.00",
-    "cantidad_disponible": 18
+    "cantidad_disponible": 25
   },
   {
     "id": 1080,
@@ -10736,13 +10736,13 @@
     "producto": "AUDIFONO BLUETOOTH KR-3500 DISEÑO, AVENGER, DISNEY",
     "minimo": 5,
     "estado": 1,
-    "precio2": "174.00",
-    "precio3": "159.00",
-    "precio4": "153.00",
-    "precio5": "125.00",
-    "precio6": "123.00",
-    "precio": "185.00",
-    "precio1": "185.00",
+    "precio2": "115.00",
+    "precio3": "110.00",
+    "precio4": "105.00",
+    "precio5": "95.00",
+    "precio6": "95.00",
+    "precio": "120.00",
+    "precio1": "120.00",
     "cantidad_disponible": 8
   },
   {
@@ -11348,14 +11348,14 @@
     "producto": "ALEXA ECHO DOT 5 GENERACION SIN RELOJ",
     "minimo": 5,
     "estado": 1,
-    "precio2": "715.00",
-    "precio3": "710.00",
-    "precio4": "705.00",
-    "precio5": "675.00",
+    "precio2": "705.00",
+    "precio3": "700.00",
+    "precio4": "695.00",
+    "precio5": "670.00",
     "precio6": "670.00",
-    "precio": "720.00",
-    "precio1": "720.00",
-    "cantidad_disponible": 3
+    "precio": "710.00",
+    "precio1": "710.00",
+    "cantidad_disponible": 2
   },
   {
     "id": 1228,
@@ -11661,7 +11661,7 @@
     "precio6": "115.00",
     "precio": "160.00",
     "precio1": "160.00",
-    "cantidad_disponible": 5
+    "cantidad_disponible": 3
   },
   {
     "id": 1248,
@@ -11924,13 +11924,13 @@
     "producto": "AUDIFONO XIAOMI MI BASIC CP",
     "minimo": 5,
     "estado": 1,
-    "precio2": "35.00",
-    "precio3": "30.00",
-    "precio4": "25.00",
-    "precio5": "15.00",
-    "precio6": "13.00",
-    "precio": "48.00",
-    "precio1": "48.00",
+    "precio2": "45.00",
+    "precio3": "40.00",
+    "precio4": "35.00",
+    "precio5": "19.00",
+    "precio6": "16.00",
+    "precio": "50.00",
+    "precio1": "50.00",
     "cantidad_disponible": 6
   },
   {
@@ -12741,7 +12741,7 @@
     "precio6": "90.00",
     "precio": "120.00",
     "precio1": "120.00",
-    "cantidad_disponible": 20
+    "cantidad_disponible": 12
   },
   {
     "id": 1328,
@@ -12813,7 +12813,7 @@
     "precio6": "42.00",
     "precio": "73.00",
     "precio1": "73.00",
-    "cantidad_disponible": 2
+    "cantidad_disponible": 1
   },
   {
     "id": 1334,
@@ -13245,7 +13245,7 @@
     "precio6": "44.00",
     "precio": "100.00",
     "precio1": "100.00",
-    "cantidad_disponible": 22
+    "cantidad_disponible": 11
   },
   {
     "id": 1364,
@@ -13371,7 +13371,7 @@
     "precio6": "248.00",
     "precio": "300.00",
     "precio1": "300.00",
-    "cantidad_disponible": 32
+    "cantidad_disponible": 31
   },
   {
     "id": 1372,
@@ -13587,7 +13587,7 @@
     "precio6": "595.00",
     "precio": "670.00",
     "precio1": "670.00",
-    "cantidad_disponible": 19
+    "cantidad_disponible": 15
   },
   {
     "id": 1385,
@@ -14055,7 +14055,7 @@
     "precio6": "115.00",
     "precio": "200.00",
     "precio1": "200.00",
-    "cantidad_disponible": 7
+    "cantidad_disponible": 6
   },
   {
     "id": 1413,
@@ -14631,7 +14631,7 @@
     "precio6": "380.00",
     "precio": "440.00",
     "precio1": "440.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 1
   },
   {
     "id": 1449,
@@ -15758,13 +15758,13 @@
     "producto": "AUDIFONO BLUETOOTH REALME T110",
     "minimo": 10,
     "estado": 1,
-    "precio2": "298.00",
-    "precio3": "293.00",
-    "precio4": "288.00",
+    "precio2": "295.00",
+    "precio3": "290.00",
+    "precio4": "285.00",
     "precio5": "280.00",
     "precio6": "280.00",
-    "precio": "303.00",
-    "precio1": "303.00",
+    "precio": "300.00",
+    "precio1": "300.00",
     "cantidad_disponible": 0
   },
   {
@@ -15927,7 +15927,7 @@
     "precio6": "585.00",
     "precio": "640.00",
     "precio1": "640.00",
-    "cantidad_disponible": 13
+    "cantidad_disponible": 12
   },
   {
     "id": 1529,
@@ -16107,7 +16107,7 @@
     "precio6": "19.00",
     "precio": "58.00",
     "precio1": "58.00",
-    "cantidad_disponible": 17
+    "cantidad_disponible": 23
   },
   {
     "id": 1539,
@@ -16359,7 +16359,7 @@
     "precio6": "19.00",
     "precio": "60.00",
     "precio1": "60.00",
-    "cantidad_disponible": 17
+    "cantidad_disponible": 16
   },
   {
     "id": 1553,
@@ -16377,7 +16377,7 @@
     "precio6": "715.00",
     "precio": "780.00",
     "precio1": "780.00",
-    "cantidad_disponible": 19
+    "cantidad_disponible": 18
   },
   {
     "id": 1554,
@@ -17421,7 +17421,7 @@
     "precio6": "335.00",
     "precio": "390.00",
     "precio1": "390.00",
-    "cantidad_disponible": 2
+    "cantidad_disponible": 1
   },
   {
     "id": 1615,
@@ -18141,7 +18141,7 @@
     "precio6": "59.00",
     "precio": "90.00",
     "precio1": "90.00",
-    "cantidad_disponible": 25
+    "cantidad_disponible": 24
   },
   {
     "id": 1655,
@@ -18357,7 +18357,7 @@
     "precio6": "130.00",
     "precio": "170.00",
     "precio1": "170.00",
-    "cantidad_disponible": 17
+    "cantidad_disponible": 16
   },
   {
     "id": 1667,
@@ -18555,7 +18555,7 @@
     "precio6": "85.00",
     "precio": "110.00",
     "precio1": "110.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 0
   },
   {
     "id": 1678,
@@ -18645,7 +18645,7 @@
     "precio6": "34.00",
     "precio": "70.00",
     "precio1": "70.00",
-    "cantidad_disponible": 1
+    "cantidad_disponible": 2
   },
   {
     "id": 1683,
@@ -18681,7 +18681,7 @@
     "precio6": "225.00",
     "precio": "280.00",
     "precio1": "280.00",
-    "cantidad_disponible": 15
+    "cantidad_disponible": 12
   },
   {
     "id": 1685,
@@ -19023,7 +19023,7 @@
     "precio6": "105.00",
     "precio": "180.00",
     "precio1": "180.00",
-    "cantidad_disponible": 57
+    "cantidad_disponible": 55
   },
   {
     "id": 1704,
@@ -19329,7 +19329,7 @@
     "precio6": "594.00",
     "precio": "650.00",
     "precio1": "650.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 1
   },
   {
     "id": 1721,
@@ -19383,7 +19383,7 @@
     "precio6": "295.00",
     "precio": "350.00",
     "precio1": "350.00",
-    "cantidad_disponible": 5
+    "cantidad_disponible": 0
   },
   {
     "id": 1724,
@@ -20013,7 +20013,7 @@
     "precio6": "147.00",
     "precio": "170.00",
     "precio1": "170.00",
-    "cantidad_disponible": 8
+    "cantidad_disponible": 7
   },
   {
     "id": 1759,
@@ -20222,13 +20222,13 @@
     "producto": "AUDIFONO BLUETOOTH CON DISEÑO K41-K26-K71-K25-K33-K7",
     "minimo": 10,
     "estado": 1,
-    "precio2": "100.00",
-    "precio3": "95.00",
-    "precio4": "90.00",
-    "precio5": "80.00",
-    "precio6": "78.00",
-    "precio": "105.00",
-    "precio1": "105.00",
+    "precio2": "95.00",
+    "precio3": "90.00",
+    "precio4": "85.00",
+    "precio5": "73.00",
+    "precio6": "70.00",
+    "precio": "100.00",
+    "precio1": "100.00",
     "cantidad_disponible": 16
   },
   {
@@ -20276,13 +20276,13 @@
     "producto": "PARLANTE BLUETOOTH JBL CLIP 5",
     "minimo": 10,
     "estado": 1,
-    "precio2": "600.00",
-    "precio3": "590.00",
-    "precio4": "580.00",
+    "precio2": "590.00",
+    "precio3": "580.00",
+    "precio4": "570.00",
     "precio5": "560.00",
     "precio6": "550.00",
-    "precio": "610.00",
-    "precio1": "610.00",
+    "precio": "600.00",
+    "precio1": "600.00",
     "cantidad_disponible": 0
   },
   {
@@ -20294,14 +20294,14 @@
     "producto": "XIAOMI MI BOX S 3RA GENERACION",
     "minimo": 10,
     "estado": 1,
-    "precio2": "840.00",
-    "precio3": "835.00",
-    "precio4": "830.00",
-    "precio5": "818.00",
-    "precio6": "815.00",
-    "precio": "845.00",
-    "precio1": "845.00",
-    "cantidad_disponible": 21
+    "precio2": "805.00",
+    "precio3": "800.00",
+    "precio4": "795.00",
+    "precio5": "790.00",
+    "precio6": "785.00",
+    "precio": "810.00",
+    "precio1": "810.00",
+    "cantidad_disponible": 14
   },
   {
     "id": 1776,
@@ -20834,14 +20834,14 @@
     "producto": "PARLANTE BLUETOOTH JBL CHARGE 6",
     "minimo": 10,
     "estado": 1,
-    "precio2": "1515.00",
-    "precio3": "1510.00",
-    "precio4": "1505.00",
-    "precio5": "1465.00",
-    "precio6": "1460.00",
-    "precio": "1520.00",
-    "precio1": "1520.00",
-    "cantidad_disponible": 32
+    "precio2": "1480.00",
+    "precio3": "1470.00",
+    "precio4": "1460.00",
+    "precio5": "1425.00",
+    "precio6": "1420.00",
+    "precio": "1490.00",
+    "precio1": "1490.00",
+    "cantidad_disponible": 31
   },
   {
     "id": 1806,
@@ -21219,7 +21219,7 @@
     "precio6": "2.80",
     "precio": "4.00",
     "precio1": "4.00",
-    "cantidad_disponible": 385
+    "cantidad_disponible": 345
   },
   {
     "id": 1827,
@@ -21417,7 +21417,7 @@
     "precio6": "1410.00",
     "precio": "1550.00",
     "precio1": "1550.00",
-    "cantidad_disponible": 1
+    "cantidad_disponible": 0
   },
   {
     "id": 1838,
@@ -21705,7 +21705,7 @@
     "precio6": "630.00",
     "precio": "670.00",
     "precio1": "670.00",
-    "cantidad_disponible": 17
+    "cantidad_disponible": 16
   },
   {
     "id": 1854,
@@ -22112,13 +22112,13 @@
     "producto": "POWER BANK XIAOMI METAL MAGNETIC POWER BANK 5000MAH",
     "minimo": 10,
     "estado": 1,
-    "precio2": "355.00",
-    "precio3": "350.00",
-    "precio4": "345.00",
-    "precio5": "305.00",
-    "precio6": "300.00",
-    "precio": "360.00",
-    "precio1": "360.00",
+    "precio2": "335.00",
+    "precio3": "330.00",
+    "precio4": "325.00",
+    "precio5": "300.00",
+    "precio6": "295.00",
+    "precio": "340.00",
+    "precio1": "340.00",
     "cantidad_disponible": 0
   },
   {
@@ -22299,7 +22299,7 @@
     "precio6": "78.00",
     "precio": "145.00",
     "precio1": "145.00",
-    "cantidad_disponible": 13
+    "cantidad_disponible": 17
   },
   {
     "id": 1888,
@@ -22569,7 +22569,7 @@
     "precio6": "48.00",
     "precio": "100.00",
     "precio1": "100.00",
-    "cantidad_disponible": 17
+    "cantidad_disponible": 23
   },
   {
     "id": 1904,
@@ -22659,7 +22659,7 @@
     "precio6": "13.00",
     "precio": "30.00",
     "precio1": "30.00",
-    "cantidad_disponible": 187
+    "cantidad_disponible": 192
   },
   {
     "id": 1909,
@@ -22677,7 +22677,7 @@
     "precio6": "420.00",
     "precio": "450.00",
     "precio1": "450.00",
-    "cantidad_disponible": 5
+    "cantidad_disponible": 6
   },
   {
     "id": 1910,
@@ -23109,7 +23109,7 @@
     "precio6": "268.00",
     "precio": "325.00",
     "precio1": "325.00",
-    "cantidad_disponible": 1
+    "cantidad_disponible": 9
   },
   {
     "id": 1934,
@@ -23228,14 +23228,14 @@
     "producto": "IMPRESORA TERMICA PORTATIL RECARGABLE KNUP KP-1025",
     "minimo": 10,
     "estado": 1,
-    "precio2": "160.00",
-    "precio3": "155.00",
-    "precio4": "150.00",
-    "precio5": "129.00",
-    "precio6": "128.00",
-    "precio": "165.00",
-    "precio1": "165.00",
-    "cantidad_disponible": 0
+    "precio2": "175.00",
+    "precio3": "170.00",
+    "precio4": "165.00",
+    "precio5": "148.00",
+    "precio6": "140.00",
+    "precio": "180.00",
+    "precio1": "180.00",
+    "cantidad_disponible": 20
   },
   {
     "id": 1941,
@@ -23469,7 +23469,7 @@
     "precio6": "145.00",
     "precio": "180.00",
     "precio1": "180.00",
-    "cantidad_disponible": 26
+    "cantidad_disponible": 20
   },
   {
     "id": 1954,
@@ -23487,7 +23487,7 @@
     "precio6": "223.00",
     "precio": "270.00",
     "precio1": "270.00",
-    "cantidad_disponible": 18
+    "cantidad_disponible": 12
   },
   {
     "id": 1955,
@@ -23786,13 +23786,13 @@
     "producto": "PROYECTOR EPSON FLEX PORTABLE CO-W01 3000LM",
     "minimo": 10,
     "estado": 1,
-    "precio2": "4090.00",
-    "precio3": "4080.00",
-    "precio4": "4070.00",
+    "precio2": "4080.00",
+    "precio3": "4070.00",
+    "precio4": "4060.00",
     "precio5": "4030.00",
     "precio6": "4025.00",
-    "precio": "4100.00",
-    "precio1": "4100.00",
+    "precio": "4090.00",
+    "precio1": "4090.00",
     "cantidad_disponible": 6
   },
   {
@@ -23822,14 +23822,14 @@
     "producto": "PROYECTOR EPSON POWER LITE E20 1080x800 3400LM",
     "minimo": 10,
     "estado": 1,
-    "precio2": "4560.00",
-    "precio3": "4550.00",
-    "precio4": "4545.00",
+    "precio2": "4550.00",
+    "precio3": "4540.00",
+    "precio4": "4535.00",
     "precio5": "4515.00",
     "precio6": "4510.00",
-    "precio": "4570.00",
-    "precio1": "4570.00",
-    "cantidad_disponible": 2
+    "precio": "4560.00",
+    "precio1": "4560.00",
+    "cantidad_disponible": 1
   },
   {
     "id": 1975,
@@ -23858,13 +23858,13 @@
     "producto": "AUDIFONO BLUETOOTH REALME BUDS AIR6 PRO",
     "minimo": 10,
     "estado": 1,
-    "precio2": "505.00",
-    "precio3": "500.00",
-    "precio4": "495.00",
+    "precio2": "490.00",
+    "precio3": "480.00",
+    "precio4": "475.00",
     "precio5": "455.00",
     "precio6": "450.00",
-    "precio": "510.00",
-    "precio1": "510.00",
+    "precio": "500.00",
+    "precio1": "500.00",
     "cantidad_disponible": 0
   },
   {
@@ -23948,14 +23948,14 @@
     "producto": "MONITOR 2K XIAOMI 27 PULGADAS A27Qi 2026",
     "minimo": 10,
     "estado": 1,
-    "precio2": "1900.00",
-    "precio3": "1890.00",
-    "precio4": "1885.00",
-    "precio5": "1810.00",
-    "precio6": "1800.00",
-    "precio": "1910.00",
-    "precio1": "1910.00",
-    "cantidad_disponible": 0
+    "precio2": "1880.00",
+    "precio3": "1870.00",
+    "precio4": "1860.00",
+    "precio5": "1770.00",
+    "precio6": "1760.00",
+    "precio": "1890.00",
+    "precio1": "1890.00",
+    "cantidad_disponible": 3
   },
   {
     "id": 1982,
@@ -24765,7 +24765,7 @@
     "precio6": "428.00",
     "precio": "470.00",
     "precio1": "470.00",
-    "cantidad_disponible": 6
+    "cantidad_disponible": 4
   },
   {
     "id": 2027,
@@ -24830,13 +24830,13 @@
     "producto": "BARRA DE LUZ XIAOMI MAGNETIC READING LIGHT BAR GL",
     "minimo": 10,
     "estado": 1,
-    "precio2": "165.00",
-    "precio3": "160.00",
-    "precio4": "155.00",
+    "precio2": "155.00",
+    "precio3": "150.00",
+    "precio4": "145.00",
     "precio5": "140.00",
     "precio6": "138.00",
-    "precio": "170.00",
-    "precio1": "170.00",
+    "precio": "160.00",
+    "precio1": "160.00",
     "cantidad_disponible": 3
   },
   {
@@ -24848,13 +24848,13 @@
     "producto": "PURIFICADOR DE AGUA XIAOMI FAUCET WATER PURIFIER",
     "minimo": 10,
     "estado": 1,
-    "precio2": "310.00",
-    "precio3": "300.00",
-    "precio4": "290.00",
+    "precio2": "300.00",
+    "precio3": "290.00",
+    "precio4": "280.00",
     "precio5": "260.00",
     "precio6": "255.00",
-    "precio": "320.00",
-    "precio1": "320.00",
+    "precio": "310.00",
+    "precio1": "310.00",
     "cantidad_disponible": 7
   },
   {
@@ -24873,7 +24873,7 @@
     "precio6": "230.00",
     "precio": "275.00",
     "precio1": "275.00",
-    "cantidad_disponible": 17
+    "cantidad_disponible": 14
   },
   {
     "id": 2033,
@@ -25010,13 +25010,13 @@
     "producto": "NOTEBOOK DELL 5440 VP6RM 14 Core 7 16GB RAM / 512GB SSD W11PRO BLUE",
     "minimo": 10,
     "estado": 1,
-    "precio2": "7653.00",
-    "precio3": "7643.00",
-    "precio4": "7632.00",
-    "precio5": "7519.00",
-    "precio6": "7509.00",
-    "precio": "7663.00",
-    "precio1": "7663.00",
+    "precio2": "7090.00",
+    "precio3": "7080.00",
+    "precio4": "7070.00",
+    "precio5": "7000.00",
+    "precio6": "6990.00",
+    "precio": "7100.00",
+    "precio1": "7100.00",
     "cantidad_disponible": 4
   },
   {
@@ -25064,13 +25064,13 @@
     "producto": "CARGADOR XIAOMI POWER ADAPTER 22.5W TYPE-A",
     "minimo": 10,
     "estado": 1,
-    "precio2": "105.00",
-    "precio3": "100.00",
-    "precio4": "95.00",
-    "precio5": "70.00",
-    "precio6": "68.00",
-    "precio": "110.00",
-    "precio1": "110.00",
+    "precio2": "95.00",
+    "precio3": "90.00",
+    "precio4": "85.00",
+    "precio5": "67.00",
+    "precio6": "65.00",
+    "precio": "100.00",
+    "precio1": "100.00",
     "cantidad_disponible": 31
   },
   {
@@ -25287,7 +25287,7 @@
     "precio6": "82.00",
     "precio": "120.00",
     "precio1": "120.00",
-    "cantidad_disponible": 43
+    "cantidad_disponible": 38
   },
   {
     "id": 2056,
@@ -25377,7 +25377,7 @@
     "precio6": "11.00",
     "precio": "35.00",
     "precio1": "35.00",
-    "cantidad_disponible": 1
+    "cantidad_disponible": 0
   },
   {
     "id": 2061,
@@ -25413,7 +25413,7 @@
     "precio6": "1995.00",
     "precio": "2080.00",
     "precio1": "2080.00",
-    "cantidad_disponible": 1
+    "cantidad_disponible": 0
   },
   {
     "id": 2063,
@@ -25480,7 +25480,7 @@
     "estado": 1,
     "precio2": "195.00",
     "precio3": "190.00",
-    "precio4": "190.00",
+    "precio4": "185.00",
     "precio5": "155.00",
     "precio6": "150.00",
     "precio": "200.00",
@@ -25604,13 +25604,13 @@
     "producto": "NOTEBOOK HP i7 15-fd0274la 156 SPA I7-1355U 16RAM  512GB W11 GAMEPASS GO TECLADO ESPAÑOL",
     "minimo": 10,
     "estado": 1,
-    "precio2": "8364.00",
-    "precio3": "8353.00",
-    "precio4": "8343.00",
-    "precio5": "8240.00",
-    "precio6": "8230.00",
-    "precio": "8374.00",
-    "precio1": "8374.00",
+    "precio2": "7790.00",
+    "precio3": "7780.00",
+    "precio4": "7770.00",
+    "precio5": "7700.00",
+    "precio6": "7690.00",
+    "precio": "7800.00",
+    "precio1": "7800.00",
     "cantidad_disponible": 0
   },
   {
@@ -25622,13 +25622,13 @@
     "producto": "NOTEBOOK DELL 15255 4W04Y 15.6 RYZEN 5 7520U 16RAM 512GB SSD W11 SILVER TECLADO ESPAÑOL",
     "minimo": 10,
     "estado": 1,
-    "precio2": "6417.00",
-    "precio3": "6407.00",
-    "precio4": "6396.00",
-    "precio5": "6345.00",
-    "precio6": "6335.00",
-    "precio": "6427.00",
-    "precio1": "6427.00",
+    "precio2": "6190.00",
+    "precio3": "6180.00",
+    "precio4": "6170.00",
+    "precio5": "6130.00",
+    "precio6": "6120.00",
+    "precio": "6200.00",
+    "precio1": "6200.00",
     "cantidad_disponible": 1
   },
   {
@@ -25640,13 +25640,13 @@
     "producto": "NOTEBOOK DELL 15255 VYY17 RYZEN 7 7730 15.6 16RAM 1TB SSD W11 SILVER TECLADO ESPAÑOL",
     "minimo": 10,
     "estado": 1,
-    "precio2": "7962.00",
-    "precio3": "7952.00",
-    "precio4": "7941.00",
-    "precio5": "7880.00",
-    "precio6": "7869.00",
-    "precio": "7972.00",
-    "precio1": "7972.00",
+    "precio2": "7490.00",
+    "precio3": "7480.00",
+    "precio4": "7470.00",
+    "precio5": "7410.00",
+    "precio6": "7400.00",
+    "precio": "7500.00",
+    "precio1": "7500.00",
     "cantidad_disponible": 9
   },
   {
@@ -25701,7 +25701,7 @@
     "precio6": "15.00",
     "precio": "40.00",
     "precio1": "40.00",
-    "cantidad_disponible": 1
+    "cantidad_disponible": 0
   },
   {
     "id": 2079,
@@ -25863,7 +25863,7 @@
     "precio6": "66.00",
     "precio": "120.00",
     "precio1": "120.00",
-    "cantidad_disponible": 16
+    "cantidad_disponible": 15
   },
   {
     "id": 2088,
@@ -25899,7 +25899,7 @@
     "precio6": "70.00",
     "precio": "120.00",
     "precio1": "120.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 2
   },
   {
     "id": 2090,
@@ -25935,7 +25935,7 @@
     "precio6": "48.00",
     "precio": "75.00",
     "precio1": "75.00",
-    "cantidad_disponible": 7
+    "cantidad_disponible": 6
   },
   {
     "id": 2092,
@@ -26036,13 +26036,13 @@
     "producto": "MOUSE INALAMBRICO XIAOMI WIRELESS MOUSE LITE 2",
     "minimo": 10,
     "estado": 1,
-    "precio2": "165.00",
-    "precio3": "160.00",
-    "precio4": "155.00",
+    "precio2": "155.00",
+    "precio3": "150.00",
+    "precio4": "140.00",
     "precio5": "100.00",
     "precio6": "98.00",
-    "precio": "170.00",
-    "precio1": "170.00",
+    "precio": "160.00",
+    "precio1": "160.00",
     "cantidad_disponible": 4
   },
   {
@@ -26097,7 +26097,7 @@
     "precio6": "328.00",
     "precio": "380.00",
     "precio1": "380.00",
-    "cantidad_disponible": 31
+    "cantidad_disponible": 27
   },
   {
     "id": 2101,
@@ -26108,14 +26108,14 @@
     "producto": "IMPRESORA TERMICA TOMATE T-IM5002",
     "minimo": 10,
     "estado": 1,
-    "precio2": "215.00",
-    "precio3": "210.00",
-    "precio4": "205.00",
-    "precio5": "165.00",
-    "precio6": "160.00",
-    "precio": "220.00",
-    "precio1": "220.00",
-    "cantidad_disponible": 0
+    "precio2": "225.00",
+    "precio3": "220.00",
+    "precio4": "215.00",
+    "precio5": "195.00",
+    "precio6": "190.00",
+    "precio": "230.00",
+    "precio1": "230.00",
+    "cantidad_disponible": 5
   },
   {
     "id": 2102,
@@ -26205,7 +26205,7 @@
     "precio6": "35.00",
     "precio": "100.00",
     "precio1": "100.00",
-    "cantidad_disponible": 8
+    "cantidad_disponible": 7
   },
   {
     "id": 2107,
@@ -26223,7 +26223,7 @@
     "precio6": "195.00",
     "precio": "290.00",
     "precio1": "290.00",
-    "cantidad_disponible": 31
+    "cantidad_disponible": 30
   },
   {
     "id": 2108,
@@ -26547,7 +26547,7 @@
     "precio6": "145.00",
     "precio": "185.00",
     "precio1": "185.00",
-    "cantidad_disponible": 35
+    "cantidad_disponible": 33
   },
   {
     "id": 2126,
@@ -26565,7 +26565,7 @@
     "precio6": "318.00",
     "precio": "370.00",
     "precio1": "370.00",
-    "cantidad_disponible": 27
+    "cantidad_disponible": 26
   },
   {
     "id": 2127,
@@ -26835,7 +26835,7 @@
     "precio6": "95.00",
     "precio": "140.00",
     "precio1": "140.00",
-    "cantidad_disponible": 14
+    "cantidad_disponible": 13
   },
   {
     "id": 2142,
@@ -26882,13 +26882,13 @@
     "producto": "POWER BANK XIAOMI MAGNETICO 10000MAH 33W Y 15W INALAMBRICO",
     "minimo": 10,
     "estado": 1,
-    "precio2": "405.00",
-    "precio3": "400.00",
-    "precio4": "395.00",
-    "precio5": "348.00",
-    "precio6": "345.00",
-    "precio": "410.00",
-    "precio1": "410.00",
+    "precio2": "395.00",
+    "precio3": "390.00",
+    "precio4": "385.00",
+    "precio5": "345.00",
+    "precio6": "342.00",
+    "precio": "400.00",
+    "precio1": "400.00",
     "cantidad_disponible": 13
   },
   {
@@ -26961,7 +26961,7 @@
     "precio6": "42.00",
     "precio": "85.00",
     "precio1": "85.00",
-    "cantidad_disponible": 15
+    "cantidad_disponible": 14
   },
   {
     "id": 2149,
@@ -27296,13 +27296,13 @@
     "producto": "PARLANTE BLUETOOTH JBL GO 5",
     "minimo": 10,
     "estado": 1,
-    "precio2": "505.00",
-    "precio3": "500.00",
-    "precio4": "495.00",
-    "precio5": "465.00",
-    "precio6": "460.00",
-    "precio": "510.00",
-    "precio1": "510.00",
+    "precio2": "495.00",
+    "precio3": "490.00",
+    "precio4": "480.00",
+    "precio5": "450.00",
+    "precio6": "445.00",
+    "precio": "500.00",
+    "precio1": "500.00",
     "cantidad_disponible": 56
   },
   {
@@ -27314,13 +27314,13 @@
     "producto": "PARLANTE BLUETOOTH JBL PARTYBOX 520",
     "minimo": 10,
     "estado": 1,
-    "precio2": "6345.00",
-    "precio3": "6340.00",
-    "precio4": "6335.00",
-    "precio5": "6300.00",
-    "precio6": "6295.00",
-    "precio": "6350.00",
-    "precio1": "6350.00",
+    "precio2": "6190.00",
+    "precio3": "6180.00",
+    "precio4": "6170.00",
+    "precio5": "6140.00",
+    "precio6": "6130.00",
+    "precio": "6200.00",
+    "precio1": "6200.00",
     "cantidad_disponible": 3
   },
   {
@@ -27334,11 +27334,11 @@
     "estado": 1,
     "precio2": "7820.00",
     "precio3": "7810.00",
-    "precio4": "8000.00",
-    "precio5": "7955.00",
-    "precio6": "7950.00",
-    "precio": "8030.00",
-    "precio1": "8030.00",
+    "precio4": "7800.00",
+    "precio5": "7780.00",
+    "precio6": "7770.00",
+    "precio": "7830.00",
+    "precio1": "7830.00",
     "cantidad_disponible": 2
   },
   {
@@ -27375,7 +27375,7 @@
     "precio6": "102.00",
     "precio": "190.00",
     "precio1": "190.00",
-    "cantidad_disponible": 12
+    "cantidad_disponible": 11
   },
   {
     "id": 2173,
@@ -27411,7 +27411,7 @@
     "precio6": "97.00",
     "precio": "170.00",
     "precio1": "170.00",
-    "cantidad_disponible": 14
+    "cantidad_disponible": 13
   },
   {
     "id": 2175,
@@ -27447,7 +27447,7 @@
     "precio6": "95.00",
     "precio": "155.00",
     "precio1": "155.00",
-    "cantidad_disponible": 16
+    "cantidad_disponible": 22
   },
   {
     "id": 2177,
@@ -27602,14 +27602,14 @@
     "producto": "MI TV STICK XIAOMI FHD 2da GENERACION",
     "minimo": 10,
     "estado": 1,
-    "precio2": "555.00",
-    "precio3": "550.00",
-    "precio4": "545.00",
-    "precio5": "522.00",
-    "precio6": "520.00",
-    "precio": "560.00",
-    "precio1": "560.00",
-    "cantidad_disponible": 15
+    "precio2": "550.00",
+    "precio3": "545.00",
+    "precio4": "540.00",
+    "precio5": "515.00",
+    "precio6": "512.00",
+    "precio": "555.00",
+    "precio1": "555.00",
+    "cantidad_disponible": 12
   },
   {
     "id": 2186,
@@ -27638,13 +27638,13 @@
     "producto": "AUDIFONO BLUETOOTH REALME BUDS T500 PRO",
     "minimo": 10,
     "estado": 1,
-    "precio2": "430.00",
-    "precio3": "425.00",
-    "precio4": "420.00",
-    "precio5": "368.00",
-    "precio6": "365.00",
-    "precio": "435.00",
-    "precio1": "435.00",
+    "precio2": "390.00",
+    "precio3": "380.00",
+    "precio4": "370.00",
+    "precio5": "345.00",
+    "precio6": "340.00",
+    "precio": "400.00",
+    "precio1": "400.00",
     "cantidad_disponible": 1
   },
   {
@@ -27692,14 +27692,14 @@
     "producto": "POWER BANK XIAOMI CABLE INTEGRADO TIPO A DE 10000MAH 33W",
     "minimo": 10,
     "estado": 1,
-    "precio2": "305.00",
-    "precio3": "300.00",
-    "precio4": "295.00",
+    "precio2": "295.00",
+    "precio3": "290.00",
+    "precio4": "285.00",
     "precio5": "240.00",
-    "precio6": "238.00",
-    "precio": "310.00",
-    "precio1": "310.00",
-    "cantidad_disponible": 21
+    "precio6": "235.00",
+    "precio": "300.00",
+    "precio1": "300.00",
+    "cantidad_disponible": 20
   },
   {
     "id": 2191,
@@ -27710,13 +27710,13 @@
     "producto": "AUDIFONO BLUETOOTH XIAOMI REDMI BUDS 8 PRO",
     "minimo": 10,
     "estado": 1,
-    "precio2": "660.00",
-    "precio3": "655.00",
-    "precio4": "650.00",
-    "precio5": "630.00",
-    "precio6": "625.00",
-    "precio": "665.00",
-    "precio1": "665.00",
+    "precio2": "640.00",
+    "precio3": "635.00",
+    "precio4": "630.00",
+    "precio5": "610.00",
+    "precio6": "605.00",
+    "precio": "645.00",
+    "precio1": "645.00",
     "cantidad_disponible": 0
   },
   {
@@ -27807,7 +27807,7 @@
     "precio6": "28.00",
     "precio": "75.00",
     "precio1": "75.00",
-    "cantidad_disponible": 48
+    "cantidad_disponible": 41
   },
   {
     "id": 2197,
@@ -27825,7 +27825,7 @@
     "precio6": "45.00",
     "precio": "110.00",
     "precio1": "110.00",
-    "cantidad_disponible": 23
+    "cantidad_disponible": 14
   },
   {
     "id": 2198,
@@ -27836,14 +27836,14 @@
     "producto": "SMARTWATCH A CHIP SUPER AMOLED TOMATE T-TA0011",
     "minimo": 10,
     "estado": 1,
-    "precio2": "645.00",
-    "precio3": "640.00",
-    "precio4": "630.00",
-    "precio5": "600.00",
-    "precio6": "595.00",
-    "precio": "650.00",
-    "precio1": "650.00",
-    "cantidad_disponible": 64
+    "precio2": "625.00",
+    "precio3": "620.00",
+    "precio4": "615.00",
+    "precio5": "590.00",
+    "precio6": "585.00",
+    "precio": "630.00",
+    "precio1": "630.00",
+    "cantidad_disponible": 63
   },
   {
     "id": 2200,
@@ -27933,7 +27933,7 @@
     "precio6": "63.00",
     "precio": "110.00",
     "precio1": "110.00",
-    "cantidad_disponible": 6
+    "cantidad_disponible": 5
   },
   {
     "id": 2205,
@@ -27951,7 +27951,7 @@
     "precio6": "46.00",
     "precio": "100.00",
     "precio1": "100.00",
-    "cantidad_disponible": 1
+    "cantidad_disponible": 0
   },
   {
     "id": 2206,
@@ -27987,7 +27987,7 @@
     "precio6": "35.00",
     "precio": "95.00",
     "precio1": "95.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 1
   },
   {
     "id": 2208,
@@ -28005,7 +28005,7 @@
     "precio6": "118.00",
     "precio": "190.00",
     "precio1": "190.00",
-    "cantidad_disponible": 17
+    "cantidad_disponible": 15
   },
   {
     "id": 2209,
@@ -28023,7 +28023,7 @@
     "precio6": "45.00",
     "precio": "100.00",
     "precio1": "100.00",
-    "cantidad_disponible": 11
+    "cantidad_disponible": 19
   },
   {
     "id": 2210,
@@ -28059,7 +28059,7 @@
     "precio6": "56.00",
     "precio": "105.00",
     "precio1": "105.00",
-    "cantidad_disponible": 9
+    "cantidad_disponible": 12
   },
   {
     "id": 2212,
@@ -28095,7 +28095,7 @@
     "precio6": "83.00",
     "precio": "140.00",
     "precio1": "140.00",
-    "cantidad_disponible": 15
+    "cantidad_disponible": 13
   },
   {
     "id": 2214,
@@ -28178,14 +28178,14 @@
     "producto": "MONITOR FHD XIAOMI 23.8 PULGADAS A24i 2026",
     "minimo": 10,
     "estado": 1,
-    "precio2": "1230.00",
-    "precio3": "1220.00",
-    "precio4": "1210.00",
-    "precio5": "1150.00",
-    "precio6": "1140.00",
-    "precio": "1240.00",
-    "precio1": "1240.00",
-    "cantidad_disponible": 4
+    "precio2": "1190.00",
+    "precio3": "1180.00",
+    "precio4": "1170.00",
+    "precio5": "1130.00",
+    "precio6": "1120.00",
+    "precio": "1200.00",
+    "precio1": "1200.00",
+    "cantidad_disponible": 2
   },
   {
     "id": 2219,
@@ -28196,14 +28196,14 @@
     "producto": "MONITOR FHD XIAOMI 27 PULGADAS A27i 2026",
     "minimo": 10,
     "estado": 1,
-    "precio2": "1420.00",
-    "precio3": "1410.00",
-    "precio4": "1400.00",
-    "precio5": "1380.00",
-    "precio6": "1370.00",
-    "precio": "1430.00",
-    "precio1": "1430.00",
-    "cantidad_disponible": 2
+    "precio2": "1390.00",
+    "precio3": "1380.00",
+    "precio4": "1370.00",
+    "precio5": "1320.00",
+    "precio6": "1310.00",
+    "precio": "1400.00",
+    "precio1": "1400.00",
+    "cantidad_disponible": 1
   },
   {
     "id": 2220,
@@ -28250,13 +28250,13 @@
     "producto": "MOCHILA XIAOMI BUSINESS BACKPACK GL",
     "minimo": 10,
     "estado": 1,
-    "precio2": "930.00",
-    "precio3": "920.00",
-    "precio4": "910.00",
-    "precio5": "840.00",
-    "precio6": "835.00",
-    "precio": "940.00",
-    "precio1": "940.00",
+    "precio2": "830.00",
+    "precio3": "820.00",
+    "precio4": "810.00",
+    "precio5": "760.00",
+    "precio6": "755.00",
+    "precio": "840.00",
+    "precio1": "840.00",
     "cantidad_disponible": 4
   },
   {
@@ -28268,13 +28268,13 @@
     "producto": "MOCHILA XIAOMI ROLL TOP CASUAL BACKPACK GL",
     "minimo": 10,
     "estado": 1,
-    "precio2": "690.00",
-    "precio3": "680.00",
-    "precio4": "670.00",
-    "precio5": "605.00",
-    "precio6": "600.00",
-    "precio": "700.00",
-    "precio1": "700.00",
+    "precio2": "590.00",
+    "precio3": "580.00",
+    "precio4": "570.00",
+    "precio5": "545.00",
+    "precio6": "540.00",
+    "precio": "600.00",
+    "precio1": "600.00",
     "cantidad_disponible": 4
   },
   {
@@ -28286,13 +28286,13 @@
     "producto": "LICUADORA XIAOMI BLENDER EU",
     "minimo": 10,
     "estado": 1,
-    "precio2": "805.00",
-    "precio3": "800.00",
-    "precio4": "795.00",
-    "precio5": "750.00",
-    "precio6": "745.00",
-    "precio": "810.00",
-    "precio1": "810.00",
+    "precio2": "740.00",
+    "precio3": "730.00",
+    "precio4": "725.00",
+    "precio5": "690.00",
+    "precio6": "685.00",
+    "precio": "750.00",
+    "precio1": "750.00",
     "cantidad_disponible": 2
   },
   {
@@ -28304,13 +28304,13 @@
     "producto": "LICUADORA XIAOMI BLENDER PRO EU",
     "minimo": 10,
     "estado": 1,
-    "precio2": "995.00",
-    "precio3": "990.00",
-    "precio4": "985.00",
-    "precio5": "880.00",
-    "precio6": "875.00",
-    "precio": "1000.00",
-    "precio1": "1000.00",
+    "precio2": "920.00",
+    "precio3": "910.00",
+    "precio4": "900.00",
+    "precio5": "850.00",
+    "precio6": "845.00",
+    "precio": "930.00",
+    "precio1": "930.00",
     "cantidad_disponible": 1
   },
   {
@@ -28322,13 +28322,13 @@
     "producto": "FLASH XIAOMI USB OTG DUAL-INTERFACE 128GB",
     "minimo": 10,
     "estado": 1,
-    "precio2": "365.00",
-    "precio3": "360.00",
-    "precio4": "355.00",
+    "precio2": "355.00",
+    "precio3": "350.00",
+    "precio4": "345.00",
     "precio5": "325.00",
     "precio6": "320.00",
-    "precio": "370.00",
-    "precio1": "370.00",
+    "precio": "360.00",
+    "precio1": "360.00",
     "cantidad_disponible": 14
   },
   {
@@ -28340,13 +28340,13 @@
     "producto": "TOMA TODO XIAOMI TRITAN WATER BOTTLE",
     "minimo": 10,
     "estado": 1,
-    "precio2": "185.00",
-    "precio3": "180.00",
-    "precio4": "175.00",
-    "precio5": "130.00",
-    "precio6": "125.00",
-    "precio": "190.00",
-    "precio1": "190.00",
+    "precio2": "165.00",
+    "precio3": "160.00",
+    "precio4": "155.00",
+    "precio5": "125.00",
+    "precio6": "120.00",
+    "precio": "170.00",
+    "precio1": "170.00",
     "cantidad_disponible": 6
   },
   {
@@ -28358,13 +28358,13 @@
     "producto": "JARRA ELECTRICA XIAOMI SMART KETTLE 2 PRO EU",
     "minimo": 10,
     "estado": 1,
-    "precio2": "560.00",
-    "precio3": "555.00",
-    "precio4": "550.00",
-    "precio5": "515.00",
-    "precio6": "510.00",
-    "precio": "565.00",
-    "precio1": "565.00",
+    "precio2": "540.00",
+    "precio3": "535.00",
+    "precio4": "530.00",
+    "precio5": "490.00",
+    "precio6": "485.00",
+    "precio": "545.00",
+    "precio1": "545.00",
     "cantidad_disponible": 2
   },
   {
@@ -28394,13 +28394,13 @@
     "producto": "HUMIDIFICADOR DIFUSOR XIAOMI SMART SCENT DIFFUSER",
     "minimo": 10,
     "estado": 1,
-    "precio2": "265.00",
-    "precio3": "260.00",
-    "precio4": "255.00",
-    "precio5": "225.00",
-    "precio6": "220.00",
-    "precio": "270.00",
-    "precio1": "270.00",
+    "precio2": "255.00",
+    "precio3": "250.00",
+    "precio4": "245.00",
+    "precio5": "220.00",
+    "precio6": "215.00",
+    "precio": "260.00",
+    "precio1": "260.00",
     "cantidad_disponible": 7
   },
   {
@@ -28412,13 +28412,13 @@
     "producto": "JARRA ELECTRICA XIAOMI DOUBLE WALL ELECTRIC KETTLE S1",
     "minimo": 10,
     "estado": 1,
-    "precio2": "400.00",
-    "precio3": "395.00",
-    "precio4": "390.00",
-    "precio5": "365.00",
-    "precio6": "360.00",
-    "precio": "405.00",
-    "precio1": "405.00",
+    "precio2": "390.00",
+    "precio3": "380.00",
+    "precio4": "370.00",
+    "precio5": "360.00",
+    "precio6": "350.00",
+    "precio": "400.00",
+    "precio1": "400.00",
     "cantidad_disponible": 3
   },
   {
@@ -28430,13 +28430,13 @@
     "producto": "SMARTWATCH XIAOMI S5 46mm",
     "minimo": 10,
     "estado": 1,
-    "precio2": "1945.00",
-    "precio3": "1940.00",
-    "precio4": "1935.00",
-    "precio5": "1855.00",
-    "precio6": "1850.00",
-    "precio": "1950.00",
-    "precio1": "1950.00",
+    "precio2": "1845.00",
+    "precio3": "1840.00",
+    "precio4": "1835.00",
+    "precio5": "1800.00",
+    "precio6": "1790.00",
+    "precio": "1850.00",
+    "precio1": "1850.00",
     "cantidad_disponible": 1
   },
   {
@@ -28538,13 +28538,13 @@
     "producto": "LOCALIZADOR RASTREADOR XIAOMI TAG 4 PACK",
     "minimo": 10,
     "estado": 1,
-    "precio2": "525.00",
-    "precio3": "520.00",
-    "precio4": "515.00",
-    "precio5": "472.00",
-    "precio6": "470.00",
-    "precio": "530.00",
-    "precio1": "530.00",
+    "precio2": "505.00",
+    "precio3": "500.00",
+    "precio4": "495.00",
+    "precio5": "465.00",
+    "precio6": "460.00",
+    "precio": "510.00",
+    "precio1": "510.00",
     "cantidad_disponible": 4
   },
   {
@@ -28556,14 +28556,14 @@
     "producto": "SMARTWATCH XIAOMI REDMI WATCH 6 ACTIVE",
     "minimo": 10,
     "estado": 1,
-    "precio2": "475.00",
-    "precio3": "470.00",
-    "precio4": "465.00",
-    "precio5": "438.00",
-    "precio6": "435.00",
-    "precio": "480.00",
-    "precio1": "480.00",
-    "cantidad_disponible": 21
+    "precio2": "455.00",
+    "precio3": "450.00",
+    "precio4": "445.00",
+    "precio5": "425.00",
+    "precio6": "420.00",
+    "precio": "460.00",
+    "precio1": "460.00",
+    "cantidad_disponible": 20
   },
   {
     "id": 2240,
@@ -28574,13 +28574,13 @@
     "producto": "SMARTWATCH XIAOMI REDMI WATCH 6 LITE",
     "minimo": 10,
     "estado": 1,
-    "precio2": "695.00",
-    "precio3": "690.00",
-    "precio4": "685.00",
-    "precio5": "655.00",
-    "precio6": "650.00",
-    "precio": "700.00",
-    "precio1": "700.00",
+    "precio2": "675.00",
+    "precio3": "670.00",
+    "precio4": "665.00",
+    "precio5": "640.00",
+    "precio6": "635.00",
+    "precio": "680.00",
+    "precio1": "680.00",
     "cantidad_disponible": 20
   },
   {
@@ -28617,7 +28617,7 @@
     "precio6": "1540.00",
     "precio": "1630.00",
     "precio1": "1630.00",
-    "cantidad_disponible": 5
+    "cantidad_disponible": 4
   },
   {
     "id": 2243,
@@ -28635,7 +28635,7 @@
     "precio6": "68.00",
     "precio": "120.00",
     "precio1": "120.00",
-    "cantidad_disponible": 35
+    "cantidad_disponible": 27
   },
   {
     "id": 2244,
@@ -28646,13 +28646,13 @@
     "producto": "POWER BANK UGREEN ROBOT 30W 10000MAH",
     "minimo": 10,
     "estado": 1,
-    "precio2": "495.00",
-    "precio3": "490.00",
-    "precio4": "485.00",
+    "precio2": "485.00",
+    "precio3": "480.00",
+    "precio4": "470.00",
     "precio5": "438.00",
     "precio6": "435.00",
-    "precio": "500.00",
-    "precio1": "500.00",
+    "precio": "490.00",
+    "precio1": "490.00",
     "cantidad_disponible": 12
   },
   {
@@ -28671,7 +28671,7 @@
     "precio6": "360.00",
     "precio": "400.00",
     "precio1": "400.00",
-    "cantidad_disponible": 10
+    "cantidad_disponible": 9
   },
   {
     "id": 2246,
@@ -28690,5 +28690,95 @@
     "precio": "270.00",
     "precio1": "270.00",
     "cantidad_disponible": 9
+  },
+  {
+    "id": 2247,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6aa6eacc37061.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "codigo": "T-IM5004",
+    "producto": "IMPRESORA TERMICA ESTACIONAL TOMATE T-IM5004",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "195.00",
+    "precio3": "190.00",
+    "precio4": "185.00",
+    "precio5": "158.00",
+    "precio6": "155.00",
+    "precio": "200.00",
+    "precio1": "200.00",
+    "cantidad_disponible": 9
+  },
+  {
+    "id": 2248,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6aa6eb61495c6.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/default.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/default.png",
+    "codigo": "P1 LABEL PRINTER",
+    "producto": "IMPRESORA TERMICA PORTATIL BT Y WIFI P1 LABEL PRINTER",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "225.00",
+    "precio3": "220.00",
+    "precio4": "215.00",
+    "precio5": "190.00",
+    "precio6": "185.00",
+    "precio": "230.00",
+    "precio1": "230.00",
+    "cantidad_disponible": 11
+  },
+  {
+    "id": 2249,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6aa8ceb164da0.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/productos/6aa8ceb18bc58_2.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/productos/6aa8ceb1c6ec0_3.png",
+    "codigo": "SAS C108",
+    "producto": "CARGADOR RAPIDO PARA MOTOCICLETA 60W SAS C108",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "0.00",
+    "precio3": "0.00",
+    "precio4": "0.00",
+    "precio5": "0.00",
+    "precio6": "0.00",
+    "precio": "0.00",
+    "precio1": "0.00",
+    "cantidad_disponible": 0
+  },
+  {
+    "id": 2250,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6aa8d0477b688.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/productos/6aa8d0479fa64_2.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/productos/6aa8d047c5368_3.png",
+    "codigo": "LC922C-240W",
+    "producto": "CABLE PD TIPO C A TIPO C 240W 2 METROS SAS LC922C-240W",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "0.00",
+    "precio3": "0.00",
+    "precio4": "0.00",
+    "precio5": "0.00",
+    "precio6": "0.00",
+    "precio": "0.00",
+    "precio1": "0.00",
+    "cantidad_disponible": 0
+  },
+  {
+    "id": 2251,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6aa8d7c178d93.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/productos/6aa8d7c19becd_2.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/productos/6aa8d7c1c9fcc_3.png",
+    "codigo": "DS-18H",
+    "producto": "HUB USB TIPO C 8 EN 1 SAS DS-18H",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "0.00",
+    "precio3": "0.00",
+    "precio4": "0.00",
+    "precio5": "0.00",
+    "precio6": "0.00",
+    "precio": "0.00",
+    "precio1": "0.00",
+    "cantidad_disponible": 0
   }
 ]
