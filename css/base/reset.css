@@ -21,9 +21,10 @@ html,
 body {
   width: 100%;
   min-height: 100%;
-  background-color: #ffffff;
+  background-color: var(--bg-primary);
   overflow-x: hidden;
   scroll-behavior: smooth;
+  transition: background-color 0.25s ease;
 }
 
 ::selection {

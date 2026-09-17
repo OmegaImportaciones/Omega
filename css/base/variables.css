@@ -12,6 +12,9 @@
   --card-bg: #f5f5f7;
   --card-bg-strong: #ebebef;
 
+  /* Fondo translúcido con blur para navbars tipo "material" (iOS) */
+  --surface-blur: rgba(255, 255, 255, 0.78);
+
   /* =========================
      LABELS — iOS text colors (light)
   ========================= */
@@ -65,3 +68,59 @@
     border 0.18s ease;
 
 }
+
+
+/* =========================================================
+   MODO OSCURO — NEGRO REAL (AMOLED)
+   No es una "capa gris" tipo Facebook: el fondo y las
+   superficies son #000000 puro para que en pantallas OLED
+   los píxeles negros queden literalmente apagados. La
+   separación entre tarjetas/botones se logra con bordes y
+   overlays translúcidos blancos, no con grises intermedios.
+========================= */
+
+html[data-theme="dark"] {
+
+  /* SURFACE — negro puro, sin matices de gris */
+  --bg-primary: #000000;
+  --bg-elevated: #000000;
+  --bg-elevated-2: rgba(255, 255, 255, 0.06);
+  --bg-elevated-3: rgba(255, 255, 255, 0.1);
+
+  --card-bg: #000000;
+  --card-bg-strong: rgba(255, 255, 255, 0.08);
+
+  --surface-blur: rgba(0, 0, 0, 0.72);
+
+  /* LABELS — iOS text colors (dark) */
+  --text-primary: #ffffff;
+  --text-secondary: rgba(235, 235, 245, 0.6);
+  --text-tertiary: rgba(235, 235, 245, 0.3);
+
+  /* SEPARATORS — líneas, no rellenos */
+  --separator: rgba(255, 255, 255, 0.16);
+  --border-color: rgba(255, 255, 255, 0.14);
+  --border-hairline: rgba(255, 255, 255, 0.16);
+
+  --button-hover: rgba(255, 255, 255, 0.06);
+  --button-pressed: rgba(255, 255, 255, 0.1);
+
+  /* SYSTEM COLORS (paleta dark de iOS, más vívida sobre negro) */
+  --accent: #0a84ff;
+  --accent-soft: #409cff;
+  --accent-dim: rgba(10, 132, 255, 0.18);
+
+  --system-green: #30d158;
+  --system-red: #ff453a;
+  --system-orange: #ff9f0a;
+  --system-teal: #40c8e0;
+  --system-purple: #bf5af2;
+
+  /* SHADOWS — sobre negro puro una sombra negra es invisible;
+     usamos halos blancos muy tenues (borde) en su lugar. */
+  --shadow-soft: none;
+  --shadow-lift: 0 0 0 1px rgba(255, 255, 255, 0.07), 0 10px 24px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 24px rgba(10, 132, 255, 0.22);
+
+}
+

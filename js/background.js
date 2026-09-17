@@ -19,9 +19,10 @@ background.style.overflow = 'hidden';
 background.style.pointerEvents = 'none';
 background.style.zIndex = '0';
 
-// Blanco puro de base — el efecto de vida lo dan los glows pastel de abajo.
-background.style.backgroundColor = '#ffffff';
-background.style.background = '#ffffff';
+// El color base ya no se fuerza aquí: lo controla --bg-primary
+// (blanco en modo claro, negro puro en modo oscuro) mediante la
+// clase 'omega-bg', para que el toggle de tema también lo afecte.
+background.classList.add('omega-bg');
 
 document.body.prepend(background);
 

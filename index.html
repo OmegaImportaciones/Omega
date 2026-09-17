@@ -6,6 +6,19 @@
     <!-- META -->
     <meta charset="UTF-8" />
 
+    <!-- THEME INIT (evita parpadeo de tema equivocado al cargar) -->
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem('omega-theme') === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    var m = document.querySelector('meta[name="theme-color"]');
+                    if (m) m.setAttribute('content', '#000000');
+                }
+            } catch (e) { }
+        })();
+    </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
     <title>
@@ -106,6 +119,16 @@
 </head>
 
 <body class="has-fab">
+
+    <!-- THEME TOGGLE -->
+    <button id="themeToggleButton" class="theme-toggle" type="button" aria-pressed="false"
+        aria-label="Cambiar a modo oscuro">
+
+        <span class="theme-toggle-icon">
+            🌙
+        </span>
+
+    </button>
 
     <main class="container">
 
@@ -295,6 +318,9 @@
     </script>
 
     <script src="./js/catalogPreview.js">
+    </script>
+
+    <script src="./js/themeToggle.js">
     </script>
 
 </body>
