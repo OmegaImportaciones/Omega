@@ -201,7 +201,7 @@ function buildWhatsAppLink(product) {
 ${nombreParaMensaje}
 
 Precio Oferta Flash:
-Bs. ${product.precio5}
+Bs. ${product.precio6}
 
 Vi esta Oferta en su página web.
 ¿Sigue disponible?`;
@@ -254,7 +254,7 @@ function buildFlashCard(product) {
                 </span>
 
                 <span class="flash-price">
-                    Bs. ${product.precio5}
+                    Bs. ${product.precio6}
                 </span>
 
             </div>
