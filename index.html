@@ -101,11 +101,11 @@
 
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/global.css?v=2" />
+    <link rel="stylesheet" href="./css/global.css?v=3" />
 
 </head>
 
-<body>
+<body class="has-fab">
 
     <main class="container">
 
@@ -143,7 +143,7 @@
 
 
         <!-- FLASH OFFERS -->
-        <section id="flashSection">
+        <section class="carousel-section" id="flashSection">
 
             <div class="section-title">
 
@@ -153,10 +153,10 @@
 
 
             <!-- FLASH WRAPPER -->
-            <div id="flashWrapper">
+            <div class="carousel-wrapper" id="flashWrapper">
 
                 <!-- FLASH SLIDER -->
-                <div class="flash-slider" id="flashContainer">
+                <div class="carousel-track" id="flashContainer">
                 </div>
 
             </div>
@@ -164,123 +164,124 @@
         </section>
 
 
-        <!-- BUTTONS -->
-        <section class="buttons-container">
+        <!-- CATALOGO (PREVIEW) -->
+        <section class="carousel-section" id="catalogSection">
 
-            <!-- WHATSAPP -->
-            <a href="https://wa.me/59164216262?text=Hola,%20quiero%20información%20sobre%20sus%20productos"
-                target="_blank" rel="noopener noreferrer" class="main-button" onclick="
+            <div class="section-title">
+
+                🛒 Catálogo
+
+            </div>
+
+
+            <!-- CATALOG WRAPPER -->
+            <div class="carousel-wrapper" id="catalogWrapper">
+
+                <!-- CATALOG SLIDER -->
+                <div class="carousel-track" id="catalogContainer">
+                </div>
+
+            </div>
+
+
+            <!-- VER CATALOGO COMPLETO -->
+            <a href="./pages/catalogo.html" class="carousel-more-link" onclick="
                     gtag(
                         'event',
-                        'click_whatsapp',
+                        'click_ver_catalogo_completo',
                         {
                             page: 'index',
-                            button: 'whatsapp'
+                            button: 'ver_catalogo_completo'
                         }
                     );
                 ">
 
-                <img src="./img/w_logo.png" alt="WhatsApp" class="button-icon" draggable="false">
-
-                <span>
-                    WhatsApp
-                </span>
-
-            </a>
-
-
-            <!-- CATALOGO -->
-            <a href="./pages/catalogo.html" class="main-button" onclick="
-                    gtag(
-                        'event',
-                        'click_catalogo',
-                        {
-                            page: 'index',
-                            button: 'catalogo'
-                        }
-                    );
-                ">
-
-                <span class="emoji-icon">
-                    🛒
-                </span>
-
-                <span>
-                    Catálogo
-                </span>
-
-            </a>
-
-
-            <!-- TIKTOK -->
-            <a href="https://www.tiktok.com/@omegaimportaciones" target="_blank" rel="noopener noreferrer"
-                class="main-button" onclick="
-                    gtag(
-                        'event',
-                        'click_tiktok',
-                        {
-                            page: 'index',
-                            button: 'tiktok'
-                        }
-                    );
-                ">
-
-                <img src="./img/t_logo.png" alt="TikTok" class="button-icon" draggable="false">
-
-                <span>
-                    TikTok
-                </span>
-
-            </a>
-
-
-            <!-- FACEBOOK -->
-            <a href="https://www.facebook.com/share/1AATCSwqwf/?mibextid=wwXIfr" target="_blank"
-                rel="noopener noreferrer" class="main-button" onclick="
-                    gtag(
-                        'event',
-                        'click_facebook',
-                        {
-                            page: 'index',
-                            button: 'facebook'
-                        }
-                    );
-                ">
-
-                <img src="./img/f_logo.png" alt="Facebook" class="button-icon" draggable="false">
-
-                <span>
-                    Facebook
-                </span>
-
-            </a>
-
-
-            <!-- UBICACION -->
-            <a href="./pages/ubicacion.html" class="main-button" onclick="
-                    gtag(
-                        'event',
-                        'click_ubicacion',
-                        {
-                            page: 'index',
-                            button: 'ubicacion'
-                        }
-                    );
-                ">
-
-                <span class="emoji-icon">
-                    📍
-                </span>
-
-                <span>
-                    Cómo llegar
-                </span>
+                Ver catálogo completo →
 
             </a>
 
         </section>
 
     </main>
+
+
+    <!-- FLOATING ACTIONS -->
+    <div class="fab-stack" role="navigation" aria-label="Contacto y redes">
+
+        <!-- UBICACION -->
+        <a href="./pages/ubicacion.html" class="fab-button fab-location" aria-label="Cómo llegar" onclick="
+                gtag(
+                    'event',
+                    'click_ubicacion',
+                    {
+                        page: 'index',
+                        button: 'ubicacion'
+                    }
+                );
+            ">
+
+            <span class="fab-emoji">
+                📍
+            </span>
+
+        </a>
+
+
+        <!-- TIKTOK -->
+        <a href="https://www.tiktok.com/@omegaimportaciones" target="_blank" rel="noopener noreferrer"
+            class="fab-button fab-tiktok" aria-label="TikTok" onclick="
+                gtag(
+                    'event',
+                    'click_tiktok',
+                    {
+                        page: 'index',
+                        button: 'tiktok'
+                    }
+                );
+            ">
+
+            <img src="./img/t_logo.png" alt="" class="fab-icon" draggable="false">
+
+        </a>
+
+
+        <!-- FACEBOOK -->
+        <a href="https://www.facebook.com/share/1AATCSwqwf/?mibextid=wwXIfr" target="_blank"
+            rel="noopener noreferrer" class="fab-button fab-facebook" aria-label="Facebook" onclick="
+                gtag(
+                    'event',
+                    'click_facebook',
+                    {
+                        page: 'index',
+                        button: 'facebook'
+                    }
+                );
+            ">
+
+            <img src="./img/f_logo.png" alt="" class="fab-icon" draggable="false">
+
+        </a>
+
+
+        <!-- WHATSAPP -->
+        <a href="https://wa.me/59164216262?text=Hola,%20quiero%20información%20sobre%20sus%20productos"
+            target="_blank" rel="noopener noreferrer" class="fab-button fab-whatsapp" aria-label="WhatsApp"
+            onclick="
+                gtag(
+                    'event',
+                    'click_whatsapp',
+                    {
+                        page: 'index',
+                        button: 'whatsapp'
+                    }
+                );
+            ">
+
+            <img src="./img/w_logo.png" alt="" class="fab-icon" draggable="false">
+
+        </a>
+
+    </div>
 
 
     <!-- SCRIPTS -->
@@ -291,6 +292,9 @@
     </script>
 
     <script src="./js/flashOffers.js">
+    </script>
+
+    <script src="./js/catalogPreview.js">
     </script>
 
 </body>

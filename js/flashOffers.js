@@ -228,18 +228,18 @@ function buildFlashCard(product) {
         'noopener noreferrer';
 
     card.className =
-        'flash-card';
+        'carousel-card';
 
     card.innerHTML = `
 
         <img src="${product.imagen}"
             alt="${product.producto}"
-            class="flash-image"
+            class="carousel-image"
             loading="lazy">
 
-        <div class="flash-info">
+        <div class="carousel-info">
 
-            <span class="flash-tag">
+            <span class="carousel-tag">
                 ⚡ Oferta Flash
             </span>
 
@@ -247,19 +247,19 @@ function buildFlashCard(product) {
                 ${product.producto}
             </h3>
 
-            <div class="flash-prices">
+            <div class="carousel-prices">
 
-                <span class="flash-old-price">
+                <span class="carousel-old-price">
                     Bs. ${product.precio1}
                 </span>
 
-                <span class="flash-price">
+                <span class="carousel-price">
                     Bs. ${product.precio6}
                 </span>
 
             </div>
 
-            <span class="flash-contact">
+            <span class="carousel-contact">
                 Consultar disponibilidad
             </span>
 
