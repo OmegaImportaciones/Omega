@@ -169,7 +169,7 @@ async function loadProducts() {
 function createWhatsAppLink(product) {
 
     const price =
-        Number(product.precio5).toFixed(2);
+        Number(product.precio3).toFixed(2);
 
     const message =
         `Hola.
@@ -222,7 +222,7 @@ function createProductCardElement(product) {
             </h3>
 
             <p class="product-price">
-                Bs ${Number(product.precio5).toFixed(2)}
+                Bs ${Number(product.precio3).toFixed(2)}
             </p>
 
             <span class="product-contact">
