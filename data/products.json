@@ -87,7 +87,7 @@
     "precio6": "240.00",
     "precio": "270.00",
     "precio1": "270.00",
-    "cantidad_disponible": 7
+    "cantidad_disponible": 6
   },
   {
     "id": 12,
@@ -249,7 +249,7 @@
     "precio6": "113.00",
     "precio": "160.00",
     "precio1": "160.00",
-    "cantidad_disponible": 10
+    "cantidad_disponible": 9
   },
   {
     "id": 41,
@@ -321,7 +321,7 @@
     "precio6": "69.00",
     "precio": "120.00",
     "precio1": "120.00",
-    "cantidad_disponible": 39
+    "cantidad_disponible": 37
   },
   {
     "id": 45,
@@ -411,7 +411,7 @@
     "precio6": "210.00",
     "precio": "280.00",
     "precio1": "280.00",
-    "cantidad_disponible": 19
+    "cantidad_disponible": 18
   },
   {
     "id": 56,
@@ -1851,7 +1851,7 @@
     "precio6": "31.00",
     "precio": "31.00",
     "precio1": "31.00",
-    "cantidad_disponible": 1
+    "cantidad_disponible": 0
   },
   {
     "id": 224,
@@ -2679,7 +2679,7 @@
     "precio6": "40.00",
     "precio": "89.00",
     "precio1": "89.00",
-    "cantidad_disponible": 1
+    "cantidad_disponible": 0
   },
   {
     "id": 303,
@@ -3075,7 +3075,7 @@
     "precio6": "170.00",
     "precio": "210.00",
     "precio1": "210.00",
-    "cantidad_disponible": 22
+    "cantidad_disponible": 21
   },
   {
     "id": 347,
@@ -3507,7 +3507,7 @@
     "precio6": "25.00",
     "precio": "60.00",
     "precio1": "60.00",
-    "cantidad_disponible": 5
+    "cantidad_disponible": 3
   },
   {
     "id": 411,
@@ -3615,7 +3615,7 @@
     "precio6": "260.00",
     "precio": "315.00",
     "precio1": "315.00",
-    "cantidad_disponible": 4
+    "cantidad_disponible": 6
   },
   {
     "id": 426,
@@ -3687,7 +3687,7 @@
     "precio6": "25.00",
     "precio": "50.00",
     "precio1": "50.00",
-    "cantidad_disponible": 26
+    "cantidad_disponible": 22
   },
   {
     "id": 436,
@@ -4317,7 +4317,7 @@
     "precio6": "200.00",
     "precio": "255.00",
     "precio1": "255.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 1
   },
   {
     "id": 526,
@@ -5001,7 +5001,7 @@
     "precio6": "65.00",
     "precio": "120.00",
     "precio1": "120.00",
-    "cantidad_disponible": 5
+    "cantidad_disponible": 4
   },
   {
     "id": 699,
@@ -5433,7 +5433,7 @@
     "precio6": "220.00",
     "precio": "265.00",
     "precio1": "265.00",
-    "cantidad_disponible": 16
+    "cantidad_disponible": 15
   },
   {
     "id": 750,
@@ -5847,7 +5847,7 @@
     "precio6": "17.00",
     "precio": "40.00",
     "precio1": "40.00",
-    "cantidad_disponible": 68
+    "cantidad_disponible": 67
   },
   {
     "id": 797,
@@ -6801,7 +6801,7 @@
     "precio6": "247.00",
     "precio": "285.00",
     "precio1": "285.00",
-    "cantidad_disponible": 17
+    "cantidad_disponible": 16
   },
   {
     "id": 878,
@@ -6963,7 +6963,7 @@
     "precio6": "100.00",
     "precio": "140.00",
     "precio1": "140.00",
-    "cantidad_disponible": 5
+    "cantidad_disponible": 4
   },
   {
     "id": 889,
@@ -7863,7 +7863,7 @@
     "precio6": "22.00",
     "precio": "50.00",
     "precio1": "50.00",
-    "cantidad_disponible": 4
+    "cantidad_disponible": 3
   },
   {
     "id": 967,
@@ -11049,7 +11049,7 @@
     "precio6": "310.00",
     "precio": "350.00",
     "precio1": "350.00",
-    "cantidad_disponible": 14
+    "cantidad_disponible": 16
   },
   {
     "id": 1210,
@@ -11445,7 +11445,7 @@
     "precio6": "60.00",
     "precio": "115.00",
     "precio1": "115.00",
-    "cantidad_disponible": 10
+    "cantidad_disponible": 9
   },
   {
     "id": 1234,
@@ -11787,7 +11787,7 @@
     "precio6": "30.00",
     "precio": "60.00",
     "precio1": "60.00",
-    "cantidad_disponible": 27
+    "cantidad_disponible": 7
   },
   {
     "id": 1263,
@@ -12759,7 +12759,7 @@
     "precio6": "1080.00",
     "precio": "1140.00",
     "precio1": "1140.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 2
   },
   {
     "id": 1330,
@@ -13245,7 +13245,7 @@
     "precio6": "44.00",
     "precio": "100.00",
     "precio1": "100.00",
-    "cantidad_disponible": 7
+    "cantidad_disponible": 6
   },
   {
     "id": 1364,
@@ -16197,7 +16197,7 @@
     "precio6": "210.00",
     "precio": "250.00",
     "precio1": "250.00",
-    "cantidad_disponible": 8
+    "cantidad_disponible": 7
   },
   {
     "id": 1544,
@@ -16431,7 +16431,7 @@
     "precio6": "445.00",
     "precio": "490.00",
     "precio1": "490.00",
-    "cantidad_disponible": 12
+    "cantidad_disponible": 10
   },
   {
     "id": 1557,
@@ -16737,7 +16737,7 @@
     "precio6": "120.00",
     "precio": "170.00",
     "precio1": "170.00",
-    "cantidad_disponible": 0
+    "cantidad_disponible": 1
   },
   {
     "id": 1575,
@@ -18663,7 +18663,7 @@
     "precio6": "80.00",
     "precio": "110.00",
     "precio1": "110.00",
-    "cantidad_disponible": 7
+    "cantidad_disponible": 6
   },
   {
     "id": 1684,
@@ -18681,7 +18681,7 @@
     "precio6": "225.00",
     "precio": "280.00",
     "precio1": "280.00",
-    "cantidad_disponible": 4
+    "cantidad_disponible": 3
   },
   {
     "id": 1685,
@@ -18843,7 +18843,7 @@
     "precio6": "30.00",
     "precio": "75.00",
     "precio1": "75.00",
-    "cantidad_disponible": 19
+    "cantidad_disponible": 18
   },
   {
     "id": 1694,
@@ -20301,7 +20301,7 @@
     "precio6": "825.00",
     "precio": "850.00",
     "precio1": "850.00",
-    "cantidad_disponible": 5
+    "cantidad_disponible": 3
   },
   {
     "id": 1776,
@@ -20841,7 +20841,7 @@
     "precio6": "1445.00",
     "precio": "1500.00",
     "precio1": "1500.00",
-    "cantidad_disponible": 24
+    "cantidad_disponible": 21
   },
   {
     "id": 1806,
@@ -21111,7 +21111,7 @@
     "precio6": "870.00",
     "precio": "960.00",
     "precio1": "960.00",
-    "cantidad_disponible": 8
+    "cantidad_disponible": 7
   },
   {
     "id": 1821,
@@ -21975,7 +21975,7 @@
     "precio6": "105.00",
     "precio": "140.00",
     "precio1": "140.00",
-    "cantidad_disponible": 1
+    "cantidad_disponible": 0
   },
   {
     "id": 1869,
@@ -22659,7 +22659,7 @@
     "precio6": "13.00",
     "precio": "30.00",
     "precio1": "30.00",
-    "cantidad_disponible": 188
+    "cantidad_disponible": 187
   },
   {
     "id": 1909,
@@ -22821,7 +22821,7 @@
     "precio6": "415.00",
     "precio": "450.00",
     "precio1": "450.00",
-    "cantidad_disponible": 8
+    "cantidad_disponible": 11
   },
   {
     "id": 1918,
@@ -23109,7 +23109,7 @@
     "precio6": "263.00",
     "precio": "300.00",
     "precio1": "300.00",
-    "cantidad_disponible": 1
+    "cantidad_disponible": 0
   },
   {
     "id": 1934,
@@ -23235,7 +23235,7 @@
     "precio6": "140.00",
     "precio": "170.00",
     "precio1": "170.00",
-    "cantidad_disponible": 17
+    "cantidad_disponible": 13
   },
   {
     "id": 1941,
@@ -25053,7 +25053,7 @@
     "precio6": "225.00",
     "precio": "255.00",
     "precio1": "255.00",
-    "cantidad_disponible": 4
+    "cantidad_disponible": 11
   },
   {
     "id": 2043,
@@ -25341,7 +25341,7 @@
     "precio6": "230.00",
     "precio": "260.00",
     "precio1": "260.00",
-    "cantidad_disponible": 31
+    "cantidad_disponible": 29
   },
   {
     "id": 2059,
@@ -25557,7 +25557,7 @@
     "precio6": "23.00",
     "precio": "50.00",
     "precio1": "50.00",
-    "cantidad_disponible": 20
+    "cantidad_disponible": 32
   },
   {
     "id": 2071,
@@ -25935,7 +25935,7 @@
     "precio6": "48.00",
     "precio": "75.00",
     "precio1": "75.00",
-    "cantidad_disponible": 2
+    "cantidad_disponible": 1
   },
   {
     "id": 2092,
@@ -26025,7 +26025,7 @@
     "precio6": "11590.00",
     "precio": "11780.00",
     "precio1": "11780.00",
-    "cantidad_disponible": 0
+    "cantidad_disponible": 1
   },
   {
     "id": 2097,
@@ -26097,7 +26097,7 @@
     "precio6": "325.00",
     "precio": "370.00",
     "precio1": "370.00",
-    "cantidad_disponible": 25
+    "cantidad_disponible": 24
   },
   {
     "id": 2101,
@@ -26115,7 +26115,7 @@
     "precio6": "185.00",
     "precio": "220.00",
     "precio1": "220.00",
-    "cantidad_disponible": 4
+    "cantidad_disponible": 3
   },
   {
     "id": 2102,
@@ -26331,7 +26331,7 @@
     "precio6": "65.00",
     "precio": "110.00",
     "precio1": "110.00",
-    "cantidad_disponible": 50
+    "cantidad_disponible": 47
   },
   {
     "id": 2114,
@@ -26547,7 +26547,7 @@
     "precio6": "145.00",
     "precio": "185.00",
     "precio1": "185.00",
-    "cantidad_disponible": 25
+    "cantidad_disponible": 22
   },
   {
     "id": 2126,
@@ -26925,7 +26925,7 @@
     "precio6": "290.00",
     "precio": "350.00",
     "precio1": "350.00",
-    "cantidad_disponible": 9
+    "cantidad_disponible": 8
   },
   {
     "id": 2147,
@@ -27177,7 +27177,7 @@
     "precio6": "158.00",
     "precio": "200.00",
     "precio1": "200.00",
-    "cantidad_disponible": 3
+    "cantidad_disponible": 2
   },
   {
     "id": 2162,
@@ -27303,7 +27303,7 @@
     "precio6": "450.00",
     "precio": "490.00",
     "precio1": "490.00",
-    "cantidad_disponible": 46
+    "cantidad_disponible": 45
   },
   {
     "id": 2169,
@@ -27447,7 +27447,7 @@
     "precio6": "95.00",
     "precio": "155.00",
     "precio1": "155.00",
-    "cantidad_disponible": 22
+    "cantidad_disponible": 21
   },
   {
     "id": 2177,
@@ -27501,7 +27501,7 @@
     "precio6": "45.00",
     "precio": "100.00",
     "precio1": "100.00",
-    "cantidad_disponible": 6
+    "cantidad_disponible": 5
   },
   {
     "id": 2180,
@@ -27699,7 +27699,7 @@
     "precio6": "250.00",
     "precio": "310.00",
     "precio1": "310.00",
-    "cantidad_disponible": 13
+    "cantidad_disponible": 12
   },
   {
     "id": 2191,
@@ -28095,7 +28095,7 @@
     "precio6": "83.00",
     "precio": "140.00",
     "precio1": "140.00",
-    "cantidad_disponible": 23
+    "cantidad_disponible": 22
   },
   {
     "id": 2214,
@@ -28401,7 +28401,7 @@
     "precio6": "220.00",
     "precio": "260.00",
     "precio1": "260.00",
-    "cantidad_disponible": 7
+    "cantidad_disponible": 6
   },
   {
     "id": 2231,
@@ -28455,7 +28455,7 @@
     "precio6": "87.00",
     "precio": "145.00",
     "precio1": "145.00",
-    "cantidad_disponible": 17
+    "cantidad_disponible": 16
   },
   {
     "id": 2234,
@@ -28545,7 +28545,7 @@
     "precio6": "460.00",
     "precio": "510.00",
     "precio1": "510.00",
-    "cantidad_disponible": 1
+    "cantidad_disponible": 0
   },
   {
     "id": 2239,
@@ -28563,7 +28563,7 @@
     "precio6": "430.00",
     "precio": "470.00",
     "precio1": "470.00",
-    "cantidad_disponible": 10
+    "cantidad_disponible": 6
   },
   {
     "id": 2240,
@@ -28581,7 +28581,7 @@
     "precio6": "640.00",
     "precio": "680.00",
     "precio1": "680.00",
-    "cantidad_disponible": 19
+    "cantidad_disponible": 16
   },
   {
     "id": 2241,
@@ -28707,7 +28707,7 @@
     "precio6": "155.00",
     "precio": "190.00",
     "precio1": "190.00",
-    "cantidad_disponible": 8
+    "cantidad_disponible": 14
   },
   {
     "id": 2248,
@@ -28869,7 +28869,7 @@
     "precio6": "100.00",
     "precio": "160.00",
     "precio1": "160.00",
-    "cantidad_disponible": 6
+    "cantidad_disponible": 3
   },
   {
     "id": 2257,
@@ -28887,7 +28887,7 @@
     "precio6": "100.00",
     "precio": "140.00",
     "precio1": "140.00",
-    "cantidad_disponible": 20
+    "cantidad_disponible": 0
   },
   {
     "id": 2258,
@@ -28905,7 +28905,7 @@
     "precio6": "54.00",
     "precio": "85.00",
     "precio1": "85.00",
-    "cantidad_disponible": 50
+    "cantidad_disponible": 49
   },
   {
     "id": 2259,
@@ -29022,6 +29022,78 @@
     "imagen3": "https://apiback.aswin-smart.com/images/productos/6ab324a4ac249_3.png",
     "codigo": "LS602",
     "producto": "CABLE TIPO C DE 2 METRO SAS LS602",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "0.00",
+    "precio3": "0.00",
+    "precio4": "0.00",
+    "precio5": "0.00",
+    "precio6": "0.00",
+    "precio": "0.00",
+    "precio1": "0.00",
+    "cantidad_disponible": 0
+  },
+  {
+    "id": 2266,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6abc54335bcd9.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/productos/6abc54337d7ed_2.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/productos/6abc5433afa7b_3.png",
+    "codigo": "LS341",
+    "producto": "CABLE TIPO C DE 1 METRO DE 50W SAS LS341",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "0.00",
+    "precio3": "0.00",
+    "precio4": "0.00",
+    "precio5": "0.00",
+    "precio6": "0.00",
+    "precio": "0.00",
+    "precio1": "0.00",
+    "cantidad_disponible": 0
+  },
+  {
+    "id": 2267,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6abc572eb8fee.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/productos/6abc572ee187a_2.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/productos/6abc572f15540_3.png",
+    "codigo": "SAS LC901c",
+    "producto": "CABLE PD TIPO C A TIPO C DE 1 METRO 65W SAS LC901c",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "0.00",
+    "precio3": "0.00",
+    "precio4": "0.00",
+    "precio5": "0.00",
+    "precio6": "0.00",
+    "precio": "0.00",
+    "precio1": "0.00",
+    "cantidad_disponible": 0
+  },
+  {
+    "id": 2268,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6abc5a2ca6166.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/productos/6abc5a2cdee6b_2.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/productos/6abc5a2d15df9_3.png",
+    "codigo": "SAS LC441c",
+    "producto": "CABLE PD TIPO C A TIPO C DE 1 METRO 65W SAS LC441c",
+    "minimo": 10,
+    "estado": 1,
+    "precio2": "0.00",
+    "precio3": "0.00",
+    "precio4": "0.00",
+    "precio5": "0.00",
+    "precio6": "0.00",
+    "precio": "0.00",
+    "precio1": "0.00",
+    "cantidad_disponible": 0
+  },
+  {
+    "id": 2269,
+    "imagen": "https://apiback.aswin-smart.com/images/productos/6abc5dcc5b3e8.png",
+    "imagen2": "https://apiback.aswin-smart.com/images/productos/6abc5d63a0a852.png",
+    "imagen3": "https://apiback.aswin-smart.com/images/productos/6abc5cb7cb289_3.png",
+    "codigo": "SAS Y6-1",
+    "producto": "BARRA DE LUZ MAGNETICA RECARGABLE CON SENSOR DE MOVIMIENTO SAS Y6-1",
     "minimo": 10,
     "estado": 1,
     "precio2": "0.00",
