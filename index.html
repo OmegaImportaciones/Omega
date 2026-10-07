@@ -3,325 +3,179 @@
 
 <head>
 
-    <!-- META -->
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
 
-    <!-- THEME INIT (evita parpadeo de tema equivocado al cargar) -->
+    <!-- Tema inicial (evita parpadeo) -->
     <script>
         (function () {
             try {
                 if (localStorage.getItem('omega-theme') === 'dark') {
                     document.documentElement.setAttribute('data-theme', 'dark');
-                    var m = document.querySelector('meta[name="theme-color"]');
-                    if (m) m.setAttribute('content', '#000000');
                 }
             } catch (e) { }
         })();
     </script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <title>
-        OMEGA IMPORTACIONES
-    </title>
+    <title>Omega Importaciones | Tienda de tecnología en La Paz</title>
 
-    <meta name="description" content="Tecnología, gadgets y accesorios premium." />
+    <meta name="description" content="Audífonos, parlantes, cargadores, cámaras y más. Tienda física en La Paz, delivery y envíos nacionales. Arma tu pedido y confírmalo por WhatsApp.">
+    <meta name="theme-color" content="#e8ebee">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://omegaimportaciones.github.io/Omega/">
 
-    <meta name="theme-color" content="#ffffff" />
-
-    <meta name="robots" content="index, follow" />
-
-
-    <!-- CANONICAL -->
-    <link rel="canonical" href="https://omegaimportaciones.github.io/Omega/" />
-
-
-    <!-- OPEN GRAPH -->
-    <meta property="og:title" content="OMEGA IMPORTACIONES">
-
-    <meta property="og:description" content="Tecnología, gadgets y accesorios premium.">
-
+    <!-- Open Graph -->
+    <meta property="og:title" content="Omega Importaciones | Tienda de tecnología en La Paz">
+    <meta property="og:description" content="Audífonos, parlantes, cargadores, cámaras y más. Tienda física en La Paz, delivery y envíos nacionales. Arma tu pedido y confírmalo por WhatsApp.">
     <meta property="og:image" content="https://omegaimportaciones.github.io/Omega/img/logo.png">
-
     <meta property="og:url" content="https://omegaimportaciones.github.io/Omega/">
-
-    <meta property="og:site_name" content="OMEGA IMPORTACIONES">
-
+    <meta property="og:site_name" content="Omega Importaciones">
     <meta property="og:type" content="website">
-
     <meta property="og:locale" content="es_BO">
-
-
-    <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image">
 
-    <meta name="twitter:title" content="OMEGA IMPORTACIONES">
-
-    <meta name="twitter:description" content="Tecnología, gadgets y accesorios premium.">
-
-    <meta name="twitter:image" content="https://omegaimportaciones.github.io/Omega/img/logo.png">
-
-
-    <!-- FAVICON -->
     <link rel="icon" href="./img/favicon.png" type="image/png">
 
-
-    <!-- PRELOAD -->
-    <link rel="preload" as="image" href="./img/logo.png">
-
-
-    <!-- GOOGLE ANALYTICS -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNVK91HBNP">
-    </script>
-
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNVK91HBNP"></script>
     <script>
-
-        window.dataLayer =
-            window.dataLayer || [];
-
-        function gtag() {
-
-            dataLayer.push(arguments);
-
-        }
-
-        gtag(
-            'js',
-            new Date()
-        );
-
-        gtag(
-            'config',
-            'G-PNVK91HBNP',
-            {
-                page_title:
-                    document.title,
-
-                page_location:
-                    window.location.href
-            }
-        );
-
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-PNVK91HBNP');
     </script>
 
-
-    <!-- FONTS -->
+    <!-- Tipografías: Unbounded (títulos y precios) + Manrope (texto) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/global.css?v=3" />
+    <link rel="stylesheet" href="./css/main.css?v=4">
 
 </head>
 
-<body class="has-fab">
+<body data-base="./" data-page="home">
 
-    <!-- THEME TOGGLE -->
-    <button id="themeToggleButton" class="theme-toggle" type="button" aria-pressed="false"
-        aria-label="Cambiar a modo oscuro">
+    <main id="main">
 
-        <span class="theme-toggle-icon">
-            🌙
-        </span>
-
-    </button>
-
-    <main class="container">
-
-        <!-- LOGO -->
-        <div class="logo-frame">
-            <img src="./img/logo.png" alt="Omega Importaciones" class="logo" draggable="false">
-        </div>
-
-
-        <!-- OPEN IN BROWSER -->
-        <section id="openBrowserContainer">
-
-            <button id="openBrowserButton" class="main-button" onclick="
-                    gtag(
-                        'event',
-                        'click_open_browser',
-                        {
-                            page: 'index',
-                            button: 'open_browser'
-                        }
-                    );
-                ">
-
-                <span class="emoji-icon">
-                    🌐
-                </span>
-
-                <span>
-                    Abrir en navegador
-                </span>
-
-            </button>
-
+        <!-- HERO: la tienda como vitrina -->
+        <section class="hero">
+            <div class="hero-copy">
+                <h1>Tecnología importada, en stock y lista para llevar.</h1>
+                <p class="lead">Elige tus productos, arma tu pedido y confírmalo por WhatsApp. Lo recoges en nuestra tienda de La Paz o te lo enviamos.</p>
+                <div class="hero-actions">
+                    <a class="button button--solid" href="./pages/catalogo.html">Ver la tienda</a>
+                    <a class="button button--ghost" href="./pages/ubicacion.html">Cómo llegar</a>
+                </div>
+                <ul class="facts">
+                    <li><span class="fact-icon" data-icon="pin"></span>Tienda física en Av. Buenos Aires</li>
+                    <li><span class="fact-icon" data-icon="truck"></span>Delivery en La Paz y envíos nacionales</li>
+                    <li><span class="fact-icon" data-icon="qr"></span>Pago con QR o transferencia</li>
+                    <li><span class="fact-icon" data-icon="shield"></span>Productos con garantía</li>
+                </ul>
+            </div>
+            <div class="vitrina" id="vitrina" aria-label="Productos destacados"></div>
         </section>
 
+        <p class="notice" id="loadError" hidden>No pudimos cargar los productos. Revisa tu conexión y recarga la página.</p>
 
-        <!-- FLASH OFFERS -->
-        <section class="carousel-section" id="flashSection">
-
-            <div class="section-title">
-
-                ⚡ Ofertas Flash
-
-            </div>
-
-
-            <!-- FLASH WRAPPER -->
-            <div class="carousel-wrapper" id="flashWrapper">
-
-                <!-- FLASH SLIDER -->
-                <div class="carousel-track" id="flashContainer">
+        <!-- OFERTAS (solo con campaña activa) -->
+        <section class="section section--offers" id="ofertas" hidden>
+            <div class="section-head">
+                <div>
+                    <h2>Ofertas de hoy</h2>
+                    <p>Precios rebajados mientras dure el stock.</p>
                 </div>
-
+                <a class="section-link" href="./pages/catalogo.html?ofertas=1">Ver todas</a>
             </div>
-
+            <div class="rail"></div>
         </section>
 
-
-        <!-- CATALOGO (PREVIEW) -->
-        <section class="carousel-section" id="catalogSection">
-
-            <div class="section-title">
-
-                🛒 Catálogo
-
+        <!-- CATEGORÍAS -->
+        <section class="section">
+            <div class="section-head">
+                <h2>Compra por categoría</h2>
+                <a class="section-link" href="./pages/catalogo.html">Ver todas</a>
             </div>
+            <div class="category-grid" id="categoryGrid"></div>
+        </section>
 
-
-            <!-- CATALOG WRAPPER -->
-            <div class="carousel-wrapper" id="catalogWrapper">
-
-                <!-- CATALOG SLIDER -->
-                <div class="carousel-track" id="catalogContainer">
+        <!-- RECIÉN LLEGADOS -->
+        <section class="section" id="nuevos" hidden>
+            <div class="section-head">
+                <div>
+                    <h2>Recién llegados</h2>
+                    <p>Lo último que entró a la tienda.</p>
                 </div>
-
+                <a class="section-link" href="./pages/catalogo.html">Ver tienda</a>
             </div>
+            <div class="rail"></div>
+        </section>
 
+        <!-- ELEGIDOS DEL DÍA -->
+        <section class="section">
+            <div class="section-head">
+                <div>
+                    <h2>Elegidos de hoy</h2>
+                    <p>Una selección distinta cada día.</p>
+                </div>
+            </div>
+            <div class="product-grid" id="dailyGrid"></div>
+            <a class="button button--ghost button--center" href="./pages/catalogo.html"><span>Ver los <span data-total-products>…</span> productos</span></a>
+        </section>
 
-            <!-- VER CATALOGO COMPLETO -->
-            <a href="./pages/catalogo.html" class="carousel-more-link" onclick="
-                    gtag(
-                        'event',
-                        'click_ver_catalogo_completo',
-                        {
-                            page: 'index',
-                            button: 'ver_catalogo_completo'
-                        }
-                    );
-                ">
+        <!-- CÓMO COMPRAR (es una secuencia real: por eso va numerado) -->
+        <section class="section how">
+            <h2>Así compras en Omega</h2>
+            <ol class="steps">
+                <li><strong>Elige</strong><span>Busca o recorre las categorías y agrega lo que quieras a tu pedido.</span></li>
+                <li><strong>Envía tu pedido</strong><span>Un solo mensaje de WhatsApp con productos, cantidades y total.</span></li>
+                <li><strong>Confirmamos</strong><span>Te respondemos con disponibilidad y los datos para pagar por QR o transferencia.</span></li>
+                <li><strong>Recibe</strong><span>Recoge en tienda o recíbelo por delivery en La Paz o envío nacional.</span></li>
+            </ol>
+        </section>
 
-                Ver catálogo completo →
-
-            </a>
-
+        <!-- VISITA -->
+        <section class="section visit">
+            <div class="visit-copy">
+                <h2>Ven a verlos en persona</h2>
+                <p>Prueba los productos antes de llevarlos. Estamos en Av. Buenos Aires, La Paz.</p>
+                <p class="visit-hours" data-store-hours></p>
+            </div>
+            <div class="visit-actions">
+                <a class="button button--solid" href="./pages/ubicacion.html">Cómo llegar</a>
+                <a class="button button--ghost" data-store-tiktok target="_blank" rel="noopener">Ver la guía en TikTok</a>
+            </div>
         </section>
 
     </main>
 
+    <!-- Configuración -->
+    <script src="./js/config/store.config.js"></script>
+    <script src="./js/config/pricing.config.js"></script>
 
-    <!-- FLOATING ACTIONS -->
-    <div class="fab-stack" role="navigation" aria-label="Contacto y redes">
+    <!-- Núcleo -->
+    <script src="./js/core/utils.js"></script>
+    <script src="./js/core/analytics.js"></script>
+    <script src="./js/core/pricing.js"></script>
+    <script src="./js/core/inventory.js"></script>
+    <script src="./js/core/categories.js"></script>
+    <script src="./js/core/catalog.js"></script>
+    <script src="./js/core/search.js"></script>
+    <script src="./js/core/cart.js"></script>
+    <script src="./js/core/whatsapp.js"></script>
 
-        <!-- UBICACION -->
-        <a href="./pages/ubicacion.html" class="fab-button fab-location" aria-label="Cómo llegar" onclick="
-                gtag(
-                    'event',
-                    'click_ubicacion',
-                    {
-                        page: 'index',
-                        button: 'ubicacion'
-                    }
-                );
-            ">
+    <!-- Interfaz -->
+    <script src="./js/ui/icons.js"></script>
+    <script src="./js/ui/theme.js"></script>
+    <script src="./js/ui/toast.js"></script>
+    <script src="./js/ui/productCard.js"></script>
+    <script src="./js/ui/cartDrawer.js"></script>
+    <script src="./js/ui/shell.js"></script>
 
-            <span class="fab-emoji">
-                📍
-            </span>
-
-        </a>
-
-
-        <!-- TIKTOK -->
-        <a href="https://www.tiktok.com/@omegaimportaciones" target="_blank" rel="noopener noreferrer"
-            class="fab-button fab-tiktok" aria-label="TikTok" onclick="
-                gtag(
-                    'event',
-                    'click_tiktok',
-                    {
-                        page: 'index',
-                        button: 'tiktok'
-                    }
-                );
-            ">
-
-            <img src="./img/t_logo.png" alt="" class="fab-icon" draggable="false">
-
-        </a>
-
-
-        <!-- FACEBOOK -->
-        <a href="https://www.facebook.com/share/1AATCSwqwf/?mibextid=wwXIfr" target="_blank"
-            rel="noopener noreferrer" class="fab-button fab-facebook" aria-label="Facebook" onclick="
-                gtag(
-                    'event',
-                    'click_facebook',
-                    {
-                        page: 'index',
-                        button: 'facebook'
-                    }
-                );
-            ">
-
-            <img src="./img/f_logo.png" alt="" class="fab-icon" draggable="false">
-
-        </a>
-
-
-        <!-- WHATSAPP -->
-        <a href="https://wa.me/59164216262?text=Hola,%20quiero%20información%20sobre%20sus%20productos"
-            target="_blank" rel="noopener noreferrer" class="fab-button fab-whatsapp" aria-label="WhatsApp"
-            onclick="
-                gtag(
-                    'event',
-                    'click_whatsapp',
-                    {
-                        page: 'index',
-                        button: 'whatsapp'
-                    }
-                );
-            ">
-
-            <img src="./img/w_logo.png" alt="" class="fab-icon" draggable="false">
-
-        </a>
-
-    </div>
-
-
-    <!-- SCRIPTS -->
-    <script src="./js/openBrowser.js">
-    </script>
-
-    <script src="./js/background.js">
-    </script>
-
-    <script src="./js/flashOffers.js">
-    </script>
-
-    <script src="./js/catalogPreview.js">
-    </script>
-
-    <script src="./js/themeToggle.js">
-    </script>
+    <script src="./js/ui/storeInfo.js"></script>
+    <script src="./js/pages/home.js"></script>
 
 </body>
 

@@ -1,0 +1,232 @@
+/* ===================== HERO ===================== */
+
+.hero {
+    display: grid;
+    gap: 32px;
+    padding-top: clamp(28px, 6vw, 72px);
+}
+
+.hero-copy { display: flex; flex-direction: column; gap: 18px; }
+
+.hero-copy h1 { max-width: 14ch; }
+
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+
+.facts {
+    display: grid;
+    gap: 10px;
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
+    font-weight: 600;
+    font-size: 0.93rem;
+}
+
+.facts li { display: flex; align-items: center; gap: 10px; }
+
+.fact-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    flex: none;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 1px solid var(--line);
+}
+
+.fact-icon .icon { width: 18px; height: 18px; }
+
+/* La vitrina: tres productos reales sobre un estante iluminado */
+.vitrina {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+    min-height: 340px;
+    padding: 14px;
+    border-radius: var(--radius-l);
+    background:
+        linear-gradient(180deg, transparent calc(100% - 10px), var(--surface-2) calc(100% - 10px)),
+        var(--pedestal);
+    border: 1px solid var(--line);
+}
+
+.vitrina-item {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 0;
+    padding: 10%;
+    text-decoration: none;
+}
+
+.vitrina-item--1 { grid-row: 1 / 3; }
+
+.vitrina-item img {
+    max-height: 100%;
+    width: 100%;
+    object-fit: contain;
+    mix-blend-mode: var(--pedestal-blend);
+    aspect-ratio: 1;
+}
+
+.vitrina-item .price-tag {
+    --hole: #f3f4f6;
+    position: absolute;
+    left: 6%;
+    bottom: 8%;
+    transform: rotate(-5deg);
+    transform-origin: 0 50%;
+}
+
+.vitrina-item--1 .price-tag .tag-price { font-size: 1.2rem; }
+
+/* El único movimiento orquestado del sitio: las etiquetas se cuelgan */
+.vitrina.is-ready .price-tag { animation: tag-hang 0.9s var(--ease-swing) both; }
+
+.vitrina.is-ready .vitrina-item--2 .price-tag { animation-delay: 0.12s; }
+
+.vitrina.is-ready .vitrina-item--3 .price-tag { animation-delay: 0.24s; }
+
+@keyframes tag-hang {
+    from { transform: rotate(-38deg) translateY(-8px); opacity: 0; }
+    60% { opacity: 1; }
+    to { transform: rotate(-5deg); }
+}
+
+@media (min-width: 900px) {
+    .hero { grid-template-columns: 1fr 1.05fr; align-items: center; gap: 56px; }
+    .vitrina { min-height: 480px; padding: 22px; }
+    .facts { grid-template-columns: 1fr 1fr; gap: 12px 20px; }
+}
+
+/* ===================== OFERTAS ===================== */
+
+.section--offers .section-head h2::after {
+    content: "";
+    display: inline-block;
+    width: 0.55em;
+    height: 0.55em;
+    margin-left: 0.4em;
+    border-radius: 50%;
+    background: var(--tag);
+    vertical-align: 0.1em;
+}
+
+/* ===================== CATEGORÍAS ===================== */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.category-tile {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 12px;
+    align-items: center;
+    padding: 10px;
+    border-radius: var(--radius-m);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    text-decoration: none;
+}
+
+.category-tile:hover { border-color: var(--ink); }
+
+.category-img {
+    grid-row: 1 / 3;
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-s);
+    background: var(--pedestal);
+    overflow: hidden;
+}
+
+.category-img img { width: 100%; height: 100%; object-fit: contain; padding: 6px; mix-blend-mode: var(--pedestal-blend); }
+
+.category-label { font-weight: 700; font-size: 0.92rem; line-height: 1.2; align-self: end; }
+
+.category-count { color: var(--ink-soft); font-size: 0.8rem; align-self: start; }
+
+@media (min-width: 720px) {
+    .category-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+    .category-tile { grid-template-columns: 72px 1fr; padding: 12px; }
+    .category-img { width: 72px; height: 72px; }
+}
+
+/* ===================== CÓMO COMPRAR ===================== */
+
+.how h2 { margin-bottom: 24px; }
+
+.steps {
+    display: grid;
+    gap: 22px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+}
+
+.steps li {
+    counter-increment: step;
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    column-gap: 14px;
+    row-gap: 4px;
+}
+
+.steps li::before {
+    content: counter(step);
+    grid-row: 1 / 3;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1.5px solid var(--ink);
+    font-family: var(--font-display);
+    font-weight: 600;
+}
+
+.steps strong { font-size: 1.02rem; align-self: end; }
+
+.steps span { color: var(--ink-soft); font-size: 0.93rem; }
+
+@media (min-width: 900px) {
+    .steps { grid-template-columns: repeat(4, 1fr); gap: 28px; }
+    .steps li { grid-template-columns: 1fr; align-content: start; }
+    .steps strong { align-self: start; }
+    .steps li::before { grid-row: auto; margin-bottom: 12px; }
+}
+
+/* ===================== VISITA ===================== */
+
+.visit {
+    display: grid;
+    gap: 22px;
+    padding: clamp(28px, 5vw, 48px);
+    border-radius: var(--radius-l);
+    background: var(--inverse-bg);
+    color: var(--inverse-ink);
+}
+
+.visit p { opacity: 0.8; margin-top: 8px; max-width: 36em; }
+
+.visit .visit-hours { opacity: 1; font-weight: 700; }
+
+.visit-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.visit .button--solid { background: var(--inverse-ink); color: var(--inverse-bg); }
+
+.visit .button--ghost { border-color: var(--inverse-ink); color: var(--inverse-ink); }
+
+.visit .button--ghost:hover { background: var(--inverse-ink); color: var(--inverse-bg); }
+
+@media (min-width: 900px) {
+    .visit { grid-template-columns: 1fr auto; align-items: center; }
+}

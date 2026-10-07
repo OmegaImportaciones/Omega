@@ -1,0 +1,92 @@
+/* =========================================================
+   TOKENS
+   plata   #E8EBEE  fondo general (gris frío del cromo)
+   vitrina #F5F6F7  superficies y pedestales
+   grafito #1A1D21  texto y botones principales
+   acero   #5A616A  texto secundario
+   etiqueta#FFD23A  precio (la firma visual)
+   whatsapp#168A47  solo para enviar/consultar por WhatsApp
+========================================================= */
+
+:root {
+
+    --bg: #e8ebee;
+    --surface: #f5f6f7;
+    --surface-2: #dce0e4;
+    --ink: #1a1d21;
+    --ink-soft: #5a616a;
+    --line: #c8cdd3;
+    --inverse-bg: #1a1d21;
+    --inverse-ink: #e8ebee;
+
+    --tag: #ffd23a;
+    --tag-ink: #1a1d21;
+
+    --whatsapp: #168a47;
+    --whatsapp-ink: #ffffff;
+
+    --ok: #168a47;
+    --focus: #2f6bff;
+
+    /* Cromo del isotipo */
+    --chrome-1: #8a9198;
+    --chrome-2: #fbfcfd;
+    --chrome-3: #5f666d;
+
+    /* Pedestal: luz de vitrina desde arriba */
+    --pedestal: radial-gradient(120% 90% at 50% 0%, #ffffff 0%, #f3f4f6 55%, #e1e5e9 100%);
+    --pedestal-blend: multiply;
+
+    --header-bg: rgba(232, 235, 238, 0.86);
+
+    --font-display: "Unbounded", "Arial Black", system-ui, sans-serif;
+    --font-body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+    --radius-s: 8px;
+    --radius-m: 14px;
+    --radius-l: 22px;
+    --radius-pill: 999px;
+
+    --gutter: 16px;
+    --max: 1240px;
+    --header-h: 64px;
+
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-swing: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    color-scheme: light;
+
+}
+
+html[data-theme="dark"] {
+
+    --bg: #131518;
+    --surface: #1c1f23;
+    --surface-2: #272b30;
+    --ink: #eceef0;
+    --ink-soft: #9ba2aa;
+    --line: #31363c;
+    --inverse-bg: #e8ebee;
+    --inverse-ink: #1a1d21;
+
+    --whatsapp: #25b660;
+    --whatsapp-ink: #0b1f12;
+
+    --focus: #7aa2ff;
+
+    --chrome-1: #9aa1a8;
+    --chrome-2: #ffffff;
+    --chrome-3: #6b7279;
+
+    /* En oscuro, el pedestal sigue iluminado (vitrina con luz) */
+    --pedestal: radial-gradient(120% 90% at 50% 0%, #f4f5f6 0%, #e3e6e9 60%, #c9ced3 100%);
+
+    --header-bg: rgba(19, 21, 24, 0.86);
+
+    color-scheme: dark;
+
+}
+
+@media (min-width: 720px) {
+    :root { --gutter: 32px; --header-h: 72px; }
+}

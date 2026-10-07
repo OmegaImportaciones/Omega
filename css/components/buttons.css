@@ -1,182 +1,83 @@
-/* =========================
-   BUTTONS CONTAINER
-========================= */
-
-.buttons-container {
-
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-
-  gap: 10px;
-
-  position: relative;
-
-  z-index: 2;
-
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    min-height: 48px;
+    padding: 0.75rem 1.4rem;
+    border: 1.5px solid transparent;
+    border-radius: var(--radius-pill);
+    font-weight: 700;
+    font-size: 0.98rem;
+    text-decoration: none;
+    line-height: 1.2;
+    transition: transform 0.15s var(--ease), background-color 0.15s ease, color 0.15s ease;
 }
 
-/* =========================
-   MAIN BUTTON
-   Estilo "grouped list row" de iOS en modo claro:
-   relleno systemGray6, esquinas 16pt, sombra
-   casi imperceptible — la profundidad la da el
-   contraste tonal, no el blur pesado.
-========================= */
+.button:active { transform: scale(0.97); }
 
-.main-button {
+.button--solid { background: var(--ink); color: var(--bg); }
 
-  width: 100%;
+.button--ghost { border-color: var(--ink); background: transparent; }
 
-  min-height: 56px;
+.button--ghost:hover { background: var(--ink); color: var(--bg); }
 
-  padding: 14px 16px;
+.button--whatsapp { background: var(--whatsapp); color: var(--whatsapp-ink); }
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.button--whatsapp-outline { border-color: var(--whatsapp); color: var(--whatsapp); }
 
-  gap: 12px;
+.button--small { min-height: 36px; padding: 0.4rem 0.9rem; font-size: 0.88rem; }
 
-  background:
-    var(--card-bg);
+.button--block { display: flex; width: 100%; }
 
-  border:
-    0.5px solid var(--border-hairline);
+.button--grow { flex: 1; }
 
-  border-radius:
-    var(--radius-main);
+.button--center { display: flex; width: fit-content; margin: 36px auto 0; }
 
-  text-decoration: none;
-
-  color:
-    var(--text-primary);
-
-  font-family: var(--font-body);
-
-  font-size: 1.0625rem; /* 17pt — iOS body/headline size */
-
-  font-weight: 590;
-
-  letter-spacing: -0.01em;
-
-  transition:
-    var(--transition-main);
-
-  box-shadow:
-    var(--shadow-soft);
-
-  position: relative;
-
-  overflow: hidden;
-
-  isolation: isolate;
-
-  contain: layout style;
-
-  transform:
-    translateZ(0);
-
-  will-change:
-    transform;
-
-  z-index: 2;
-
-  -webkit-tap-highlight-color: transparent;
-
-  animation:
-    button-enter 0.5s var(--ease-out) both;
-
+.icon-button {
+    display: inline-grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
 }
 
-@keyframes button-enter {
+.icon-button:hover { background: var(--surface-2); }
 
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
+.text-button {
+    display: block;
+    margin: 10px auto 0;
+    border: 0;
+    background: none;
+    color: var(--ink-soft);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
-.buttons-container .main-button:nth-child(1) { animation-delay: 0.04s; }
-.buttons-container .main-button:nth-child(2) { animation-delay: 0.09s; }
-.buttons-container .main-button:nth-child(3) { animation-delay: 0.14s; }
-.buttons-container .main-button:nth-child(4) { animation-delay: 0.19s; }
-.buttons-container .main-button:nth-child(5) { animation-delay: 0.24s; }
-.buttons-container .main-button:nth-child(6) { animation-delay: 0.29s; }
-
-@media (prefers-reduced-motion: reduce) {
-
-  .main-button {
-    animation: none;
-  }
-
+.stepper {
+    display: inline-flex;
+    align-items: center;
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius-pill);
 }
 
-/* =========================
-   PRESS STATE (mobile-first)
-========================= */
-
-.main-button:active {
-
-  transform:
-    scale(0.98);
-
-  background:
-    var(--card-bg-strong);
-
+.stepper button {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
 }
 
-/* =========================
-   HOVER (solo aporta en desktop/trackpad)
-========================= */
+.stepper button:hover { background: var(--surface-2); }
 
-@media (hover: hover) {
+.stepper output { min-width: 2ch; text-align: center; font-weight: 700; font-variant-numeric: tabular-nums; }
 
-  .main-button:hover {
+.stepper--large button { width: 46px; height: 46px; }
 
-    background:
-      var(--card-bg-strong);
-
-  }
-
-}
-
-/* =========================
-   WHATSAPP ACCENT
-========================= */
-
-.main-button:nth-child(1):active {
-
-  background:
-    rgba(52, 199, 89, 0.1);
-
-}
-
-/* =========================
-   TIKTOK ACCENT
-========================= */
-
-.main-button:nth-child(3):active {
-
-  background:
-    rgba(48, 176, 199, 0.1);
-
-}
-
-/* =========================
-   FACEBOOK ACCENT
-========================= */
-
-.main-button:nth-child(4):active {
-
-  background:
-    rgba(0, 122, 255, 0.1);
-
-}
+.stepper--large output { min-width: 3ch; font-size: 1.1rem; }

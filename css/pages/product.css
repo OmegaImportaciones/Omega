@@ -1,0 +1,81 @@
+.product-page { padding-top: clamp(16px, 3vw, 32px); }
+
+.crumbs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    color: var(--ink-soft);
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.crumbs a { text-decoration: none; }
+
+.crumbs a:hover { color: var(--ink); text-decoration: underline; }
+
+.product-layout { display: grid; gap: 28px; }
+
+.gallery { display: flex; flex-direction: column; gap: 12px; }
+
+.gallery-main { aspect-ratio: 1; border-radius: var(--radius-l); }
+
+.gallery-main img { padding: 10%; }
+
+.gallery-thumbs { display: flex; gap: 10px; }
+
+.thumb {
+    width: 72px;
+    height: 72px;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: var(--radius-s);
+    background: var(--pedestal);
+    overflow: hidden;
+}
+
+.thumb img { width: 100%; height: 100%; object-fit: contain; padding: 8px; mix-blend-mode: var(--pedestal-blend); }
+
+.thumb[aria-pressed="true"] { border-color: var(--ink); }
+
+.product-info { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+
+.product-title { font-size: clamp(1.45rem, 3.2vw, 2.15rem); line-height: 1.15; letter-spacing: -0.025em; }
+
+.product-code { color: var(--ink-soft); font-size: 0.88rem; margin-top: -6px; }
+
+.product-price { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; margin-top: 6px; }
+
+.saving { font-weight: 700; color: var(--ok); }
+
+.stock-line { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.92rem; }
+
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 0 4px color-mix(in srgb, var(--ok) 20%, transparent); }
+
+.buy-box { display: flex; gap: 10px; width: 100%; margin-top: 6px; }
+
+.product-info > .button--block { width: 100%; }
+
+.perks {
+    display: grid;
+    gap: 16px;
+    width: 100%;
+    margin: 14px 0 0;
+    padding: 20px 0 0;
+    border-top: 1px solid var(--line);
+    list-style: none;
+}
+
+.perks li { display: grid; grid-template-columns: 24px 1fr; gap: 12px; }
+
+.perks .icon { width: 22px; height: 22px; margin-top: 2px; }
+
+.perks strong { display: block; font-size: 0.93rem; }
+
+.perks span { color: var(--ink-soft); font-size: 0.86rem; }
+
+.product-layout.is-loading .gallery-main { animation: shimmer 1.4s linear infinite; }
+
+@media (min-width: 900px) {
+    .product-layout { grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: start; }
+    .gallery { position: sticky; top: calc(var(--header-h) + 24px); }
+}

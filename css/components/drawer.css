@@ -1,0 +1,86 @@
+.drawer { position: fixed; inset: 0; z-index: 60; pointer-events: none; }
+
+.drawer-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 12, 14, 0.45);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.drawer-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: min(440px, 100%);
+    background: var(--bg);
+    transform: translateX(100%);
+    transition: transform 0.32s var(--ease);
+    outline: none;
+}
+
+.drawer.is-open { pointer-events: auto; }
+
+.drawer.is-open .drawer-backdrop { opacity: 1; }
+
+.drawer.is-open .drawer-panel { transform: none; }
+
+.drawer-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 12px 14px 22px;
+    border-bottom: 1px solid var(--line);
+}
+
+.drawer-body { flex: 1; overflow-y: auto; padding: 8px 22px; }
+
+.drawer-foot {
+    padding: 16px 22px calc(16px + env(safe-area-inset-bottom));
+    border-top: 1px solid var(--line);
+    background: var(--surface);
+}
+
+.cart-lines { list-style: none; margin: 0; padding: 0; }
+
+.cart-line {
+    display: grid;
+    grid-template-columns: 72px 1fr auto;
+    gap: 14px;
+    align-items: start;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.cart-thumb {
+    aspect-ratio: 1;
+    border-radius: var(--radius-s);
+    background: var(--pedestal);
+    overflow: hidden;
+}
+
+.cart-thumb img { width: 100%; height: 100%; object-fit: contain; padding: 8px; mix-blend-mode: var(--pedestal-blend); }
+
+.cart-info { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+
+.cart-name { font-weight: 600; font-size: 0.9rem; line-height: 1.3; text-decoration: none; }
+
+.cart-unit { color: var(--ink-soft); font-size: 0.82rem; }
+
+.cart-info .stepper { align-self: flex-start; margin-top: 4px; }
+
+.cart-subtotal { font-family: var(--font-display); font-weight: 600; font-size: 0.9rem; white-space: nowrap; }
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-weight: 700;
+}
+
+.cart-total strong { font-family: var(--font-display); font-size: 1.5rem; }
+
+.cart-hint { margin: 6px 0 14px; color: var(--ink-soft); font-size: 0.85rem; }

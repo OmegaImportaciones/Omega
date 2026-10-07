@@ -1,0 +1,31 @@
+/* Fila deslizable en móvil, grilla en escritorio */
+
+.rail {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(150px, 44%);
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    margin-inline: calc(var(--gutter) * -1);
+    padding-inline: var(--gutter);
+    scroll-padding-inline: var(--gutter);
+}
+
+.rail::-webkit-scrollbar { display: none; }
+
+.rail > * { scroll-snap-align: start; }
+
+@media (min-width: 720px) {
+    .rail { grid-auto-columns: calc((100% - 2 * var(--gutter) - 44px) / 3); gap: 22px; }
+}
+
+@media (min-width: 1040px) {
+    .rail {
+        margin-inline: 0;
+        padding-inline: 0;
+        scroll-padding-inline: 0;
+        grid-auto-columns: calc((100% - 66px) / 4);
+    }
+}

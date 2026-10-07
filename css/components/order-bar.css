@@ -1,0 +1,45 @@
+/* Barra flotante "Ver mi pedido" — solo móvil */
+
+.order-bar {
+    position: fixed;
+    left: 50%;
+    bottom: calc(14px + env(safe-area-inset-bottom));
+    z-index: 30;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: min(420px, calc(100% - 2 * var(--gutter)));
+    padding: 10px 18px 10px 10px;
+    border: 0;
+    border-radius: var(--radius-pill);
+    background: var(--ink);
+    color: var(--bg);
+    font-weight: 700;
+    transform: translateX(-50%);
+    box-shadow: 0 10px 30px rgba(10, 12, 14, 0.28);
+}
+
+.order-bar span:nth-child(2) { flex: 1; text-align: left; }
+
+.order-bar strong { font-family: var(--font-display); font-weight: 600; }
+
+.order-bar-count {
+    display: grid;
+    place-items: center;
+    min-width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--tag);
+    color: var(--tag-ink);
+    font-size: 0.85rem;
+}
+
+html.no-scroll .order-bar { display: none; }
+
+@media (min-width: 900px) {
+    .order-bar { display: none !important; }
+}
+
+@media (max-width: 899px) {
+    .site-footer { padding-bottom: 96px; }
+}

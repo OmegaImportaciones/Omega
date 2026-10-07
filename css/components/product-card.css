@@ -1,0 +1,95 @@
+/* Sin caja alrededor: el producto descansa sobre su pedestal, como en un estante */
+
+.product-card { display: flex; flex-direction: column; min-width: 0; }
+
+.card-link { display: block; text-decoration: none; }
+
+.pedestal {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: var(--radius-m);
+    background: var(--pedestal);
+    overflow: hidden;
+}
+
+.pedestal img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 12%;
+    mix-blend-mode: var(--pedestal-blend);
+    transition: transform 0.35s var(--ease);
+}
+
+.card-link:hover .pedestal img { transform: scale(1.04); }
+
+.card-badges {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: var(--radius-pill);
+    background: var(--inverse-bg);
+    color: var(--inverse-ink);
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.badge--offer { background: var(--tag); color: var(--tag-ink); }
+
+.badge--muted { background: var(--surface-2); color: var(--ink-soft); }
+
+.card-name {
+    margin-top: 12px;
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.7em;
+}
+
+.card-link:hover .card-name { text-decoration: underline; text-underline-offset: 3px; }
+
+.card-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.add-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    height: 36px;
+    padding: 0 12px 0 9px;
+    border: 1.5px solid var(--ink);
+    border-radius: var(--radius-pill);
+    background: transparent;
+    font-size: 0.85rem;
+    font-weight: 700;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.add-button:hover { background: var(--ink); color: var(--bg); }
+
+.add-button.is-added { background: var(--ok); border-color: var(--ok); color: #fff; }
+
+@media (max-width: 479px) {
+    .add-button { width: 36px; padding: 0; justify-content: center; }
+    .add-button span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+}

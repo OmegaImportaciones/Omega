@@ -1,0 +1,143 @@
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: var(--header-bg);
+    backdrop-filter: saturate(160%) blur(14px);
+    -webkit-backdrop-filter: saturate(160%) blur(14px);
+    border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+        "brand . actions"
+        "search search search";
+    align-items: center;
+    gap: 8px 16px;
+    padding-block: 10px;
+}
+
+.brand {
+    grid-area: brand;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.brand-mark { width: 34px; height: 31px; flex: none; }
+
+.brand-word {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.brand-word small {
+    margin-top: 4px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.6rem;
+    letter-spacing: 0.28em;
+    color: var(--ink-soft);
+}
+
+.header-search {
+    grid-area: search;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 46px;
+    padding-inline: 16px;
+    border-radius: var(--radius-pill);
+    background: var(--surface);
+    border: 1.5px solid var(--line);
+    color: var(--ink-soft);
+}
+
+.header-search:focus-within { border-color: var(--ink); color: var(--ink); }
+
+.header-search input {
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    background: transparent;
+    outline: none;
+    color: var(--ink);
+}
+
+.header-search input::-webkit-search-cancel-button { cursor: pointer; }
+
+.header-nav { display: none; }
+
+.header-actions { grid-area: actions; display: flex; align-items: center; gap: 4px; }
+
+.cart-button {
+    position: relative;
+    display: inline-grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--bg);
+}
+
+.cart-count {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    min-width: 22px;
+    height: 22px;
+    padding-inline: 5px;
+    border-radius: var(--radius-pill);
+    background: var(--tag);
+    color: var(--tag-ink);
+    border: 2px solid var(--bg);
+    font-size: 0.72rem;
+    font-weight: 800;
+    line-height: 18px;
+    text-align: center;
+}
+
+@media (min-width: 900px) {
+
+    .header-inner {
+        grid-template-columns: auto minmax(0, 1fr) auto auto;
+        grid-template-areas: "brand search nav actions";
+        gap: 28px;
+        min-height: var(--header-h);
+    }
+
+    .header-search { max-width: 560px; }
+
+    .header-nav { grid-area: nav; display: flex; gap: 22px; font-weight: 600; }
+
+    .header-nav a { text-decoration: none; padding-block: 6px; border-bottom: 2px solid transparent; }
+
+    .header-nav a:hover, .header-nav a[aria-current="page"] { border-bottom-color: var(--ink); }
+
+}
+
+/* Aviso dentro de TikTok / Instagram / Facebook */
+.inapp-notice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px var(--gutter);
+    background: var(--tag);
+    color: var(--tag-ink);
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.inapp-notice .button { background: var(--tag-ink); color: var(--tag); flex: none; }

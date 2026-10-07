@@ -1,333 +1,111 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
 
-    <!-- =========================
-         META
-    ========================== -->
+    <meta charset="UTF-8">
 
-    <meta charset="UTF-8" />
-
-    <!-- THEME INIT (evita parpadeo de tema equivocado al cargar) -->
+    <!-- Tema inicial (evita parpadeo) -->
     <script>
         (function () {
             try {
                 if (localStorage.getItem('omega-theme') === 'dark') {
                     document.documentElement.setAttribute('data-theme', 'dark');
-                    var m = document.querySelector('meta[name="theme-color"]');
-                    if (m) m.setAttribute('content', '#000000');
                 }
             } catch (e) { }
         })();
     </script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <title>
+    <title>Tienda | Omega Importaciones</title>
 
-        Catálogo | OMEGA IMPORTACIONES
+    <meta name="description" content="Todos los productos disponibles de Omega Importaciones con precio. Arma tu pedido y envíalo por WhatsApp.">
+    <meta name="theme-color" content="#e8ebee">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://omegaimportaciones.github.io/Omega/pages/catalogo.html">
 
-    </title>
-
-    <meta name="description" content="Explora nuestros gadgets y accesorios premium." />
-
-    <meta name="theme-color" content="#ffffff" />
-
-    <meta name="robots" content="index, follow" />
-
-    <!-- =========================
-         CANONICAL
-    ========================== -->
-
-    <link rel="canonical" href="https://omegaimportaciones.github.io/Omega/pages/catalogo.html" />
-
-    <!-- =========================
-         OPEN GRAPH
-    ========================== -->
-
-    <meta property="og:title" content="Catálogo | OMEGA IMPORTACIONES">
-
-    <meta property="og:description" content="Explora nuestros gadgets y accesorios premium.">
-
+    <!-- Open Graph -->
+    <meta property="og:title" content="Tienda | Omega Importaciones">
+    <meta property="og:description" content="Todos los productos disponibles de Omega Importaciones con precio. Arma tu pedido y envíalo por WhatsApp.">
     <meta property="og:image" content="https://omegaimportaciones.github.io/Omega/img/logo.png">
-
     <meta property="og:url" content="https://omegaimportaciones.github.io/Omega/pages/catalogo.html">
-
-    <meta property="og:site_name" content="OMEGA IMPORTACIONES">
-
+    <meta property="og:site_name" content="Omega Importaciones">
     <meta property="og:type" content="website">
-
     <meta property="og:locale" content="es_BO">
-
-    <!-- =========================
-         TWITTER
-    ========================== -->
-
     <meta name="twitter:card" content="summary_large_image">
-
-    <meta name="twitter:title" content="Catálogo | OMEGA IMPORTACIONES">
-
-    <meta name="twitter:description" content="Explora nuestros gadgets y accesorios premium.">
-
-    <meta name="twitter:image" content="https://omegaimportaciones.github.io/Omega/img/logo.png">
-
-    <!-- =========================
-         FAVICON
-    ========================== -->
 
     <link rel="icon" href="../img/favicon.png" type="image/png">
 
-    <!-- =========================
-         PRELOAD
-    ========================== -->
-
-    <link rel="preload" as="image" href="../img/logo.png">
-
-    <!-- =========================
-         GOOGLE ANALYTICS
-    ========================== -->
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNVK91HBNP">
-    </script>
-
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNVK91HBNP"></script>
     <script>
-
-        window.dataLayer =
-            window.dataLayer || [];
-
-        function gtag() {
-
-            dataLayer.push(arguments);
-
-        }
-
-        gtag(
-            'js',
-            new Date()
-        );
-
-        gtag(
-            'config',
-            'G-PNVK91HBNP',
-            {
-                page_title:
-                    document.title,
-
-                page_location:
-                    window.location.href
-            }
-        );
-
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-PNVK91HBNP');
     </script>
 
-    <!-- =========================
-         FONTS
-    ========================== -->
-
+    <!-- Tipografías: Unbounded (títulos y precios) + Manrope (texto) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- =========================
-         CSS
-    ========================== -->
-
-    <link rel="stylesheet" href="../css/global.css?v=3" />
+    <link rel="stylesheet" href="../css/main.css?v=4">
 
 </head>
 
-<body>
-
-    <!-- THEME TOGGLE -->
-    <button id="themeToggleButton" class="theme-toggle" type="button" aria-pressed="false"
-        aria-label="Cambiar a modo oscuro">
-
-        <span class="theme-toggle-icon">
-            🌙
-        </span>
-
-    </button>
-
-    <!-- =========================
-         MAIN
-    ========================== -->
-
-    <main class="container">
-
-
-
-        <!-- =========================
-             HERO NAVBAR
-        ========================== -->
-
-        <header class="catalog-hero-navbar" id="heroNavbar">
-
-            <!-- BACK -->
-            <a href="../index.html" class="catalog-hero-back">
-
-                ← Volver
-
-            </a>
-
-
-            <!-- LOGO -->
-            <div class="catalog-hero-brand">
-
-                <img src="../img/logo.png" alt="Omega Importaciones" class="catalog-hero-logo" draggable="false">
-
-            </div>
-
-
-            <!-- SEARCH -->
-            <div class="catalog-hero-search-wrapper">
-
-                <div class="catalog-hero-search">
-
-                    <!-- ICON -->
-                    <svg class="catalog-hero-search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-
-                        <circle cx="11" cy="11" r="8">
-                        </circle>
-
-                        <path d="m21 21-4.3-4.3">
-                        </path>
-
-                    </svg>
-
-
-                    <!-- INPUT -->
-                    <input type="text" id="searchInput" class="catalog-hero-search-input"
-                        placeholder="Buscar productos..." autocomplete="off" spellcheck="false">
-
-                </div>
-
-            </div>
-
-        </header>
-
-
-
-        <!-- =========================
-             COMPACT NAVBAR
-        ========================== -->
-
-        <header class="catalog-compact-navbar" id="compactNavbar">
-
-            <!-- BACK -->
-            <a href="../index.html" class="catalog-compact-back">
-
-                ←
-
-            </a>
-
-
-            <!-- LOGO -->
-            <div class="catalog-compact-brand">
-
-                <img src="../img/logo.png" alt="Omega Importaciones" class="catalog-compact-logo" draggable="false">
-
-            </div>
-
-
-            <!-- SEARCH -->
-            <div class="catalog-compact-search-wrapper">
-
-                <div class="catalog-compact-search">
-
-                    <!-- ICON -->
-                    <svg class="catalog-compact-search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-
-                        <circle cx="11" cy="11" r="8">
-                        </circle>
-
-                        <path d="m21 21-4.3-4.3">
-                        </path>
-
-                    </svg>
-
-
-                    <!-- INPUT -->
-                    <input type="text" class="catalog-compact-search-input" placeholder="Buscar..." autocomplete="off"
-                        spellcheck="false">
-
-                </div>
-
-            </div>
-
-        </header>
-
-
-
-        <!-- =========================
-             PRODUCTS
-        ========================== -->
-
-        <section class="buttons-container" id="productsContainer">
-        </section>
-
-
-
-        <!-- =========================
-             GENERAL WHATSAPP
-        ========================== -->
-
-        <a href="https://wa.me/59164216262?text=Hola,%20quiero%20información%20sobre%20sus%20productos" target="_blank"
-            rel="noopener noreferrer" class="main-button" onclick="
-                gtag(
-                    'event',
-                    'click_general_whatsapp',
-                    {
-                        page: 'catalogo',
-                        button: 'general_whatsapp'
-                    }
-                );
-            ">
-
-            <img src="../img/w_logo.png" alt="WhatsApp" class="button-icon" draggable="false">
-
-            <span>
-
-                Consultar por WhatsApp
-
-            </span>
-
-        </a>
+<body data-base="../" data-page="shop">
+
+    <main id="main" class="shop">
+
+        <div class="shop-head">
+            <h1>Tienda</h1>
+            <p class="result-summary" id="resultSummary" aria-live="polite">Cargando productos…</p>
+        </div>
+
+        <div class="shop-toolbar">
+            <div class="chips" id="categoryChips" role="group" aria-label="Categorías"></div>
+            <label class="sort">
+                <span>Ordenar</span>
+                <select id="sortSelect">
+                    <option value="relevancia">Destacados</option>
+                    <option value="precio-asc">Menor precio</option>
+                    <option value="precio-desc">Mayor precio</option>
+                    <option value="nombre">Nombre A–Z</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="product-grid" id="shopGrid"></div>
+
+        <div class="shop-sentinel" id="shopSentinel" aria-hidden="true"></div>
 
     </main>
 
+    <!-- Configuración -->
+    <script src="../js/config/store.config.js"></script>
+    <script src="../js/config/pricing.config.js"></script>
 
+    <!-- Núcleo -->
+    <script src="../js/core/utils.js"></script>
+    <script src="../js/core/analytics.js"></script>
+    <script src="../js/core/pricing.js"></script>
+    <script src="../js/core/inventory.js"></script>
+    <script src="../js/core/categories.js"></script>
+    <script src="../js/core/catalog.js"></script>
+    <script src="../js/core/search.js"></script>
+    <script src="../js/core/cart.js"></script>
+    <script src="../js/core/whatsapp.js"></script>
 
-    <!-- =========================
-         BACKGROUND
-    ========================== -->
-
-    <script src="../js/background.js">
-    </script>
-
-
-
-    <!-- =========================
-         CATALOG
-    ========================== -->
-
-    <script src="../js/catalog/catalog.js">
-    </script>
-
-    <script src="../js/catalog/navbar.js">
-    </script>
-
-    <script src="../js/catalog/search.js">
-    </script>
-
-    <script src="../js/themeToggle.js">
-    </script>
+    <!-- Interfaz -->
+    <script src="../js/ui/icons.js"></script>
+    <script src="../js/ui/theme.js"></script>
+    <script src="../js/ui/toast.js"></script>
+    <script src="../js/ui/productCard.js"></script>
+    <script src="../js/ui/cartDrawer.js"></script>
+    <script src="../js/ui/shell.js"></script>
+    <script src="../js/pages/shop.js"></script>
 
 </body>
 
