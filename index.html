@@ -3,421 +3,243 @@
 
 <head>
 
-    <!-- META -->
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <!-- THEME INIT (evita parpadeo de tema equivocado al cargar) -->
-    <script>
-        (function () {
-            try {
-                if (localStorage.getItem('omega-theme') === 'dark') {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                    var m = document.querySelector('meta[name="theme-color"]');
-                    if (m) m.setAttribute('content', '#000000');
-                }
-            } catch (e) { }
-        })();
-    </script>
+    <title>SAS · Tecnología que responde | Omega Importaciones</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="SAS, la marca propia de Omega Importaciones: cables HDMI, redes, conversores y accesorios con 2 años de garantía y cambio en tienda. La Paz, Bolivia.">
+    <meta name="theme-color" content="#0b0b0c">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://omegaimportaciones.github.io/Omega/">
 
-    <title>
-        OMEGA IMPORTACIONES
-    </title>
-
-    <meta name="description" content="Tecnología, gadgets y accesorios premium. Socios oficiales de SAS." />
-
-    <meta name="theme-color" content="#ffffff" />
-
-    <meta name="robots" content="index, follow" />
-
-
-    <!-- CANONICAL -->
-    <link rel="canonical" href="https://omegaimportaciones.github.io/Omega/" />
-
-
-    <!-- OPEN GRAPH -->
-    <meta property="og:title" content="OMEGA IMPORTACIONES">
-
-    <meta property="og:description" content="Tecnología, gadgets y accesorios premium. Socios oficiales de SAS.">
-
-    <meta property="og:image" content="https://omegaimportaciones.github.io/Omega/img/logo.png">
-
+    <!-- Open Graph -->
+    <meta property="og:title" content="SAS · Tecnología que responde">
+    <meta property="og:description" content="Marca propia de Omega Importaciones. Cables, conectividad y video con 2 años de garantía y cambio en tienda, en La Paz.">
+    <meta property="og:image" content="https://omegaimportaciones.github.io/Omega/img/sas/og-sas.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://omegaimportaciones.github.io/Omega/">
-
-    <meta property="og:site_name" content="OMEGA IMPORTACIONES">
-
+    <meta property="og:site_name" content="Omega Importaciones">
     <meta property="og:type" content="website">
-
     <meta property="og:locale" content="es_BO">
-
-
-    <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image">
 
-    <meta name="twitter:title" content="OMEGA IMPORTACIONES">
+    <link rel="icon" href="./img/sas/icon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="./img/sas/icon-180.png">
 
-    <meta name="twitter:description" content="Tecnología, gadgets y accesorios premium. Socios oficiales de SAS.">
-
-    <meta name="twitter:image" content="https://omegaimportaciones.github.io/Omega/img/logo.png">
-
-
-    <!-- FAVICON -->
-    <link rel="icon" href="./img/favicon.png" type="image/png">
-
-
-    <!-- PRELOAD -->
-    <link rel="preload" as="image" href="./img/logo.png">
-
-
-    <!-- GOOGLE ANALYTICS -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNVK91HBNP">
+    <!-- Datos para Google: la tienda -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ElectronicsStore",
+        "name": "Omega Importaciones",
+        "url": "https://omegaimportaciones.github.io/Omega/",
+        "image": "https://omegaimportaciones.github.io/Omega/img/sas/og-sas.jpg",
+        "telephone": "+59164216262",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Buenos Aires",
+            "addressLocality": "La Paz",
+            "addressCountry": "BO"
+        },
+        "openingHours": "Mo-Sa 10:00-20:00",
+        "brand": { "@type": "Brand", "name": "SAS", "slogan": "Tecnología que responde." }
+    }
     </script>
 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PNVK91HBNP"></script>
     <script>
-
-        window.dataLayer =
-            window.dataLayer || [];
-
-        function gtag() {
-
-            dataLayer.push(arguments);
-
-        }
-
-        gtag(
-            'js',
-            new Date()
-        );
-
-        gtag(
-            'config',
-            'G-PNVK91HBNP',
-            {
-                page_title:
-                    document.title,
-
-                page_location:
-                    window.location.href
-            }
-        );
-
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-PNVK91HBNP');
     </script>
 
-
-    <!-- FONTS -->
+    <!-- Tipografías: Unbounded (títulos y precios) + Manrope (texto) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/global.css?v=4" />
+    <link rel="stylesheet" href="./css/main.css?v=5">
 
 </head>
 
-<body class="has-fab">
+<body data-base="./" data-page="home">
 
-    <!-- THEME TOGGLE -->
-    <button id="themeToggleButton" class="theme-toggle" type="button" aria-pressed="false"
-        aria-label="Cambiar a modo oscuro">
+    <main id="main">
 
-        <span class="theme-toggle-icon">
-            🌙
-        </span>
-
-    </button>
-
-    <main class="container">
-
-        <!-- LOGO -->
-        <div class="logo-frame">
-            <img src="./img/logo.png" alt="Omega Importaciones" class="logo" draggable="false">
-        </div>
-
-
-        <!-- OPEN IN BROWSER -->
-        <section id="openBrowserContainer">
-
-            <button id="openBrowserButton" class="main-button" onclick="
-                    gtag(
-                        'event',
-                        'click_open_browser',
-                        {
-                            page: 'index',
-                            button: 'open_browser'
-                        }
-                    );
-                ">
-
-                <span class="emoji-icon">
-                    🌐
-                </span>
-
-                <span>
-                    Abrir en navegador
-                </span>
-
-            </button>
-
-        </section>
-
-
-        <!-- SAS HERO (marca protagonista, aliada de Omega) -->
-        <section class="sas-hero" id="sasHero">
-
-            <span class="sas-hero-badge">
-                Marca aliada de Omega Importaciones
-            </span>
-
-            <img src="./img/sas-lockup-dark.png" alt="SAS" class="sas-hero-logo" draggable="false">
-
-            <p class="sas-hero-tagline">
-                Tecnología que responde.
-            </p>
-
-            <div class="sas-hero-chips">
-
-                <span class="sas-hero-chip">
-                    🛡️ 2 años de garantía
-                </span>
-
-                <span class="sas-hero-chip">
-                    ⚡ Cambio inmediato
-                </span>
-
-                <span class="sas-hero-chip">
-                    🤝 Respaldo Omega
-                </span>
-
-            </div>
-
-            <div class="sas-hero-actions">
-
-                <a href="./pages/catalogo.html?marca=sas" class="sas-hero-cta" onclick="
-                        gtag(
-                            'event',
-                            'click_ver_catalogo_sas',
-                            {
-                                page: 'index',
-                                button: 'sas_hero_cta'
-                            }
-                        );
-                    ">
-
-                    Ver catálogo SAS →
-
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- SAS (PREVIEW) -->
-        <section class="carousel-section" id="sasSection">
-
-            <div class="section-title">
-
-                ⭐ SAS
-
-            </div>
-
-
-            <!-- SAS WRAPPER -->
-            <div class="carousel-wrapper" id="sasWrapper">
-
-                <!-- SAS SLIDER -->
-                <div class="carousel-track" id="sasContainer">
+        <!-- HERO SAS -->
+        <section class="sas-hero">
+            <div class="sas-hero-copy">
+                <p class="eyebrow"><span class="eyebrow-dot"></span>Marca propia de Omega Importaciones</p>
+                <h1>Tecnología que <em>responde.</em></h1>
+                <p class="lead">Cables, conectividad y accesorios de video SAS, desarrollados junto a fabricantes especializados. Con <strong>2 años de garantía</strong> y cambio en el momento cuando se confirma un defecto cubierto.</p>
+                <div class="hero-actions">
+                    <a class="button button--solid" href="./pages/sas.html">Ver productos SAS <span data-icon="arrowRight"></span></a>
+                    <a class="button button--ghost" href="./pages/garantia.html">Cómo funciona la garantía</a>
                 </div>
-
             </div>
 
-
-            <!-- VER CATALOGO SAS -->
-            <a href="./pages/catalogo.html?marca=sas" class="carousel-more-link" onclick="
-                    gtag(
-                        'event',
-                        'click_ver_catalogo_sas',
-                        {
-                            page: 'index',
-                            button: 'ver_catalogo_sas'
-                        }
-                    );
-                ">
-
-                Ver catálogo SAS completo →
-
-            </a>
-
+            <div class="sas-emblem" aria-hidden="true">
+                <div class="emblem-rings"></div>
+                <svg class="emblem-svg" viewBox="190 190 640 640">
+                    <g fill="none" stroke-width="60" stroke-linejoin="miter">
+                        <path class="emblem-arc emblem-arc--ink" pathLength="1" d="M440 510 H228 A282 282 0 0 1 775 414"/>
+                        <path class="emblem-arc emblem-arc--red" pathLength="1" d="M580 510 H792 A282 282 0 0 1 245 606"/>
+                    </g>
+                    <polygon class="emblem-leg emblem-leg--ink" points="470,330 545,330 460,655 375,655"/>
+                    <polygon class="emblem-leg emblem-leg--red" points="545,330 635,655 555,655 507,477"/>
+                </svg>
+                <span class="emblem-chip emblem-chip--top"><strong>2 años</strong> de garantía</span>
+                <span class="emblem-chip emblem-chip--bottom">Cambio en tienda</span>
+            </div>
         </section>
 
+        <!-- PILARES -->
+        <ul class="pillars">
+            <li>
+                <span class="pillar-icon" data-icon="shield"></span>
+                <div><strong>2 años de garantía</strong><span>Según las condiciones de cada producto.</span></div>
+            </li>
+            <li>
+                <span class="pillar-icon" data-icon="swap"></span>
+                <div><strong>Cambio en el momento</strong><span>Comprobamos el producto en tienda y, si el defecto está cubierto, lo cambiamos ahí mismo.</span></div>
+            </li>
+            <li>
+                <span class="pillar-icon" data-icon="award"></span>
+                <div><strong>Calidad-precio</strong><span>Prestaciones competitivas a precios accesibles.</span></div>
+            </li>
+        </ul>
 
-        <!-- FLASH OFFERS -->
-        <section class="carousel-section" id="flashSection">
+        <p class="notice" id="loadError" hidden>No pudimos cargar los productos. Revisa tu conexión y recarga la página.</p>
 
-            <div class="section-title">
-
-                ⚡ Ofertas Flash
-
-            </div>
-
-
-            <!-- FLASH WRAPPER -->
-            <div class="carousel-wrapper" id="flashWrapper">
-
-                <!-- FLASH SLIDER -->
-                <div class="carousel-track" id="flashContainer">
+        <!-- LÍNEAS SAS -->
+        <section class="section">
+            <div class="section-head">
+                <div>
+                    <h2>Líneas SAS</h2>
+                    <p>Carga, conectividad, audio y video para el día a día.</p>
                 </div>
-
+                <a class="section-link" href="./pages/sas.html">Ver todo SAS</a>
             </div>
-
+            <div class="line-grid" id="lineGrid"></div>
         </section>
 
-
-        <!-- CATALOGO (PREVIEW) -->
-        <section class="carousel-section" id="catalogSection">
-
-            <div class="section-title">
-
-                🛒 Catálogo
-
-            </div>
-
-
-            <!-- CATALOG WRAPPER -->
-            <div class="carousel-wrapper" id="catalogWrapper">
-
-                <!-- CATALOG SLIDER -->
-                <div class="carousel-track" id="catalogContainer">
+        <!-- CARGA (línea prioritaria: aparece cuando hay productos) -->
+        <section class="section charge" id="carga" hidden>
+            <div class="charge-head">
+                <span class="charge-icon" data-icon="bolt"></span>
+                <div>
+                    <p class="eyebrow">Línea principal</p>
+                    <h2>Carga SAS</h2>
+                    <p>Cargadores de pared, carga rápida y cables de carga con la garantía SAS.</p>
                 </div>
-
+                <a class="section-link" href="./pages/sas.html?linea=carga">Ver carga</a>
             </div>
+            <div class="rail"></div>
+        </section>
 
+        <!-- PRODUCTOS SAS -->
+        <section class="section">
+            <div class="section-head">
+                <div>
+                    <h2>Productos SAS</h2>
+                    <p>Disponibles hoy en tienda.</p>
+                </div>
+            </div>
+            <div class="product-grid" id="sasGrid"></div>
+            <a class="button button--ghost button--center" href="./pages/sas.html"><span>Ver los <span data-total-sas>…</span> productos SAS</span></a>
+        </section>
 
-            <!-- VER CATALOGO COMPLETO -->
-            <a href="./pages/catalogo.html" class="carousel-more-link" onclick="
-                    gtag(
-                        'event',
-                        'click_ver_catalogo_completo',
-                        {
-                            page: 'index',
-                            button: 'ver_catalogo_completo'
-                        }
-                    );
-                ">
+        <!-- GARANTÍA -->
+        <section class="section warranty-band" id="garantia">
+            <div class="warranty-big">
+                <span class="warranty-num">2</span>
+                <span class="warranty-unit">años de<br>garantía</span>
+            </div>
+            <div class="warranty-copy">
+                <h2>Una garantía que se resuelve en la tienda</h2>
+                <p>Sin esperar a la fábrica ni hacer trámites largos: los casos que se pueden solucionar con un cambio se resuelven en el momento.</p>
+                <ol class="steps steps--compact">
+                    <li><strong>Trae tu producto SAS</strong><span>A nuestra tienda en Av. Buenos Aires, La Paz.</span></li>
+                    <li><strong>Lo comprobamos</strong><span>Nuestro personal revisa su funcionamiento ahí mismo.</span></li>
+                    <li><strong>Te lo cambiamos</strong><span>Si se confirma un defecto de fabricación cubierto, lo cambias en el momento.</span></li>
+                </ol>
+                <p class="fine-print">Garantía conforme a las condiciones de cada producto. El cambio inmediato está sujeto a la disponibilidad de unidades.</p>
+                <a class="button button--ghost" href="./pages/garantia.html">Ver detalles de la garantía</a>
+            </div>
+        </section>
 
-                Ver catálogo completo →
+        <!-- CALIDAD -->
+        <section class="section quality">
+            <div class="quality-card">
+                <span class="quality-icon" data-icon="award"></span>
+                <h3>Fabricante con ISO 9001</h3>
+                <p>La fábrica que produce SAS cuenta con certificación ISO 9001, que respalda su <strong>sistema de gestión de calidad</strong>. No es una certificación individual de cada producto.</p>
+            </div>
+            <div class="quality-card">
+                <span class="quality-icon" data-icon="cable"></span>
+                <h3>Desarrollado con Omega</h3>
+                <p>Omega Importaciones participa en el desarrollo de cada línea SAS junto a fabricantes especializados.</p>
+            </div>
+            <div class="quality-card">
+                <span class="quality-icon" data-icon="search2"></span>
+                <h3>Información clara</h3>
+                <p>Potencia, compatibilidad y especificaciones varían por modelo. Pregúntanos antes de comprar y te asesoramos.</p>
+                <a class="text-link" data-store-whatsapp target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            </div>
+        </section>
 
-            </a>
-
+        <!-- RESPALDO OMEGA -->
+        <section class="section omega-band">
+            <div class="omega-band-copy">
+                <div class="omega-lockup"><span data-icon="mark"></span><span>Omega Importaciones</span></div>
+                <h2>SAS, con el respaldo de Omega Importaciones</h2>
+                <p>Somos la tienda de tecnología detrás de SAS. Además de nuestra marca, tenemos <strong><span data-total-products>…</span> productos</strong> de otras marcas: audífonos, cámaras, parlantes, mouse y más.</p>
+                <div class="hero-actions">
+                    <a class="button button--light" href="./pages/catalogo.html">Ver catálogo Omega completo</a>
+                    <a class="button button--ghost" href="./pages/ubicacion.html">Cómo llegar</a>
+                </div>
+                <p class="visit-hours"><span data-icon="clock"></span><span data-store-hours></span> · <span data-store-address></span></p>
+            </div>
+            <ol class="steps steps--buy">
+                <li><strong>Elige</strong><span>Agrega productos SAS u Omega a tu pedido.</span></li>
+                <li><strong>Envía tu pedido</strong><span>Un solo mensaje de WhatsApp con productos, cantidades y total.</span></li>
+                <li><strong>Confirmamos</strong><span>Te respondemos con disponibilidad y los datos para pagar por QR o transferencia.</span></li>
+                <li><strong>Recibe</strong><span>Recoge en tienda o recíbelo por delivery en La Paz o envío nacional.</span></li>
+            </ol>
         </section>
 
     </main>
 
+    <!-- Configuración -->
+    <script src="./js/config/store.config.js"></script>
+    <script src="./js/config/pricing.config.js"></script>
+    <script src="./js/config/sas.config.js"></script>
 
-    <!-- FLOATING ACTIONS -->
-    <div class="fab-stack" role="navigation" aria-label="Contacto y redes">
+    <!-- Núcleo -->
+    <script src="./js/core/utils.js"></script>
+    <script src="./js/core/analytics.js"></script>
+    <script src="./js/core/pricing.js"></script>
+    <script src="./js/core/inventory.js"></script>
+    <script src="./js/core/categories.js"></script>
+    <script src="./js/core/sas.js"></script>
+    <script src="./js/core/catalog.js"></script>
+    <script src="./js/core/search.js"></script>
+    <script src="./js/core/cart.js"></script>
+    <script src="./js/core/whatsapp.js"></script>
 
-        <!-- UBICACION -->
-        <a href="./pages/ubicacion.html" class="fab-button fab-location" aria-label="Cómo llegar" onclick="
-                gtag(
-                    'event',
-                    'click_ubicacion',
-                    {
-                        page: 'index',
-                        button: 'ubicacion'
-                    }
-                );
-            ">
+    <!-- Interfaz -->
+    <script src="./js/ui/icons.js"></script>
+    <script src="./js/ui/toast.js"></script>
+    <script src="./js/ui/productCard.js"></script>
+    <script src="./js/ui/cartDrawer.js"></script>
+    <script src="./js/ui/shell.js"></script>
 
-            <span class="fab-emoji">
-                📍
-            </span>
-
-        </a>
-
-
-        <!-- TIKTOK -->
-        <a href="https://www.tiktok.com/@omegaimportaciones" target="_blank" rel="noopener noreferrer"
-            class="fab-button fab-tiktok" aria-label="TikTok" onclick="
-                gtag(
-                    'event',
-                    'click_tiktok',
-                    {
-                        page: 'index',
-                        button: 'tiktok'
-                    }
-                );
-            ">
-
-            <img src="./img/t_logo.png" alt="" class="fab-icon" draggable="false">
-
-        </a>
-
-
-        <!-- FACEBOOK -->
-        <a href="https://www.facebook.com/share/1AATCSwqwf/?mibextid=wwXIfr" target="_blank"
-            rel="noopener noreferrer" class="fab-button fab-facebook" aria-label="Facebook" onclick="
-                gtag(
-                    'event',
-                    'click_facebook',
-                    {
-                        page: 'index',
-                        button: 'facebook'
-                    }
-                );
-            ">
-
-            <img src="./img/f_logo.png" alt="" class="fab-icon" draggable="false">
-
-        </a>
-
-
-        <!-- WHATSAPP -->
-        <a href="https://wa.me/59164216262?text=Hola,%20quiero%20información%20sobre%20sus%20productos"
-            target="_blank" rel="noopener noreferrer" class="fab-button fab-whatsapp" aria-label="WhatsApp"
-            onclick="
-                gtag(
-                    'event',
-                    'click_whatsapp',
-                    {
-                        page: 'index',
-                        button: 'whatsapp'
-                    }
-                );
-            ">
-
-            <img src="./img/w_logo.png" alt="" class="fab-icon" draggable="false">
-
-        </a>
-
-    </div>
-
-
-    <!-- SCRIPTS -->
-    <script src="./js/openBrowser.js">
-    </script>
-
-    <script src="./js/background.js">
-    </script>
-
-    <script src="./js/brandFilter.js">
-    </script>
-
-    <script src="./js/sasPreview.js">
-    </script>
-
-    <script src="./js/flashOffers.js">
-    </script>
-
-    <script src="./js/catalogPreview.js">
-    </script>
-
-    <script src="./js/themeToggle.js">
-    </script>
+    <script src="./js/ui/storeInfo.js"></script>
+    <script src="./js/pages/home.js"></script>
 
 </body>
 

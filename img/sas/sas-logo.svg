@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 900" role="img" aria-label="SAS">
+  
+  <g transform="translate(-190 -190)">
+    <g fill="none" stroke-width="60" stroke-linejoin="miter">
+      <path stroke="#111214" d="M440 510 H228 A282 282 0 0 1 775 414"/>
+      <path stroke="#E3242B" d="M580 510 H792 A282 282 0 0 1 245 606"/>
+    </g>
+    <polygon fill="#111214" points="470,330 545,330 460,655 375,655"/>
+    <polygon fill="#E3242B" points="545,330 635,655 555,655 507,477"/>
+  </g>
+  <g transform="translate(95 700)" fill="none" stroke="#111214" stroke-width="26">
+    <path d="M86 31 A38 30 0 1 0 50 70 A38 30 0 1 1 14 110"/>
+    <path transform="translate(450 0) scale(-1 1)" d="M86 31 A38 30 0 1 0 50 70 A38 30 0 1 1 14 110"/>
+  </g>
+  <g transform="translate(95 700)">
+    <polygon fill="#111214" points="210,0 235,0 202,140 172,140"/>
+    <polygon fill="#E3242B" points="235,0 278,140 248,140 222,55"/>
+  </g>
+</svg>

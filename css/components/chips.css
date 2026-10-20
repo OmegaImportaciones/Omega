@@ -25,9 +25,9 @@
 
 .chip span { color: var(--ink-soft); font-size: 0.8rem; font-variant-numeric: tabular-nums; }
 
-.chip:hover { border-color: var(--ink); }
+.chip:hover { border-color: var(--ink-soft); }
 
-.chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.chip[aria-pressed="true"] { background: var(--red); border-color: var(--red); color: var(--red-ink); }
 
 .chip[aria-pressed="true"] span { color: inherit; opacity: 0.7; }
 

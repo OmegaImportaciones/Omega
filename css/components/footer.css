@@ -1,18 +1,26 @@
 .site-footer {
     margin-top: clamp(64px, 9vw, 112px);
     border-top: 1px solid var(--line);
-    background: var(--surface);
+    background: var(--bg-2);
 }
 
 .footer-inner {
     display: grid;
     gap: 28px;
-    padding-block: 40px 24px;
+    padding-block: 44px 24px;
 }
 
-.footer-brand { display: flex; gap: 14px; align-items: flex-start; max-width: 30em; }
+.footer-brand { display: flex; flex-direction: column; gap: 16px; max-width: 30em; color: var(--ink-soft); }
 
-.footer-brand .brand-mark { width: 40px; height: 36px; }
+.footer-brand strong { color: var(--ink); }
+
+.footer-lockup { display: flex; align-items: center; gap: 12px; color: var(--ink); }
+
+.footer-lockup .sas-mark { width: 46px; height: 46px; }
+
+.footer-lockup .brand-mark { width: 40px; height: 36px; }
+
+.footer-x { color: var(--ink-soft); font-weight: 600; }
 
 .footer-col { display: flex; flex-direction: column; gap: 6px; color: var(--ink-soft); }
 
@@ -20,10 +28,10 @@
 
 .footer-col a { color: var(--ink); font-weight: 600; text-decoration: none; width: fit-content; }
 
-.footer-col a:hover { text-decoration: underline; }
+.footer-col a:hover { color: var(--red); }
 
 .footer-note { padding-bottom: 28px; color: var(--ink-soft); font-size: 0.82rem; }
 
 @media (min-width: 720px) {
-    .footer-inner { grid-template-columns: 2fr 1fr 1fr; }
+    .footer-inner { grid-template-columns: 1.6fr 1fr 1fr 1fr; }
 }

@@ -69,7 +69,7 @@
                     <p>Agrega productos desde la tienda y envíalos juntos en un solo mensaje.</p>
                 </div>`;
 
-            foot.innerHTML = `<a class="button button--solid button--block" href="${U.url('pages/catalogo.html')}">Ir a la tienda</a>`;
+            foot.innerHTML = `<a class="button button--solid button--block" href="${U.url("pages/sas.html")}">Ver productos SAS</a>`;
 
             return;
 

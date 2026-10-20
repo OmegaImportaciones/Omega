@@ -21,3 +21,15 @@
 @media (min-width: 900px) {
     .location-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
 }
+
+.fact-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--red-soft);
+    color: var(--red);
+}
+
+.fact-icon .icon { width: 22px; height: 22px; }

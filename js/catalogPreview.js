@@ -1,9 +1,7 @@
 /* =========================================================
    CATÁLOGO (PREVIEW EN HOME) — MISMO ESTILO CARRUSEL
    QUE OFERTAS FLASH, PERO CON EL DATASET COMPLETO DEL
-   CATÁLOGO (products.json) Y PRECIO REGULAR (precio5).
-   Excluye productos de la marca SAS (esos van en su
-   propio carrusel, ver sasPreview.js).
+   CATÁLOGO (products.json) Y PRECIO REGULAR (precio3).
 ========================================================= */
 
 
@@ -92,8 +90,7 @@ function filterAvailableCatalogProducts(products) {
     return products.filter(product =>
 
         product.estado === 1 &&
-        product.cantidad_disponible > 0 &&
-        !isSasProduct(product)
+        product.cantidad_disponible > 0
 
     );
 
@@ -200,7 +197,7 @@ async function fetchCatalogPreviewProducts() {
 function buildCatalogPreviewWhatsAppLink(product) {
 
     const price =
-        Number(product.precio5).toFixed(2);
+        Number(product.precio3).toFixed(2);
 
     const message =
         `Hola.
@@ -269,7 +266,7 @@ function buildCatalogPreviewCard(product) {
             <div class="carousel-prices">
 
                 <span class="carousel-price">
-                    Bs. ${Number(product.precio5).toFixed(2)}
+                    Bs. ${Number(product.precio3).toFixed(2)}
                 </span>
 
             </div>

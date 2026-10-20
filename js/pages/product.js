@@ -32,7 +32,7 @@
 
         const images = product._images;
 
-        if (!images.length) return `<div class="gallery"><div class="gallery-main pedestal"></div></div>`;
+        if (!images.length) return `<div class="gallery"><div class="gallery-main pedestal">${Card.placeholder(product)}</div></div>`;
 
         return `
             <div class="gallery">
@@ -51,15 +51,42 @@
     }
 
 
-    function perks() {
+    function perks(product) {
+
+        const SAS = window.OMEGA_SAS;
+
+        const warranty = product._isSas
+            ? `<li>${I.shield}<div><strong>Garantía SAS de ${SAS.GARANTIA_ANIOS} años</strong><span>Si se confirma un defecto de fabricación cubierto, te lo cambiamos en el momento. <a href="${U.url('pages/garantia.html')}">Cómo funciona</a></span></div></li>`
+            : `<li>${I.shield}<div><strong>Garantía Omega</strong><span>Consulta la cobertura de este producto por WhatsApp.</span></div></li>`;
 
         return `
             <ul class="perks">
+                ${warranty}
                 <li>${I.pin}<div><strong>Recoge en tienda</strong><span>${STORE.DIRECCION}. ${STORE.HORARIO}.</span></div></li>
                 <li>${I.truck}<div><strong>Delivery en La Paz y envíos nacionales</strong><span>Coordinamos costo y horario por WhatsApp.</span></div></li>
                 <li>${I.qr}<div><strong>Paga con QR o transferencia</strong><span>Te enviamos los datos al confirmar tu pedido.</span></div></li>
-                <li>${I.shield}<div><strong>Garantía Omega</strong><span>Consulta la cobertura de este producto por WhatsApp.</span></div></li>
             </ul>`;
+
+    }
+
+
+    // Los SAS se agrupan por línea SAS; el resto por categoría Omega
+    function groupOf(product) {
+
+        if (product._isSas) {
+            const line = product._sasLine;
+            return {
+                home: 'pages/sas.html', homeLabel: 'Productos SAS',
+                label: `SAS ${line.label}`, href: 'pages/sas.html?linea=' + line.slug,
+                match: p => p._isSas && p._sasLine.slug === line.slug
+            };
+        }
+
+        return {
+            home: 'pages/catalogo.html', homeLabel: 'Catálogo Omega',
+            label: product._category.label, href: 'pages/catalogo.html?cat=' + product._category.slug,
+            match: p => p._category.slug === product._category.slug
+        };
 
     }
 
@@ -70,18 +97,21 @@
 
         const max = Math.min(Number(product.cantidad_disponible) || 1, STORE.MAX_POR_PRODUCTO);
 
+        const group = groupOf(product);
+
         root.innerHTML = `
             <nav class="crumbs" aria-label="Ruta">
-                <a href="${U.url('pages/catalogo.html')}">Tienda</a>
+                <a href="${U.url(group.home)}">${group.homeLabel}</a>
                 <span aria-hidden="true">/</span>
-                <a href="${U.url('pages/catalogo.html?cat=' + product._category.slug)}">${U.escapeHTML(product._category.label)}</a>
+                <a href="${U.url(group.href)}">${U.escapeHTML(group.label)}</a>
             </nav>
 
             <div class="product-layout">
                 ${gallery(product)}
 
                 <div class="product-info">
-                    ${product._isNew ? '<span class="badge">Recién llegado</span>' : ''}
+                    ${product._isSas ? Card.sasSeal(product) : ''}
+                    ${product._isNew && !product._isSas ? '<span class="badge">Recién llegado</span>' : ''}
                     <h1 class="product-title">${U.escapeHTML(product._name)}</h1>
                     <p class="product-code">Código ${U.escapeHTML(product.codigo)}</p>
 
@@ -105,14 +135,14 @@
                         ${I.chat}<span>Comprar ahora por WhatsApp</span>
                     </a>
 
-                    ${perks()}
+                    ${perks(product)}
                 </div>
             </div>
 
             <section class="section" id="related" hidden>
                 <div class="section-head">
-                    <h2>Más en ${U.escapeHTML(product._category.label)}</h2>
-                    <a class="section-link" href="${U.url('pages/catalogo.html?cat=' + product._category.slug)}">Ver todo</a>
+                    <h2>Más en ${U.escapeHTML(group.label)}</h2>
+                    <a class="section-link" href="${U.url(group.href)}">Ver todo</a>
                 </div>
                 <div class="rail"></div>
             </section>`;
@@ -163,7 +193,7 @@
         });
 
         const related = catalog.products
-            .filter(p => p._category.slug === product._category.slug && p.id !== product.id)
+            .filter(p => group.match(p) && p.id !== product.id)
             .slice(0, 10);
 
         if (related.length) {

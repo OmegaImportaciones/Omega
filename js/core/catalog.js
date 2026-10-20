@@ -59,6 +59,12 @@
 
         const { price, oldPrice } = window.OmegaPricing.getPrice(product);
 
+        const SAS = window.Omega.sas;
+
+        const isSas = SAS.isSas(product);
+
+        const parts = isSas ? SAS.split(product) : null;
+
         return Object.assign({}, product, {
             _price: price,
             _oldPrice: oldPrice,
@@ -66,7 +72,10 @@
             _category: window.Omega.categories.of(product),
             _images: imagesOf(product),
             _isNew: isNew(product),
-            _name: U.titleCase(product.producto)
+            _isSas: isSas,
+            _model: parts ? parts.model : '',
+            _sasLine: isSas ? SAS.lineOf(product) : null,
+            _name: U.titleCase(parts ? parts.base : String(product.producto || '').replace(/\{SAS\}/ig, ''))
         });
 
     }
@@ -89,7 +98,11 @@
 
             const products = all.filter(p => window.OmegaInventory.isPublishable(p));
 
+            const sas = products.filter(p => p._isSas);
+
             return {
+                sas,
+                sasLines: window.Omega.sas.summarize(sas),
                 products,
                 byId: new Map(products.map(p => [String(p.id), p])),
                 allById: new Map(all.map(p => [String(p.id), p])),

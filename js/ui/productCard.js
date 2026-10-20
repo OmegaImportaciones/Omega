@@ -31,9 +31,46 @@
 
         if (product._discount > 0) list.push(`<span class="badge badge--offer">−${product._discount}%</span>`);
 
-        if (product._isNew) list.push(`<span class="badge">Recién llegado</span>`);
+        // En SAS el sello de marca ya destaca; "Recién llegado" solo para el resto
+        if (product._isNew && !product._isSas) list.push(`<span class="badge">Recién llegado</span>`);
 
         return list.length ? `<div class="card-badges">${list.join('')}</div>` : '';
+
+    }
+
+
+    // Sin foto: los SAS muestran su emblema y modelo; el resto, su categoría
+    function placeholder(product) {
+
+        if (product._isSas) {
+            return `
+                <div class="ph ph--sas">
+                    ${I.sas}
+                    ${product._model ? `<span class="ph-model">${U.escapeHTML(product._model)}</span>` : ''}
+                </div>`;
+        }
+
+        return `<div class="ph"><span>${U.escapeHTML(product._category.label)}</span></div>`;
+
+    }
+
+
+    function media(product, alt) {
+
+        const image = product._images[0];
+
+        return image
+            ? `<img src="${U.escapeHTML(image)}" alt="${U.escapeHTML(alt || '')}" loading="lazy" decoding="async">`
+            : placeholder(product);
+
+    }
+
+
+    function sasSeal(product) {
+
+        if (!product._isSas) return '';
+
+        return `<span class="sas-seal">${I.sas}<span>SAS${product._model ? ' · ' + U.escapeHTML(product._model) : ''}</span></span>`;
 
     }
 
@@ -49,15 +86,14 @@
 
         const opts = options || {};
 
-        const image = product._images[0] || '';
-
         const card = U.el(`
-            <article class="product-card">
+            <article class="product-card${product._isSas ? ' product-card--sas' : ''}">
                 <a class="card-link" href="${productHref(product)}">
                     <div class="pedestal">
-                        ${image ? `<img src="${U.escapeHTML(image)}" alt="" loading="lazy" decoding="async">` : ''}
+                        ${media(product)}
                         ${badges(product)}
                     </div>
+                    ${sasSeal(product)}
                     <h3 class="card-name">${U.escapeHTML(product._name)}</h3>
                 </a>
                 <div class="card-foot">
@@ -111,6 +147,6 @@
     }
 
 
-    window.Omega.productCard = { render, renderInto, priceTag, productHref };
+    window.Omega.productCard = { render, renderInto, priceTag, productHref, media, placeholder, sasSeal };
 
 })();

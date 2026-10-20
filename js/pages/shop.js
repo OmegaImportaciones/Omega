@@ -1,6 +1,10 @@
 /* =========================================================
-   SHOP — tienda completa: búsqueda, categorías y orden
-   Estado en la URL: ?q=audifonos&cat=parlantes&orden=precio-asc
+   SHOP — catálogo con búsqueda, grupos y orden.
+   Sirve para dos páginas según <body data-page>:
+     "shop" -> Catálogo Omega completo, agrupado por categoría
+               ?q=audifonos&cat=parlantes&orden=precio-asc
+     "sas"  -> Solo productos SAS, agrupados por línea SAS
+               ?q=hdmi&linea=hdmi-video
 ========================================================= */
 
 (function () {
@@ -12,11 +16,23 @@
     const BATCH = 24;
 
     const SORTS = {
-        relevancia: (a, b) => (b._isNew - a._isNew) || (b._discount - a._discount),
+        // Destacados: SAS primero, luego con foto, recién llegados y ofertas
+        relevancia: (a, b) =>
+            (b._isSas - a._isSas) ||
+            ((b._images.length > 0) - (a._images.length > 0)) ||
+            (b._isNew - a._isNew) ||
+            (b._discount - a._discount),
         'precio-asc': (a, b) => a._price - b._price,
         'precio-desc': (a, b) => b._price - a._price,
         nombre: (a, b) => a._name.localeCompare(b._name, 'es')
     };
+
+    const IS_SAS = document.body.dataset.page === 'sas';
+
+    // Qué productos y qué grupos usa esta página
+    const SCOPE = IS_SAS
+        ? { param: 'linea', list: 'sas', base: c => c.sas, groups: c => c.sasLines, groupOf: p => p._sasLine.slug }
+        : { param: 'cat', list: 'tienda', base: c => c.products, groups: c => c.categories, groupOf: p => p._category.slug };
 
     const state = { catalog: null, q: '', cat: '', orden: 'relevancia', results: [], shown: 0 };
 
@@ -39,7 +55,7 @@
 
         state.q = params.get('q') || '';
 
-        state.cat = params.get('cat') || '';
+        state.cat = params.get(SCOPE.param) || '';
 
         state.orden = SORTS[params.get('orden')] ? params.get('orden') : 'relevancia';
 
@@ -55,7 +71,7 @@
         if (state.q) params.set('q', state.q);
 
         if (state.cat === '__ofertas') params.set('ofertas', '1');
-        else if (state.cat) params.set('cat', state.cat);
+        else if (state.cat) params.set(SCOPE.param, state.cat);
 
         if (state.orden !== 'relevancia') params.set('orden', state.orden);
 
@@ -70,11 +86,15 @@
 
         const { catalog } = state;
 
-        const items = [{ slug: '', label: 'Todo', count: catalog.products.length }];
+        const base = SCOPE.base(catalog);
 
-        if (catalog.offers.length) items.push({ slug: '__ofertas', label: 'Ofertas', count: catalog.offers.length });
+        const offers = base.filter(p => p._oldPrice);
 
-        items.push(...catalog.categories);
+        const items = [{ slug: '', label: IS_SAS ? 'Todo SAS' : 'Todo', count: base.length }];
+
+        if (offers.length) items.push({ slug: '__ofertas', label: 'Ofertas', count: offers.length });
+
+        items.push(...SCOPE.groups(catalog));
 
         chips.innerHTML = items.map(c => `
             <button type="button" class="chip${c.slug === '__ofertas' ? ' chip--offer' : ''}" data-cat="${c.slug}" aria-pressed="${state.cat === c.slug}">
@@ -92,10 +112,10 @@
 
         const { catalog } = state;
 
-        let list = catalog.products;
+        let list = SCOPE.base(catalog);
 
-        if (state.cat === '__ofertas') list = catalog.offers;
-        else if (state.cat) list = list.filter(p => p._category.slug === state.cat);
+        if (state.cat === '__ofertas') list = list.filter(p => p._oldPrice);
+        else if (state.cat) list = list.filter(p => SCOPE.groupOf(p) === state.cat);
 
         list = window.Omega.search.filter(list, state.q);
 
@@ -112,9 +132,9 @@
 
         const catLabel = state.cat === '__ofertas'
             ? 'en oferta'
-            : (state.catalog.categories.find(c => c.slug === state.cat) || {}).label;
+            : (SCOPE.groups(state.catalog).find(c => c.slug === state.cat) || {}).label;
 
-        let text = `${n} ${n === 1 ? 'producto' : 'productos'}`;
+        let text = `${n} ${n === 1 ? 'producto' : 'productos'}${IS_SAS ? ' SAS' : ''}`;
 
         if (catLabel) text += state.cat === '__ofertas' ? ` ${catLabel}` : ` en ${catLabel}`;
 
@@ -129,7 +149,7 @@
 
         const next = state.results.slice(state.shown, state.shown + BATCH);
 
-        Card.renderInto(grid, next, { list: state.cat || 'tienda' });
+        Card.renderInto(grid, next, { list: state.cat || SCOPE.list });
 
         state.shown += next.length;
 
@@ -151,7 +171,8 @@
             grid.innerHTML = `
                 <div class="empty-state empty-state--wide">
                     <p><strong>No encontramos “${U.escapeHTML(state.q)}”${state.cat ? ' en esta categoría' : ''}.</strong></p>
-                    <p>Prueba con otra palabra o pregúntanos: muchas veces lo tenemos en tienda.</p>
+                    <p>${IS_SAS ? 'Prueba con otra palabra o búscalo en todo el catálogo Omega.' : 'Prueba con otra palabra o pregúntanos: muchas veces lo tenemos en tienda.'}</p>
+                    ${IS_SAS ? `<a class="button button--ghost" href="${U.url('pages/catalogo.html' + (state.q ? '?q=' + encodeURIComponent(state.q) : ''))}">Buscar en el catálogo Omega</a>` : ''}
                     <a class="button button--whatsapp" target="_blank" rel="noopener"
                        href="${window.Omega.whatsapp.general(`Hola ${window.OMEGA_STORE.NOMBRE}, ¿tienen ${state.q || 'este producto'}?`)}">Preguntar por WhatsApp</a>
                 </div>`;
@@ -208,7 +229,7 @@
 
             render();
 
-            window.Omega.analytics.track('filter_category', { category: state.cat || 'todo' });
+            window.Omega.analytics.track('filter_category', { category: state.cat || 'todo', scope: SCOPE.list });
 
         });
 

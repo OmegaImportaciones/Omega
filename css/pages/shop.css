@@ -43,3 +43,56 @@
         align-items: center;
     }
 }
+
+/* ---------- Encabezado del catálogo SAS ---------- */
+
+.sas-head { display: flex; align-items: center; gap: 14px; }
+
+.sas-head-mark .sas-mark { width: 56px; height: 56px; color: var(--ink); }
+
+.sas-perks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sas-perks li {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px 7px 10px;
+    border-radius: var(--radius-pill);
+    background: var(--red-soft);
+    color: var(--ink);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.sas-perks .icon { width: 18px; height: 18px; color: var(--red); }
+
+/* ---------- Franja "¿Buscas SAS?" en el catálogo Omega ---------- */
+
+.sas-strip {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 16px;
+    padding: 12px 14px;
+    border-radius: var(--radius-m);
+    background: linear-gradient(90deg, rgba(227, 36, 43, 0.22), rgba(227, 36, 43, 0.06));
+    border: 1px solid rgba(227, 36, 43, 0.4);
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+}
+
+.sas-strip strong { color: var(--ink); }
+
+.sas-strip .sas-mark { width: 34px; height: 34px; color: var(--ink); }
+
+.sas-strip > span:nth-child(2) { flex: 1; }
+
+.sas-strip-go { font-weight: 800; color: var(--red); white-space: nowrap; }

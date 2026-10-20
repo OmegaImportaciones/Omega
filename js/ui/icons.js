@@ -43,6 +43,48 @@
 
         link: stroke('<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>'),
 
+        bolt: stroke('<path d="M13 2.5 5 13.5h6l-1 8 8-11h-6l1-8Z"/>'),
+
+        swap: stroke('<path d="M4 8h13l-3.5-3.5M20 16H7l3.5 3.5"/>'),
+
+        search2: stroke('<circle cx="10.5" cy="10.5" r="6"/><path d="m19.5 19.5-4.5-4.5M8 10.5h5"/>'),
+
+        award: stroke('<circle cx="12" cy="9" r="5.5"/><path d="m8.6 13.4-1.6 7.1 5-2.5 5 2.5-1.6-7.1"/>'),
+
+        cable: stroke('<path d="M7 3v4M11 3v4M5.5 7h7v4a3.5 3.5 0 0 1-7 0V7ZM9 14.5V17a4 4 0 0 0 8 0V9a2 2 0 0 1 4 0v12"/>'),
+
+        hdmi: stroke('<path d="M3 8.5h18v4l-2.5 3h-13L3 12.5v-4Z"/><path d="M7 11.5h10"/>'),
+
+        network: stroke('<rect x="9" y="3" width="6" height="5" rx="1"/><rect x="3" y="16" width="6" height="5" rx="1"/><rect x="15" y="16" width="6" height="5" rx="1"/><path d="M12 8v4M6 16v-4h12v4"/>'),
+
+        audio: stroke('<path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4.5" height="6" rx="1.5"/><rect x="16.5" y="14" width="4.5" height="6" rx="1.5"/>'),
+
+        usb: stroke('<path d="M12 21V5M9 7.5 12 4l3 3.5M12 16l-4.5-3V10M12 13.5l4.5-3V8"/><circle cx="7.5" cy="9" r="1.2"/><rect x="15.3" y="6.5" width="2.4" height="2.4"/>'),
+
+        convert: stroke('<rect x="3" y="7" width="7" height="10" rx="1.5"/><rect x="14" y="7" width="7" height="10" rx="1.5"/><path d="M10 12h4"/>'),
+
+        arrowRight: stroke('<path d="M5 12h14M13 6l6 6-6 6"/>'),
+
+        // Emblema SAS: el trazo oscuro usa currentColor, el rojo es fijo
+        sas: `<svg class="sas-mark" viewBox="190 190 640 640" aria-hidden="true">
+                <g fill="none" stroke-width="64" stroke-linejoin="miter">
+                    <path stroke="currentColor" d="M440 510 H228 A282 282 0 0 1 775 414"/>
+                    <path stroke="var(--red)" d="M580 510 H792 A282 282 0 0 1 245 606"/>
+                </g>
+                <polygon fill="currentColor" points="470,330 545,330 460,655 375,655"/>
+                <polygon fill="var(--red)" points="545,330 635,655 555,655 507,477"/>
+              </svg>`,
+
+        // Palabra SΛƧ (como en el logo original)
+        sasWord: `<svg class="sas-word" viewBox="0 -8 450 156" aria-hidden="true">
+                <g fill="none" stroke="currentColor" stroke-width="26">
+                    <path d="M86 31 A38 30 0 1 0 50 70 A38 30 0 1 1 14 110"/>
+                    <path transform="translate(450 0) scale(-1 1)" d="M86 31 A38 30 0 1 0 50 70 A38 30 0 1 1 14 110"/>
+                </g>
+                <polygon fill="currentColor" points="210,0 235,0 202,140 172,140"/>
+                <polygon fill="var(--red)" points="235,0 278,140 248,140 222,55"/>
+              </svg>`,
+
         // Isotipo Omega: dos medialunas cromadas (del logo de la marca)
         mark: `<svg class="brand-mark" viewBox="0 0 44 40" aria-hidden="true">
                 <defs>

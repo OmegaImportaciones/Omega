@@ -1,83 +1,100 @@
 /* =========================================================
-   HOME — vitrina, ofertas, categorías, recién llegados
+   HOME — portada SAS: líneas, carga, productos SAS
 ========================================================= */
 
 (function () {
 
     const U = window.Omega.utils;
 
+    const I = window.Omega.icons;
+
     const Card = window.Omega.productCard;
 
+    const SAS = window.OMEGA_SAS;
 
-    function pickShowcase(catalog) {
+    // Ícono de cada línea (slug -> nombre en icons.js)
+    const LINE_ICONS = {
+        carga: 'bolt',
+        conversores: 'convert',
+        'hdmi-video': 'hdmi',
+        redes: 'network',
+        audio: 'audio',
+        'usb-pc': 'usb',
+        accesorios: 'cable'
+    };
 
-        const withImage = list => list.filter(p => p._images.length);
 
-        const pool = [
-            ...withImage(catalog.offers),
-            ...withImage(catalog.fresh),
-            ...U.seededShuffle(withImage(catalog.products), U.daySeed())
-        ];
+    // Fijados en sas.config.js primero; luego con foto, mezclados por día
+    function pickFeatured(catalog, count) {
+
+        const pinned = SAS.DESTACADOS
+            .map(id => catalog.byId.get(String(id)))
+            .filter(p => p && p._isSas);
+
+        const withPhoto = U.seededShuffle(catalog.sas.filter(p => p._images.length), U.daySeed());
+
+        const rest = U.seededShuffle(catalog.sas.filter(p => !p._images.length), U.daySeed());
 
         const seen = new Set();
 
-        return pool.filter(p => !seen.has(p.id) && seen.add(p.id)).slice(0, 3);
+        return [...pinned, ...withPhoto, ...rest]
+            .filter(p => !seen.has(p.id) && seen.add(p.id))
+            .slice(0, count);
 
     }
 
 
-    function renderShowcase(catalog) {
+    function renderLines(catalog) {
 
-        const stage = document.getElementById('vitrina');
+        const grid = document.getElementById('lineGrid');
 
-        if (!stage) return;
+        if (!grid) return;
 
-        const items = pickShowcase(catalog);
+        const lines = [...catalog.sasLines];
 
-        stage.innerHTML = items.map((p, i) => `
-            <a class="vitrina-item vitrina-item--${i + 1}" href="${Card.productHref(p)}">
-                <img src="${U.escapeHTML(p._images[0])}" alt="${U.escapeHTML(p._name)}" ${i === 0 ? 'fetchpriority="high"' : 'loading="lazy"'}>
-                ${Card.priceTag(p)}
-            </a>`).join('');
+        // La línea de carga es prioritaria: se muestra aunque aún no tenga stock
+        const charge = SAS.LINEAS.find(l => l.slug === 'carga');
 
-        stage.classList.add('is-ready');
+        if (charge && !lines.some(l => l.slug === 'carga')) {
+            lines.unshift({ slug: 'carga', label: charge.label, descripcion: charge.descripcion, count: 0 });
+        }
+
+        grid.innerHTML = lines.map(line => {
+
+            const icon = I[LINE_ICONS[line.slug] || 'cable'];
+
+            const soon = line.count === 0;
+
+            const tag = soon ? 'div' : 'a';
+
+            const href = soon ? '' : ` href="${U.url('pages/sas.html?linea=' + line.slug)}"`;
+
+            return `
+                <${tag} class="line-tile${line.slug === 'carga' ? ' line-tile--main' : ''}${soon ? ' is-soon' : ''}"${href}>
+                    <span class="line-icon">${icon}</span>
+                    <span class="line-label">${U.escapeHTML(line.label)}</span>
+                    <span class="line-desc">${U.escapeHTML(line.descripcion || '')}</span>
+                    <span class="line-count">${soon ? 'Muy pronto' : `${line.count} ${line.count === 1 ? 'producto' : 'productos'}`}</span>
+                </${tag}>`;
+
+        }).join('');
 
     }
 
 
-    function renderRail(sectionId, products, list) {
+    function renderCharge(catalog) {
 
-        const section = document.getElementById(sectionId);
+        const section = document.getElementById('carga');
 
         if (!section) return;
+
+        const products = catalog.sas.filter(p => p._sasLine.slug === 'carga');
 
         if (!products.length) { section.hidden = true; return; }
 
         section.hidden = false;
 
-        Card.renderInto(section.querySelector('.rail'), products, { list });
-
-    }
-
-
-    function renderCategories(catalog) {
-
-        const grid = document.getElementById('categoryGrid');
-
-        if (!grid) return;
-
-        grid.innerHTML = catalog.categories.slice(0, 8).map(cat => {
-
-            const sample = catalog.products.find(p => p._category.slug === cat.slug && p._images.length) || cat.sample;
-
-            return `
-                <a class="category-tile" href="${U.url('pages/catalogo.html?cat=' + cat.slug)}">
-                    <span class="category-img">${sample._images[0] ? `<img src="${U.escapeHTML(sample._images[0])}" alt="" loading="lazy">` : ''}</span>
-                    <span class="category-label">${U.escapeHTML(cat.label)}</span>
-                    <span class="category-count">${cat.count} productos</span>
-                </a>`;
-
-        }).join('');
+        Card.renderInto(section.querySelector('.rail'), products.slice(0, 12), { list: 'sas_carga' });
 
     }
 
@@ -88,17 +105,13 @@
 
             const catalog = await window.Omega.catalog.load();
 
-            renderShowcase(catalog);
+            renderLines(catalog);
 
-            renderRail('ofertas', catalog.offers.slice(0, 12), 'ofertas');
+            renderCharge(catalog);
 
-            renderCategories(catalog);
+            Card.renderInto(document.getElementById('sasGrid'), pickFeatured(catalog, 8), { list: 'sas_portada' });
 
-            renderRail('nuevos', catalog.fresh.slice(0, 12), 'recien_llegados');
-
-            const daily = U.seededShuffle(catalog.products, U.daySeed() + 7).slice(0, 8);
-
-            Card.renderInto(document.getElementById('dailyGrid'), daily, { list: 'elegidos_hoy' });
+            document.querySelectorAll('[data-total-sas]').forEach(n => { n.textContent = catalog.sas.length; });
 
             document.querySelectorAll('[data-total-products]').forEach(n => { n.textContent = catalog.products.length; });
 

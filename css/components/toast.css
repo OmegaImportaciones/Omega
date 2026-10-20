@@ -24,13 +24,12 @@
 .toast-action {
     border: 0;
     background: none;
-    color: var(--tag);
+    color: var(--red);
     font-weight: 800;
     text-decoration: underline;
     text-underline-offset: 3px;
 }
 
-html[data-theme="dark"] .toast-action { color: var(--tag-ink); }
 
 @media (min-width: 900px) {
     .toast { bottom: 28px; }

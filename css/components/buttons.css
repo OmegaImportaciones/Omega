@@ -16,9 +16,13 @@
 
 .button:active { transform: scale(0.97); }
 
-.button--solid { background: var(--ink); color: var(--bg); }
+.button--solid { background: var(--red); color: var(--red-ink); }
 
-.button--ghost { border-color: var(--ink); background: transparent; }
+.button--solid:hover { background: var(--red-hover); }
+
+.button--light { background: var(--ink); color: var(--bg); }
+
+.button--ghost { border-color: var(--line-strong); background: transparent; }
 
 .button--ghost:hover { background: var(--ink); color: var(--bg); }
 

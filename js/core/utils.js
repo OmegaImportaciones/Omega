@@ -58,12 +58,33 @@ window.Omega = window.Omega || {};
     }
 
 
-    // "AUDIFONO BLUETOOTH XIAOMI" -> "Audifono Bluetooth Xiaomi"
+    // Siglas que siempre van en mayúsculas y palabras que van en minúscula
+    const ACRONYMS = new Set(['HDMI', 'USB', 'UTP', 'VGA', 'DVI', 'RCA', 'AV', 'AV2', 'DP', 'UHD', 'FHD', 'HD',
+        'PC', 'CPU', 'SSD', 'HDD', 'TV', 'LED', 'RGB', 'SC', 'IP', 'TWS', 'BT', 'OTG', 'KVM', 'HDTV', 'POE', 'RJ45',
+        'SD', 'MSD', 'NVME', 'SATA', 'PD', 'QC', 'GB', 'TB', 'MB', '2RCA', '4K', '2K', '8K', 'TP-LINK']);
+
+    const LOWER = new Set(['de', 'a', 'para', 'con', 'y', 'o', 'por', 'en', 'del', 'el', 'la', 'sin', 'mm', 'cm', 'w', 'mah', 'metros', 'metro', 'm']);
+
+
+    // "CABLE HDMI 2.0V DE 3 METROS" -> "Cable HDMI 2.0v de 3 metros"
     function titleCase(text) {
 
         return String(text || '')
             .toLowerCase()
-            .replace(/(^|[\s\-/(])([a-záéíóúñ])/g, (m, sep, ch) => sep + ch.toUpperCase());
+            .replace(/\s+/g, ' ')
+            .trim()
+            .split(' ')
+            .map((word, i) => word
+                // cada parte separada por "/" se trata como palabra ("hdmi/vga" -> "HDMI/VGA")
+                .split('/')
+                .map((part, j) => {
+                    const up = part.toUpperCase();
+                    if (ACRONYMS.has(up)) return up;
+                    if ((i > 0 || j > 0) && LOWER.has(part)) return part;
+                    return part.replace(/(^|[\-(])([a-záéíóúñ])/g, (m, sep, ch) => sep + ch.toUpperCase());
+                })
+                .join('/'))
+            .join(' ');
 
     }
 

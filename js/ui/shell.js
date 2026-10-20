@@ -15,37 +15,60 @@
     const page = document.body.dataset.page || '';
 
 
+    // Pestañas principales. "page" = data-page del <body>
+    const TABS = [
+        { page: 'home', label: 'Inicio', href: 'index.html' },
+        { page: 'sas', label: 'Productos SAS', href: 'pages/sas.html' },
+        { page: 'shop', label: 'Catálogo Omega', href: 'pages/catalogo.html' },
+        { page: 'warranty', label: 'Garantía', href: 'pages/garantia.html' },
+        { page: 'location', label: 'Visítanos', href: 'pages/ubicacion.html' }
+    ];
+
+
+    function tabs(className) {
+
+        return `
+            <nav class="${className}" aria-label="Principal">
+                ${TABS.map(t => `<a href="${U.url(t.href)}" ${page === t.page ? 'aria-current="page"' : ''}>${t.label}</a>`).join('')}
+            </nav>`;
+
+    }
+
+
     function header() {
 
         const query = new URLSearchParams(location.search).get('q') || '';
 
+        const searchesHere = page === 'shop' || page === 'sas';
+
+        const searchAction = page === 'sas' ? 'pages/sas.html' : 'pages/catalogo.html';
+
+        const placeholder = page === 'sas' ? 'Buscar en SAS: HDMI, UTP, conversor…' : 'Buscar cables, audífonos, cargadores…';
+
         return U.el(`
             <header class="site-header">
                 <div class="header-inner">
-                    <a class="brand" href="${U.url('index.html')}" aria-label="${STORE.NOMBRE}, inicio">
-                        ${I.mark}
-                        <span class="brand-word">Omega<small>Importaciones</small></span>
+                    <a class="brand" href="${U.url('index.html')}" aria-label="SAS, marca de ${STORE.NOMBRE}. Inicio">
+                        ${I.sas}
+                        <span class="brand-word">${I.sasWord}<small>${STORE.NOMBRE}</small></span>
                     </a>
 
-                    <form class="header-search" role="search" action="${U.url('pages/catalogo.html')}">
+                    <form class="header-search" role="search" action="${U.url(searchAction)}">
                         <label class="visually-hidden" for="headerSearch">Buscar productos</label>
                         ${I.search}
-                        <input id="headerSearch" name="q" type="search" placeholder="Buscar audífonos, cargadores, cámaras…" value="${U.escapeHTML(page === 'shop' ? query : '')}" autocomplete="off" enterkeyhint="search">
+                        <input id="headerSearch" name="q" type="search" placeholder="${placeholder}" value="${U.escapeHTML(searchesHere ? query : '')}" autocomplete="off" enterkeyhint="search">
                     </form>
 
-                    <nav class="header-nav" aria-label="Principal">
-                        <a href="${U.url('pages/catalogo.html')}" ${page === 'shop' ? 'aria-current="page"' : ''}>Tienda</a>
-                        <a href="${U.url('pages/ubicacion.html')}" ${page === 'location' ? 'aria-current="page"' : ''}>Visítanos</a>
-                    </nav>
+                    ${tabs('header-nav')}
 
                     <div class="header-actions">
-                        <button type="button" class="icon-button" data-theme-toggle></button>
                         <button type="button" class="cart-button" data-open-cart aria-label="Abrir mi pedido">
                             ${I.bag}
                             <span class="cart-count" data-cart-count hidden>0</span>
                         </button>
                     </div>
                 </div>
+                ${tabs('tab-bar')}
             </header>`);
 
     }
@@ -53,18 +76,30 @@
 
     function footer() {
 
+        const SAS = window.OMEGA_SAS;
+
         return U.el(`
             <footer class="site-footer">
                 <div class="footer-inner">
                     <div class="footer-brand">
-                        ${I.mark}
-                        <p><strong>${STORE.NOMBRE}</strong><br>Tecnología importada con tienda física en La Paz.</p>
+                        <div class="footer-lockup">
+                            ${I.sas}
+                            <span class="footer-x" aria-hidden="true">×</span>
+                            ${I.mark}
+                        </div>
+                        <p><strong>SAS · ${SAS.LEMA}</strong><br>Marca propia de ${STORE.NOMBRE}, tienda de tecnología con local en La Paz.</p>
                     </div>
                     <div class="footer-col">
-                        <h2>Tienda</h2>
+                        <h2>SAS</h2>
+                        <a href="${U.url('pages/sas.html')}">Productos SAS</a>
+                        <a href="${U.url('pages/garantia.html')}">Garantía de ${SAS.GARANTIA_ANIOS} años</a>
+                        <a href="${U.url('pages/catalogo.html')}">Catálogo Omega</a>
+                    </div>
+                    <div class="footer-col">
+                        <h2>Tienda Omega</h2>
                         <p>${STORE.DIRECCION}</p>
                         <p>${STORE.HORARIO}</p>
-                        <a href="${STORE.MAPS_URL}" target="_blank" rel="noopener">Cómo llegar</a>
+                        <a href="${STORE.MAPS_URL}" target="_blank" rel="noopener" data-track="click_maps">Cómo llegar</a>
                     </div>
                     <div class="footer-col">
                         <h2>Contacto</h2>
@@ -73,8 +108,19 @@
                         <a href="${STORE.FACEBOOK_URL}" target="_blank" rel="noopener" data-track="click_facebook">Facebook</a>
                     </div>
                 </div>
-                <p class="footer-note">Precios en bolivianos. Disponibilidad sujeta a confirmación por WhatsApp.</p>
+                <p class="footer-note">Precios en bolivianos. Disponibilidad sujeta a confirmación por WhatsApp. Garantía SAS según las condiciones de cada producto.</p>
             </footer>`);
+
+    }
+
+
+    // Botón flotante de WhatsApp (escritorio y móvil sin pedido)
+    function whatsappFab() {
+
+        return U.el(`
+            <a class="wa-fab" href="${window.Omega.whatsapp.general()}" target="_blank" rel="noopener" data-track="click_whatsapp_fab" aria-label="Escribir por WhatsApp">
+                ${I.chat}<span>WhatsApp</span>
+            </a>`);
 
     }
 
@@ -126,6 +172,8 @@
             node.hidden = count === 0;
         });
 
+        document.body.classList.toggle('has-order', count > 0);
+
         const bar = document.querySelector('.order-bar');
 
         if (!bar) return;
@@ -159,7 +207,14 @@
 
         document.body.appendChild(orderBar());
 
-        window.Omega.theme.bind(document.querySelector('[data-theme-toggle]'));
+        document.body.appendChild(whatsappFab());
+
+        // En móvil, deja visible la pestaña de la página actual
+        const bar = document.querySelector('.tab-bar');
+
+        const current = bar && bar.querySelector('[aria-current="page"]');
+
+        if (current) bar.scrollLeft = current.offsetLeft - (bar.clientWidth - current.offsetWidth) / 2;
 
         document.addEventListener('click', event => {
 
@@ -182,14 +237,14 @@
             window.Omega.analytics.track('search', { search_term: value, page });
 
             // En la tienda, la búsqueda se aplica sin recargar
-            if (page === 'shop' && window.Omega.shopPage) {
+            if ((page === 'shop' || page === 'sas') && window.Omega.shopPage) {
                 event.preventDefault();
                 window.Omega.shopPage.setQuery(value);
             }
 
         });
 
-        if (page === 'shop') {
+        if (page === 'shop' || page === 'sas') {
             form.q.addEventListener('input', () => window.Omega.shopPage && window.Omega.shopPage.setQuery(form.q.value, true));
         }
 
