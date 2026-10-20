@@ -87,7 +87,7 @@
                             <span class="footer-x" aria-hidden="true">×</span>
                             ${I.mark}
                         </div>
-                        <p><strong>SAS · ${SAS.LEMA}</strong><br>Marca propia de ${STORE.NOMBRE}, tienda de tecnología con local en La Paz.</p>
+                        <p><strong>SAS · ${SAS.LEMA}</strong><br>${STORE.NOMBRE}, socio estratégico de SAS. Tienda de tecnología con local en La Paz.</p>
                     </div>
                     <div class="footer-col">
                         <h2>SAS</h2>
