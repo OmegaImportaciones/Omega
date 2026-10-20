@@ -349,7 +349,7 @@ function startFlashSlider() {
 
     const firstCard =
         flashContainer.querySelector(
-            '.flash-card'
+            '.carousel-card'
         );
 
     if (!firstCard) return;

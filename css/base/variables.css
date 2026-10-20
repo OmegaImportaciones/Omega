@@ -33,14 +33,25 @@
   --button-pressed: rgba(0, 0, 0, 0.06);
 
   /* =========================
-     SYSTEM COLORS (light palette)
+     MARCA — SAS (negro / rojo)
+     Identidad única del sitio: el acento ya no es el
+     azul de iOS, es el rojo de SAS. Es el MISMO rojo en
+     claro y oscuro — lo que cambia entre temas es el
+     fondo/negro, no el color de marca.
   ========================= */
-  --accent: #007aff;        /* systemBlue */
-  --accent-soft: #3395ff;
-  --accent-dim: rgba(0, 122, 255, 0.1);
+  --sas-red: #e01020;
+  --sas-red-strong: #b50d1a;
+  --sas-black: #0d0d0d;
 
-  --system-green: #34c759;
-  --system-red: #ff3b30;
+  /* =========================
+     SYSTEM COLORS (acento = marca SAS)
+  ========================= */
+  --accent: var(--sas-red);
+  --accent-soft: #ff3b3f;
+  --accent-dim: rgba(224, 16, 32, 0.1);
+
+  --system-green: #34c759;      /* se mantiene: es el color universal de "precio" */
+  --system-red: var(--sas-red); /* "Oferta Flash" usa el mismo rojo de marca */
   --system-orange: #ff9500;
   --system-teal: #30b0c7;
   --system-purple: #af52de;
@@ -48,7 +59,7 @@
   /* SHADOWS — soft, barely-there depth */
   --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 1px rgba(0, 0, 0, 0.03);
   --shadow-lift: 0 12px 28px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
-  --shadow-glow: 0 0 24px rgba(0, 122, 255, 0.1);
+  --shadow-glow: 0 0 24px rgba(224, 16, 32, 0.12);
 
   /* RADIUS — iOS corner radii */
   --radius-main: 16px;
@@ -77,6 +88,7 @@
    los píxeles negros queden literalmente apagados. La
    separación entre tarjetas/botones se logra con bordes y
    overlays translúcidos blancos, no con grises intermedios.
+   El rojo de marca (--sas-red) es EL MISMO que en modo claro.
 ========================= */
 
 html[data-theme="dark"] {
@@ -105,13 +117,12 @@ html[data-theme="dark"] {
   --button-hover: rgba(255, 255, 255, 0.06);
   --button-pressed: rgba(255, 255, 255, 0.1);
 
-  /* SYSTEM COLORS (paleta dark de iOS, más vívida sobre negro) */
-  --accent: #0a84ff;
-  --accent-soft: #409cff;
-  --accent-dim: rgba(10, 132, 255, 0.18);
+  /* ACCENT — mismo rojo de marca; solo sube un poco el "soft"
+     para que siga leyéndose vívido sobre negro puro. */
+  --accent-soft: #ff5a5e;
+  --accent-dim: rgba(224, 16, 32, 0.22);
 
   --system-green: #30d158;
-  --system-red: #ff453a;
   --system-orange: #ff9f0a;
   --system-teal: #40c8e0;
   --system-purple: #bf5af2;
@@ -120,7 +131,6 @@ html[data-theme="dark"] {
      usamos halos blancos muy tenues (borde) en su lugar. */
   --shadow-soft: none;
   --shadow-lift: 0 0 0 1px rgba(255, 255, 255, 0.07), 0 10px 24px rgba(0, 0, 0, 0.6);
-  --shadow-glow: 0 0 24px rgba(10, 132, 255, 0.22);
+  --shadow-glow: 0 0 24px rgba(224, 16, 32, 0.28);
 
 }
-

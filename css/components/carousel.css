@@ -1,9 +1,9 @@
 /* =========================================================
    CARRUSEL GENÉRICO
-   Base compartida por "Ofertas Flash" y "Catálogo" en la
-   página de inicio. Los IDs (#flashSection, #catalogSection...)
-   los usa el JS para engancharse al DOM; el look & feel vive
-   acá, en clases reutilizables.
+   Base compartida por "Ofertas Flash", "SAS" y "Catálogo" en
+   la página de inicio. Los IDs (#flashSection, #catalogSection,
+   #sasSection...) los usa el JS para engancharse al DOM; el
+   look & feel vive acá, en clases reutilizables.
 ========================================================= */
 
 
@@ -208,7 +208,16 @@
 /* Variante neutra (Catálogo sin oferta/etiqueta) */
 .carousel-tag--catalog {
 
-    background: var(--accent);
+    background: var(--text-primary);
+
+    color: var(--bg-primary);
+
+}
+
+/* Variante SAS (marca propia) */
+.carousel-tag--sas {
+
+    background: var(--sas-red);
 
 }
 
@@ -351,7 +360,7 @@
 /* =========================
    "VER TODO" LINK
    Cierra cada carrusel invitando a la página
-   completa (por ahora solo el Catálogo lo usa).
+   completa.
 ========================= */
 
 .carousel-more-link {
@@ -391,7 +400,7 @@
     transform: scale(0.97);
 
     background:
-        rgba(0, 122, 255, 0.18);
+        rgba(224, 16, 32, 0.18);
 
 }
 

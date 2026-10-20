@@ -122,6 +122,12 @@ function sortNewStockFirst(products) {
 
 }
 
+// '?marca=sas' en la URL filtra el catálogo a solo productos SAS;
+// sin ese parámetro se ve el catálogo general (sin productos SAS,
+// que tienen su propia vista para no duplicarlos en ambos lados).
+const BRAND_FILTER =
+    new URLSearchParams(window.location.search).get('marca');
+
 async function fetchAvailableProducts() {
 
     const [products, oldStockMap] = await Promise.all([
@@ -129,11 +135,22 @@ async function fetchAvailableProducts() {
         fetchOldStockMap()
     ]);
 
-    const availableProducts =
+    let availableProducts =
         products.filter(product =>
             product.estado === 1 &&
             product.cantidad_disponible > 0
         );
+
+    availableProducts =
+        BRAND_FILTER === 'sas'
+            ? availableProducts.filter(isSasProduct)
+            : availableProducts.filter(product => !isSasProduct(product));
+
+    // Para mostrar: sin la etiqueta técnica "{SAS}" en el nombre.
+    availableProducts = availableProducts.map(product => ({
+        ...product,
+        producto: stripBrandTag(product.producto)
+    }));
 
     const withNewStockFlag =
         markNewStock(availableProducts, oldStockMap);
@@ -169,7 +186,7 @@ async function loadProducts() {
 function createWhatsAppLink(product) {
 
     const price =
-        Number(product.precio3).toFixed(2);
+        Number(product.precio5).toFixed(2);
 
     const message =
         `Hola.
@@ -222,7 +239,7 @@ function createProductCardElement(product) {
             </h3>
 
             <p class="product-price">
-                Bs ${Number(product.precio3).toFixed(2)}
+                Bs ${Number(product.precio5).toFixed(2)}
             </p>
 
             <span class="product-contact">

@@ -41,7 +41,7 @@
 
     border-radius: 8px;
 
-    background: rgba(0, 122, 255, 0.12);
+    background: var(--accent-dim);
 
     font-size: 1rem;
 
