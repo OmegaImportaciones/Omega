@@ -29,7 +29,7 @@
 
         return `
             <nav class="${className}" aria-label="Principal">
-                ${TABS.map(t => `<a href="${U.url(t.href)}" ${page === t.page ? 'aria-current="page"' : ''}>${t.label}</a>`).join('')}
+                ${TABS.map(t => `<a href="${U.url(t.href)}" ${page === t.page ? 'aria-current="page"' : ''}${t.page === 'sas' ? ' class="tab-sas"' : ''}>${t.page === 'sas' ? I.sas : ''}${t.label}</a>`).join('')}
             </nav>`;
 
     }
@@ -48,9 +48,9 @@
         return U.el(`
             <header class="site-header">
                 <div class="header-inner">
-                    <a class="brand" href="${U.url('index.html')}" aria-label="SAS, marca de ${STORE.NOMBRE}. Inicio">
-                        ${I.sas}
-                        <span class="brand-word">${I.sasWord}<small>${STORE.NOMBRE}</small></span>
+                    <a class="brand" href="${U.url('index.html')}" aria-label="${STORE.NOMBRE}, inicio">
+                        ${I.mark}
+                        <span class="brand-word">Omega<small>Importaciones</small></span>
                     </a>
 
                     <form class="header-search" role="search" action="${U.url(searchAction)}">
