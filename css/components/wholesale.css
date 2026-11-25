@@ -1,0 +1,192 @@
+/* =========================================================
+   WHOLESALE — modo mayorista (ventana, franja, precios)
+   Sin modo activo solo existen los dos accesos discretos.
+========================================================= */
+
+/* ---------- Accesos discretos ---------- */
+
+.footer-link-button {
+    width: fit-content;
+    margin-top: 6px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--ink-soft);
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.footer-link-button:hover { color: var(--ink); }
+
+.text-button--quiet { margin-top: 14px; font-weight: 500; font-size: 0.82rem; text-decoration-color: var(--line-strong); }
+
+/* ---------- Ventana de contraseña ---------- */
+
+.wgate {
+    position: fixed;
+    inset: 0;
+    z-index: 80;
+    display: grid;
+    place-items: end center;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.wgate.is-open { visibility: visible; pointer-events: auto; }
+
+.wgate-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.wgate.is-open .wgate-backdrop { opacity: 1; }
+
+.wgate-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: min(100%, 440px);
+    padding: 28px 22px calc(22px + env(safe-area-inset-bottom));
+    border: 1px solid var(--line);
+    border-radius: var(--radius-l) var(--radius-l) 0 0;
+    background: var(--surface);
+    transform: translateY(24px);
+    opacity: 0;
+    transition: transform 0.25s var(--ease), opacity 0.2s ease;
+}
+
+.wgate.is-open .wgate-panel { transform: none; opacity: 1; }
+
+.wgate-panel h2 { margin: 0; font-size: 1.3rem; }
+
+.wgate-panel p { margin: 0; color: var(--ink-soft); font-size: 0.92rem; }
+
+.wgate-x { position: absolute; top: 10px; right: 10px; }
+
+.wgate-input {
+    min-height: 52px;
+    padding: 0 16px;
+    border: 1.5px solid var(--line-strong);
+    border-radius: var(--radius-m);
+    background: var(--bg);
+    color: var(--ink);
+    font: inherit;
+    font-size: 1rem;
+}
+
+.wgate-input:focus { outline: none; border-color: var(--red); }
+
+.wgate-panel .wgate-error { color: var(--focus); font-weight: 600; }
+
+.wgate-help { align-self: center; color: var(--ink-soft); font-size: 0.85rem; text-underline-offset: 3px; }
+
+@media (min-width: 720px) {
+    .wgate { place-items: center; }
+    .wgate-panel { border-radius: var(--radius-l); padding: 32px 28px 26px; }
+}
+
+/* ---------- Franja "Modo mayorista" ---------- */
+
+.wbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px var(--gutter);
+    border-bottom: 1px solid rgba(37, 182, 96, 0.35);
+    background: rgba(37, 182, 96, 0.12);
+    font-size: 0.85rem;
+}
+
+.wbar p { margin: 0; }
+
+.wbar strong { color: var(--ok); }
+
+.wbar span { color: var(--ink-soft); }
+
+.wbar-exit {
+    flex: none;
+    min-height: 36px;
+    padding: 0 14px;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-pill);
+    background: transparent;
+    color: var(--ink);
+    font-weight: 700;
+}
+
+@media (max-width: 479px) {
+    .wbar span { display: none; }
+}
+
+/* ---------- Precio por mayor en tarjetas ---------- */
+
+.card-wholesale {
+    margin: 8px 0 0;
+    padding-top: 8px;
+    border-top: 1px dashed var(--line);
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+}
+
+.card-wholesale strong { color: var(--ok); }
+
+/* ---------- Ficha de producto ---------- */
+
+.wholesale-tiers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 14px 0 4px;
+}
+
+.wholesale-tiers div {
+    display: grid;
+    gap: 2px;
+    padding: 10px 14px;
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius-m);
+}
+
+.wholesale-tiers span { color: var(--ink-soft); font-size: 0.82rem; }
+
+.wholesale-tiers .is-current { border-color: var(--ok); background: rgba(37, 182, 96, 0.08); }
+
+.wholesale-total { margin: 4px 0 0; color: var(--ink-soft); font-size: 0.85rem; }
+
+/* ---------- Mi pedido ---------- */
+
+.cart-unit.is-wholesale { color: var(--ok); }
+
+.cart-unit s { color: var(--ink-soft); margin-right: 2px; }
+
+.cart-wholesale-hint {
+    display: block;
+    width: fit-content;
+    margin: 2px 0 6px;
+    padding: 3px 8px;
+    border-radius: var(--radius-s);
+    background: var(--red-soft);
+    color: var(--ink);
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.cart-saving { margin: 0 0 6px; color: var(--ok); font-weight: 700; font-size: 0.88rem; }
+
+.cart-kind {
+    margin-left: 6px;
+    padding: 2px 8px;
+    border-radius: var(--radius-pill);
+    background: rgba(37, 182, 96, 0.14);
+    color: var(--ok);
+    font-size: 0.72rem;
+    font-weight: 800;
+    vertical-align: middle;
+}
