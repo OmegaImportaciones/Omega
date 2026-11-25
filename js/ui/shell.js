@@ -74,6 +74,18 @@
     }
 
 
+    // Acceso discreto al modo mayorista (lo maneja ui/wholesaleGate.js)
+    function wholesaleEntry() {
+
+        const W = window.Omega.wholesale;
+
+        if (!W || !W.isEnabled() || W.isActive()) return '';
+
+        return `<button type="button" class="footer-link-button" data-wholesale-open>${U.escapeHTML(W.config.TEXTO_ACCESO)}</button>`;
+
+    }
+
+
     function footer() {
 
         const SAS = window.OMEGA_SAS;
@@ -106,6 +118,7 @@
                         <a href="${window.Omega.whatsapp.general()}" target="_blank" rel="noopener" data-track="click_whatsapp">WhatsApp</a>
                         <a href="${STORE.TIKTOK_URL}" target="_blank" rel="noopener" data-track="click_tiktok">TikTok</a>
                         <a href="${STORE.FACEBOOK_URL}" target="_blank" rel="noopener" data-track="click_facebook">Facebook</a>
+                        ${wholesaleEntry()}
                     </div>
                 </div>
                 <p class="footer-note">Precios en bolivianos. Disponibilidad sujeta a confirmación por WhatsApp. Garantía SAS según las condiciones de cada producto.</p>

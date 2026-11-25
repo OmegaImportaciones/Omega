@@ -32,19 +32,34 @@
     }
 
 
+    function isWholesale() {
+
+        return !!(window.Omega.wholesale && window.Omega.wholesale.isActive());
+
+    }
+
+
+    function row(product, qty, unit, wholesale) {
+
+        return `• ${product._name} (cód. ${product.codigo})\n   ${qty} x ${U.money(unit)}${wholesale ? ' (por mayor)' : ''} = ${U.money(unit * qty)}`;
+
+    }
+
+
+    // lines: de cart.resolve() -> { product, qty, unit, wholesale }
     function order(lines, total, code) {
 
-        const rows = lines.map(l =>
-            `• ${l.product._name} (cód. ${l.product.codigo})\n   ${l.qty} x ${U.money(l.product._price)} = ${U.money(l.subtotal)}`
-        ).join('\n');
+        const rows = lines.map(l => row(l.product, l.qty, l.unit, l.wholesale)).join('\n');
+
+        const kind = isWholesale() ? 'pedido mayorista' : 'pedido';
 
         return link(
-`Hola ${STORE.NOMBRE}, quiero hacer este pedido:
+`Hola ${STORE.NOMBRE}, quiero hacer este ${kind}:
 
 ${rows}
 
 Total: ${U.money(total)}
-Pedido web: ${code}
+Pedido web: ${code}${isWholesale() ? ' (mayorista)' : ''}
 
 ¿Me confirman disponibilidad para coordinar el pago y la entrega?`
         );
@@ -56,14 +71,25 @@ Pedido web: ${code}
 
         const n = qty || 1;
 
-        return link(
-`Hola ${STORE.NOMBRE}, quiero comprar:
+        const W = window.Omega.wholesale;
 
-• ${product._name} (cód. ${product.codigo})
-   ${n} x ${U.money(product._price)} = ${U.money(product._price * n)}
+        const { unit, wholesale } = W ? W.unitFor(product, n) : { unit: product._price, wholesale: false };
+
+        return link(
+`Hola ${STORE.NOMBRE}, quiero comprar${isWholesale() ? ' por mayor' : ''}:
+
+${row(product, n, unit, wholesale)}
 
 ¿Me confirman disponibilidad para coordinar el pago y la entrega?`
         );
+
+    }
+
+
+    // Para quien quiere ser mayorista y aún no tiene la contraseña
+    function wholesaleAccess() {
+
+        return link(`Hola ${STORE.NOMBRE}, quiero comprar por mayor. ¿Cómo puedo acceder a los precios mayoristas?`);
 
     }
 
@@ -88,6 +114,6 @@ Pedido web: ${code}
     }
 
 
-    window.Omega.whatsapp = { link, orderCode, order, buyNow, notifyMe, general };
+    window.Omega.whatsapp = { link, orderCode, order, buyNow, notifyMe, general, wholesaleAccess };
 
 })();

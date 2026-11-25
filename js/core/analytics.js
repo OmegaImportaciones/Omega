@@ -22,13 +22,13 @@
     }
 
 
-    function item(product, quantity) {
+    function item(product, quantity, price) {
 
         return {
             item_id: String(product.id),
             item_name: product.producto,
             item_category: product._category ? product._category.label : undefined,
-            price: product._price,
+            price: price || product._price,
             quantity: quantity || 1
         };
 
@@ -38,7 +38,7 @@
     function ecommerce(name, products, extra) {
 
         const items = products.map(entry =>
-            entry.product ? item(entry.product, entry.qty) : item(entry, 1)
+            entry.product ? item(entry.product, entry.qty, entry.unit) : item(entry, 1)
         );
 
         const value = items.reduce((sum, i) => sum + i.price * i.quantity, 0);

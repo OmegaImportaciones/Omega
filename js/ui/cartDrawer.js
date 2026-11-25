@@ -53,7 +53,9 @@
 
         const catalog = await window.Omega.catalog.load();
 
-        const { lines, removed, total } = window.Omega.cart.resolve(catalog);
+        const { lines, removed, total, saving } = window.Omega.cart.resolve(catalog);
+
+        const W = window.Omega.wholesale;
 
         const notice = removed.length
             ? `<p class="notice">Ya no tenemos disponible: ${removed.map(U.escapeHTML).join(', ')}. Lo quitamos de tu pedido.</p>`
@@ -69,7 +71,7 @@
                     <p>Agrega productos desde la tienda y envíalos juntos en un solo mensaje.</p>
                 </div>`;
 
-            foot.innerHTML = `<a class="button button--solid button--block" href="${U.url("pages/sas.html")}">Ver productos SAS</a>`;
+            foot.innerHTML = `<a class="button button--solid button--block" href="${U.url("pages/sas.html")}">Ver productos SAS</a>${accessLink()}`;
 
             return;
 
@@ -85,16 +87,20 @@
 
         body.appendChild(list);
 
+        const isWholesale = W && W.isActive();
+
         foot.innerHTML = `
+            ${saving > 0 ? `<p class="cart-saving">Ahorras ${U.money(saving)} con precio por mayor</p>` : ''}
             <div class="cart-total">
-                <span>Total</span>
+                <span>Total${isWholesale ? ' <small class="cart-kind">Pedido mayorista</small>' : ''}</span>
                 <strong>${U.money(total)}</strong>
             </div>
             <p class="cart-hint">Te confirmamos disponibilidad por WhatsApp y coordinamos pago (QR o transferencia) y entrega.</p>
             <a class="button button--whatsapp button--block" target="_blank" rel="noopener" data-send>
                 ${I.chat}<span>Enviar pedido por WhatsApp</span>
             </a>
-            <button type="button" class="text-button" data-clear>Vaciar pedido</button>`;
+            <button type="button" class="text-button" data-clear>Vaciar pedido</button>
+            ${accessLink()}`;
 
         const send = foot.querySelector('[data-send]');
 
@@ -121,6 +127,42 @@
     }
 
 
+    // Acceso discreto al modo mayorista (solo si no está activo)
+    function accessLink() {
+
+        const W = window.Omega.wholesale;
+
+        if (!W || !W.isEnabled() || W.isActive()) return '';
+
+        return `<button type="button" class="text-button text-button--quiet" data-wholesale-open>${U.escapeHTML(W.config.TEXTO_ACCESO)}</button>`;
+
+    }
+
+
+    function unitText(line) {
+
+        const p = line.product;
+
+        if (line.wholesale) {
+            return `<s>${U.money(p._price)}</s> ${U.money(line.unit)} c/u · por mayor`;
+        }
+
+        return `${U.money(line.unit)} c/u`;
+
+    }
+
+
+    function missingHint(line) {
+
+        if (!line.missing) return '';
+
+        const info = window.Omega.wholesale.infoOf(line.product);
+
+        return `<span class="cart-wholesale-hint">Agrega ${line.missing} más y pagas ${U.money(info.price)} c/u</span>`;
+
+    }
+
+
     function renderLine(line) {
 
         const p = line.product;
@@ -132,7 +174,8 @@
                 </a>
                 <div class="cart-info">
                     <a class="cart-name" href="${window.Omega.productCard.productHref(p)}">${U.escapeHTML(p._name)}</a>
-                    <span class="cart-unit">${U.money(p._price)} c/u</span>
+                    <span class="cart-unit${line.wholesale ? ' is-wholesale' : ''}">${unitText(line)}</span>
+                    ${missingHint(line)}
                     <div class="stepper" role="group" aria-label="Cantidad">
                         <button type="button" data-step="-1" aria-label="Quitar uno">${line.qty === 1 ? I.trash : I.minus}</button>
                         <output aria-live="polite">${line.qty}</output>
@@ -153,7 +196,7 @@
                 window.Omega.cart.setQty(p, next);
 
                 if (next <= 0) {
-                    window.Omega.analytics.ecommerce('remove_from_cart', [{ product: p, qty: line.qty }]);
+                    window.Omega.analytics.ecommerce('remove_from_cart', [{ product: p, qty: line.qty, unit: line.unit }]);
                 } else if (step > 0) {
                     window.Omega.analytics.ecommerce('add_to_cart', [{ product: p, qty: 1 }], { item_list_name: 'pedido' });
                 }

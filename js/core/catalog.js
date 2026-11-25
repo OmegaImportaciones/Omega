@@ -41,7 +41,16 @@
     }
 
 
+    // products.json público (del Generador): ya no trae niveles de precio
+    function isPublicFile(list) {
+
+        return !list.some(p => 'precio5' in p || 'precio6' in p);
+
+    }
+
+
     // "Nuevo" = no existía en old.json o antes estaba en 0
+    // (solo para el formato antiguo; el Generador ya marca "nuevo")
     function buildNewChecker(oldProducts) {
 
         if (!Array.isArray(oldProducts)) return () => false;
@@ -87,14 +96,16 @@
 
         cache = (async () => {
 
-            const [raw, old] = await Promise.all([
-                fetchJSON(STORE.PRODUCTS_URL),
-                fetchJSON(STORE.OLD_PRODUCTS_URL, true)
-            ]);
+            const data = await fetchJSON(STORE.PRODUCTS_URL);
 
-            const isNew = buildNewChecker(old);
+            const raw = Array.isArray(data) ? data : [];
 
-            const all = (Array.isArray(raw) ? raw : []).map(p => enrich(p, isNew));
+            // Formato público: "nuevo" ya viene marcado. Formato antiguo: se compara con old.json
+            const isNew = isPublicFile(raw)
+                ? (product => product.nuevo === true)
+                : buildNewChecker(await fetchJSON(STORE.OLD_PRODUCTS_URL, true));
+
+            const all = raw.map(p => enrich(p, isNew));
 
             const products = all.filter(p => window.OmegaInventory.isPublishable(p));
 

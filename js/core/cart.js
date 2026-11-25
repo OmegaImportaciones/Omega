@@ -33,11 +33,22 @@
     }
 
 
+    // Tope normal: MAX_POR_PRODUCTO y el stock publicado.
+    // En modo mayorista: stock real y tope mayorista (wholesale.maxQty).
+    function limitOf(product) {
+
+        if (!product) return MAX;
+
+        const normal = Math.min(MAX, Number(product.cantidad_disponible) || MAX);
+
+        return window.Omega.wholesale ? window.Omega.wholesale.maxQty(product, normal) : normal;
+
+    }
+
+
     function clampQty(qty, product) {
 
-        const stock = product ? Number(product.cantidad_disponible) || MAX : MAX;
-
-        return Math.max(1, Math.min(qty, MAX, stock));
+        return Math.max(1, Math.min(qty, limitOf(product)));
 
     }
 
@@ -135,7 +146,19 @@
 
             const qty = clampQty(item.qty, product);
 
-            lines.push({ product, qty, subtotal: product._price * qty });
+            const W = window.Omega.wholesale;
+
+            const { unit, wholesale } = W ? W.unitFor(product, qty) : { unit: product._price, wholesale: false };
+
+            lines.push({
+                product,
+                qty,
+                unit,
+                wholesale,
+                missing: W ? W.missingFor(product, qty) : 0,
+                saving: (product._price - unit) * qty,
+                subtotal: unit * qty
+            });
 
         });
 
@@ -145,11 +168,13 @@
 
         const total = lines.reduce((sum, l) => sum + l.subtotal, 0);
 
-        return { lines, removed, total };
+        const saving = lines.reduce((sum, l) => sum + l.saving, 0);
+
+        return { lines, removed, total, saving };
 
     }
 
 
-    window.Omega.cart = { add, setQty, remove, clear, count, qtyOf, resolve, read };
+    window.Omega.cart = { add, setQty, remove, clear, count, qtyOf, resolve, read, limitOf };
 
 })();
