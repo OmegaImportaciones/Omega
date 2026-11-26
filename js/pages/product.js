@@ -91,31 +91,11 @@
     }
 
 
-    // Solo en modo mayorista: tabla de 2 filas (unidad / por mayor)
-    function wholesaleTiers(info, product) {
-
-        if (!info) return '';
-
-        return `
-            <div class="wholesale-tiers" data-tiers>
-                <div data-tier="unit"><span>1 a ${info.min - 1} u.</span><strong>${U.money(product._price)} c/u</strong></div>
-                <div data-tier="mayor"><span>${info.min} o más</span><strong>${U.money(info.price)} c/u</strong></div>
-            </div>
-            <p class="wholesale-total" data-wtotal></p>`;
-
-    }
-
-
     function renderAvailable(product, catalog) {
 
-        const W = window.Omega.wholesale;
+        let qty = 1;
 
-        const info = W ? W.infoOf(product) : null;
-
-        const max = window.Omega.cart.limitOf(product);
-
-        // En modo mayorista se empieza directamente en el mínimo
-        let qty = info ? Math.min(info.min, max) : 1;
+        const max = Math.min(Number(product.cantidad_disponible) || 1, STORE.MAX_POR_PRODUCTO);
 
         const group = groupOf(product);
 
@@ -140,14 +120,12 @@
                         ${product._discount ? `<span class="saving">Ahorras ${U.money(product._oldPrice - product._price)}</span>` : ''}
                     </div>
 
-                    ${wholesaleTiers(info, product)}
-
                     <p class="stock-line"><span class="dot"></span>Disponible en tienda</p>
 
                     <div class="buy-box">
                         <div class="stepper stepper--large" role="group" aria-label="Cantidad">
                             <button type="button" data-step="-1" aria-label="Quitar uno">${I.minus}</button>
-                            <output aria-live="polite" data-qty>${qty}</output>
+                            <output aria-live="polite" data-qty>1</output>
                             <button type="button" data-step="1" aria-label="Agregar uno">${I.plus}</button>
                         </div>
                         <button type="button" class="button button--solid button--grow" data-add>${I.bag}<span>Agregar al pedido</span></button>
@@ -173,25 +151,7 @@
 
         const buy = root.querySelector('[data-buy]');
 
-        const updateBuy = () => {
-
-            buy.href = window.Omega.whatsapp.buyNow(product, qty);
-
-            if (!info) return;
-
-            const { unit, wholesale } = W.unitFor(product, qty);
-
-            root.querySelector('[data-tier="unit"]').classList.toggle('is-current', !wholesale);
-
-            root.querySelector('[data-tier="mayor"]').classList.toggle('is-current', wholesale);
-
-            const missing = W.missingFor(product, qty);
-
-            root.querySelector('[data-wtotal]').textContent = wholesale
-                ? `${qty} × ${U.money(unit)} = ${U.money(unit * qty)} · ahorras ${U.money((product._price - unit) * qty)}`
-                : `${qty} × ${U.money(unit)} = ${U.money(unit * qty)} · agrega ${missing} más para precio por mayor`;
-
-        };
+        const updateBuy = () => { buy.href = window.Omega.whatsapp.buyNow(product, qty); };
 
         updateBuy();
 
@@ -209,7 +169,7 @@
 
             window.Omega.cart.add(product, qty);
 
-            window.Omega.analytics.ecommerce('add_to_cart', [{ product, qty, unit: W ? W.unitFor(product, qty).unit : product._price }], { item_list_name: 'ficha' });
+            window.Omega.analytics.ecommerce('add_to_cart', [{ product, qty }], { item_list_name: 'ficha' });
 
             window.Omega.toast.show(`${qty} agregado${qty > 1 ? 's' : ''} a tu pedido`, 'Ver pedido', () => window.Omega.cartDrawer.open());
 
@@ -217,11 +177,9 @@
 
         buy.addEventListener('click', () => {
 
-            const unit = W ? W.unitFor(product, qty).unit : product._price;
+            window.Omega.analytics.ecommerce('begin_checkout', [{ product, qty }], { checkout_type: 'compra_directa' });
 
-            window.Omega.analytics.ecommerce('begin_checkout', [{ product, qty, unit }], { checkout_type: 'compra_directa' });
-
-            window.Omega.analytics.track('generate_lead', { currency: 'BOB', value: unit * qty, lead_source: 'compra_directa' });
+            window.Omega.analytics.track('generate_lead', { currency: 'BOB', value: product._price * qty, lead_source: 'compra_directa' });
 
         });
 

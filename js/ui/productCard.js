@@ -75,43 +75,6 @@
     }
 
 
-    // Solo en modo mayorista: "Por mayor (3+): Bs 48 c/u"
-    function wholesaleLine(product) {
-
-        const W = window.Omega.wholesale;
-
-        const info = W && W.infoOf(product);
-
-        if (!info) return '';
-
-        return `<p class="card-wholesale">Por mayor (${info.min}+): <strong>${U.money(info.price)}</strong> c/u</p>`;
-
-    }
-
-
-    // En modo mayorista, el primer toque agrega el mínimo de una vez
-    function addAmount(product) {
-
-        const W = window.Omega.wholesale;
-
-        const info = W && W.infoOf(product);
-
-        if (!info) return 1;
-
-        return window.Omega.cart.qtyOf(product.id) === 0 ? info.min : 1;
-
-    }
-
-
-    function addLabel(product) {
-
-        const n = addAmount(product);
-
-        return n > 1 ? `Agregar ${n}` : 'Agregar';
-
-    }
-
-
     function productHref(product) {
 
         return U.url(`pages/producto.html?id=${encodeURIComponent(product.id)}`);
@@ -135,11 +98,10 @@
                 </a>
                 <div class="card-foot">
                     ${priceTag(product)}
-                    <button type="button" class="add-button" aria-label="${addLabel(product)} ${U.escapeHTML(product._name)} a tu pedido">
-                        ${I.plus}<span>${addLabel(product)}</span>
+                    <button type="button" class="add-button" aria-label="Agregar ${U.escapeHTML(product._name)} a tu pedido">
+                        ${I.plus}<span>Agregar</span>
                     </button>
                 </div>
-                ${wholesaleLine(product)}
             </article>`);
 
         card.querySelector('.card-link').addEventListener('click', () => {
@@ -152,11 +114,9 @@
 
         button.addEventListener('click', () => {
 
-            const amount = addAmount(product);
+            window.Omega.cart.add(product, 1);
 
-            window.Omega.cart.add(product, amount);
-
-            window.Omega.analytics.ecommerce('add_to_cart', [{ product, qty: amount }], { item_list_name: opts.list || 'catalogo' });
+            window.Omega.analytics.ecommerce('add_to_cart', [{ product, qty: 1 }], { item_list_name: opts.list || 'catalogo' });
 
             button.classList.add('is-added');
 
@@ -164,12 +124,10 @@
 
             setTimeout(() => {
                 button.classList.remove('is-added');
-                button.innerHTML = `${I.plus}<span>${addLabel(product)}</span>`;
+                button.innerHTML = `${I.plus}<span>Agregar</span>`;
             }, 1400);
 
-            const message = amount > 1 ? `${amount} agregados a tu pedido` : 'Agregado a tu pedido';
-
-            window.Omega.toast.show(message, 'Ver pedido', () => window.Omega.cartDrawer.open());
+            window.Omega.toast.show('Agregado a tu pedido', 'Ver pedido', () => window.Omega.cartDrawer.open());
 
         });
 
@@ -189,6 +147,6 @@
     }
 
 
-    window.Omega.productCard = { render, renderInto, priceTag, productHref, media, placeholder, sasSeal, wholesaleLine };
+    window.Omega.productCard = { render, renderInto, priceTag, productHref, media, placeholder, sasSeal };
 
 })();

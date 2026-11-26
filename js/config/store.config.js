@@ -19,6 +19,9 @@ window.OMEGA_STORE = {
 
     TIKTOK_GUIA_URL: 'https://vt.tiktok.com/ZS9sLWaJa/',
 
+    // Sitio aparte para mayoristas (protegido con contraseña)
+    MAYORISTAS_URL: 'https://omegaimportaciones.github.io/mayoristas/',
+
     FACEBOOK_URL: 'https://www.facebook.com/share/1AATCSwqwf/?mibextid=wwXIfr',
 
     // Archivos de datos (relativos a la raíz del sitio)

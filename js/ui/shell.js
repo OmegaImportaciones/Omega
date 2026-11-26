@@ -20,16 +20,29 @@
         { page: 'home', label: 'Inicio', href: 'index.html' },
         { page: 'sas', label: 'Productos SAS', href: 'pages/sas.html' },
         { page: 'shop', label: 'Catálogo Omega', href: 'pages/catalogo.html' },
+        { page: 'mayoristas', label: 'Catálogo mayoristas', href: STORE.MAYORISTAS_URL, external: true },
         { page: 'warranty', label: 'Garantía', href: 'pages/garantia.html' },
         { page: 'location', label: 'Visítanos', href: 'pages/ubicacion.html' }
     ];
+
+
+    function tab(t) {
+
+        // Sitio de mayoristas: enlace externo con estilo de botón
+        if (t.external) {
+            return `<a class="tab-mayoristas" href="${t.href}" data-track="click_mayoristas"><span>${t.label}</span></a>`;
+        }
+
+        return `<a href="${U.url(t.href)}" ${page === t.page ? 'aria-current="page"' : ''}${t.page === 'sas' ? ' class="tab-sas"' : ''}>${t.page === 'sas' ? I.sas : ''}${t.label}</a>`;
+
+    }
 
 
     function tabs(className) {
 
         return `
             <nav class="${className}" aria-label="Principal">
-                ${TABS.map(t => `<a href="${U.url(t.href)}" ${page === t.page ? 'aria-current="page"' : ''}${t.page === 'sas' ? ' class="tab-sas"' : ''}>${t.page === 'sas' ? I.sas : ''}${t.label}</a>`).join('')}
+                ${TABS.map(tab).join('')}
             </nav>`;
 
     }
@@ -62,6 +75,7 @@
                     ${tabs('header-nav')}
 
                     <div class="header-actions">
+                        <a class="header-mayoristas" href="${STORE.MAYORISTAS_URL}" data-track="click_mayoristas">Mayoristas</a>
                         <button type="button" class="cart-button" data-open-cart aria-label="Abrir mi pedido">
                             ${I.bag}
                             <span class="cart-count" data-cart-count hidden>0</span>
@@ -70,18 +84,6 @@
                 </div>
                 ${tabs('tab-bar')}
             </header>`);
-
-    }
-
-
-    // Acceso discreto al modo mayorista (lo maneja ui/wholesaleGate.js)
-    function wholesaleEntry() {
-
-        const W = window.Omega.wholesale;
-
-        if (!W || !W.isEnabled() || W.isActive()) return '';
-
-        return `<button type="button" class="footer-link-button" data-wholesale-open>${U.escapeHTML(W.config.TEXTO_ACCESO)}</button>`;
 
     }
 
@@ -106,6 +108,7 @@
                         <a href="${U.url('pages/sas.html')}">Productos SAS</a>
                         <a href="${U.url('pages/garantia.html')}">Garantía de ${SAS.GARANTIA_ANIOS} años</a>
                         <a href="${U.url('pages/catalogo.html')}">Catálogo Omega</a>
+                        <a href="${STORE.MAYORISTAS_URL}" data-track="click_mayoristas">Catálogo mayoristas</a>
                     </div>
                     <div class="footer-col">
                         <h2>Tienda Omega</h2>
@@ -118,7 +121,6 @@
                         <a href="${window.Omega.whatsapp.general()}" target="_blank" rel="noopener" data-track="click_whatsapp">WhatsApp</a>
                         <a href="${STORE.TIKTOK_URL}" target="_blank" rel="noopener" data-track="click_tiktok">TikTok</a>
                         <a href="${STORE.FACEBOOK_URL}" target="_blank" rel="noopener" data-track="click_facebook">Facebook</a>
-                        ${wholesaleEntry()}
                     </div>
                 </div>
                 <p class="footer-note">Precios en bolivianos. Disponibilidad sujeta a confirmación por WhatsApp. Garantía SAS según las condiciones de cada producto.</p>
