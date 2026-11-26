@@ -59,6 +59,39 @@
 
 .tab-sas .sas-mark { width: 16px; height: 16px; color: var(--ink); }
 
+/* Botón "Catálogo mayoristas" (sitio aparte) */
+.tab-mayoristas { display: inline-flex !important; align-items: center; }
+
+.tab-mayoristas span {
+    padding: 3px 12px;
+    border: 1.5px solid var(--red);
+    border-radius: var(--radius-pill);
+    color: var(--ink);
+}
+
+.tab-mayoristas:hover span { background: var(--red); }
+
+/* En móvil la pestaña quedaría fuera de la pantalla: se muestra
+   como botón junto a "Mi pedido" y se oculta en la barra */
+.tab-bar .tab-mayoristas { display: none !important; }
+
+.header-mayoristas {
+    display: inline-flex;
+    align-items: center;
+    min-height: 40px;
+    margin-right: 6px;
+    padding: 0 14px;
+    border: 1.5px solid var(--red);
+    border-radius: var(--radius-pill);
+    color: var(--ink);
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.header-mayoristas:hover { background: var(--red); }
+
 /* ---------- Buscador ---------- */
 
 .header-search {
@@ -190,6 +223,8 @@
     .header-nav a { padding: 22px 10px; }
 
     .tab-bar { display: none; }
+
+    .header-mayoristas { display: none; }
 
     .brand-mark { width: 38px; height: 34px; }
 
